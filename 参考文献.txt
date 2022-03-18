@@ -1,3 +1,5 @@
-cron格式
+cron格式(必会)
 https://www.cnblogs.com/tekikesyo/p/15919582.html 
+vscode与git指导(选)
+https://zhuanlan.zhihu.com/p/398791874
 
