@@ -63,11 +63,11 @@ class activity(course): #活动与课程的需求基本一样,直接继承课程
     super(course, self).__init__(name,Id,campusId,buildId,Time,duration)
     pass
 
-class user:
-  def __init__(self,type:str,id:int,phone:int,passwd:str):
-    self.type=type
+class user:#用户信息以json格式存储在user.txt中
+  def __init__(self,user_status:str,id:int,phone:int,passwd:str):
+    self.user_status=user_status
     self.id=id
     self.phone=phone
     self.passwd=passwd
     #模板,具体类函数等由[3]自行完善
-
+ 
