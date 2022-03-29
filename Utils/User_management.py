@@ -1,11 +1,20 @@
-#未完善
 import json
 
-def dict2user(d):#dict转user类
+"""
+class user:
+  def __init__(self,user_status:str,id:str,phone:int,passwd:str):
+    self.user_status=user_status
+    self.id=id
+    self.phone=phone
+    self.passwd=passwd
+"""
+
+def dict2user(d):
     return user(d['user_status'],d['id'],d['phone'],d['passwd'])
-  
-IS_LOGIN="NO"#登录状态初始化
-USER_LIST=user("unlogin",0,0,0)#登录信息存储
+
+
+IS_LOGIN="NO"
+USER_LIST=user("unlogin",0,0,0)
 
 def user_register():  #注册函数
     registerid=input("请输入用户名：")
@@ -24,7 +33,7 @@ def user_register():  #注册函数
             break
     register_user = user(registertype,registerid,registerphone,registerpasswd)
     registered=0
-    with open("user.txt","r") as f:#对比是否已经注册过
+    with open("user.txt","r") as f:
         for line in f:
             user_list=json.loads(line,object_hook=dict2user)
             if register_user.id==user_list.id:
@@ -39,23 +48,62 @@ def user_register():  #注册函数
         with open("user.txt","a") as f:
             f.write(json.dumps(register_user,default=lambda obj: obj.__dict__)+"\n")
         print("注册成功")
-        
+            
 def register(): #注册
     if IS_LOGIN=="YES":
         print("已登录，无法注册")
     else:
         user_register()
 
-def login():#登录  待完善检测
+def login():#登录
     userid=input("请输入用户id")
     userpasswd=input("请输入密码")
+    judge=0#判断有无用户
     with open("user.txt","r") as f:
         for line in f:
             user_list=json.loads(line,object_hook=dict2user)
             if user_list.id==userid and user_list.passwd==userpasswd:
                 print("登录成功")
-                global USER_LIST
+                global USER_LIST,IS_LOGIN
                 USER_LIST=user_list
                 IS_LOGIN="YES"
+                judge=1
+    if judge==0:
+        print("用户名或密码错误")
+            
+
+def is_login(func):#装饰器，判断是否已经登录
+    def decorator(*args,**kwargs):
+        if IS_LOGIN=="YES":
+            return func(*args,**kwargs)
+        else:
+            print("未登录，请登录后再试")
+    return decorator
+
+@is_login
+def change_password():#修改密码
+    print("当前用户id为:%s"%USER_LIST.id)
+    count=3
+    while count>=0:
+        old_password=input("请输入当前用户的旧密码：")
+        if old_password==USER_LIST.passwd:
+            new_password1=input("请输入当前用户的新密码：")
+            if len(new_password1)>=8:
+                new_password2=input("请再次输入当前用户的新密码：")
+                if new_password1==new_password2:
+                    USER_LIST.passwd=new_password1
+                    with open("user.txt","r") as old:
+                        all_user=old.readlines()
+                    with open("user.txt","w") as new:
+                        for line in all_user:
+                            user_list=json.loads(line,object_hook=dict2user)
+                            if user_list.id==USER_LIST.id:
+                                line=line.replace(json.dumps(user_list,default=lambda obj: obj.__dict__)+"\n", json.dumps(USER_LIST,default=lambda obj: obj.__dict__)+"\n")
+                            new.write(line)
+                    print("修改成功")
+                    break
             else:
-                print("用户名或密码错误")
+                print("密码过短，请重新尝试")
+                count-=1
+        if count==-1:
+            print("错误次数过多，即将退出")
