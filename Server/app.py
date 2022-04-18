@@ -5,17 +5,28 @@ import time,random,sys,os,shutil
 import json as js
 import numpy as np
 from multiprocessing import Process
+from .. Utils import log 
 from datetime import datetime,timedelta
 
 app = Flask(__name__,template_folder='')
 
 
+def save_cfg():
+    global pwd,cfgPwd
+    global cfgs
+    cfgfile=cfgPwd+"cfg.json"
+    try:
+        with open(cfgfile,"w+") as fw:
+             js.dump(cfgs,fw)
+    except:pass
+
+
 def load_cfg():
-    global upfileId
+    global cfgs
     global cronLock
     global pwd,cfgPwd
     cronLock=0;upfileId=0
-    pwd=os.path.dirname(os.path.abspath(__file__))+"/"
+    pwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+"/"
     cfgPwd=os.path.join(pwd,"config")+"/"
     cfgfile=cfgPwd+"cfg.json"
     try:
