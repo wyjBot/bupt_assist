@@ -5,8 +5,11 @@ import time,random,sys,os,shutil
 import json as js
 import numpy as np
 from multiprocessing import Process
-from .. Utils import log 
+sys.path.append('.')
+from Utils.log import log 
+from Utils.database import cnct_db
 from datetime import datetime,timedelta
+from login import *
 
 app = Flask(__name__,template_folder='')
 
@@ -43,4 +46,6 @@ def load_cfg():
 
 
 if __name__ == '__main__':
+    load_cfg()
+    db=cnct_db()
     app.run(debug=True,port=1024,host="0.0.0.0")

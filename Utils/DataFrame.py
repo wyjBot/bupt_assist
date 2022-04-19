@@ -64,8 +64,8 @@ class activity(course): #活动与课程的需求基本一样,直接继承课程
     pass
 
 class user:#用户信息以json格式存储在user.txt中
-  def __init__(self,user_status:str,id:int,phone:int,passwd:str):
-    self.user_status=user_status
+  def __init__(self,role:str,id:int,phone:int,passwd:str):
+    self.role=role
     self.id=id
     self.phone=phone
     self.passwd=passwd
