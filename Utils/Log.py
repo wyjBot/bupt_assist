@@ -1,14 +1,13 @@
 import DataFrame
+from datetime import datetime
 
-class Log:
-  def __init__():
+class log:
+  def __init__(self,tb,cnt):
+    self.tb=tb
+    self.cnt=cnt
+
+  def write(data):
     pass
 
-  def __del__():
-    pass
-
-  def write():
-    pass
-
-  def read(begin:tim,end:tim):
+  def read(userId:int,begin:datetime,end:datetime):
     pass
