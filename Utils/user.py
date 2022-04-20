@@ -1,38 +1,55 @@
 import sys,os
+
 sys.path.append('.')
-from Utils.database import cnct_db
+from Utils.database import conn
+from datetime import datetime
 import json as js
 import hashlib
 
 def enMD5(txt):
   md5Obj = hashlib.md5(b'md5secert')
-  md5Obj.update(txt)
+  md5Obj.update(txt.encode('utf-8'))
   ret = md5Obj.hexdigest()
   return ret
 
-db=cnct_db()["users"]
+tb=conn["users"]
 
-def signUp(tb,role,id,name,phone,passwd):
+def sign_up(tb,role,id,name,phone,passwd):
   if role not in [0,1,2]:
     return -101,"请选择正确的用户角色"
   if len(phone)!=11 or phone[0]!=1:
-    return -1,"请输入正确的中国大陆手机号"
+    return -10,"请输入正确的中国大陆手机号"
   if len(passwd)<8 or 25<len(passwd):
-    return -2,"密码长度在8~25个字符之间"
+    return -20,"密码长度在8~25个字符之间"
+  if len(id)!=10:
+    return -30,"请输入正确的10位学号/工号"
   if len(name)<8 or 25<len(name):
-    return -3,"姓名长度在2~15个字符之间"
+    return -40,"姓名长度在2~15个字符之间"
   passwd=enMD5(passwd)
   data={
       "role":role,
       "id":id,
       "phone":phone,
       "name":name,
-      "passwd":passwd
+      "passwd":passwd,
+      "sessionId":None
     }
-  db.find_one({"phone":phone})
+  if  tb.find_one({"phone":phone}):return -11,"手机号已注册"
+  if  tb.find_one({"id":id}):   return -33,"学号/工号已注册"
+  tb.insert(data)
+  return 1,"注册成功"
 
-def signIn(tb,IdorPhone,password):
-  pass
+def sign_in(tb,IdorPhone,passwd):
+  passwd=enMD5(passwd)
+  res=tb.find_one({"phone":IdorPhone,"passwd":passwd})
+  if not res: tb.find_one({"id":IdorPhone,"passwd":passwd})
+  if not res: return -1,"用户名或密码错误"
+  return 1,gen_session(res['id'])
+
+def gen_session(userId):
+  sessionId =enMD5(str(userId)+str(datetime.now()))
+  tb.update({"id":userId},{"sessionId":sessionId})
+  return sessionId 
 
 
 # import json

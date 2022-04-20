@@ -62,6 +62,7 @@ class Table:
       self._save()
     if len(items)>=2:
       raise ValueError("find Multiple eligible lines")
+    return True
 
   def insert(self,dataX):
     keysX=dataX.keys()
@@ -94,7 +95,7 @@ class Table:
     # shutil.move()
     pass
 
-class DateBase:
+class DataBase:
   def __init__(self,bufferTime=0):
     # print(os.getcwd())
     try: os.makedirs(pwd+"db")
@@ -135,9 +136,10 @@ class DateBase:
     js.dump(self.tbsIndex,fw,ensure_ascii=False)
     fw.close()
 
+conn=DataBase()
 
 if __name__ == '__main__':
-  a=DateBase()
+  a=DataBase()
   if not a["Dfdf"]:a.create("Dfdf")
   a["Dfdf"].update({"name":"wyj"},{"name":"wyj","id":2020222333})
   tb=a["Dfdf"]
