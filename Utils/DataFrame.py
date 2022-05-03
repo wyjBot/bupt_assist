@@ -1,12 +1,13 @@
 import numpy as np
+buildId=int
 
 tim=str  # tim为cron格式的字符串 "* * * * * *" "分 时 日 月 周 年" 详见参考文档
 
 #************************[1]的任务*******************#
-class crood: #二维坐标
+class cdnt: #二维坐标
   def __init__(self,x,y):
-    self.x=-1
-    self.y=-1
+    self.x=x
+    self.y=y
 
 class rect:
   def __init__(self,addr:crood,len,width):

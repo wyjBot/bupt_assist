@@ -6,8 +6,8 @@ import json as js
 import numpy as np
 from multiprocessing import Process
 sys.path.append('.')
-from Utils.log import log 
-from Utils.database import cnct_db
+from Utils.Log import log 
+from Utils.Database import conn
 from datetime import datetime,timedelta
 from login import *
 
@@ -47,5 +47,5 @@ def load_cfg():
 
 if __name__ == '__main__':
     load_cfg()
-    db=cnct_db()
+    print(conn)
     app.run(debug=True,port=1024,host="0.0.0.0")

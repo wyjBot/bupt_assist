@@ -2,7 +2,7 @@
 import os,sys,os.path as path
 from app import app
 from flask import request,redirect,make_response
-from Utils import user
+from Utils import User
 
 
 
