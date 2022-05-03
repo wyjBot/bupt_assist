@@ -46,15 +46,15 @@ def get_all_build():
   global builds
   return builds
 
-def get_plan_c2c(s:cdnt,t:cdnt):
+def get_plan_c2c(s:cdnt,t:cdnt,perfer:int):
   """输入坐标->坐标，进行导航"""
   return res
 
-def get_plan_c2b(s:cdnt,t:buildId):
+def get_plan_c2b(s:cdnt,t:buildId,perfer:int):
   """输入坐标->建筑Id，进行导航"""
   return res
 
-def get_plan_b2b(s:cdnt,t:buildId):
+def get_plan_b2b(s:cdnt,t:buildId,perfer:int):
   """输入建筑Id->建筑Id，进行导航"""
   return res
 
@@ -87,6 +87,7 @@ def query_bulid_with_cdnt(crood:cdnt):
 #导航返回以dict格式，样例：
 res={
   "step":5,
+  "perfer":3,#1步行最短距离策略，2步行最短时间策略，3混合交通工具的最短时间
   "1":{
     "description": "沿着雁北路向南骑行700米，至第一个十字路口",
     #以左上角为左边系原点(0，0),x轴正方向向右,y轴正方向向下

@@ -1,2 +1,2 @@
-from pytest import importorskip
-from Utils import log
+# from pytest import importorskip
+from Utils import Log

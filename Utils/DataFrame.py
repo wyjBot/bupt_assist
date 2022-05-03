@@ -10,7 +10,7 @@ class cdnt: #二维坐标
     self.y=y
 
 class rect:
-  def __init__(self,addr:crood,len,width):
+  def __init__(self,addr:cdnt,len,width):
     self.addr=addr  #右上角坐标
 
 
