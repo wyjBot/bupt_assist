@@ -1,6 +1,8 @@
 from datetime import datetime,timedelta
 from Utils.Database import conn
 from Utils.DataFrame import cdnt,buildId
+import sys,os.path as path
+sys.path.append(path.dirname(__file__))
 import cv2,numpy as np
 #以下为地图的结构化描述，完善后，还应用numpy/cv2生成一张点整图
 builds=[
