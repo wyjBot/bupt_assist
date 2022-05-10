@@ -5,8 +5,8 @@ from Utils.DataFrame import *
 from Utils.Database import conn
 
 
-################course##################
-def search_course(str="操作系统"):
+################class_mgmt##################
+def search_class(str="操作系统"):
   res=[
     {
       "id":12,
@@ -35,13 +35,13 @@ def search_course(str="操作系统"):
   ]
   return
 
-def join_course(classId):
+def join_class(classId):
   return
 
-def quit_course(classId): 
+def quit_class(classId): 
   return
 
-def edit_course(classId,data:dict):
+def update_class(classId,data:dict):
   """data为dict格式"""
   return
 
