@@ -5,6 +5,7 @@ sys.path.append(path.dirname(__file__))
 from datetime import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.Database import conn
+from Utils.Cfg import cfg
 ###########task_mgmt###########
 def list_class_task(classId=-1):
   """list all class when classId=-1"""
