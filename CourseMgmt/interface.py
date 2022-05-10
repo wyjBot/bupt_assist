@@ -2,6 +2,7 @@ import sys,os.path as path
 sys.path.append(path.dirname(__file__))
 from datetime import datetime,timedelta
 from Utils.DataFrame import *
+from Utils.Database import conn
 
 
 ################course##################
@@ -44,49 +45,3 @@ def edit_course(classId,data:dict):
   """data为dict格式"""
   return
 
-################course_material##################
-def list_course_material(classId):
-  return
-
-def view_material(materialId):
-  """return the newest version and simple inform of history version"""
-  return
-
-def rollback_course_material(materialId,version):
-  """恢复到历史版本"""
-  return
-
-def create_course_material(classId):
-  """return -1 when creates failed"""
-  materialId =3
-  return materialId
-
-def update_course_material(materialId):
-  version+=1
-  return
-
-def delete_course_material(materialId):
-  return
-
-###########task_mgmt###########
-def list_crouse_task(courseId):
-  pass
-
-def create_course_task(courseId):
-  pass
-
-def view_task(courseId):
-  pass
-
-######hmwk_mgmt############
-def list_class_hmwk(classId):
-  return
-
-def view_hmwk(hmwkId):
-  return
-
-def submit_hmwk(hmwkId):
-  return
-
-def update_hmwk(hmwkId):
-  return

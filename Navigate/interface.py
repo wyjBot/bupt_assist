@@ -5,7 +5,7 @@ import sys,os.path as path
 sys.path.append(path.dirname(__file__))
 import cv2,numpy as np
 #以下为地图的结构化描述，完善后，还应用numpy/cv2生成一张点整图
-juilds=[
+builds=[
     { "Id":1,"名称":"体育馆",
       "bx":60,#占地矩形左上角x坐标
       "by":800,#占地矩形左上角y坐标
