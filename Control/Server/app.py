@@ -7,7 +7,8 @@ import numpy as np
 from multiprocessing import Process
 sys.path.append('.')
 from Utils.Log import log 
-from Utils.Database import conn
+from Utils.database import conn
+from Utils.Cfg import cfg
 from datetime import datetime,timedelta
 from login import *
 
@@ -16,6 +17,5 @@ app = Flask(__name__,template_folder='')
 
 
 if __name__ == '__main__':
-    loadCfg()
     print(conn)
     app.run(debug=True,port=1024,host="0.0.0.0")

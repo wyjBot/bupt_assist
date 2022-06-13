@@ -4,9 +4,10 @@ import compress as cpr
 import shutil as st
 import Time
 import Cfg;cfg=Cfg.cfg
-from Database import conn
+from Log import log
+from database import conn
 
-tb=conn.create("File")
+tb=conn.create("file")
 
 def saveFile(path:str):
   cfg["file_sum"]+=1

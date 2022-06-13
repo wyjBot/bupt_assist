@@ -3,8 +3,8 @@ from cgitb import reset
 from datetime import datetime,timedelta
 import Cfg;cfg=Cfg.cfg
 from Log import log 
-realnow=datetime.now 
 
+realnow=datetime.now 
 
 def now():
   cfg['now']+=(realnow()-cfg['rate_time_b'])*cfg['rate']
@@ -19,6 +19,7 @@ def rate(num:int):
     return "错误,最小为一"
   cfg['rate']=num
 
-rate(3600)
-resetTo(datetime(1999,1,1))
-print(now())
+if __name__=="__main__":
+  rate(3600)
+  resetTo(datetime(1999,1,1))
+  print(now())

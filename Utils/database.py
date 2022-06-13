@@ -2,6 +2,7 @@ import os,sys
 import os.path as path
 import json as js
 import shutil
+from Log import log
 pwd=path.dirname(path.dirname(path.abspath(__file__)))+"/Database/"# father directory
 
 class Table:
@@ -23,7 +24,7 @@ class Table:
 
   def set_ukey(self,keyX):
     if keyX in self.ukeys:
-      print("Waring: ukey",keyX,"has been existed,Jump")
+      log("Waring: ukey "+str(keyX)+" has been existed,Jump",1)
       return 1
     self.ukeys.append(keyX)
     self.ukVals[keyX]=list()
@@ -72,7 +73,6 @@ class Table:
       self.insert(newline)
     if len(items)==1:
       items[0].update(newline)
-      print("debug_in_ud",items[0])
       self._save()
     if len(items)>=2:
       raise ValueError("find Multiple eligible lines")
@@ -131,7 +131,7 @@ class DataBase:
 
   def create(self,tbname):
     if tbname in self.tbsIndex:
-      print("Waring:",tbname,"has been existed,Jump")
+      log("Waring:"+tbname+" has been existed,Jump",1)
       return self.all[tbname]
     self.all[tbname]=Table(tbname)
     self.tbsIndex.append(tbname)
