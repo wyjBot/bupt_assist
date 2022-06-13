@@ -16,8 +16,7 @@ def resetTo(tgt_tim:datetime):
 
 def rate(num:int):
   if num<1: 
-    print("错误")
-    exit(0)
+    return "错误,最小为一"
   cfg['rate']=num
 
 rate(3600)
