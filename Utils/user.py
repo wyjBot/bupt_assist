@@ -9,7 +9,7 @@ import Md5 as md5
 tb=conn["users"]
 
 
-def sign_up(tb,role,id,name,phone,passwd):
+def sign_up(id,passwd,role,name,phone):
   if role not in [0,1,2]:
     return -101,"请选择正确的用户角色"
   if len(phone)!=11 or phone[0]!=1:
@@ -34,7 +34,7 @@ def sign_up(tb,role,id,name,phone,passwd):
   tb.insert(data)
   return 1,"注册成功"
 
-def sign_in(tb,IdorPhone,passwd):
+def sign_in(IdorPhone,passwd):
   passwd=md5.en(passwd)
   res=tb.find_one({"phone":IdorPhone,"passwd":passwd})
   if not res: tb.find_one({"id":IdorPhone,"passwd":passwd})

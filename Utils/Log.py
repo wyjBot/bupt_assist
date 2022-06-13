@@ -9,10 +9,8 @@ warnPwd=logdir+"warn.log"
 errorPwd=logdir+"error.log"
 
 class Log:
-  def __init__(self,tb,cnt):
+  def __init__(self):
     if not path.exists(logdir): os.mkdir(logdir)
-    self.tb=tb
-    self.cnt=cnt
 
   def write(mess,Level=0):
     """

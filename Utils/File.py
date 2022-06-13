@@ -5,7 +5,7 @@ import shutil as st
 import Time
 import Cfg;cfg=Cfg.cfg
 from Log import log
-from database import conn
+from Database import conn
 
 tb=conn.create("file")
 

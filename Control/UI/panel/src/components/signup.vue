@@ -9,18 +9,28 @@
       class="login-form"
     >
       <h1 class="title-zc">登录页</h1>
-      <el-form-item label="账号" prop="username">
+      <el-form-item label="学号" prop="username">
         <el-input v-model.number="form.username"></el-input>
       </el-form-item>
  
       <el-form-item label="密码" prop="password">
         <el-input
-          type="password"
-          v-model="form.password"
+          type="password" v-model="form.password"
           autocomplete="off"
         ></el-input>
       </el-form-item>
+      
+      <el-form-item label="角色" prop="role">
+        <el-input v-model="form.role"></el-input>
+      </el-form-item>
  
+      <el-form-item label="姓名" prop="name">
+        <el-input v-model="form.name"></el-input>
+      </el-form-item>
+
+      <el-form-item label="电话" prop="phone">
+        <el-input v-model.number="form.name"></el-input>
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="submitForm">提交</el-button>
       </el-form-item>
@@ -35,19 +45,20 @@ export default {
       form: {
         username: "",
         password: "",
+        role:"",
+        name:"",
+        phone:"",
       },
+      
       rules: {
         username: [{ required: true, message: "请输入账号", trigger: "blur" }],
         password: [{ required: true, message: "请输入昵称", trigger: "blur" }],
+        role: [{ required: true, message: "学生/教师", trigger: "blur" }],
       },
     };
   },
   methods: {
     submitForm() {
-      this.login(this.form.username, this.form.password)
-    },
-
-    login(username, password) {
       this.$axios.post("http://192.168.1.88:1024/api/login",
       {
         "act":username,

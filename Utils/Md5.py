@@ -1,4 +1,3 @@
-
 import hashlib
 def en(txt):
   md5Obj = hashlib.md5(b'md5secert')

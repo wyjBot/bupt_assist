@@ -1,5 +1,6 @@
 import os,sys
 import os.path as path
+sys.path.append(path.dirname(__file__))
 import json as js
 import shutil
 from Log import log
