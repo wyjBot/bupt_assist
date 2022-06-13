@@ -2,7 +2,6 @@
 #the compress tools is under package utils
 import sys,os.path as path
 sys.path.append(path.dirname(__file__))
-from datetime import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.Database import conn
 from Utils.Cfg import cfg

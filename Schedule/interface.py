@@ -1,6 +1,6 @@
 import sys,os.path as path
 sys.path.append(path.dirname(__file__))
-from datetime import datetime,timedelta
+from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
 
 def view_timetable(userId):

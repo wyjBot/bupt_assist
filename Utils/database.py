@@ -22,7 +22,9 @@ class Table:
       self.ukVals=dict()
 
   def set_ukey(self,keyX):
-    if keyX in self.ukeys: return 1
+    if keyX in self.ukeys:
+      print("Waring: ukey",keyX,"has been existed,Jump")
+      return 1
     self.ukeys.append(keyX)
     self.ukVals[keyX]=list()
   def del_ukey(self,keyX):
@@ -39,26 +41,38 @@ class Table:
     '''
     for x in self.lines:
       for key in fiter:
-        if x[key]!=fiter[key]: continue
+        if x[key]!=fiter[key]: break
+      if x[key]!=fiter[key]: continue
       return x.copy()
 
-  def find_all(self,fiter):
-    '''adapt for fuzzy lookup with some value'''
+  def _find_all(self,fiter):
+    '''
+      adapt for fuzzy lookup with some value
+      return orgin line
+    '''
     ret=list()
     for x in self.lines:
       flag=True
       for key in fiter:
         if x[key]!=fiter[key]: flag=False
-      if flag:ret.append(x.copy())
+      if flag:ret.append(x)
+    return ret
+
+  def find_all(self,fiter):
+    "return copy of orgin line"
+    ret=list()
+    res=self._find_all(fiter)
+    for x in res : ret.append(x.copy())
     return ret
 
   def update(self,fiter,newline):
-    """If data existing,then Update it,else insert """
-    items=self.find_all(fiter)
+    """If data existing,then Update it,else try to insert """
+    items=self._find_all(fiter)
     if len(items)==0:
       self.insert(newline)
     if len(items)==1:
       items[0].update(newline)
+      print("debug_in_ud",items[0])
       self._save()
     if len(items)>=2:
       raise ValueError("find Multiple eligible lines")
@@ -117,7 +131,8 @@ class DataBase:
 
   def create(self,tbname):
     if tbname in self.tbsIndex:
-      raise NameError("duplicate with existing table")
+      print("Waring:",tbname,"has been existed,Jump")
+      return self.all[tbname]
     self.all[tbname]=Table(tbname)
     self.tbsIndex.append(tbname)
     self._save()
@@ -139,10 +154,10 @@ class DataBase:
 conn=DataBase()
 
 if __name__ == '__main__':
-  a=DataBase()
-  if not a["Dfdf"]:a.create("Dfdf")
-  a["Dfdf"].update({"name":"wyj"},{"name":"wyj","id":2020222333})
-  tb=a["Dfdf"]
+  tb=conn.create("testTb")
+  tb.update({"name":"wyj"},{"name":"wyj","id":2020222333})
   tb.set_ukey("id")
-  a["Dfdf"].update({"name":"bd1"},{"name":"bd1","id":2020222333})
-  tb=a.create("users")
+  tb.update({"name":"bd1"},{"name":"bd1_u","id":2021222313})
+  tb.update({"name":"bd2"},{"name":"bd2","id":2021222369})
+  print(tb.find_one({"name":"bd1"}))
+  print("all: ",tb.find_all({}))

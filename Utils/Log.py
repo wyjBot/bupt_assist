@@ -11,5 +11,5 @@ class log:
   def write(data):
     pass
 
-  def read(userId:int,begin:datetime,end:datetime):
+  def read(user_id:int,begin:datetime,end:datetime):
     pass

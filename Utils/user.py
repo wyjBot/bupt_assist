@@ -4,15 +4,10 @@ sys.path.append('.')
 from Utils.Database import conn
 from datetime import datetime
 import json as js
-import hashlib
-
-def enMD5(txt):
-  md5Obj = hashlib.md5(b'md5secert')
-  md5Obj.update(txt.encode('utf-8'))
-  ret = md5Obj.hexdigest()
-  return ret
+import Md5 as md5
 
 tb=conn["users"]
+
 
 def sign_up(tb,role,id,name,phone,passwd):
   if role not in [0,1,2]:
@@ -25,7 +20,7 @@ def sign_up(tb,role,id,name,phone,passwd):
     return -30,"请输入正确的10位学号/工号"
   if len(name)<8 or 25<len(name):
     return -40,"姓名长度在2~15个字符之间"
-  passwd=enMD5(passwd)
+  passwd=md5.en(passwd)
   data={
       "role":role,
       "id":id,
@@ -40,17 +35,21 @@ def sign_up(tb,role,id,name,phone,passwd):
   return 1,"注册成功"
 
 def sign_in(tb,IdorPhone,passwd):
-  passwd=enMD5(passwd)
+  passwd=md5.en(passwd)
   res=tb.find_one({"phone":IdorPhone,"passwd":passwd})
   if not res: tb.find_one({"id":IdorPhone,"passwd":passwd})
   if not res: return -1,"用户名或密码错误"
-  return 1,gen_session(res['id'])
+  return 1,newSession(res['id'])
 
-def gen_session(userId):
-  sessionId =enMD5(str(userId)+str(datetime.now()))
+def newSession(userId):
+  sessionId =md5.en(str(userId)+str(datetime.now()))
   tb.update({"id":userId},{"sessionId":sessionId})
   return sessionId 
 
+def vrfSession(serial):
+  user=tb.find_one({"session":serial})
+  if user:return user
+  else:return None
 
 # import json
 
@@ -67,45 +66,6 @@ def gen_session(userId):
 
 # IS_LOGIN="NO"
 # USER_LIST=user("unlogin",0,0,0)
-
-# def user_register():  #注册函数
-#     registerid=input("请输入用户名：")
-#     registertype_judge=input("请选择用户类型：0.管理员 1.学生")
-#     if registertype_judge=="0":
-#         registertype="administrator"
-#     else:
-#         registertype="student"
-#     while True:
-#         registerpasswd=input("请输入密码：")
-#         if len(registerpasswd)>=8:
-#             break
-#     while True:
-#         registerphone=input("请输入手机号：")
-#         if len(registerphone)==11:
-#             break
-#     register_user = user(registertype,registerid,registerphone,registerpasswd)
-#     registered=0
-#     with open("user.txt","r") as f:
-#         for line in f:
-#             user_list=json.loads(line,object_hook=dict2user)
-#             if register_user.id==user_list.id:
-#                 print("用户名已被注册")
-#                 registered=1
-#                 break
-#             if register_user.phone==user_list.phone:
-#                 print("手机号已被注册")
-#                 registered=1
-#                 break
-#     if registered==0:
-#         with open("user.txt","a") as f:
-#             f.write(json.dumps(register_user,default=lambda obj: obj.__dict__)+"\n")
-#         print("注册成功")
-            
-# def register(): #注册
-#     if IS_LOGIN=="YES":
-#         print("已登录，无法注册")
-#     else:
-#         user_register()
 
 # def login():#登录
 #     userid=input("请输入用户id")

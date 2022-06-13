@@ -3,16 +3,7 @@ import os,sys,os.path as path
 from app import app
 from flask import request,redirect,make_response
 from Utils import User
-
-
-
-def session_vrf(serial):
-  global db
-  tb=db["user"]
-  user=db.find_one({"session":serial})
-  if user:return user
-  else:return None
-
+from Utils import database
 
 
 
@@ -27,8 +18,9 @@ def login():
 
   if request.method == 'POST':
     try:
-      useId=request.form['useId']
+      user_id=request.form['user_id']
       role=request.form['role']
+      passwd=request.form['role']
 
     except:pass
 

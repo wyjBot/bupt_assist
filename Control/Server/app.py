@@ -16,6 +16,6 @@ app = Flask(__name__,template_folder='')
 
 
 if __name__ == '__main__':
-    load_cfg()
+    loadCfg()
     print(conn)
     app.run(debug=True,port=1024,host="0.0.0.0")
