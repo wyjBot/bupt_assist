@@ -77,7 +77,7 @@ import { Document, Menu as IconMenu, Location,
   Setting, } from '@element-plus/icons-vue'
 import axios from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { defineComponent, reactive, ref, toRefs } from 'vue';
+import {reactive, ref, toRefs } from 'vue';
 import {onMounted,onBeforeUpdate,onUpdated,onBeforeMount,onBeforeUnmount,onUnmounted,computed,watch } from "vue";
 
 import {defineExpose ,getCurrentInstance} from 'vue';
@@ -116,6 +116,19 @@ const filterTableData = computed(() =>
   )
 )
 
+const mounted=onMounted(()=>
+{
+      console.log("mounted")
+      const user:User={
+        name: '计算机系统基础',
+        day: '星期一',
+        speaker: '周峰',
+      }
+      addTodo(user)
+      search.value="1"
+      search.value=""
+})
+
 const tableData: User[] = [
   {
     name: '数据结构',
@@ -124,7 +137,7 @@ const tableData: User[] = [
   },
 ]
 
-axios.post("http://192.168.1.88:1024/api/signin",
+axios.post("http://192.168.1.88:1024/api/classlist",
 {
   session:session,
 })//传参
@@ -136,7 +149,7 @@ if(res.data.code==1)
       type: 'info',
       message: `提示: 登录成功`,
     })
-    this.$router.push({name:'home',params: {id:'10001'}})
+    // this.$router.push({name:'home',params: {id:'10001'}})
 }
 else{
   throw res.data.mess
@@ -157,18 +170,8 @@ defineExpose({addTodo,search})
 
 
 <script lang="ts">
+import { defineComponent}from 'vue';
 export default defineComponent({
-  mounted(){
-      console.log("mounted")
-      const user:User={
-        name: '计算机系统基础',
-        day: '星期一',
-        speaker: '周峰',
-      }
-      this.addTodo(user)
-      this.search="1"
-      this.search=""
-  },
   data(){
       return {
       form: {

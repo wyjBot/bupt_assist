@@ -100,10 +100,10 @@ class Table:
   
   def _save(self):
       fw=open(pwd+self.name+".json","w+")
-      js.dump(self.lines, fw)
+      js.dump(self.lines, fw,ensure_ascii=False)
       fw.close()
       fw=open(pwd+self.name+".ukVals","w+")
-      js.dump(self.ukVals, fw)
+      js.dump(self.ukVals, fw,ensure_ascii=False)
       fw.close()
 
   def _bak(self):
