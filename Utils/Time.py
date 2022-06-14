@@ -1,6 +1,8 @@
 #时间是深拷贝
 from cgitb import reset
 from datetime import datetime,timedelta
+import sys,os.path as path
+sys.path.append(path.dirname(__file__))
 import Cfg;cfg=Cfg.cfg
 realnow=datetime.now 
 

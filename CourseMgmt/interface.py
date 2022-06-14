@@ -4,6 +4,9 @@ from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.Database import conn
 
+tb=conn["course"]
+tbCourse=conn["course"]
+tbUser=conn["user"]
 
 ################class_mgmt##################
 def search_class(userId,str="操作系统"):
@@ -36,8 +39,7 @@ def search_class(userId,str="操作系统"):
     },
   ]
   '''
-  a=DataBase()
-  tb=a.__getitem__("userCourse")
+  tb=conn["userCourse"]
   ret=tb.find_all()
   res=list()
   for x in ret:
@@ -47,9 +49,6 @@ def search_class(userId,str="操作系统"):
   return res
 
 def join_class(classId,userId):
-  a=DataBase()
-  tb=a.__getitem__("userCourse")
-  tbCourse=a.__getitem__("course")
   res=tbCourse.find_one({"id":classId})
   if not res:return -1,"不存在该课程"
   if tb.find_one({"id":classId,"userId":userId}):return -2,"该课程已加入"
@@ -58,9 +57,6 @@ def join_class(classId,userId):
   return 1,"已加入该学生课表"
 
 def quit_class(classId,userId):
-  a=DataBase()
-  tb=a.__getitem__("userCourse")
-  tbCourse=a.__getitem__("course")
   res=tbCourse.find_one({"id":classId})
   if not res:return -1,"不存在该课程"
   if not tb.find_one({"id":classId,"userId":userId}):return -2,"该学生无该门课程"
@@ -70,10 +66,6 @@ def quit_class(classId,userId):
 
 def update_class(classId,userId,data:dict):
   """data为dict格式"""
-  a=DataBase()
-  tb=a.__getitem__("userCourse")
-  tbCourse=a.__getitem__("course")
-  tbUser=a.__getitem__("user")
   res=tbUser.find_one({"id":userId})
   if not res:return -1,"用户名错误"
   if res["role"]==0:return -2,"用户权限错误"
@@ -108,6 +100,6 @@ def kmp(keyword,name):#返回值0代表没有，1代表有
                 b+=1
             else:
                 b=nextplace[b]
-        if s==len(keyword):#匹配成功
-            return 1
+        # if s==len(keyword):#匹配成功
+            # return 1
     return 0

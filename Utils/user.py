@@ -1,5 +1,6 @@
 import sys,os
-
+import sys,os.path as path
+sys.path.append(path.dirname(__file__))
 sys.path.append('.')
 from Utils.Database import conn
 from datetime import datetime
