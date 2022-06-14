@@ -99,10 +99,10 @@ class Table:
     self._save()
   
   def _save(self):
-      fw=open(pwd+self.name+".json","w+")
+      fw=open(pwd+self.name+".json","w+",encoding='utf-8')
       js.dump(self.lines, fw,ensure_ascii=False)
       fw.close()
-      fw=open(pwd+self.name+".ukVals","w+")
+      fw=open(pwd+self.name+".ukVals","w+",encoding='utf-8')
       js.dump(self.ukVals, fw,ensure_ascii=False)
       fw.close()
 
@@ -148,7 +148,7 @@ class DataBase:
     self._save()
 
   def _save(self):
-    fw=open(pwd+"db/tbs.json","w+")
+    fw=open(pwd+"db/tbs.json","w+",encoding='utf-8')
     js.dump(self.tbsIndex,fw,ensure_ascii=False)
     fw.close()
 
@@ -158,7 +158,10 @@ if __name__ == '__main__':
   tb=conn.create("testTb")
   tb.update({"name":"wyj"},{"name":"wyj","id":2020222333})
   tb.set_ukey("id")
-  tb.update({"name":"bd1"},{"name":"bd1_u","id":2021222310})
-  tb.update({"name":"bd2"},{"name":"bd2","id":2021222369})
   print(tb.find_one({"name":"bd1"}))
+  print("all: ",tb.find_all({}))
+  tb=conn["user"]
+  tb.update({"id":"2020211838"},{"name":"珠峰","role":"学生","id":"2020211838"})
+  tb.update({"id":"2002211838"},{"name":"彭木","role":"教师"})
+  tb=conn["user"]
   print("all: ",tb.find_all({}))

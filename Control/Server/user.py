@@ -2,7 +2,7 @@
 from flask import Blueprint
 import os,sys,os.path as path
 import json as js
-import webrpc
+from webrpc import rjs
 from flask import request,redirect,make_response
 from Utils import User
 from Utils import Database
