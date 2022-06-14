@@ -6,7 +6,7 @@ from Utils.Database import conn
 
 
 ################class_mgmt##################
-def search_class(tb,userId,str="操作系统"):
+def search_class(userId,str="操作系统"):
   '''  
   tb为用户-课程表,当str为“”时返回所有课程
   res=[
@@ -36,6 +36,8 @@ def search_class(tb,userId,str="操作系统"):
     },
   ]
   '''
+  a=DataBase()
+  tb=a.__getitem__("userCourse")
   ret=tb.find_all()
   res=list()
   for x in ret:
@@ -44,7 +46,10 @@ def search_class(tb,userId,str="操作系统"):
     res.append(x.copy())
   return res
 
-def join_class(tb,tbCourse,classId,userId):
+def join_class(classId,userId):
+  a=DataBase()
+  tb=a.__getitem__("userCourse")
+  tbCourse=a.__getitem__("course")
   res=tbCourse.find_one({"id":classId})
   if not res:return -1,"不存在该课程"
   if tb.find_one({"id":classId,"userId":userId}):return -2,"该课程已加入"
@@ -52,7 +57,10 @@ def join_class(tb,tbCourse,classId,userId):
   tb.insert(res)
   return 1,"已加入该学生课表"
 
-def quit_class(tb,tbCourse,classId,userId):
+def quit_class(classId,userId):
+  a=DataBase()
+  tb=a.__getitem__("userCourse")
+  tbCourse=a.__getitem__("course")
   res=tbCourse.find_one({"id":classId})
   if not res:return -1,"不存在该课程"
   if not tb.find_one({"id":classId,"userId":userId}):return -2,"该学生无该门课程"
@@ -60,8 +68,12 @@ def quit_class(tb,tbCourse,classId,userId):
   tb.remove(res)
   return 1,"已退课"
 
-def update_class(tb,tbCourse,tbUser,classId,userId,data:dict):
+def update_class(classId,userId,data:dict):
   """data为dict格式"""
+  a=DataBase()
+  tb=a.__getitem__("userCourse")
+  tbCourse=a.__getitem__("course")
+  tbUser=a.__getitem__("user")
   res=tbUser.find_one({"id":userId})
   if not res:return -1,"用户名错误"
   if res["role"]==0:return -2,"用户权限错误"
