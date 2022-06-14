@@ -53,7 +53,7 @@ def list_user_task(userId):
     temp=list_class_task(x["id"])
     for x in range(len(temp)):
       ret[count]=temp[x]
-  return
+  return ret
 
 def search_user_task(userId,):
   #ret={}
