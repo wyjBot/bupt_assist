@@ -126,13 +126,13 @@ class DataBase:
         
   def __getitem__(self, tbname):
     if tbname not in self.tbsIndex:
-      # raise NameError("Try to access unexisting table")
+      log(f"Try to access unexisting table {tbname}",level=3)
       return None
     return self.all[tbname]
 
   def create(self,tbname):
     if tbname in self.tbsIndex:
-      log("Waring:"+tbname+" has been existed,Jump",1)
+      log("Waring:"+tbname+" has been existed,Jump")
       return self.all[tbname]
     self.all[tbname]=Table(tbname)
     self.tbsIndex.append(tbname)
@@ -158,7 +158,7 @@ if __name__ == '__main__':
   tb=conn.create("testTb")
   tb.update({"name":"wyj"},{"name":"wyj","id":2020222333})
   tb.set_ukey("id")
-  tb.update({"name":"bd1"},{"name":"bd1_u","id":2021222313})
+  tb.update({"name":"bd1"},{"name":"bd1_u","id":2021222310})
   tb.update({"name":"bd2"},{"name":"bd2","id":2021222369})
   print(tb.find_one({"name":"bd1"}))
   print("all: ",tb.find_all({}))

@@ -16,17 +16,16 @@ def login():
     data = request.get_data()
     try:
         data = js.loads(data)
-        print("1111",data)
     except:
       return ans(400,"无效请求")
     if "session" in data and vrfSession(data['session']):
       return ans(1,data["session"])
     try:
-      parm=set("act","pwd")
-      if not parm.issubset(list(data)):return "参数错误"
+      parm=set(["act","pwd"])
+      if not parm.issubset(data):return "参数错误"
       flag,res=User.sign_in(data["act"],data["pwd"])
       return ans(flag,res)
-    except:
+    except Exception as e: # raise e
       return ans(400,"账户名或密码错误")
 
       
@@ -38,11 +37,12 @@ def signup():
     except:
       return ans(400,"无效请求")
     try:
-      parm=set("act","pwd","role","name","phone")
-      if not parm.issubset(list(data)):return "参数不足"
+      parm=set(["act","pwd","role","name","phone"])
+      if not parm.issubset(set(data)):return ans(400,"参数不足")
       flag,res=User.sign_up(data["act"],data["pwd"],data["role"],data["name"],data["phone"])
       return ans(flag,res)
-    except:
+    except Exception as e:
+      raise e
       return ans(400,"注册失败,请联系系统管理员")
 
 

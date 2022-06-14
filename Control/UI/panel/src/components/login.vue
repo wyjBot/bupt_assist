@@ -27,45 +27,59 @@
     </el-form>
   </div>
 </template>
-<script>
- 
-export default {
-  data() {
-    return {
+
+<script lang="ts">
+import { ElMessage, ElMessageBox } from 'element-plus'
+import { defineComponent, reactive, ref, toRefs } from 'vue';
+import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+export default defineComponent({
+
+  data(){
+      return {
       form: {
-        username: "",
-        password: "",
+        username: "2020211838",
+        password: "111111",
       },
       rules: {
         username: [{ required: true, message: "请输入账号", trigger: "blur" }],
         password: [{ required: true, message: "请输入昵称", trigger: "blur" }],
       },
-    };
+      }
   },
-  methods: {
-    submitForm() {
+  methods:{
+    submitForm(){
       this.login(this.form.username, this.form.password)
     },
-
-    login(username, password) {
-      this.$axios.post("http://192.168.1.88:1024/api/login",
+    login(username: string, password: string){
+      axios.post("http://192.168.1.88:1024/api/signin",
       {
         "act":username,
         "pwd":password
       })//传参
-      .then(function(res){
-          console.log(res)          
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+           console.log(res.data.mess)
+           ElMessage({
+              type: 'info',
+              message: `提示: 登录成功`,
+           })
+           this.$router.push({name:'home',params: {id:'10001'}})
+        }
+        else{
+          throw res.data.mess
+        }
       })
-      .catch(function(err){
-            throw "请求失败233",err
+      .catch(function(err: any){
+           ElMessage({
+              type: 'info',
+              message: `提示: ${err}`,
+           })
       });
     },
   },
-};
-
-
+})
 </script>
-
 
 
 <style scoped>

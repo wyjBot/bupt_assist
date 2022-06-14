@@ -6,19 +6,19 @@ from datetime import datetime
 import json as js
 import Md5 as md5
 
-tb=conn["users"]
+tb=conn["user"]
 
 
 def sign_up(id,passwd,role,name,phone):
-  if role not in [0,1,2]:
-    return -101,"请选择正确的用户角色"
-  if len(phone)!=11 or phone[0]!=1:
+  if role not in ["学生","教师"]:
+    return -101,"请选择正确的用户角色(学生/教师)"
+  if len(phone)!=11 or phone[0]!='1':
     return -10,"请输入正确的中国大陆手机号"
-  if len(passwd)<8 or 25<len(passwd):
-    return -20,"密码长度在8~25个字符之间"
+  if len(passwd)<6 or 25<len(passwd):
+    return -20,"密码长度在6~25个字符之间"
   if len(id)!=10:
     return -30,"请输入正确的10位学号/工号"
-  if len(name)<8 or 25<len(name):
+  if len(name)<2 or 15<len(name):
     return -40,"姓名长度在2~15个字符之间"
   passwd=md5.en(passwd)
   data={
@@ -37,7 +37,7 @@ def sign_up(id,passwd,role,name,phone):
 def sign_in(IdorPhone,passwd):
   passwd=md5.en(passwd)
   res=tb.find_one({"phone":IdorPhone,"passwd":passwd})
-  if not res: tb.find_one({"id":IdorPhone,"passwd":passwd})
+  if not res: res=tb.find_one({"id":IdorPhone,"passwd":passwd})
   if not res: return -1,"用户名或密码错误"
   return 1,newSession(res['id'])
 

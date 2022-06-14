@@ -29,7 +29,7 @@
       </el-form-item>
 
       <el-form-item label="电话" prop="phone">
-        <el-input v-model.number="form.name"></el-input>
+        <el-input v-model.number="form.phone"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="submitForm">提交</el-button>
@@ -43,11 +43,11 @@ export default {
   data() {
     return {
       form: {
-        username: "",
-        password: "",
-        role:"",
-        name:"",
-        phone:"",
+        username: "2020211838",
+        password: "111111",
+        role:"学生",
+        name:"王昱杰",
+        phone:"19509991727",
       },
       
       rules: {
@@ -59,10 +59,13 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$axios.post("http://192.168.1.88:1024/api/login",
+      this.$axios.post("http://192.168.1.88:1024/api/signup",
       {
-        "act":username,
-        "pwd":password
+        "act":this.form.username,
+        "pwd":this.form.password,
+        "role":this.form.role,
+        "name":this.form.name,
+        "phone":this.form.phone
       })//传参
       .then(function(res){
           console.log(res)          

@@ -2,8 +2,6 @@
 from cgitb import reset
 from datetime import datetime,timedelta
 import Cfg;cfg=Cfg.cfg
-from Log import log 
-
 realnow=datetime.now 
 
 def now():

@@ -14,8 +14,8 @@ from flask_cors import *
 from user import user_api
 
 app = Flask(__name__,template_folder='')
-CORS(app, supports_credentials=True)
 app.register_blueprint(user_api)
+CORS(app, supports_credentials=True)
 
 
 if __name__ == '__main__':
