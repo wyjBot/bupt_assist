@@ -4,9 +4,9 @@ from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.Database import conn
 
-tb=conn["course"]
-tbCourse=conn["course"]
-tbUser=conn["user"]
+tb=conn.create("course")
+tbCourse=conn.create("course")
+tbUser=conn.create("user")
 
 ################class_mgmt##################
 def search_class(userId,str="操作系统"):
@@ -47,6 +47,9 @@ def search_class(userId,str="操作系统"):
     if not kmp(str,x["name"]):continue
     res.append(x.copy())
   return res
+
+def list_class(userId):
+  ret=tb.find_all()
 
 def join_class(classId,userId):
   res=tbCourse.find_one({"id":classId})
