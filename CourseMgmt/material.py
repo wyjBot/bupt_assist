@@ -17,7 +17,7 @@ def list_class_material(classId=-1):
   """list all class when classId=-1"""
   if classId==-1:res=tbMaterial.find_all({})
   else:res=tbTask.find_all({"id":classId})
-  return res
+  return res,"这是所有的task"
 
 def search_class_material(classId=-1,match="有限状态自动机"):
   """search all class_material when classId=-1"""
