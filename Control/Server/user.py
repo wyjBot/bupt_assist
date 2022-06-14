@@ -41,8 +41,7 @@ def signup():
       if not parm.issubset(set(data)):return ans(400,"参数不足")
       flag,res=User.sign_up(data["act"],data["pwd"],data["role"],data["name"],data["phone"])
       return ans(flag,res)
-    except Exception as e:
-      raise e
+    except Exception as e: # raise e
       return ans(400,"注册失败,请联系系统管理员")
 
 

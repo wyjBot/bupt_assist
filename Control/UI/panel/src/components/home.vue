@@ -42,9 +42,10 @@
 
 
 <el-main>
-   <el-table :data="filterTableData" style="width: 100%">
-    <el-table-column label="Date" prop="date" />
-    <el-table-column label="Name" prop="name" />
+   <el-table :data="filterTableData"  :key="refreshNum" style="width: 100%">
+    <el-table-column label="名称" prop="name" />
+    <el-table-column label="星期" prop="day" />
+    <el-table-column label="教授" prop="speaker" />
     <el-table-column align="right">
       <template #header>
         <el-input v-model="search" size="small" placeholder="Type to search" />
@@ -67,31 +68,35 @@
 </el-container>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  data(){
-      return {
-      form: {
-        username: "2020211838",
-        password: "111111",
-      },
-    }
-  },
-  onMounted(){
-    console.log("mounted")
-    const user:User={
 
-    }
-  }
 
-})
-</script>
+
 
 <script lang="ts" setup>
 import { Document, Menu as IconMenu, Location,
   Setting, } from '@element-plus/icons-vue'
-import { defineComponent,computed, reactive, ref, toRefs } from 'vue';
+import axios from 'axios';
+import { ElMessage, ElMessageBox } from 'element-plus'
+import { defineComponent, reactive, ref, toRefs } from 'vue';
+import {onMounted,onBeforeUpdate,onUpdated,onBeforeMount,onBeforeUnmount,onUnmounted,computed,watch } from "vue";
 
+import {defineExpose ,getCurrentInstance} from 'vue';
+import cookies from 'vue-cookies'
+const session = cookies.get("session")
+console.log(session)
+
+interface User {
+  name: string
+  day: string
+  speaker:string
+  
+}
+const handleEdit = (index: number, row: User) => {
+  console.log(index, row)
+}
+const handleDelete = (index: number, row: User) => {
+  console.log(index, row)
+}
 
 const isCollapse = ref(true)
 const handleOpen = (key: string, keyPath: string[]) => {
@@ -100,8 +105,8 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
-const search = ref('')
 
+const search = ref('')
 
 const filterTableData = computed(() =>
   tableData.filter(
@@ -110,37 +115,71 @@ const filterTableData = computed(() =>
       data.name.toLowerCase().includes(search.value.toLowerCase())
   )
 )
-const handleEdit = (index: number, row: User) => {
-  console.log(index, row)
-}
-const handleDelete = (index: number, row: User) => {
-  console.log(index, row)
-}
 
-interface User {
-  name: string
-  day: string
-  
-
-  address: string
-}
 const tableData: User[] = [
   {
-    name: 'Tom',
-    date: '2016-05-03',
-    address: 'No. 189, Grove St, Los Angeles',
-  },
-  {
-    name: 'John',
-    date: '2016-05-02',
-    address: 'No. 189, Grove St, Los Angeles',
+    name: '数据结构',
+    day: '星期一',
+    speaker: '周丽',
   },
 ]
+
+axios.post("http://192.168.1.88:1024/api/signin",
+{
+  session:session,
+})//传参
+.then((res: any)=>{
+if(res.data.code==1)
+{
+    console.log(res.data.mess)
+    ElMessage({
+      type: 'info',
+      message: `提示: 登录成功`,
+    })
+    this.$router.push({name:'home',params: {id:'10001'}})
+}
+else{
+  throw res.data.mess
+}
+})
+.catch(function(err: any){
+    ElMessage({
+      type: 'info',
+      message: `提示: ${err}`,
+    })
+});
 
 const addTodo = (user: User): void => {
   tableData.push(user)
 }
+defineExpose({addTodo,search})
+</script>
 
+
+<script lang="ts">
+export default defineComponent({
+  mounted(){
+      console.log("mounted")
+      const user:User={
+        name: '计算机系统基础',
+        day: '星期一',
+        speaker: '周峰',
+      }
+      this.addTodo(user)
+      this.search="1"
+      this.search=""
+  },
+  data(){
+      return {
+      form: {
+        username: "2020211838",
+        password: "111111",
+      },
+      refreshNum:1
+    }
+  },
+
+})
 </script>
 
 <style>
