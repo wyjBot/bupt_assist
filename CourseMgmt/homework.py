@@ -88,7 +88,7 @@ def create_class_task(classId,data):
 def view_task(taskId):
   '''return a dict contain key same as "create_task" '''
   res=tbTask.find_one({"taskId":taskId})
-  return res[0],"已返回该task"
+  return res,"已返回该task"
 
 ######hmwk_mgmt############
 
@@ -96,7 +96,7 @@ def view_hmwk(hmwkId):
   '''ret a dict contain all hmwk version '''
   ret=tbHmwk.find_one({"hmwkId":hmwkId})
   if not ret:return -1,"不存在该hmwkId"
-  return ret
+  return ret,"已经返回该作业"
 
 def rollback_hmwk(hmwkId,version):
   """reset hmwk version to old ret 1 when suc
@@ -104,7 +104,7 @@ def rollback_hmwk(hmwkId,version):
   res=tbHmwkRollBack.find_one({"hmwkId":hmwkId,"version":version})
   if not res:return 0,"不存在该版本"
   tbHmwk.update({"hmwkId":hmwkId},res)
-  return 
+  return 1,"已返回版本"
 
 def submit_hmwk(data):
   """generate and ret a hmwkId for the taskId of user"""
@@ -126,7 +126,7 @@ def submit_hmwk(data):
   data["hmwkId"]=hmwkId
   data["version"]=0
   tbHmwk.insert(data)
-  return hmwkId
+  return hmwkId,"已经提交作业"
 
 def update_hmwk(data):
   '''return now versionId'''
@@ -147,4 +147,4 @@ def update_hmwk(data):
   data["version"]=res["version"]+1
   tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
   tbHmwk.update({"hmwkId":data["hmwkId"]},data)
-  return data["version"]
+  return data["version"],"已经更新作业"
