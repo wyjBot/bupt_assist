@@ -6,7 +6,9 @@ from Utils.Database import conn
 
 
 ################class_mgmt##################
-def search_class(str="操作系统"):
+def search_class(tb,userId,str="操作系统"):
+  '''  
+  tb为用户-课程表,当str为“”时返回所有课程
   res=[
     {
       "id":12,
@@ -33,15 +35,67 @@ def search_class(str="操作系统"):
       "已加入":True,
     },
   ]
-  return
+  '''
+  ret=tb.find_all()
+  res=list()
+  for x in ret:
+    if not x["userId"]==userId:continue
+    if not kmp(str,x["name"]):continue
+    res.append(x.copy())
+  return res
 
-def join_class(classId):
-  return
+def join_class(tb,tbCourse,classId,userId):
+  res=tbCourse.find_one({"id":classId})
+  if not res:return -1,"不存在该课程"
+  if tb.find_one({"id":classId,"userId":userId}):return -2,"该课程已加入"
+  res["userId"]=userId
+  tb.insert(res)
+  return 1,"已加入该学生课表"
 
-def quit_class(classId): 
-  return
+def quit_class(tb,tbCourse,classId,userId):
+  res=tbCourse.find_one({"id":classId})
+  if not res:return -1,"不存在该课程"
+  if not tb.find_one({"id":classId,"userId":userId}):return -2,"该学生无该门课程"
+  res["userId"]=userId
+  tb.remove(res)
+  return 1,"已退课"
 
-def update_class(classId,data:dict):
+def update_class(tb,tbCourse,tbUser,classId,userId,data:dict):
   """data为dict格式"""
-  return
+  res=tbUser.find_one({"id":userId})
+  if not res:return -1,"用户名错误"
+  if res["role"]==0:return -2,"用户权限错误"
+  tbCourse.update({"id":classId},data)
+  ret=tb.find_all({"id":classId})
+  for x in ret:
+    data["userId"]=x["userId"]
+    tb.update({"id":classId,"userId":x["userId"]},data)
+  return 1,"已更新课程信息"
 
+def kmp(keyword,name):#返回值0代表没有，1代表有
+    if isinstance(keyword,str) and isinstance(name,str):#判断输入条件
+        if len(keyword)==0:
+            return 1
+        if len(name)==0:
+            return 0
+        nextplace=[-1 for i in range(len(keyword))]#初始化next数组
+        nextplace[1]=0
+        i=1
+        j=0
+        while i<len(keyword)-1:#计算next数组
+            if j==-1 or keyword[i]==keyword[j]:
+                i+=1
+                j+=1
+                nextplace[i]=j
+            else:
+                j=nextplace[j]
+        a=b=0#初始化串的开始位置
+        while(a<len(name) and b<len(keyword)):#kmp算法
+            if b==-1 or name[a]==keyword[b]:
+                a+=1
+                b+=1
+            else:
+                b=nextplace[b]
+        if s==len(keyword):#匹配成功
+            return 1
+    return 0
