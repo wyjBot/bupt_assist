@@ -10,13 +10,15 @@ class Table:
   def __init__(self,tbname):
     self.name=tbname
     try: 
-      fr=open(pwd+tbname+".json")
-      self.lines=js.load(fr)
+      fr=open(pwd+tbname+".json",encoding='utf-8')
+      fs=fr.read()
+      self.lines=js.loads(fs)
       fr.close()
     except:self.lines=list()
     try: 
-      fr=open(pwd+tbname+".ukVals")
-      self.ukVals=js.load(fr)
+      fr=open(pwd+tbname+".ukVals",encoding='utf-8')
+      fs=fr.read()
+      self.ukVals=js.loads(fs)
       self.ukeys=list(self.ukVals.keys())
       fr.close()
     except:
@@ -93,7 +95,7 @@ class Table:
     
   def remove(self,dataX):
     '''必须传入完整的数据才可删除'''
-    for ukey in self.xdata:
+    for ukey in self.ukeys:
       self.ukVals[ukey].remove(dataX[ukey])
     self.lines.remove(dataX)
     self._save()
