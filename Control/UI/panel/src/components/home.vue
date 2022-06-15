@@ -75,15 +75,9 @@
         <el-input v-model="search" size="small" placeholder="Type to search" />
       </template>
       <template #default="scope">
-        <el-button size="small" @click="handleEdit(scope.$index, scope.row)"
-          >Edit</el-button
-        >
-        <el-button
-          size="small"
-          type="danger"
+         <el-button size="small"
           @click="handleDelete(scope.$index, scope.row)"
-          >Delete</el-button
-        >
+          type="info" >查看</el-button >
       </template>
     </el-table-column>
   </el-table>
