@@ -6,7 +6,7 @@ from webrpc import rjs
 from flask import request,redirect,make_response
 from Utils import User
 from Utils import Database
-from Utils.User import vrfSession
+from Utils.user import vrfSession
 
 
 user_api = Blueprint('user_api', __name__)
