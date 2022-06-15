@@ -42,7 +42,7 @@
         <el-menu-item index="1-2" @click="listmetal">资料</el-menu-item>
         <el-menu-item index="1-3" @click="listhmwk">作业</el-menu-item>
         <!-- <el-sub-menu index="1-3" @click="listexam">子菜单</el-sub-menu> -->
-        <el-menu-item index="1-4" @click="listhmwk">考试</el-menu-item>
+        <el-menu-item index="1-4" @click="listexam">考试</el-menu-item>
     </el-sub-menu>
     <el-menu-item index="2">
       <el-icon><icon-menu /></el-icon>
@@ -110,8 +110,6 @@ interface User {
   speaker:string
   
 }
-// const getCookie = (name:string) => document.cookie.match(`[;\s+]?${name}=([^;]*)`)?.pop();
-// let session:string=getCookie("session");
 
 let timer:any;
 
@@ -157,7 +155,7 @@ export default defineComponent({
       this.session = this.$cookies.get("session")
       if(this.session=="") this.$router.push("/login")
       timer = setInterval(() => {
-        console.log("开始---");
+        // console.log("开始---");
       }, 1000);
   },
   destroyed(){
@@ -215,8 +213,14 @@ export default defineComponent({
       });
     },
 
-    },
     listhmwk(){
+      this._tableHead.length=0;
+      this._tableHead.pop()
+      this._tableHead.pop()
+      this._tableHead.push({label:"课程",prop:"className"})
+      this._tableHead.push({label:"截止时间",prop:"ddl"})
+    },
+    listexam(){
       this._tableHead.length=0;
       this._tableHead.pop()
       this._tableHead.pop()
@@ -232,12 +236,8 @@ export default defineComponent({
       }
       this.tableData.push(user)
     },
+  }
    
-}
-
-
-  },
-
 })
 </script>
 

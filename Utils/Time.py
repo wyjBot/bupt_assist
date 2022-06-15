@@ -15,10 +15,20 @@ def now():
 def resetTo(tgt_tim:datetime):
   cfg['now']=tgt_tim
 
+
+
 def rate(num:int):
   if num<1: 
     return "错误,最小为一"
   cfg['rate']=num
+
+def stop():
+  now()
+  cfg['stop']=True
+
+def start():
+  cfg['rate_time_b']=realnow()
+  cfg['stop']=False
 
 if __name__=="__main__":
   rate(60)
