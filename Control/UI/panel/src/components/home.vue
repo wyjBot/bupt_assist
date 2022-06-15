@@ -95,11 +95,13 @@
 
 
 
+<script lang="ts" setup>
+import { Document, Menu as IconMenu, Location,
+  Setting, } from '@element-plus/icons-vue'
+</script>
 
 
 <script lang="ts">
-import { Document, Menu as IconMenu, Location,
-  Setting, } from '@element-plus/icons-vue'
 import axios from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus'
 import {reactive, ref, toRefs } from 'vue';
@@ -115,7 +117,7 @@ interface User {
   
 }
 
-
+let timer:any;
 
 const addTodo = (user: User): void => {
   console.log("nmsl")
@@ -158,13 +160,12 @@ export default defineComponent({
       console.log("mounted")
       this.session = this.$cookies.get("session")
       if(this.session!="") console.log(this.session)
-      const timer = setInterval(() => {
+      timer = setInterval(() => {
         console.log("开始---");
       }, 1000);
   },
   destroyed(){
-      // clearInterval(this.timer)
-      // // this.timer = null
+      clearInterval(timer)
   },
   computed:{
     tableHead:function(){
