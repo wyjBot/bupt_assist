@@ -55,15 +55,6 @@ def list_user_task(userId):
   log("list_user_task:user="+userId,0)
   return ret,"这是这个学生的所有task"
 
-def search_user_task(userId,):
-  #ret={}
-  if not tb.find_one({"id":classId,"userId":userId}):return -1,"该学生没有这门课"
-  res=tb.find_all({"userId":userId})
-  ret=list()
-  for x in res:
-    ret.extend(tbCourse.find_one({"id":x["id"]}))
-  log("search_class_task",0)
-  return ret,"返回的是课程的list"
 
 def create_class_task(classId,data):
   '''parameter data will be a dict,contain key
