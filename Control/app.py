@@ -5,16 +5,18 @@ import time,random,sys,os,shutil
 import json as js
 import numpy as np
 from multiprocessing import Process
-sys.path.append('.')
 from Utils.Log import log 
 from Utils.database import conn
 from Utils.Cfg import cfg
 from datetime import datetime,timedelta
 from flask_cors import *
-from user import user_api
+sys.path.append('..')
+from Control.user import user_api
+from Control.crouse import api as crouse_api
 
 app = Flask(__name__,template_folder='')
 app.register_blueprint(user_api)
+app.register_blueprint(crouse_api)
 CORS(app, supports_credentials=True)
 
 

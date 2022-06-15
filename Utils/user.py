@@ -3,6 +3,7 @@ import sys,os.path as path
 sys.path.append(path.dirname(__file__))
 sys.path.append('.')
 from Utils.database import conn
+from Utils.Log import log
 from datetime import datetime
 import json as js
 import Md5 as md5
@@ -10,7 +11,7 @@ import Md5 as md5
 tb=conn["user"]
 
 
-def sign_up(id,passwd,role,name,phone):
+def sign_up(id,passwd,role,name,phone,addr):
   if role not in ["学生","教师"]:
     return -101,"请选择正确的用户角色(学生/教师)"
   if len(phone)!=11 or phone[0]!='1':
@@ -28,6 +29,7 @@ def sign_up(id,passwd,role,name,phone):
       "phone":phone,
       "name":name,
       "passwd":passwd,
+      "addr":addr,
       "sessionId":None
     }
   if  tb.find_one({"phone":phone}):return -11,"手机号已注册"

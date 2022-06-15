@@ -38,11 +38,11 @@
         <el-icon><location /></el-icon>
         <span>学业</span>
       </template>
-        <el-menu-item index="1-1" @click="viewclass">课程表</el-menu-item>
-        <el-menu-item index="1-2" @click="viewmetal">资料</el-menu-item>
-        <el-menu-item index="1-3" @click="viewhmwk">作业</el-menu-item>
-        <!-- <el-sub-menu index="1-3" @click="viewexam">子菜单</el-sub-menu> -->
-        <el-menu-item index="1-4" @click="viewhmwk">考试</el-menu-item>
+        <el-menu-item index="1-1" @click="listclass">课程表</el-menu-item>
+        <el-menu-item index="1-2" @click="listmetal">资料</el-menu-item>
+        <el-menu-item index="1-3" @click="listhmwk">作业</el-menu-item>
+        <!-- <el-sub-menu index="1-3" @click="listexam">子菜单</el-sub-menu> -->
+        <el-menu-item index="1-4" @click="listhmwk">考试</el-menu-item>
     </el-sub-menu>
     <el-menu-item index="2">
       <el-icon><icon-menu /></el-icon>
@@ -153,7 +153,7 @@ export default defineComponent({
   mounted(){
       console.log("mounted")
       this.session = this.$cookies.get("session")
-      if(this.session!="") console.log(this.session)
+      if(this.session=="") this.$router.push("/login")
       timer = setInterval(() => {
         console.log("开始---");
       }, 1000);
@@ -174,13 +174,6 @@ export default defineComponent({
     }
   },
   methods:{
-    viewhmwk(){
-      this._tableHead.length=0;
-      this._tableHead.pop()
-      this._tableHead.pop()
-      this._tableHead.push({label:"课程",prop:"className"})
-      this._tableHead.push({label:"截止时间",prop:"ddl"})
-    },
     handleEdit (index: number, row: User){
       console.log(index, row)
     },
@@ -194,7 +187,17 @@ export default defineComponent({
     handleClose(key: string, keyPath: string[]){
       console.log(key, keyPath)
     },
-    viewmetal(){
+    listclass(){
+
+    },
+    listhmwk(){
+      this._tableHead.length=0;
+      this._tableHead.pop()
+      this._tableHead.pop()
+      this._tableHead.push({label:"课程",prop:"className"})
+      this._tableHead.push({label:"截止时间",prop:"ddl"})
+    },
+    listmetal(){
       // this._tableHead.length=0;
       const user:User={
         name: '计算机系统基础',
@@ -203,31 +206,7 @@ export default defineComponent({
       }
       this.tableData.push(user)
     },
-    viewclass(){
-      axios.post("http://192.168.1.88:1024/api/classlist",
-      {
-        session:this.session,
-      })//传参
-      .then((res: any)=>{
-      if(res.data.code==1)
-      {
-          console.log(res.data.mess)
-          ElMessage({
-            type: 'info',
-            message: `提示: 登录成功`,
-          })
-          // this.$router.push({name:'home',params: {id:'10001'}})
-      }
-      else{
-        throw res.data.mess
-      }
-      })
-      .catch(function(err: any){
-          ElMessage({
-            type: 'info',
-            message: `提示: ${err}`,
-          })
-      });
+   
 }
 
 

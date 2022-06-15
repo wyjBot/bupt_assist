@@ -32,13 +32,17 @@
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { defineComponent, reactive, ref, toRefs } from 'vue';
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+var cookies= require('cookie-parser');
+console.log(cookies.get("bbb"));
+
+
 export default defineComponent({
 
   data(){
       return {
       form: {
-        username: "2020211838",
-        password: "111111",
+        username: "2020211839",
+        password: "12345678",
       },
       rules: {
         username: [{ required: true, message: "请输入账号", trigger: "blur" }],
@@ -59,15 +63,16 @@ export default defineComponent({
       .then((res: any)=>{
         if(res.data.code==1)
         {
-           console.log(res.data.mess)
            ElMessage({
               type: 'info',
               message: `提示: 登录成功`,
            })
+           this.$cookies.set("session",res.data.mess)
            this.$router.push({name:'home',params: {id:'10001'}})
         }
         else{
           throw res.data.mess
+          console.log(res.data.code)
         }
       })
       .catch(function(err: any){
