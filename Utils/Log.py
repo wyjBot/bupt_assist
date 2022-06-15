@@ -9,7 +9,7 @@ warnPwd=logdir+"warn.log"
 errorPwd=logdir+"error.log"
 
 
-def log(mess,level=0):
+def log(mess,level=1):
   if not path.exists(logdir): os.mkdir(logdir)
   """
   0=act 1=info 2=warn 3=error
