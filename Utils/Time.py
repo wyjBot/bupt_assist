@@ -21,6 +21,6 @@ def rate(num:int):
   cfg['rate']=num
 
 if __name__=="__main__":
-  rate(3600)
-  resetTo(datetime(1999,1,1))
+  rate(60)
+  resetTo(datetime(2000,1,1))
   print(now())
