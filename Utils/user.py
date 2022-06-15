@@ -46,7 +46,7 @@ def sign_in(IdorPhone,passwd):
 
 def newSession(userId):
   sessionId =md5.en(str(userId)+str(datetime.now()))
-  tb.update({"id":userId},{"sessionId":sessionId})
+  tb.update({"id":userId},{"session":sessionId})
   return sessionId 
 
 def vrfSession(serial):

@@ -32,8 +32,6 @@
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { defineComponent, reactive, ref, toRefs } from 'vue';
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
-var cookies= require('cookie-parser');
-console.log(cookies.get("bbb"));
 
 
 export default defineComponent({
@@ -55,7 +53,7 @@ export default defineComponent({
       this.login(this.form.username, this.form.password)
     },
     login(username: string, password: string){
-      axios.post("http://192.168.1.88:1024/api/signin",
+      axios.post("/api/signin",
       {
         "act":username,
         "pwd":password

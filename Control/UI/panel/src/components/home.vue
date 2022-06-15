@@ -188,8 +188,11 @@ export default defineComponent({
       console.log(key, keyPath)
     },
     listclass(){
-      axios.post("http://192.168.1.88:1024/api/signin",
+      axios.post("/api/crouse/list",
+      // axios.post("/api/signin",
       {
+        // "act":"username",
+        // "pwd":"password",
         "session":this.session
       })//传参
       .then((res: any)=>{
@@ -198,6 +201,10 @@ export default defineComponent({
            this.$cookies.set("session",res.data.mess)
         }
         else if(res.data.code==-1){
+           ElMessage({
+              type: 'info',
+              message: `提示: 登录失效`,
+           })
            this.$router.push({name:'login',params: {id:'10001'}})
         }
         else{
