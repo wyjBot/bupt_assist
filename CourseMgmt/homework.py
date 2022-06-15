@@ -1,16 +1,18 @@
 #put the file uploaded to root dir /Upload and classify them by time
 #the compress tools is under package utils
 import sys,os.path as path
-sys.path.append(path.dirname(__file__))
+sys.path.append(path.dirname(path.dirname(__file__)))
+import Utils
+from Utils.Time import *
 from Utils.DataFrame import *
-from Utils.Database import conn
+from Utils.database import conn
 from Utils.Cfg import cfg
 
-tbTask=conn["task"]
-tb=conn["userCourse"]
-tbCourse=conn["course"]
-tbHmwk=conn["hmwk"]
-tbHmwkRollBack=conn["hmwkRollBack"]
+tbTask=conn.create("task")
+tb=conn.create("userCourse")
+tbCourse=conn.create("course")
+tbHmwk=conn.create("hmwk")
+tbHmwkRollBack=conn.create("hmwkRollBack")
 ###########task_mgmt###########
 def list_class_task(classId=-1):
   """list all class when classId=-1"""
@@ -23,10 +25,7 @@ def list_class_task(classId=-1):
   """
   if classId==-1:res=tbTask.find_all({})
   else:res=tbTask.find_all({"id":classId})
-  ret=dict()
-  for x in range(len(res)):
-    ret["x"]=res[x]
-  return ret,"这是这门课的所有task"
+  return res,"这是这门课的所有task"
 
 def search_class_task(userId,classId=-1,match="有限状态自动机"):
   """search all class_task when classId=-1"""
@@ -46,13 +45,9 @@ def list_user_task(userId):
   }
   """
   res=tb.find_all({"userId":userId})
-  temp=dict()
-  ret=dict()
-  count=1
+  ret=list()
   for x in res:
-    temp=list_class_task(x["id"])
-    for x in range(len(temp)):
-      ret[count]=temp[x]
+    ret.extend(list_class_task(x["id"]))
   return ret
 
 def search_user_task(userId,):
@@ -69,7 +64,7 @@ def create_class_task(classId,data):
   name, des, attentionId,Deadline
   the func return taksId
   '''
-  res=tbTask.find_all()
+  res=tbTask.find_all({})
   data["classId"]=classId
   data["taskId"]=len(res)+1
   tbTask.insert(data)
@@ -148,3 +143,30 @@ def update_hmwk(data):
   tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
   tbHmwk.update({"hmwkId":data["hmwkId"]},data)
   return data["version"],"已经更新作业"
+
+if __name__ == "__main__":
+  data1={
+    "name":"第一章习题",
+    "des":"一个习题",
+    "attentionId":1,
+    "deadline":str(now())
+  }
+  data2={
+    "name":"第二章习题",
+    "des":"二个习题",
+    "attentionId":2,
+    "deadline":str(now())
+  }
+  data3={
+    "name":"第一章习题",
+    "des":"一个习题",
+    "attentionId":3,
+    "deadline":str(now())
+  }
+  create_class_task(12, data1)
+  create_class_task(12, data2)
+  create_class_task(13, data3)
+  print("12: ",list_class_task(12))
+  print("13: ",list_class_task(13))
+  print("2020211839: ",list_user_task("2020211839"))
+  view_task(1)
