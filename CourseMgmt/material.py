@@ -21,15 +21,6 @@ def list_class_material(classId=-1):
   else:res=tbMaterial.find_all({"id":classId})
   return res,"这是所有的task"
 
-def search_class_material(classId=-1,match="有限状态自动机"):
-  """search all class_material when classId=-1"""
-  if not tb.find_one({"id":classId,"userId":userId}):return -1,"该学生没有这门课"
-  res=tb.find_all({"userId":userId})
-  ret=list()
-  for x in res:
-    ret.extend(tbCourse.find_one({"id":x["id"]}))
-  return ret,"返回的是课程的list"
-
 def view_material(materialId):
   """return all version """
   res=tbMaterial.find_one({"materialId":materialId})
