@@ -5,6 +5,7 @@ import sys,os.path as path
 sys.path.append(path.dirname(__file__))
 import Cfg;cfg=Cfg.cfg
 realnow=datetime.now 
+fromstr=datetime.fromisoformat
 
 def now():
   cfg['now']+=(realnow()-cfg['rate_time_b'])*cfg['rate']

@@ -97,7 +97,7 @@
 
 
 
-<script lang="ts" setup>
+<script lang="ts">
 import { Document, Menu as IconMenu, Location,
   Setting, } from '@element-plus/icons-vue'
 import axios from 'axios';
@@ -107,9 +107,6 @@ import {onMounted,onBeforeUpdate,onUpdated,onBeforeMount,onBeforeUnmount,onUnmou
 
 import {defineExpose ,getCurrentInstance} from 'vue';
 import cookies from 'vue-cookies'
-const session = cookies.get("session")
-console.log(session)
-
 
 interface User {
   name: string
@@ -117,124 +114,127 @@ interface User {
   speaker:string
   
 }
-const handleEdit = (index: number, row: User) => {
-  console.log(index, row)
-}
-const handleDelete = (index: number, row: User) => {
-  console.log(index, row)
-}
 
-const isCollapse = ref(true)
 
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
+
+const addTodo = (user: User): void => {
+  console.log("nmsl")
 }
 
-const search = ref('')
-const refreshNum=ref(1)
-const filterTableData = computed(() =>
-  tableData.filter(
-    (data) =>
-      !search.value ||
-      data.name.toLowerCase().includes(search.value.toLowerCase())
-  )
-)
-
-const mounted=onMounted(()=>
-{
+import { defineComponent}from 'vue';
+export default defineComponent({
+  data(){
+      return {
+        isCollapse :true,
+        refreshNum:1,
+        search : '',
+        tableData: [
+          {
+            name: '数据结构',
+            day: '星期一',
+            speaker: '周丽',
+          },
+        ],
+        _tableHead:[
+            {label: '名称', prop: 'name'},
+            {label: '星期', prop: 'day'},
+            {label: '教授', prop: 'speaker'},
+        ],
+        form: {
+          username: "2020211838",
+          password: "111111",
+        },
+      session:"",
+      timeSpeedValue:ref(1),
+      timeSpeedOptions:[
+        {label:"1x:1秒->1秒",value:1},
+        {label:"60x:1秒->1分",value:60},
+        {label:"3600x:1秒->1时",value:3600},
+        {label:"86400x:1秒->1天",value:86400},
+      ],
+    }
+  },
+  mounted(){
       console.log("mounted")
+      this.session = this.$cookies.get("session")
+      if(this.session!="") console.log(this.session)
+      const timer = setInterval(() => {
+        console.log("开始---");
+      }, 1000);
+  },
+  destroyed(){
+      // clearInterval(this.timer)
+      // // this.timer = null
+  },
+  computed:{
+    tableHead:function(){
+      return this._tableHead
+    },
+    filterTableData:function(){
+      return this.tableData.filter(
+      (data) =>
+        !this.search ||
+        data.name.toLowerCase().includes(this.search.toLowerCase())
+      )
+    }
+  },
+  methods:{
+    viewhmwk(){
+      this._tableHead.length=0;
+      this._tableHead.pop()
+      this._tableHead.pop()
+      this._tableHead.push({label:"课程",prop:"className"})
+      this._tableHead.push({label:"截止时间",prop:"ddl"})
+    },
+    handleEdit (index: number, row: User){
+      console.log(index, row)
+    },
+    handleDelete (index: number, row: User){
+      console.log(index, row)
+    },
+
+    handleOpen  (key: string, keyPath: string[]){
+      console.log(key, keyPath)
+    },
+    handleClose(key: string, keyPath: string[]){
+      console.log(key, keyPath)
+    },
+    viewmetal(){
+      // this._tableHead.length=0;
       const user:User={
         name: '计算机系统基础',
         day: '星期一',
         speaker: '周峰',
       }
-      addTodo(user)
-      search.value="1"
-      search.value=""
-})
-
-const tableData: User[] = [
-  {
-    name: '数据结构',
-    day: '星期一',
-    speaker: '周丽',
-  },
-]
-
-const tableHead=[
-      {label: '名称', prop: 'name'},
-      {label: '星期', prop: 'day'},
-      {label: '教授', prop: 'speaker'},
-  ]
-const timeSpeedValue=ref(1)
-const timeSpeedOptions=[
-  {label:"1x:1秒->1秒",value:1},
-  {label:"60x:1秒->1分",value:60},
-  {label:"3600x:1秒->1时",value:3600},
-  {label:"86400x:1秒->1天",value:86400},
-]
-
-const viewmetal=()=>{
-  tableHead.length=0;
-}
-
-const viewclass=()=>{
-  axios.post("http://192.168.1.88:1024/api/classlist",
-  {
-    session:session,
-  })//传参
-  .then((res: any)=>{
-  if(res.data.code==1)
-  {
-      console.log(res.data.mess)
-      ElMessage({
-        type: 'info',
-        message: `提示: 登录成功`,
+      this.tableData.push(user)
+    },
+    viewclass(){
+      axios.post("http://192.168.1.88:1024/api/classlist",
+      {
+        session:this.session,
+      })//传参
+      .then((res: any)=>{
+      if(res.data.code==1)
+      {
+          console.log(res.data.mess)
+          ElMessage({
+            type: 'info',
+            message: `提示: 登录成功`,
+          })
+          // this.$router.push({name:'home',params: {id:'10001'}})
+      }
+      else{
+        throw res.data.mess
+      }
       })
-      // this.$router.push({name:'home',params: {id:'10001'}})
-  }
-  else{
-    throw res.data.mess
-  }
-  })
-  .catch(function(err: any){
-      ElMessage({
-        type: 'info',
-        message: `提示: ${err}`,
-      })
-  });
+      .catch(function(err: any){
+          ElMessage({
+            type: 'info',
+            message: `提示: ${err}`,
+          })
+      });
 }
 
-
-const addTodo = (user: User): void => {
-  tableData.push(user)
-}
-defineExpose({addTodo})
-</script>
-
-
-<script lang="ts">
-import { defineComponent}from 'vue';
-export default defineComponent({
-  data(){
-      return {
-      form: {
-        username: "2020211838",
-        password: "111111",
-      },
-      refreshNum:1
-    }
-  },
-  methods:{
-    viewhmwk(){
-      // this.tableHead.length=0;
-      // this.tableHead.pop()
-      // this.tableHead.pop()
-      // this.tableHead.push({label:"课程",prop:"className"})
-    }
 
   },
 
