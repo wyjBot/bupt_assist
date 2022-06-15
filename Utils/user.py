@@ -52,6 +52,9 @@ def vrfSession(serial):
   if user:return user
   else:return None
 
+if __name__=='__main__':
+  sign_up("2020211838", "12345678", "教师", "珠峰", "17623596408")
+  sign_up("2020211839", "12345678", "学生", "彭木", "17623596409")
 # import json
 
 # class user:
