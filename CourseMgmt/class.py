@@ -47,39 +47,51 @@ def search_class(userId,str="操作系统"):
     if not x["userId"]==userId:continue
     if not kmp(str,x["name"]):continue
     res.append(x.copy())
-    log("search_class--"+str)
+    log("search_class--"+str,0)
   return res,"已返回查到的课程"
 
 def list_class(userId):
   ret=tb.find_all({"userId":userId})
+  log("list_class",0)
   return ret,"已返回所有课程"
 
 def join_class(classId,userId):
   res=tbCourse.find_one({"id":classId})
-  if not res:return -1,"不存在该课程"
+  if not res:
+    log("join_class fail",2)
+    return -1,"不存在该课程"
   if tb.find_one({"id":classId,"userId":userId}):return -2,"该课程已加入"
   res["userId"]=userId
   tb.insert(res)
+  log(userId+" join_class "+str(classId),0)
   return 1,"已加入该学生课表"
 
 def quit_class(classId,userId):
   res=tbCourse.find_one({"id":classId})
-  if not res:return -1,"不存在该课程"
+  if not res:
+    log("quit_class fail",2)
+    return -1,"不存在该课程"
   if not tb.find_one({"id":classId,"userId":userId}):return -2,"该学生无该门课程"
   res["userId"]=userId
   tb.remove(res)
+  log(userId+" quit_class "+str(classId),0)
   return 1,"已退课"
 
 def update_class(classId,userId,data:dict):
   """data为dict格式"""
   res=tbUser.find_one({"id":userId})
-  if not res:return -1,"用户名错误"
-  if res["role"]=="学生":return -2,"用户权限错误"
+  if not res:
+    log("update_class fail",2)
+    return -1,"用户名错误"
+  if res["role"]=="学生":
+    log("update fail",2)
+    return -2,"用户权限错误"
   tbCourse.update({"id":classId},data)
   ret=tb.find_all({"id":classId})
   for x in ret:
     data["userId"]=x["userId"]
     tb.update({"id":classId,"userId":x["userId"]},data)
+  log("updata_class "+str(classId),0)
   return 1,"已更新课程信息"
 
 def kmp(keyword,name):#返回值0代表没有，1代表有
@@ -122,7 +134,8 @@ if __name__ == '__main__':
       "教学楼":"n3多功能教学楼",
       "教室":641,
       "上课地点":18,#返回建筑Id
-
+      "最大人数":90,
+      "当前人数":77
   }
   data2={
       "id":13,
@@ -130,7 +143,8 @@ if __name__ == '__main__':
       "教师":"吴军",
       "上课时间":1,
       "持续时间":2,
-
+      "最大人数":30,
+      "当前人数":23
   }
   data3={
       "id":14,
@@ -142,7 +156,8 @@ if __name__ == '__main__':
       "教学楼":"n3多功能教学楼",
       "教室":641,
       "上课地点":18,#返回建筑Id
-
+      "最大人数":90,
+      "当前人数":77
   }
   data4={
       "id":15,
@@ -150,7 +165,8 @@ if __name__ == '__main__':
       "教师":"",
       "上课时间":1,
       "持续时间":2,
-
+      "最大人数":30,
+      "当前人数":23
   }
   update_class(12, "2020211838", data1)
   update_class(13, "2020211838", data2)
