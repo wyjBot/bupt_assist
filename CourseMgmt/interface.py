@@ -39,7 +39,7 @@ def search_class(userId,str="操作系统"):
     },
   ]
   '''
-  tb=conn["userCourse"]
+  tb=create["userCourse"]
   ret=tb.find_all()
   res=list()
   for x in ret:
