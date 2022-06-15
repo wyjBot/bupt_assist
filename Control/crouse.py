@@ -19,7 +19,7 @@ def list_class():
       return rjs(400,"参数缺失")
     userid=vrfSession(data['session'])
     if not userid:
-      return rjs(0,"登录失效")
+      return rjs(-1,"登录失效")
     ret=course.list_class(userid)
     return rjs(1,ret)
 

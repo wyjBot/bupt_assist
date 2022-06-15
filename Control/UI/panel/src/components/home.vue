@@ -110,6 +110,8 @@ interface User {
   speaker:string
   
 }
+// const getCookie = (name:string) => document.cookie.match(`[;\s+]?${name}=([^;]*)`)?.pop();
+// let session:string=getCookie("session");
 
 let timer:any;
 
@@ -124,6 +126,7 @@ export default defineComponent({
         isCollapse :true,
         refreshNum:1,
         search : '',
+        session: '',
         tableData: [
           {
             name: '数据结构',
@@ -140,7 +143,6 @@ export default defineComponent({
           username: "2020211838",
           password: "111111",
         },
-      session:"",
       timeSpeedValue:ref(1),
       timeSpeedOptions:[
         {label:"1x:1秒->1秒",value:1},
@@ -188,6 +190,30 @@ export default defineComponent({
       console.log(key, keyPath)
     },
     listclass(){
+      axios.post("http://192.168.1.88:1024/api/signin",
+      {
+        "session":this.session
+      })//传参
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+           this.$cookies.set("session",res.data.mess)
+        }
+        else if(res.data.code==-1){
+           this.$router.push({name:'login',params: {id:'10001'}})
+        }
+        else{
+          console.log(res.data.code)
+          throw res.data.mess
+        }
+      })
+      .catch(function(err: any){
+           ElMessage({
+              type: 'info',
+              message: `提示: ${err}`,
+           })
+      });
+    },
 
     },
     listhmwk(){
