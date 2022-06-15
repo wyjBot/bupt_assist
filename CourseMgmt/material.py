@@ -1,22 +1,24 @@
 import sys,os.path as path
 sys.path.append(path.dirname(__file__))
+sys.path.append(path.dirname(path.dirname(__file__)))
+import Utils
 from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
-from Utils.Database import conn
+from Utils.database import conn
 
 """The implementation principle of this module 
     is highly similar to hmwt module
     you could refer to detail annotation in homework.py/hmwt
 """
-tbMaterial=conn["material"]
-tb=conn["userCourse"]
-tbCourse=conn["course"]
-tbMaterialRollBack=conn["materialRollBack"]
+tbMaterial=conn.create("material")
+tb=conn.create("userCourse")
+tbCourse=conn.create("course")
+tbMaterialRollBack=conn.create("materialRollBack")
 ################class_material##################
 def list_class_material(classId=-1):
   """list all class when classId=-1"""
   if classId==-1:res=tbMaterial.find_all({})
-  else:res=tbTask.find_all({"id":classId})
+  else:res=tbMaterial.find_all({"id":classId})
   return res,"这是所有的task"
 
 def search_class_material(classId=-1,match="有限状态自动机"):
@@ -47,8 +49,11 @@ def create_class_material(classId,data):
     "descript":"the ppt of the first chapter",
     "attachId":2435,
   }
+  "classId":
+  "materialId"
   """
-  res=tbMaterial.find_all()
+  res=tbMaterial.find_all({})
+  data["id"]=classId
   data["materialId"]=len(res)+1
   data["version"]=0
   tbMaterial.insert(data)
@@ -67,7 +72,38 @@ def delete_class_material(materialId):
   res=tbMaterial.find_one({"materialId":materialId})
   tbMaterial.remove(res)
   ret=tbMaterialRollBack.find_all({"materialId":materialId})
-  for x in len(ret):
+  for x in range(len(ret)):
     tbMaterialRollBack.remove(ret[x])
   return 1,"已删除资料"
 
+if __name__ == "__main__":
+  data1={
+    "title":"课件1",
+    "descript":"the ppt of the first chapter",
+    "attachId":2435,
+  }
+  data2={
+    "title":"课件2",
+    "descript":"the ppt of the second chapter",
+    "attachId":2436,
+  }
+  data3={
+     "title":"课件1",
+    "descript":"the ppt",
+    "attachId":2437,
+  }
+  create_class_material(12, data1)
+  create_class_material(12, data2)
+  create_class_material(13, data3)
+  print("12: ",list_class_material(12))
+  print("13: ",list_class_material(13))
+  print("material1: ",view_material(1))
+  data4={
+    "title":"课件4",
+    "descript":"the ppt of the 4 chapter",
+    "attachId":2438,
+  }
+  update_class_material(1, data4)
+  print("12: ",list_class_material(12))
+  delete_class_material(2)
+  print("12: ",list_class_material(12))
