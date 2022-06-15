@@ -111,7 +111,7 @@ def kmp(keyword,name):#返回值0代表没有，1代表有
     return 0
 
 if __name__ == '__main__':
-  """
+  # """
   data1={
       "id":14,
       "name":"计算机组成",
@@ -136,8 +136,8 @@ if __name__ == '__main__':
   }
   update_class(14, "2020211838", data1)
   update_class(15, "2020211838", data2)
-  """
+  # """
   print("all: ",list_class("2020211839"))
   print("操作: ",search_class("2020211839","操作"))
-  jion_class(13, "2020211839")
+  join_class(13, "2020211839")
   print("操作: ",search_class("2020211839","操作"))
