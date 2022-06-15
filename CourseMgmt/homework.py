@@ -91,7 +91,9 @@ def view_task(taskId):
   '''return a dict contain key same as "create_task" '''
   res=tbTask.find_one({"taskId":taskId})
   log("view_task:task="+str(taskId),0)
-  return res,"已返回该task"
+  ret=list()
+  ret.append(res)
+  return ret,"已返回该task"
 
 ######hmwk_mgmt############
 
@@ -102,7 +104,9 @@ def view_hmwk(hmwkId):
     log("view_hmwk fail",2)
     return -1,"不存在该hmwkId"
   log("view_hmwk:hmwkId="+str(hmwkId),0)
-  return ret,"已经返回该作业"
+  res=list()
+  res.append(ret)
+  return res,"已经返回该作业"
 
 def rollback_hmwk(hmwkId,version):
   """reset hmwk version to old ret 1 when suc
@@ -167,7 +171,7 @@ def update_hmwk(data):
   return data["version"],"已经更新作业"
 
 if __name__ == "__main__":
-  """
+  
   data1={
     "name":"第一章习题",
     "des":"一个习题",
@@ -193,7 +197,7 @@ if __name__ == "__main__":
   print("13: ",list_class_task(13))
   print("2020211839: ",list_user_task("2020211839"))
   print("task1: ",view_task(1))
-  """
+  
   data4={#example
     "date":str(now()),
     "userId":2020211839,
