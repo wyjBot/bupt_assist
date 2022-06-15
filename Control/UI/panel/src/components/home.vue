@@ -1,10 +1,19 @@
 <template>
 <el-container>
+<el-header class="header">
+<div>
+<span class="timebox">3600倍</span>
+<el-button type="primary" plain>调节</el-button>
+<el-button type="info" plain>暂停</el-button>
+</div>
+
+</el-header>
+<el-container>
 <el-aside width="200px">
-  <el-switch v-model="isCollapse" />
-  <el-menu
-    default-active="2"
-    class="el-menu-vertical-demo"
+<el-switch v-model="isCollapse" />
+<el-menu
+  default-active="2"
+  class="el-menu-vertical-demo"
     :collapse="!isCollapse"
     @open="handleOpen"
     @close="handleClose"
@@ -65,6 +74,7 @@
   </el-table>
 
 </el-main>
+</el-container>
 </el-container>
 </template>
 
@@ -201,6 +211,10 @@ export default defineComponent({
   },
 
 })
+</script>
+
+<style lang="scss" scoped>
+@import '../assets/css/home.scss';
 </script>
 
 <style>

@@ -49,7 +49,7 @@ def search_class(userId,str="操作系统"):
   return res
 
 def list_class(userId):
-  ret=tb.find_all()
+  ret=tb.find_all({})
 
 def join_class(classId,userId):
   res=tbCourse.find_one({"id":classId})
