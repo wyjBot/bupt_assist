@@ -2,7 +2,7 @@ import os,sys,time,os.path as path
 sys.path.append(path.dirname(__file__))
 import DataFrame,Time
 absdir=path.dirname(__file__)
-logdir=path.dirname(absdir)+"/Control/log/"
+logdir=path.dirname(absdir)+"/Control/Log/"
 actPwd=logdir+"action.log" #用户操作
 warnPwd=logdir+"warn.log" #用户警告
 infoPwd=logdir+"info.log" #管理员通知信息/轻度错误

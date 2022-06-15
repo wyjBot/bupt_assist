@@ -7,7 +7,7 @@ import numpy as np
 from multiprocessing import Process
 sys.path.append('.')
 from Utils.Log import log 
-from Utils.Database import conn
+from Utils.database import conn
 from Utils.Cfg import cfg
 from datetime import datetime,timedelta
 from flask_cors import *
