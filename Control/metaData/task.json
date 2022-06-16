@@ -1,0 +1,43 @@
+[{
+    "name": "第一次作业",
+    "des": "完成1,3,4题",
+    "attentionId": 0,
+    "deadline": "2022-06-15 23:59:00",
+    "classId": 1
+},
+{
+    "name": "第一章",
+    "des": "",
+    "attentionId": 0,
+    "deadline": "2022-06-15 00:00:00",
+    "classId": 2
+},
+{
+    "name": "期末作业",
+    "des": "请独自完成",
+    "attentionId": 1,
+    "deadline": "2022-06-24 00:00:00",
+    "classId": 3
+},
+{
+    "name": "第二次作业",
+    "des": "请完成2,3(1)(2)",
+    "attentionId": 0,
+    "deadline": "2022-06-16 00:00:00",
+    "classId": 4
+},
+{
+    "name": "第二章",
+    "des": "完成3,5,7题",
+    "attentionId": 0,
+    "deadline": "2022-06-18 00:00:00",
+    "classId": 5
+},
+{
+    "name": "期末作业",
+    "des": "",
+    "attentionId": 2,
+    "deadline": "2022-06-25 00:00:00",
+    "classId": 6
+}
+]
