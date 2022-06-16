@@ -45,7 +45,7 @@ def search_class(userId,str="操作系统"):
   res=list()
   for x in ret:
     if not x["userId"]==userId:continue
-    if not kmp(str,x["name"]):continue
+    if not kmp(str,x["名称"]):continue
     temp=x.copy()
     temp.pop("userId")
     temp.pop("teacherId")
@@ -160,7 +160,7 @@ if __name__ == '__main__':
     "地点": 18,
     "teacherId": "2020211838"
   }
-  {
+  data4={
     "id": 4,
     "名称": "习近平新时代中国特色社会主义思想概论",
     "教师": "郭斌",
@@ -177,8 +177,9 @@ if __name__ == '__main__':
   
   join_class(1, "2020211839")
   join_class(2, "2020211839")
+  join_class(3, "2020211839")
   join_class(4, "2020211839")
   print("all: ",list_class("2020211839"))
-  print("操作: ",search_class("2020211839","操作"))
+  print("数: ",search_class("2020211839","数"))
   quit_class(2, "2020211839")
-  print("操作: ",search_class("2020211839","操作"))
+  print("数: ",search_class("2020211839","数"))
