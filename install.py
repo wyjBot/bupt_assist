@@ -38,7 +38,7 @@ fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
 # print(fr.read());exit(0)
 data1=js.load(fr)
 for item in data1:
-  actvt.actvt_create(item)
+  print(actvt.actvt_create(item))
 fr.close()
 
 
@@ -49,27 +49,17 @@ examtb.set_ukey("examId")
 fr=open("Control/metaData/exam.json","r",encoding='utf-8')
 data2=js.load(fr)
 for item in data2:
-  Exam.create_class_exam(item["classId"], item)
-"""
-data31={"title":"期末考试","开始时间":str(datetime(2022,6,22,10)),"持续时间":120,"地点":2}
-data32={"title":"期末考试","开始时间":str(datetime(2022,6,22,14)),"持续时间":120,"地点":18}
-data33={"title":"期末考试","开始时间":str(datetime(2022,6,23,9)),"持续时间":120,"地点":18}
-data34={"title":"期末考试","开始时间":str(datetime(2022,6,23,13,30)),"持续时间":120,"地点":11}
-data35={"title":"期末考试","开始时间":str(datetime(2022,6,24,8)),"持续时间":120,"地点":2}
-Exam.create_class_exam(1, data31)
-Exam.create_class_exam(2, data32)
-Exam.create_class_exam(3, data33)
-Exam.create_class_exam(4, data34)
-Exam.create_class_exam(5, data35)
-"""
+  print(Exam.create_class_exam(item["classId"], item))
+
 #task初始数据
+print("create task")
 from CourseMgmt import homework as hmwk
 tasktb=conn.create("task")
 tasktb.set_ukey("taskId")
 fr=open("Control/metaData/task.json","r",encoding='utf-8')
 data3=js.load(fr)
 for item in data3:
-  hmwk.create_class_task(item["classId"], item)
+  print(hmwk.create_class_task(item["classId"], item))
 """
 data36={"name":"第一次作业","des":"完成1,3,4题","attentionId":0,"deadline":str(datetime(2022,6,15,23,59))}
 data37={"name":"第一章","des":"","attentionId":0,"deadline":str(datetime(2022,6,15))}
@@ -130,3 +120,4 @@ userCoursetb=conn.create("userCourse")
 course.join_class(2,"2020211839")
 
 print(course.list_class("2020211839"))
+print(Exam.list_user_exam("2020211839"))

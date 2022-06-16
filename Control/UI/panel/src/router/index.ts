@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
         component: course
       },
       {
+        path: 'activity',
+        name: 'activity',
+        component: activity
+      },
+      {
         path: 'hmwk',
         name: 'hmwk',
         component: hmwk

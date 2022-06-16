@@ -17,9 +17,9 @@
         <!-- <el-sub-menu index="1-3" @click="goexam">子菜单</el-sub-menu> -->
         <el-menu-item index="1-4" @click="goexam">考试</el-menu-item>
     </el-sub-menu>
-    <el-menu-item index="2">
+    <el-menu-item index="2" @click="goactvt">
       <el-icon><icon-menu /></el-icon>
-      <template #title>活动管理</template>
+      <template #title >活动管理</template>
     </el-menu-item>
     <el-menu-item index="3">
       <el-icon><document /></el-icon>
@@ -71,6 +71,9 @@ export default defineComponent({
     },
     goexam(){
       this.$router.push("/exam")
+    },
+    goactvt(){
+      this.$router.push("/activity")
     },
   }
 })

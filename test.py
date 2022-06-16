@@ -30,69 +30,17 @@ for item in data:
 
 
 
-
+import json as js
 from Activity import actvt
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
-#exam初始数据
-from CourseMgmt import Exam
-examtb=conn.create("exam")
-data31={"title":"期末考试","开始时间":str(datetime(2022,6,22,10)),"持续时间":120,"地点":2}
-data32={"title":"期末考试","开始时间":str(datetime(2022,6,22,14)),"持续时间":120,"地点":18}
-data33={"title":"期末考试","开始时间":str(datetime(2022,6,23,9)),"持续时间":120,"地点":18}
-data34={"title":"期末考试","开始时间":str(datetime(2022,6,23,13,30)),"持续时间":120,"地点":11}
-data35={"title":"期末考试","开始时间":str(datetime(2022,6,24,8)),"持续时间":120,"地点":2}
-Exam.create_class_exam(1, data31)
-Exam.create_class_exam(2, data32)
-Exam.create_class_exam(3, data33)
-Exam.create_class_exam(4, data34)
-Exam.create_class_exam(5, data35)
-#task初始数据
-from CourseMgmt import homework as hmwk
-data36={"name":"第一次作业","des":"完成1,3,4题","attentionId":0,"deadline":str(datetime(2022,6,15,23,59))}
-data37={"name":"第一章","des":"","attentionId":0,"deadline":str(datetime(2022,6,15))}
-data38={"name":"期末作业","des":"请独自完成","attentionId":1,"deadline":str(datetime(2022,6,24))}
-data39={"name":"第二次作业","des":"请完成2,3(1)(2)","attentionId":0,"deadline":str(datetime(2022,6,16))}
-data40={"name":"第二章","des":"完成3,5,7题","attentionId":0,"deadline":str(datetime(2022,6,18))}
-data41={"name":"期末作业","des":"","attentionId":2,"deadline":str(datetime(2022,6,25))}
-hmwk.create_class_task(1, data36)
-hmwk.create_class_task(2, data37)
-hmwk.create_class_task(3, data38)
-hmwk.create_class_task(4, data39)
-hmwk.create_class_task(5, data40)
-hmwk.create_class_task(6, data41)
-
-#material初始数据
-from CourseMgmt import material
-data42={"title":"课件1","descript":"the ppt of the first chapter","attachId":2435}
-data43={"title":"课件2","descript":"the ppt of the second chapter","attachId":2436}
-data44={"title":"课件1","descript":"the ppt","attachId":2437}
-data45={"title":"pdf教材","descript":"教材","attachId":2438}
-data46={"title":"第一章","descript":"the ppt of the first chapter","attachId":2439}
-data47={"title":"第二章","descript":"the ppt of the second chapter","attachId":2440}
-data48={"title":"课件3","descript":"answer of chapter one","attachId":2441}
-data49={"title":"第一章第一节","descript":"the ppt of the first chapter one session","attachId":2442}
-data50={"title":"第一章第二节","descript":"the ppt of the first chapter two session","attachId":2443}
-data51={"title":"第二章第二节","descript":"the ppt of the second chapter two session","attachId":2444}
-updata_number_42=material.create_class_material(1, data42)
-material.create_class_material(1, data43)
-material.create_class_material(2, data44)
-material.create_class_material(3, data45)
-updata_number_46=material.create_class_material(4, data46)
-updata_number_47=material.create_class_material(4, data47)
-material.create_class_material(1, data48)
-material.create_class_material(5, data49)
-material.create_class_material(5, data50)
-material.create_class_material(5, data51)
-data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2445}
-data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2446}
-data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2447}
-material.update_class_material(updata_number_42, data52)
-material.update_class_material(updata_number_42, data52)
-material.update_class_material(updata_number_42, data52)
-
-#file初始数据
-conn.create("file")
+tbActvt.set_ukey("actvtId")
+fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
+# print(fr.read());exit(0)
+data1=js.load(fr)
+for item in data1:
+  actvt.actvt_create(item)
+fr.close()
 
 #user课程关联
 userCoursetb=conn.create("userCourse")
