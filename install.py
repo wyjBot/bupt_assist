@@ -47,7 +47,7 @@ tbActvt.set_ukey("actvtid")
 fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
 data1=js.load(fr)
 for item in data1:
-  activity.actvt_create(item)
+  actvt.actvt_create(item)
 fr.close()
 """
 data11={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
