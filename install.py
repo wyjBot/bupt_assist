@@ -34,7 +34,7 @@ import json as js
 from Activity import actvt
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
-tbActvt.set_ukey("actvtid")
+tbActvt.set_ukey("actvtId")
 fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
 # print(fr.read());exit(0)
 data1=js.load(fr)
