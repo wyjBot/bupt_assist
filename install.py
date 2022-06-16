@@ -1,6 +1,6 @@
 from datetime import datetime
 from Utils.database import conn
-from Time impport datetime
+from Utils.Time import datetime,timedelta
 
 #user初始数据（学号，密码，类型，姓名，电话，地址）
 from Utils import user
@@ -17,12 +17,12 @@ user.sign_up("2020211845", "12345678", "学生", "焦俊毅", "17623596415",14)
 user.sign_up("2020211846", "12345678", "学生", "高稚柳", "17623596416",16)
 user.sign_up("2020211847", "12345678", "学生", "肖晟轩", "17623596417",15)
 user.sign_up("2020211848", "12345678", "教师", "郜濒", "17623596418",23)
+user.sign_in("2020211839", "12345678")
 
 #class初始数据（id，name，教师，上课星期，上课节次，持续时间，建筑id）
 from CourseMgmt import course
-userCoursetb=conn.create("userCourse")
 coursetb=conn.create("course")
-usertb=conn.create("user")
+coursetb.set_ukey("id")
 data1={"id":1,"name":"计算机系统基础","教师":"陈锋","上课星期":0,"上课节次":3,"持续时间":3,"buildId":18}
 data2={"id":2,"name":"数据结构","教师":"郜濒","上课星期":1,"上课节次":2,"持续时间":2,"buildId":18}
 data3={"id":3,"name":"离散数学","教师":"珠峰","上课星期":2,"上课节次":3,"持续时间":3,"buildId":18}
@@ -43,6 +43,12 @@ course.update_class(7, "2020211840", data7)
 course.update_class(8, "2020211838", data8)
 course.update_class(9, "2020211841", data9)
 course.update_class(10, "2020211842", data10)
+
+
+#user加入课程
+userCoursetb=conn.create("userCourse")
+course.join_class(2,"2020211839")
+print(course.list_class("2020211839"))
 
 from Activities import interface
 tbActvt=conn.create("actvt")

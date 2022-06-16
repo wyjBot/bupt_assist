@@ -14,7 +14,8 @@ class Table:
       fs=fr.read()
       self.lines=js.loads(fs)
       fr.close()
-    except:self.lines=list()
+    except:
+      self.lines=list()
     try: 
       fr=open(pwd+tbname+".ukVals",encoding='utf-8')
       fs=fr.read()
@@ -24,6 +25,7 @@ class Table:
     except:
       self.ukeys=list()
       self.ukVals=dict()
+    self._save()
 
   def set_ukey(self,keyX):
     if keyX in self.ukeys:
@@ -102,10 +104,10 @@ class Table:
   
   def _save(self):
       fw=open(pwd+self.name+".json","w+",encoding='utf-8')
-      js.dump(self.lines, fw,ensure_ascii=False)
+      js.dump(self.lines, fw,ensure_ascii=False,indent=2)
       fw.close()
       fw=open(pwd+self.name+".ukVals","w+",encoding='utf-8')
-      js.dump(self.ukVals, fw,ensure_ascii=False)
+      js.dump(self.ukVals, fw,ensure_ascii=False,indent=4)
       fw.close()
 
   def _bak(self):
