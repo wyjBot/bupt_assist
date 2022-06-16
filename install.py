@@ -27,15 +27,6 @@ fr=open("Control/metaData/class.json","r",encoding='utf-8')
 data=js.load(fr)
 for item in data:
   course.update_class(item['id'], item['teacherId'], item)
-# course.update_class(2, "2020211848", data2)
-# course.update_class(3, "2020211838", data3)
-# course.update_class(4, "2020211841", data4)
-# course.update_class(5, "2020211842", data5)
-# course.update_class(6, "2020211843", data6)
-# course.update_class(7, "2020211840", data7)
-# course.update_class(8, "2020211838", data8)
-# course.update_class(9, "2020211841", data9)
-# course.update_class(10, "2020211842", data10)
 
 
 
@@ -70,26 +61,7 @@ data27={"type":2,"name":"club","InitiatorId":"2020211839","time":str(datetime(20
 data28={"type":1,"name":"movie","InitiatorId":"2020211845","time":str(datetime(2022,6,8,14)),"last":str(timedelta(hours=2))}
 data29={"type":1,"name":"study","InitiatorId":"2020211847","time":str(datetime(2022,6,8,13)),"last":str(timedelta(hours=5))}
 data30={"type":2,"name":"perform","InitiatorId":"2020211839","time":str(datetime(2022,6,8,18)),"last":str(timedelta(hours=1))}
-actvt.actvt_create(data11)
-actvt.actvt_create(data12)
-actvt.actvt_create(data13)
-actvt.actvt_create(data14)
-actvt.actvt_create(data15)
-actvt.actvt_create(data16)
-actvt.actvt_create(data17)
-actvt.actvt_create(data18)
-actvt.actvt_create(data19)
-actvt.actvt_create(data20)
-actvt.actvt_create(data21)
-actvt.actvt_create(data22)
-actvt.actvt_create(data23)
-actvt.actvt_create(data24)
-actvt.actvt_create(data25)
-actvt.actvt_create(data26)
-actvt.actvt_create(data27)
-actvt.actvt_create(data28)
-actvt.actvt_create(data29)
-actvt.actvt_create(data30)
+
 """
 #exam初始数据
 from CourseMgmt import Exam
