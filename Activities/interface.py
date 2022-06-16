@@ -13,6 +13,7 @@ from Utils.database import conn
 """
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
+tbUserCourse=conn["userCourse"]
 ##########活动管理与查看，加入#############
 def actvt_list(userId):
   ret=tbUserActvt.find_all({"userId":userId})
@@ -20,6 +21,8 @@ def actvt_list(userId):
     log("actvt_list fail",2)
     return 0,"userId错误"
   log("actvt_list:userId="+userId,0)
+  for x in ret:
+    x.pop("userId")
   return ret,"这是所有的活动"
 
 def actvt_create(data):
@@ -58,6 +61,7 @@ def actvt_join(userId,actvtId):
     return -3,"该活动为个人活动"
   res["userId"]=userId
   tbUserActvt.insert(res)
+
   log("actvt_join:actvtId="+str(actvtId),0)
   return 1,"已加入集体活动"
 
