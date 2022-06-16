@@ -2,6 +2,7 @@ import sys,os.path as path
 sys.path.append(path.dirname(__file__))
 sys.path.append(path.dirname(path.dirname(__file__)))
 import Utils
+from Utils.Log import *
 from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.database import conn
@@ -19,19 +20,32 @@ def list_class_material(classId=-1):
   """list all class when classId=-1"""
   if classId==-1:res=tbMaterial.find_all({})
   else:res=tbMaterial.find_all({"id":classId})
+  for x in res:
+    x.pop("id")
+  log("list_class_material:class="+str(classId),0)
   return res,"这是所有的task"
 
 def view_material(materialId):
   """return all version """
   res=tbMaterial.find_one({"materialId":materialId})
+  if not res:
+    log("view_task fail",2)
+    return -1,"不存在该taskId"
+  res.pop("materialId")
+  ret=list()
+  ret.append(res)
+  log("view_material:material="+str(materialId),0)
   return res,"已返回该material"
 
 def rollback_class_material(materialId,version):
   """恢复到历史版本"""
   res=tbMaterialRollBack.find_one({"materialId":materialId,"version":version})
-  if not res:return 0,"不存在该版本"
+  if not res:
+    log("rollback_class_material fail",2)
+    return 0,"不存在该版本"
   tbMaterial.update({"materialId":materialId},res)
-  return
+  log("rollback_hmwk:hmwkId="+str(hmwkId),0)
+  return 1,"已返回版本"
 
 def create_class_material(classId,data):
   """
@@ -45,18 +59,24 @@ def create_class_material(classId,data):
   """
   res=tbMaterial.find_all({})
   data["id"]=classId
-  data["materialId"]=len(res)+1
+  for i in range(len(res)+1):
+    if tbMaterial.find_one({"materialId":i}):continue
+    data["materialId"]=len(res)+1
   data["version"]=0
   tbMaterial.insert(data)
-  return len(res)+1,"已经创建资料"
+  log("create_class_task:class="+str(classId),0)
+  return data["materialId"],"已经创建资料"
 
 def update_class_material(materialId,data):
   "refer to the descript of update_hmwk"
   res=tbMaterial.find_one({"materialId":materialId})
-  if not res:return 0,"materialId错误"
+  if not res:
+    log("update_class fail",2)
+    return 0,"materialId错误"
   data["version"]=res["version"]+1
   tbMaterialRollBack.update({"materialId":materialId,"version":res["version"]},res)
   tbMaterial.update({"materialId":materialId},data)
+  log("update_class_material:materialId="+str(materialId),0)
   return data["version"],"已更新资料"
 
 def delete_class_material(materialId):
@@ -65,6 +85,7 @@ def delete_class_material(materialId):
   ret=tbMaterialRollBack.find_all({"materialId":materialId})
   for x in range(len(ret)):
     tbMaterialRollBack.remove(ret[x])
+  log("delete_class_material:material="+str(materialId),0)
   return 1,"已删除资料"
 
 if __name__ == "__main__":

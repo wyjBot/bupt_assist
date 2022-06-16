@@ -19,6 +19,8 @@ def list_class_exam(classId=-1):
   """list all class when classId=-1"""
   if classId==-1:res=tbExam.find_all({})
   else:res=tbExam.find_all({"classId":classId})
+  for x in res:
+    x.pop("classId")
   log("list_class_exam:class="+str(classId),0)
   return res,"这是所有的exam"
 
@@ -29,6 +31,8 @@ def search_class_exam(userId,classId=-1,match="有限状态自动机"):
   ret=list()
   for x in res:
     ret.extend(tbCourse.find_one({"id":x["id"]}))
+  for x in ret:
+    x.pop("userId")
   log("search_class_task",0)
   return ret,"返回的是课程的list"
 
@@ -43,10 +47,10 @@ def list_user_exam(userId):
   res=tb.find_all({"userId":userId})
   ret=list()
   for x in res:
-    temp=list_class_exam(x["id"])
-    ret.extend(temp[0])
+    temp=tbExam.find_all({"classId":x["id"]})
+    ret.extend(temp)
   log("list_user_exam:user="+userId,0)
-  return
+  return ret,"这是这个学生所有的考试"
 
 def search_user_exam(userId):
   #ret={}
@@ -55,6 +59,8 @@ def search_user_exam(userId):
   ret=list()
   for x in res:
     ret.extend(tbCourse.find_one({"id":x["id"]}))
+  for x in ret:
+    x.pop("userId")
   log("search_class_exam",0)
   return ret,"返回的是课程的list"
 

@@ -46,12 +46,16 @@ def search_class(userId,str="操作系统"):
   for x in ret:
     if not x["userId"]==userId:continue
     if not kmp(str,x["name"]):continue
-    res.append(x.copy())
+    temp=x.copy()
+    temp.pop("userId")
+    res.append(temp)
     log("search_class--"+str,0)
   return res,"已返回查到的课程"
 
 def list_class(userId):
   ret=tb.find_all({"userId":userId})
+  for x in ret:
+    x.pop("userId")
   log("list_class",0)
   return ret,"已返回所有课程"
 

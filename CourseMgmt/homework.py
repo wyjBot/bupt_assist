@@ -26,6 +26,8 @@ def list_class_task(classId=-1):
   """
   if classId==-1:res=tbTask.find_all({})
   else:res=tbTask.find_all({"classId":classId})
+  for x in res:
+    x.pop("classId")
   log("list_class_task:class="+str(classId),0)
   return res,"这是这门课的所有task"
 
@@ -36,6 +38,8 @@ def search_class_task(userId,classId=-1,match="有限状态自动机"):
   ret=list()
   for x in res:
     ret.extend(tbCourse.find_one({"id":x["id"]}))
+  for x in ret:
+    x.pop("userId")
   log("search_class_task",0)
   return ret,"返回的是课程的list"
 
@@ -50,8 +54,8 @@ def list_user_task(userId):
   res=tb.find_all({"userId":userId})
   ret=list()
   for x in res:
-    temp=list_class_task(x["id"])
-    ret.extend(temp[0])
+    temp=tbTask.find_all({"classId":x["id"]})
+    ret.extend(temp)
   log("list_user_task:user="+userId,0)
   return ret,"这是这个学生的所有task"
 
@@ -81,6 +85,10 @@ def create_class_task(classId,data):
 def view_task(taskId):
   '''return a dict contain key same as "create_task" '''
   res=tbTask.find_one({"taskId":taskId})
+  if not res:
+    log("view_task fail",2)
+    return -1,"不存在该taskId"
+  res.pop("taskId")
   log("view_task:task="+str(taskId),0)
   ret=list()
   ret.append(res)
@@ -94,6 +102,7 @@ def view_hmwk(hmwkId):
   if not ret:
     log("view_hmwk fail",2)
     return -1,"不存在该hmwkId"
+  ret.pop("hmwkId")
   log("view_hmwk:hmwkId="+str(hmwkId),0)
   res=list()
   res.append(ret)
