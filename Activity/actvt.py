@@ -14,6 +14,7 @@ from Utils.database import conn
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
 tbUserCourse=conn["userCourse"]
+tbUser=conn["user"]
 ##########活动管理与查看，加入#############
 def actvt_list(userId):
   ret=tbUserActvt.find_all({"userId":userId})
@@ -28,6 +29,7 @@ def actvt_list(userId):
     else:
       x["类型"]="公开活动"
     x.pop("type")
+    x["地点"]=x.pop("buildId")
     x["名称"]=x.pop("name")
     x["创建者"]=x.pop("InitiatorId")
     x["开始时间"]=x.pop("time")
@@ -53,6 +55,7 @@ def actvt_create(data):
     "InitiatorId":2020211888,
     "time":datetime(2022,6,15,14),
     "last":timedelta(2),
+    "buildId":
   }
   "actvtId":actvtId
   """
@@ -149,6 +152,31 @@ def actvt_conflict(userId,actvtId):#1有冲突，0无冲突
       time2=time2+lasttimeret
       if time1.__le__(time2):return 1
   return 0
+
+def find_user_location(timein,userId):#通过时间找用户位置
+  res=tbUserActvt.find_all({"userId":userId})
+  timestr=str(timein)[0:19]
+  time=datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S")
+  for x in res:#活动检测
+    time1=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
+    if time1.__le__(time2):
+      lasttime=lasttotimedelta(x["last"])
+      time1=time1+lasttime
+      if time1.__le__(time2):continue
+      return x["buildId"],"这是用户所在位置"
+  day=time.weekday()#计算星期几
+  rex=tbUserCourse.find_all({"userId":userId,"星期":day})
+  temptime=str(timeact.date())+" 08:00:00"
+  for x in rex:#课程检测
+    time1=datetime.strptime(temptime, "%Y-%m-%d %H:%M:%S")
+    time1=time1+timedelta(minutes=(45*(x["节次"]-1)))
+    if time1.__le__(time2):
+      time1=time1+timedelta(minutes=(45*x["时长"]))
+      if time1.__le__(time2):continue
+      return x["地点"],"这是用户所在位置"
+  nofind=tbUser.find_one({"userId":userId})
+  return nofind["addr"],"这是用户注册地址"
+
 
 def lasttotimedelta(str):
   strtime=str.split(":")
