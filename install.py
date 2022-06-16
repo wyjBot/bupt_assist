@@ -51,16 +51,46 @@ course.join_class(2,"2020211839")
 from Activities import interface
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":1,"name":"running","InitiatorId":"2020211839","time":str(datetime(2022,6,5,20)),"last":str(timedelta(minutes=30))}
-data1={"type":1,"name":"play basketball","InitiatorId":"2020211844","time":str(datetime(2022,6,5,17)),"last":str(timedelta(hours=2))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
-data1={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
+data11={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
+data12={"type":1,"name":"running","InitiatorId":"2020211839","time":str(datetime(2022,6,5,20)),"last":str(timedelta(minutes=30))}
+data13={"type":1,"name":"play basketball","InitiatorId":"2020211844","time":str(datetime(2022,6,5,17)),"last":str(timedelta(hours=2))}
+data14={"type":1,"name":"eating lunch","InitiatorId":"2020211839","time":str(datetime(2022,6,6,12)),"last":str(timedelta(hours=1))}
+data15={"type":2,"name":"music activity","InitiatorId":"2020211845","time":str(datetime(2022,6,5,19)),"last":str(timedelta(hours=2))}
+data16={"type":2,"name":"find teacher","InitiatorId":"2020211846","time":str(datetime(2022,6,6,10)),"last":str(timedelta(hours=2))}
+data17={"type":1,"name":"play game","InitiatorId":"2020211847","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=4))}
+data18={"type":1,"name":"sing","InitiatorId":"2020211845","time":str(datetime(2022,6,6,19)),"last":str(timedelta(hours=1))}
+data19={"type":2,"name":"play on gym","InitiatorId":"2020211847","time":str(datetime(2022,6,6,18)),"last":str(timedelta(hours=3))}
+data20={"type":2,"name":"watching basketball","InitiatorId":"2020211839","time":str(datetime(2022,6,6,18)),"last":str(timedelta(hours=3))}
+data21={"type":2,"name":"早操","InitiatorId":"2020211838","time":str(datetime(2022,6,6,8)),"last":str(timedelta(minutes=40))}
+data22={"type":1,"name":"go out","InitiatorId":"2020211846","time":str(datetime(2022,6,7,13)),"last":str(timedelta(hours=6))}
+data23={"type":1,"name":"buy something","InitiatorId":"2020211845","time":str(datetime(2022,6,7,19)),"last":str(timedelta(minutes=30))}
+data24={"type":2,"name":"play volleyball","InitiatorId":"2020211845","time":str(datetime(2022,6,7,20)),"last":str(timedelta(hours=2))}
+data25={"type":1,"name":"write homework","InitiatorId":"2020211847","time":str(datetime(2022,6,7,21)),"last":str(timedelta(hours=3))}
+data26={"type":1,"name":"code","InitiatorId":"2020211845","time":str(datetime(2022,6,8,10)),"last":str(timedelta(hours=3))}
+data27={"type":2,"name":"club","InitiatorId":"2020211839","time":str(datetime(2022,6,8,13)),"last":str(timedelta(hours=4))}
+data28={"type":1,"name":"movie","InitiatorId":"2020211845","time":str(datetime(2022,6,8,14)),"last":str(timedelta(hours=2))}
+data29={"type":1,"name":"study","InitiatorId":"2020211847","time":str(datetime(2022,6,8,13)),"last":str(timedelta(hours=5))}
+data30={"type":2,"name":"perform","InitiatorId":"2020211839","time":str(datetime(2022,6,8,18)),"last":str(timedelta(hours=1))}
+interface.actvt_create(data11)
+interface.actvt_create(data12)
+interface.actvt_create(data13)
+interface.actvt_create(data14)
+interface.actvt_create(data15)
+interface.actvt_create(data16)
+interface.actvt_create(data17)
+interface.actvt_create(data18)
+interface.actvt_create(data19)
+interface.actvt_create(data20)
+interface.actvt_create(data21)
+interface.actvt_create(data22)
+interface.actvt_create(data23)
+interface.actvt_create(data24)
+interface.actvt_create(data25)
+interface.actvt_create(data26)
+interface.actvt_create(data27)
+interface.actvt_create(data28)
+interface.actvt_create(data29)
+interface.actvt_create(data30)
 #file初始数据
 conn.create("file")
 
