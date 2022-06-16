@@ -28,6 +28,7 @@ def actvt_list(userId):
     else:
       x["类型"]="公开活动"
     x.pop("type")
+    x["名称"]=x.pop("name")
     x["创建者"]=x.pop("InitiatorId")
     x["开始时间"]=x.pop("time")
     x["持续时间"]=x.pop("last")
@@ -60,6 +61,7 @@ def actvt_create(data):
     if tbActvt.find_one({"actvtId":i}):continue
     data["actvtId"]=i
   tbActvt.insert(data)
+  data["userId"]=data["InitiatorId"]
   tbUserActvt.insert(data)
   log("actvt_create",0)
   return data["actvtId"],"成功创建活动"
