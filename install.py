@@ -91,6 +91,33 @@ interface.actvt_create(data27)
 interface.actvt_create(data28)
 interface.actvt_create(data29)
 interface.actvt_create(data30)
+#exam初始数据
+from CourseMgmt import Exam
+examtb=conn.create("exam")
+data31={"title":"期末考试","开始时间":str(datatime(2022,6,22,10)),"持续时间":120,"地点":2}
+data32={"title":"期末考试","开始时间":str(datatime(2022,6,22,14)),"持续时间":120,"地点":18}
+data33={"title":"期末考试","开始时间":str(datatime(2022,6,23,9)),"持续时间":120,"地点":18}
+data34={"title":"期末考试","开始时间":str(datatime(2022,6,23,13,30)),"持续时间":120,"地点":11}
+data35={"title":"期末考试","开始时间":str(datatime(2022,6,24,8)),"持续时间":120,"地点":2}
+Exam.create_class_exam(1, data31)
+Exam.create_class_exam(2, data32)
+Exam.create_class_exam(3, data33)
+Exam.create_class_exam(4, data34)
+Exam.create_class_exam(5, data35)
+#task初始数据
+from CourseMgmt import homework
+data36={"name":"第一次作业","des":"完成1,3,4题","attentionId":0,"deadline":str(dataime(2022,6,15,23,59))}
+data37={"name":"第一章","des":"","attentionId":0,"deadline":str(dataime(2022,6,15))}
+data38={"name":"期末作业","des":"请独自完成","attentionId":1,"deadline":str(dataime(2022,6,24))}
+data39={"name":"第二次作业","des":"请完成2,3(1)(2)","attentionId":0,"deadline":str(dataime(2022,6,16))}
+data40={"name":"第二章","des":"完成3,5,7题","attentionId":0,"deadline":str(dataime(2022,6,18))}
+data41={"name":"期末作业","des":"","attentionId":2,"deadline":str(dataime(2022,6,25))}
+create_class_task(1, data36)
+create_class_task(2, data37)
+create_class_task(3, data38)
+create_class_task(4, data39)
+create_class_task(5, data40)
+create_class_task(6, data41)
 #file初始数据
 conn.create("file")
 
