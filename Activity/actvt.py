@@ -23,7 +23,25 @@ def actvt_list(userId):
   log("actvt_list:userId="+userId,0)
   for x in ret:
     x.pop("userId")
+    if x["type"]==1:
+      x["类型"]="私人活动"
+    else:
+      x["类型"]="公开活动"
+    x.pop("type")
+    x["创建者"]=x.pop("InitiatorId")
+    x["开始时间"]=x.pop("time")
+    x["持续时间"]=x.pop("last")
   return ret,"这是所有的活动"
+
+def actvt_canjoin_list(userId):
+  ret=tbActvt.find_all({})
+  res=list()
+  for x in ret:
+    temp=x
+    temp["userId"]=userId
+    if not tbUserActvt.find_one(temp):res.append(x)
+  log("actvt_canjoin_list:userId="+userId,0)
+  return res,"这是可以加入的活动"
 
 def actvt_create(data):
   '''input data,return generated actvtId'''
@@ -41,7 +59,6 @@ def actvt_create(data):
   for i in range(len(res)+1):
     if tbActvt.find_one({"actvtId":i}):continue
     data["actvtId"]=i
-  data["userId"]=data["InitiatorId"]
   tbActvt.insert(data)
   tbUserActvt.insert(data)
   log("actvt_create",0)
@@ -75,7 +92,7 @@ def actvt_del(actvtId,userId=-1):
   if not res:
     log("actvt_del fail",2)
     return -1,"该用户不存在该活动"
-  if ret["userId"]==userId:
+  if ret["InitiatorId"]==userId:
     tbActvt.remove(ret)
     temp=tbUserActvt.find_all({"actvtId":actvtId})
     for x in temp:
