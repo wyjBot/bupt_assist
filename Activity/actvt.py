@@ -63,9 +63,11 @@ def actvt_create(data):
   tbActvt.insert(data)
   insertdata=data.copy()
   insertdata["userId"]=insertdata["InitiatorId"]
+  flag=actvt_conflict(insertdata["InitiatorId"], i)
   tbUserActvt.insert(insertdata)
   log("actvt_create",0)
-  return data["actvtId"],"成功创建活动"
+  if flag==0:return data["actvtId"],"成功创建活动,无冲突活动或课程"
+  return data["actvtId"],"成功创建活动,有冲突活动或课程"
 
 def actvt_join(userId,actvtId):
   '''join a actvt created by others'''
@@ -80,10 +82,12 @@ def actvt_join(userId,actvtId):
     log("actvt_join fail",2)
     return -3,"该活动为个人活动"
   res["userId"]=userId
+  flag=actvt_conflict(userId, actvtId)
   tbUserActvt.insert(res)
 
   log("actvt_join:actvtId="+str(actvtId),0)
-  return 1,"已加入集体活动"
+  if flag==0:return 1,"已加入集体活动,无冲突活动或课程"
+  return 1,"已加入集体活动,有冲突活动或课程"
 
 def actvt_del(actvtId,userId=-1):
   '''delete a actvt,pay attention to check user's Permission'''
@@ -114,33 +118,69 @@ def actvt_update(actvtId,data):
   log("actvt_update:actvtId="+str(actvtId),0)
   return 1,"已更新活动信息"
 
+def actvt_conflict(userId,actvtId):#1有冲突，0无冲突
+  res=tbUserActvt.find_all({"userId":userId})
+  ret=tbActvt.find_one({"actvtId":actvtId})
+  lasttimeret=lasttotimedelta(ret["last"])
+  for x in res:#活动检测
+    time1=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
+    time2=datetime.strptime(ret["time"], "%Y-%m-%d %H:%M:%S")
+    if time1.__le__(time2):
+      lasttime=lasttotimedelta(x["last"])
+      time1=time1+lasttime
+      if time1.__le__(time2):continue
+      return 1
+    else:
+      time2=time2+lasttimeret
+      if time1.__le__(time2):return 1
+  timeact=datetime.strptime(ret["time"], "%Y-%m-%d %H:%M:%S")#计算星期几
+  dayact=timeact.weekday()
+  rex=tbUserCourse.find_all({"userId":userId,"星期":dayact})
+  temptime=str(timeact.date())+" 08:00:00"
+  for x in rex:#课程检测
+    time1=datetime.strptime(temptime, "%Y-%m-%d %H:%M:%S")
+    time1=time1+timedelta(minutes=(45*(x["节次"]-1)))
+    time2=timeact
+    if time1.__le__(time2):
+      time1=time1+timedelta(minutes=(45*x["时长"]))
+      if time1.__le__(time2):continue
+      return 1
+    else:
+      time2=time2+lasttimeret
+      if time1.__le__(time2):return 1
+  return 0
+
+def lasttotimedelta(str):
+  strtime=str.split(":")
+  return timedelta(hours=int(strtime[0]),minutes=int(strtime[1]),seconds=int(strtime[2]))
+
 if __name__ == "__main__":
   data1={
     "type":2,#1 represent personal ,2 means collective
     "name":"class meeting",
     "InitiatorId":"2020211838",
-    "time":str(now()),
-    "last":str(timedelta(2))
+    "time":str(datetime(2022,6,14,11)),
+    "last":str(timedelta(hours=2))
   }
   data2={
     "type":1,#1 represent personal ,2 means collective
     "name":"run",
     "InitiatorId":"2020211839",
-    "time":str(now()),
-    "last":str(timedelta(2)),
+    "time":str(datetime(2022,6,14,9)),
+    "last":str(timedelta(hours=3)),
   }
-  actvt_create(data1)
-  actvt_create(data2)
+  print(actvt_create(data1))
+  print(actvt_create(data2))
   print("2020211839: ",actvt_list("2020211839"))
   print("canjoin:",actvt_canjoin_list("2020211839"))
-  actvt_join("2020211839", 0)
+  print(actvt_join("2020211839", 0))
   print("2020211839: ",actvt_list("2020211839"))
   data3={
     "type":1,#1 represent personal ,2 means collective
     "name":"run again",
     "InitiatorId":"2020211839",
-    "time":str(now()),
-    "last":str(timedelta(2)),
+    "time":str(datetime(2022,6,16,22)),
+    "last":str(timedelta(hours=2)),
   }
   actvt_update(1, data3)
   print("2020211839: ",actvt_list("2020211839"))
