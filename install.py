@@ -42,6 +42,14 @@ for item in data:
 from Activity import actvt
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
+
+tbActvt.set_ukey("actvtid")
+fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
+data1=js.load(fr)
+for item in data1:
+  activity.actvt_create(item)
+fr.close()
+"""
 data11={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
 data12={"type":1,"name":"running","InitiatorId":"2020211839","time":str(datetime(2022,6,5,20)),"last":str(timedelta(minutes=30))}
 data13={"type":1,"name":"play basketball","InitiatorId":"2020211844","time":str(datetime(2022,6,5,17)),"last":str(timedelta(hours=2))}
@@ -62,26 +70,27 @@ data27={"type":2,"name":"club","InitiatorId":"2020211839","time":str(datetime(20
 data28={"type":1,"name":"movie","InitiatorId":"2020211845","time":str(datetime(2022,6,8,14)),"last":str(timedelta(hours=2))}
 data29={"type":1,"name":"study","InitiatorId":"2020211847","time":str(datetime(2022,6,8,13)),"last":str(timedelta(hours=5))}
 data30={"type":2,"name":"perform","InitiatorId":"2020211839","time":str(datetime(2022,6,8,18)),"last":str(timedelta(hours=1))}
-activity.actvt_create(data11)
-activity.actvt_create(data12)
-activity.actvt_create(data13)
-activity.actvt_create(data14)
-activity.actvt_create(data15)
-activity.actvt_create(data16)
-activity.actvt_create(data17)
-activity.actvt_create(data18)
-activity.actvt_create(data19)
-activity.actvt_create(data20)
-activity.actvt_create(data21)
-activity.actvt_create(data22)
-activity.actvt_create(data23)
-activity.actvt_create(data24)
-activity.actvt_create(data25)
-activity.actvt_create(data26)
-activity.actvt_create(data27)
-activity.actvt_create(data28)
-activity.actvt_create(data29)
-activity.actvt_create(data30)
+actvt.actvt_create(data11)
+actvt.actvt_create(data12)
+actvt.actvt_create(data13)
+actvt.actvt_create(data14)
+actvt.actvt_create(data15)
+actvt.actvt_create(data16)
+actvt.actvt_create(data17)
+actvt.actvt_create(data18)
+actvt.actvt_create(data19)
+actvt.actvt_create(data20)
+actvt.actvt_create(data21)
+actvt.actvt_create(data22)
+actvt.actvt_create(data23)
+actvt.actvt_create(data24)
+actvt.actvt_create(data25)
+actvt.actvt_create(data26)
+actvt.actvt_create(data27)
+actvt.actvt_create(data28)
+actvt.actvt_create(data29)
+actvt.actvt_create(data30)
+"""
 #exam初始数据
 from CourseMgmt import Exam
 examtb=conn.create("exam")
