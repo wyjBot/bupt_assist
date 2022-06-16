@@ -155,4 +155,5 @@ def notice_work(timein,userId):
     timelat=timenotice+timedelta(seconds=cfg['rate']*1)
     if timepre.__le__(time) and timelat.__ge__(time):
       ret.append(x["noticeId"])
+  log("notice_work",0)
   return ret,"这是要响的闹钟"
