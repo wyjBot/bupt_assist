@@ -118,6 +118,7 @@ def view_hmwk(hmwkId):
     return -1,"不存在该hmwkId"
   ret.pop("hmwkId")
   ret.pop("userId")
+  ret.pop("version")
   ret["提交时间"]=ret.pop("date")
   ret["文本"]=ret.pop("text")
   log("view_hmwk:hmwkId="+str(hmwkId),0)
