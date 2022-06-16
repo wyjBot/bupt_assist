@@ -891,3 +891,39 @@
 1999-01-01 04:09:35.901120 : list_class
 1999-01-01 15:42:53.665380 : list_class
 1999-01-01 16:30:07.924380 : list_class
+1999-01-01 16:30:09.908940 : Waring:user has been existed,Jump
+1999-01-01 16:30:10.748880 : Waring:userCourse has been existed,Jump
+1999-01-01 16:30:11.228880 : Waring:course has been existed,Jump
+1999-01-01 16:30:11.708940 : Waring:user has been existed,Jump
+1999-01-01 16:30:12.809160 : Waring:user has been existed,Jump
+1999-01-01 16:30:14.429100 : Waring:user has been existed,Jump
+1999-01-01 16:30:14.849040 : Waring:course has been existed,Jump
+1999-01-01 16:30:15.268980 : updata_class 1
+1999-01-01 16:30:15.748920 : updata_class 2
+1999-01-01 16:30:16.229220 : updata_class 3
+1999-01-01 16:30:16.708920 : updata_class 4
+1999-01-01 16:30:17.188980 : updata_class 5
+1999-01-01 16:30:17.729040 : updata_class 6
+1999-01-01 16:30:18.209040 : updata_class 7
+1999-01-01 16:30:18.689220 : updata_class 8
+1999-01-01 16:30:19.169160 : updata_class 9
+1999-01-01 16:30:19.709220 : updata_class 10
+1999-01-01 16:30:20.129160 : Waring:userCourse has been existed,Jump
+1999-01-01 16:30:20.609460 : 2020211839 join_class 2
+1999-01-01 16:30:21.397680 : Waring:actvt has been existed,Jump
+1999-01-01 16:30:21.817620 : Waring:userActvt has been existed,Jump
+1999-01-01 16:30:22.297320 : list_class
+1999-01-01 16:30:24.791640 : Waring:user has been existed,Jump
+1999-01-01 16:30:25.631820 : Waring:userCourse has been existed,Jump
+1999-01-01 16:30:26.051700 : Waring:course has been existed,Jump
+1999-01-01 16:30:26.471760 : Waring:user has been existed,Jump
+1999-01-01 16:30:28.811760 : Waring:user has been existed,Jump
+1999-01-01 16:30:29.651880 : Waring:userCourse has been existed,Jump
+1999-01-01 16:30:30.071880 : Waring:course has been existed,Jump
+1999-01-01 16:30:30.491820 : Waring:user has been existed,Jump
+1999-01-01 17:27:30.514080 : list_class
+1999-01-01 21:13:09.587520 : list_class
+1999-01-01 21:19:37.353060 : list_class
+1999-01-01 21:20:08.011560 : list_class
+1999-01-01 21:20:33.955380 : list_class
+1999-01-01 21:21:54.297660 : list_class
