@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="filterTableData"   style="width: 100%">
+  <el-table :data="filterTableData"  style="width: 100%">
       <el-table-column
         v-for="(items,indexs) in tableHead"
         :key="indexs"
@@ -54,16 +54,12 @@ export default defineComponent({
             {label: '星期', prop: 'day'},
             {label: '教授', prop: 'speaker'},
         ],
-        form: {
-          username: "2020211838",
-          password: "111111",
-        },
     }
   },
   mounted(){
       this.session = this.$cookies.get("session")
       if(this.session=="") this.$router.push("/login")
-      this.listclass()
+      this.listActivity()
   },
   destroyed(){
   },
@@ -93,8 +89,8 @@ export default defineComponent({
     handleClose(key: string, keyPath: string[]){
       console.log(key, keyPath)
     },
-    listclass(){
-      axios.post("/api/crouse/list",
+    listActivity(){
+      axios.post("/api/activity/list",
       {
         "session":this.session
       })//传参
