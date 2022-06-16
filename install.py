@@ -26,8 +26,7 @@ coursetb.set_ukey("id")
 fr=open("Control/metaData/class.json","r",encoding='utf-8')
 data=js.load(fr)
 for item in data:
-  course.update_class(item['id'], item['teacherId'], item)
-fr.close()
+  print(course.update_class(item['id'], item['teacherId'], item))
 
 
 

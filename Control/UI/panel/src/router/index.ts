@@ -3,6 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Login from "../components/login.vue"
 import SignUp from "../components/signup.vue"
 import home from "../components/home.vue"
+import hmwk from "../components/hmwk.vue"
 import activity from "../components/activity.vue"
 import course from "../components/course.vue"
 import ts from "../components/ts.vue"
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'course',
         name: 'course',
         component: course
+      },
+      {
+        path: 'hmwk',
+        name: 'hmwk',
+        component: hmwk
       },
       {
         path: 'ts',

@@ -1803,3 +1803,328 @@
 1999-01-09 04:56:49.171800 : Waring:course has been existed,Jump
 1999-01-09 04:56:53.791920 : Waring:actvt has been existed,Jump
 1999-01-09 04:56:54.331980 : Waring:userActvt has been existed,Jump
+1999-01-09 04:56:56.012040 : Waring:user has been existed,Jump
+1999-01-09 04:56:56.971860 : Waring:userCourse has been existed,Jump
+1999-01-09 04:56:57.452040 : Waring:course has been existed,Jump
+1999-01-09 04:56:57.931980 : Waring:user has been existed,Jump
+1999-01-09 04:56:59.011920 : Waring:actvt has been existed,Jump
+1999-01-09 04:56:59.551740 : Waring:userActvt has been existed,Jump
+1999-01-09 04:57:01.231860 : Waring:user has been existed,Jump
+1999-01-09 04:57:02.191860 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:02.671920 : Waring:course has been existed,Jump
+1999-01-09 04:57:03.151560 : Waring:user has been existed,Jump
+1999-01-09 04:57:03.991320 : Waring:actvt has been existed,Jump
+1999-01-09 04:57:04.471380 : Waring:userActvt has been existed,Jump
+1999-01-09 04:57:05.311260 : Waring:user has been existed,Jump
+1999-01-09 04:57:05.851200 : Waring:user has been existed,Jump
+1999-01-09 04:57:06.691260 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:07.171200 : Waring:course has been existed,Jump
+1999-01-09 04:57:07.711320 : Waring:user has been existed,Jump
+1999-01-09 04:57:08.191200 : Waring:course has been existed,Jump
+1999-01-09 04:57:12.390900 : Waring:actvt has been existed,Jump
+1999-01-09 04:57:12.870840 : Waring:userActvt has been existed,Jump
+1999-01-09 04:57:13.350660 : Waring:actvt has been existed,Jump
+1999-01-09 04:57:13.890540 : Waring:userActvt has been existed,Jump
+1999-01-09 04:57:15.030360 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:15.450000 : Waring:course has been existed,Jump
+1999-01-09 04:57:15.930060 : Waring:exam has been existed,Jump
+1999-01-09 04:57:16.470180 : create_class_exam:class=1
+1999-01-09 04:57:17.010000 : create_class_exam:class=2
+1999-01-09 04:57:17.549940 : create_class_exam:class=3
+1999-01-09 04:57:18.089880 : create_class_exam:class=4
+1999-01-09 04:57:18.570060 : create_class_exam:class=5
+1999-01-09 04:57:19.110240 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:19.530240 : Waring:course has been existed,Jump
+1999-01-09 04:57:20.250360 : create_class_task:class=1
+1999-01-09 04:57:20.790240 : create_class_task:class=2
+1999-01-09 04:57:21.330180 : create_class_task:class=3
+1999-01-09 04:57:21.990180 : create_class_task:class=4
+1999-01-09 04:57:22.589580 : create_class_task:class=5
+1999-01-09 04:57:23.129400 : create_class_task:class=6
+1999-01-09 04:57:23.729520 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:24.209580 : Waring:course has been existed,Jump
+1999-01-09 04:57:24.809460 : create_class_task:class=1
+1999-01-09 04:57:25.289340 : create_class_task:class=1
+1999-01-09 04:57:25.770000 : create_class_task:class=2
+1999-01-09 04:57:26.309880 : create_class_task:class=3
+1999-01-09 04:57:26.789820 : create_class_task:class=4
+1999-01-09 04:57:27.269940 : create_class_task:class=4
+1999-01-09 04:57:27.810120 : create_class_task:class=1
+1999-01-09 04:57:28.350240 : create_class_task:class=5
+1999-01-09 04:57:28.830240 : create_class_task:class=5
+1999-01-09 04:57:29.370300 : create_class_task:class=5
+1999-01-09 04:57:30.870780 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:32.130960 : list_class
+1999-01-09 04:57:33.211080 : Waring:user has been existed,Jump
+1999-01-09 04:57:34.951020 : Waring:user has been existed,Jump
+1999-01-09 04:57:35.371080 : Waring:course has been existed,Jump
+1999-01-09 04:57:39.811320 : Waring:actvt has been existed,Jump
+1999-01-09 04:57:40.291500 : Waring:userActvt has been existed,Jump
+1999-01-09 04:57:41.731440 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:42.211200 : Waring:course has been existed,Jump
+1999-01-09 04:57:42.631140 : Waring:exam has been existed,Jump
+1999-01-09 04:57:43.170900 : create_class_exam:class=1
+1999-01-09 04:57:43.711080 : create_class_exam:class=2
+1999-01-09 04:57:44.244600 : create_class_exam:class=3
+1999-01-09 04:57:44.784600 : create_class_exam:class=4
+1999-01-09 04:57:45.324600 : create_class_exam:class=5
+1999-01-09 04:57:46.044660 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:46.524660 : Waring:course has been existed,Jump
+1999-01-09 04:57:47.244600 : create_class_task:class=1
+1999-01-09 04:57:47.784600 : create_class_task:class=2
+1999-01-09 04:57:48.324660 : create_class_task:class=3
+1999-01-09 04:57:48.984480 : create_class_task:class=4
+1999-01-09 04:57:49.584660 : create_class_task:class=5
+1999-01-09 04:57:50.124780 : create_class_task:class=6
+1999-01-09 04:57:50.964600 : Waring:userCourse has been existed,Jump
+1999-01-09 04:57:51.444540 : Waring:course has been existed,Jump
+1999-01-09 04:57:52.104900 : create_class_task:class=1
+1999-01-09 04:57:52.884240 : create_class_task:class=1
+1999-01-09 04:57:53.483940 : create_class_task:class=2
+1999-01-09 04:57:54.024120 : create_class_task:class=3
+1999-01-09 04:57:54.623880 : create_class_task:class=4
+1999-01-09 04:57:55.164000 : create_class_task:class=4
+1999-01-09 04:57:55.703880 : create_class_task:class=1
+1999-01-09 04:57:56.243880 : create_class_task:class=5
+1999-01-09 04:57:56.783940 : create_class_task:class=5
+1999-01-09 04:57:57.324480 : create_class_task:class=5
+1999-01-09 04:57:59.184300 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:00.804420 : list_class
+1999-01-09 04:58:02.665200 : Waring:user has been existed,Jump
+1999-01-09 04:58:03.145500 : Waring:user has been existed,Jump
+1999-01-09 04:58:03.865740 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:04.285800 : Waring:course has been existed,Jump
+1999-01-09 04:58:04.765920 : Waring:user has been existed,Jump
+1999-01-09 04:58:05.306100 : Waring:course has been existed,Jump
+1999-01-09 04:58:10.807140 : Waring:actvt has been existed,Jump
+1999-01-09 04:58:11.646960 : Waring:userActvt has been existed,Jump
+1999-01-09 04:58:12.186960 : Waring:actvt has been existed,Jump
+1999-01-09 04:58:12.846960 : Waring:userActvt has been existed,Jump
+1999-01-09 04:58:14.167020 : Waring:exam has been existed,Jump
+1999-01-09 04:58:14.647020 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:15.126900 : Waring:course has been existed,Jump
+1999-01-09 04:58:15.727260 : Waring:exam has been existed,Jump
+1999-01-09 04:58:16.387260 : create_class_exam:class=1
+1999-01-09 04:58:16.987500 : create_class_exam:class=2
+1999-01-09 04:58:17.587380 : create_class_exam:class=3
+1999-01-09 04:58:18.127260 : create_class_exam:class=4
+2022-06-16 16:25:14.021841 : Waring:user has been existed,Jump
+2022-06-16 16:25:14.030840 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:18.667200 : create_class_exam:class=5
+2022-06-16 16:25:14.038838 : Waring:course has been existed,Jump
+1999-01-09 04:58:19.087020 : Waring:task has been existed,Jump
+2022-06-16 16:25:14.046836 : Waring:user has been existed,Jump
+Jump
+2022-06-16 16:25:14.054844 : Waring:actvt has been existed,Jump
+
+1999-01-09 04:58:20.588040 : Waring:hmwk has been existed,Jump
+2022-06-16 16:25:14.062856 : Waring:userActvt has been existed,Jump
+1999-01-09 04:58:21.187680 : Waring:hmwkRollBack has been existed,Jump
+1999-01-09 04:58:21.787740 : create_class_task:class=1
+1999-01-09 04:58:22.387560 : create_class_task:class=2
+1999-01-09 04:58:22.927500 : create_class_task:class=3
+1999-01-09 04:58:23.467680 : create_class_task:class=4
+1999-01-09 04:58:24.067680 : create_class_task:class=5
+1999-01-09 04:58:24.667980 : create_class_task:class=6
+1999-01-09 04:58:25.388040 : Waring:material has been existed,Jump
+1999-01-09 04:58:25.868220 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:26.408100 : Waring:course has been existed,Jump
+1999-01-09 04:58:26.948100 : Waring:materialRollBack has been existed,Jump
+1999-01-09 04:58:27.548220 : create_class_task:class=1
+1999-01-09 04:58:28.268340 : create_class_task:class=1
+1999-01-09 04:58:28.808400 : create_class_task:class=2
+1999-01-09 04:58:29.348340 : create_class_task:class=3
+1999-01-09 04:58:29.948340 : create_class_task:class=4
+1999-01-09 04:58:30.488400 : create_class_task:class=4
+1999-01-09 04:58:31.028460 : create_class_task:class=1
+1999-01-09 04:58:31.628640 : create_class_task:class=5
+1999-01-09 04:58:32.168520 : create_class_task:class=5
+1999-01-09 04:58:32.768640 : create_class_task:class=5
+1999-01-09 04:58:35.108460 : Waring:file has been existed,Jump
+1999-01-09 04:58:35.648460 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:37.028580 : list_class
+1999-01-09 04:58:41.408700 : Waring:user has been existed,Jump
+1999-01-09 04:58:43.986000 : Waring:userCourse has been existed,Jump
+1999-01-09 04:58:46.026300 : Waring:course has been existed,Jump
+1999-01-09 04:58:48.306900 : Waring:user has been existed,Jump
+1999-01-09 04:58:52.507380 : Waring:actvt has been existed,Jump
+1999-01-09 04:58:52.446600 : Waring:user has been existed,Jump
+1999-01-09 04:58:55.505700 : Waring:userActvt has been existed,Jump
+1999-01-09 04:58:55.385940 : Waring:user has been existed,Jump
+1999-01-09 04:59:01.305120 : Waring:userCourse has been existed,Jump
+1999-01-09 04:59:05.016420 : Waring:course has been existed,Jump
+1999-01-09 04:59:08.076060 : Waring:user has been existed,Jump
+1999-01-09 04:59:09.816300 : Waring:course has been existed,Jump
+1999-01-09 04:59:29.446620 : Waring:actvt has been existed,Jump
+1999-01-09 04:59:32.325120 : Waring:userActvt has been existed,Jump
+1999-01-09 04:59:35.890440 : Waring:actvt has been existed,Jump
+1999-01-09 04:59:37.870620 : Waring:userActvt has been existed,Jump
+1999-01-09 04:59:43.090020 : Waring:exam has been existed,Jump
+1999-01-09 04:59:45.250140 : Waring:userCourse has been existed,Jump
+1999-01-09 04:59:47.769000 : Waring:course has been existed,Jump
+1999-01-09 04:59:49.149000 : Waring:exam has been existed,Jump
+1999-01-09 04:59:51.215760 : create_class_exam:class=1
+1999-01-09 04:59:52.535940 : create_class_exam:class=2
+1999-01-09 04:59:56.110320 : create_class_exam:class=3
+1999-01-09 05:00:01.030200 : create_class_exam:class=4
+1999-01-09 05:00:04.089600 : create_class_exam:class=5
+1999-01-09 05:00:06.728880 : Waring:task has been existed,Jump
+1999-01-09 05:00:08.469360 : Waring:userCourse has been existed,Jump
+1999-01-09 05:00:10.089120 : Waring:course has been existed,Jump
+1999-01-09 05:00:11.889840 : Waring:hmwk has been existed,Jump
+1999-01-09 05:00:13.389420 : Waring:hmwkRollBack has been existed,Jump
+1999-01-09 05:00:15.369720 : create_class_task:class=1
+1999-01-09 05:00:18.617820 : create_class_task:class=2
+1999-01-09 05:00:21.557940 : create_class_task:class=3
+1999-01-09 05:00:23.478060 : create_class_task:class=4
+1999-01-09 05:00:27.196560 : create_class_task:class=5
+1999-01-09 05:00:30.196500 : create_class_task:class=6
+1999-01-09 05:00:34.011240 : Waring:material has been existed,Jump
+1999-01-09 05:00:36.711060 : Waring:userCourse has been existed,Jump
+1999-01-09 05:00:38.361900 : Waring:course has been existed,Jump
+1999-01-09 05:00:39.681840 : Waring:materialRollBack has been existed,Jump
+1999-01-09 05:00:41.542320 : create_class_task:class=1
+1999-01-09 05:00:44.302080 : create_class_task:class=1
+1999-01-09 05:00:46.811040 : create_class_task:class=2
+1999-01-09 05:00:48.130980 : create_class_task:class=3
+1999-01-09 05:00:49.930920 : create_class_task:class=4
+1999-01-09 05:00:52.629960 : create_class_task:class=4
+1999-01-09 05:00:55.990440 : create_class_task:class=1
+1999-01-09 05:00:58.030260 : create_class_task:class=5
+1999-01-09 05:00:59.769780 : create_class_task:class=5
+1999-01-09 05:01:02.648280 : create_class_task:class=5
+1999-01-09 05:01:06.006780 : Waring:file has been existed,Jump
+1999-01-09 05:01:06.846480 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:09.847020 : list_class
+1999-01-09 05:01:11.588760 : Waring:user has been existed,Jump
+1999-01-09 05:01:12.068820 : Waring:user has been existed,Jump
+1999-01-09 05:01:12.848400 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:13.268400 : Waring:course has been existed,Jump
+1999-01-09 05:01:13.748280 : Waring:user has been existed,Jump
+1999-01-09 05:01:14.228400 : Waring:course has been existed,Jump
+1999-01-09 05:01:14.768580 : updata_class 1
+1999-01-09 05:01:15.308220 : updata_class 2
+1999-01-09 05:01:15.847860 : updata_class 3
+1999-01-09 05:01:16.447920 : updata_class 4
+1999-01-09 05:01:17.048280 : updata_class 5
+1999-01-09 05:01:17.646780 : updata_class 6
+1999-01-09 05:01:18.246780 : updata_class 7
+1999-01-09 05:01:18.786720 : updata_class 8
+1999-01-09 05:01:19.326900 : updata_class 9
+1999-01-09 05:01:19.986900 : updata_class 10
+1999-01-09 05:01:20.706840 : Waring:actvt has been existed,Jump
+1999-01-09 05:01:21.186780 : Waring:userActvt has been existed,Jump
+1999-01-09 05:01:21.666720 : Waring:actvt has been existed,Jump
+1999-01-09 05:01:22.266600 : Waring:userActvt has been existed,Jump
+1999-01-09 05:01:23.466600 : Waring:exam has been existed,Jump
+1999-01-09 05:01:24.006240 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:24.486420 : Waring:course has been existed,Jump
+1999-01-09 05:01:25.026420 : Waring:exam has been existed,Jump
+1999-01-09 05:01:25.746480 : create_class_exam:class=1
+1999-01-09 05:01:26.286300 : create_class_exam:class=2
+1999-01-09 05:01:26.826480 : create_class_exam:class=3
+1999-01-09 05:01:27.486420 : create_class_exam:class=4
+1999-01-09 05:01:28.086540 : create_class_exam:class=5
+1999-01-09 05:01:28.806480 : Waring:task has been existed,Jump
+1999-01-09 05:01:29.286480 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:29.766060 : Waring:course has been existed,Jump
+1999-01-09 05:01:30.246000 : Waring:hmwk has been existed,Jump
+1999-01-09 05:01:30.786120 : Waring:hmwkRollBack has been existed,Jump
+1999-01-09 05:01:31.385880 : create_class_task:class=1
+1999-01-09 05:01:31.926000 : create_class_task:class=2
+1999-01-09 05:01:32.465580 : create_class_task:class=3
+1999-01-09 05:01:33.065580 : create_class_task:class=4
+1999-01-09 05:01:33.605640 : create_class_task:class=5
+1999-01-09 05:01:34.145700 : create_class_task:class=6
+1999-01-09 05:01:34.805760 : Waring:material has been existed,Jump
+1999-01-09 05:01:35.357880 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:35.837820 : Waring:course has been existed,Jump
+1999-01-09 05:01:36.257820 : Waring:materialRollBack has been existed,Jump
+1999-01-09 05:01:36.917700 : create_class_task:class=1
+1999-01-09 05:01:37.517700 : create_class_task:class=1
+1999-01-09 05:01:38.117640 : create_class_task:class=2
+1999-01-09 05:01:38.657640 : create_class_task:class=3
+1999-01-09 05:01:39.257760 : create_class_task:class=4
+1999-01-09 05:01:39.857820 : create_class_task:class=4
+1999-01-09 05:01:40.442940 : create_class_task:class=1
+1999-01-09 05:01:41.042940 : create_class_task:class=5
+1999-01-09 05:01:41.702940 : create_class_task:class=5
+1999-01-09 05:01:42.183120 : create_class_task:class=5
+1999-01-09 05:01:43.563120 : Waring:file has been existed,Jump
+1999-01-09 05:01:44.043120 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:44.583060 : 2020211839 join_class 2
+1999-01-09 05:01:45.063300 : list_class
+1999-01-09 05:01:47.883240 : Waring:user has been existed,Jump
+1999-01-09 05:01:48.783120 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:49.203120 : Waring:course has been existed,Jump
+1999-01-09 05:01:49.683180 : Waring:user has been existed,Jump
+1999-01-09 05:01:50.703000 : Waring:actvt has been existed,Jump
+1999-01-09 05:01:51.242880 : Waring:userActvt has been existed,Jump
+1999-01-09 05:01:53.643180 : Waring:user has been existed,Jump
+1999-01-09 05:01:54.603120 : Waring:userCourse has been existed,Jump
+1999-01-09 05:01:55.203420 : Waring:course has been existed,Jump
+1999-01-09 05:01:55.683000 : Waring:user has been existed,Jump
+1999-01-09 05:01:56.522940 : Waring:actvt has been existed,Jump
+1999-01-09 05:01:57.062940 : Waring:userActvt has been existed,Jump
+1999-01-09 05:01:59.523060 : Waring:user has been existed,Jump
+1999-01-09 05:02:00.423600 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:00.903720 : Waring:course has been existed,Jump
+1999-01-09 05:02:01.383780 : Waring:user has been existed,Jump
+1999-01-09 05:02:02.223720 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:02.764020 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:05.164020 : Waring:user has been existed,Jump
+1999-01-09 05:02:06.124020 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:06.604380 : Waring:course has been existed,Jump
+1999-01-09 05:02:07.084260 : Waring:user has been existed,Jump
+1999-01-09 05:02:07.924500 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:08.404440 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:11.104560 : Waring:user has been existed,Jump
+1999-01-09 05:02:12.124740 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:12.724800 : Waring:course has been existed,Jump
+1999-01-09 05:02:13.325820 : Waring:user has been existed,Jump
+1999-01-09 05:02:14.285220 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:14.825340 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:17.244000 : Waring:user has been existed,Jump
+1999-01-09 05:02:18.204060 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:18.684120 : Waring:course has been existed,Jump
+1999-01-09 05:02:19.284000 : Waring:user has been existed,Jump
+1999-01-09 05:02:20.183880 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:20.783940 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:23.183880 : Waring:user has been existed,Jump
+1999-01-09 05:02:24.323820 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:24.803760 : Waring:course has been existed,Jump
+1999-01-09 05:02:25.343580 : Waring:user has been existed,Jump
+1999-01-09 05:02:26.183640 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:26.758140 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:29.098260 : Waring:user has been existed,Jump
+1999-01-09 05:02:30.178380 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:30.838380 : Waring:course has been existed,Jump
+1999-01-09 05:02:31.318440 : Waring:user has been existed,Jump
+1999-01-09 05:02:32.158320 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:32.638320 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:34.138680 : Waring:user has been existed,Jump
+1999-01-09 05:02:34.678620 : Waring:user has been existed,Jump
+1999-01-09 05:02:35.398560 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:35.850960 : Waring:course has been existed,Jump
+1999-01-09 05:02:36.330900 : Waring:user has been existed,Jump
+1999-01-09 05:02:36.810840 : Waring:course has been existed,Jump
+1999-01-09 05:02:37.776900 : updata_class 1
+1999-01-09 05:02:38.496960 : updata_class 2
+1999-01-09 05:02:39.042180 : updata_class 3
+1999-01-09 05:02:39.643380 : updata_class 4
+1999-01-09 05:02:40.249620 : updata_class 5
+1999-01-09 05:02:40.855380 : updata_class 6
+1999-01-09 05:02:41.395380 : updata_class 7
+1999-01-09 05:02:41.972760 : updata_class 8
+1999-01-09 05:02:42.512820 : updata_class 9
+1999-01-09 05:02:43.085100 : updata_class 10
+1999-01-09 05:02:43.805040 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:44.331060 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:44.816100 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:45.417300 : Waring:userActvt has been existed,Jump
+1999-01-09 05:02:47.825580 : Waring:user has been existed,Jump
+1999-01-09 05:02:48.840600 : Waring:userCourse has been existed,Jump
+1999-01-09 05:02:49.330080 : Waring:course has been existed,Jump
+1999-01-09 05:02:49.870080 : Waring:user has been existed,Jump
+1999-01-09 05:02:50.805000 : Waring:actvt has been existed,Jump
+1999-01-09 05:02:51.283740 : Waring:userActvt has been existed,Jump
