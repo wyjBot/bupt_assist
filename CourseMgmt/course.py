@@ -48,6 +48,7 @@ def search_class(userId,str="操作系统"):
     if not kmp(str,x["name"]):continue
     temp=x.copy()
     temp.pop("userId")
+    temp.pop("teacherId")
     res.append(temp)
     log("search_class--"+str,0)
   return res,"已返回查到的课程"
@@ -56,6 +57,7 @@ def list_class(userId):
   ret=tb.find_all({"userId":userId})
   for x in ret:
     x.pop("userId")
+    x.pop("teacherId")
   log("list_class",0)
   return ret,"已返回所有课程"
 
@@ -127,60 +129,56 @@ def kmp(keyword,name):#返回值0代表没有，1代表有
     return 0
 
 if __name__ == '__main__':
-
+  #新数据格式如下
   data1={
-      "id":12,
-      "name":"操作系统",
-      "教师":"赵华",
-      "上课星期":1,#星期二
-      "上课节次":3,#第八节
-      "持续时间":3,#以节为单位，每节课45min
-      "教学楼":"n3多功能教学楼",
-      "教室":641,
-      "上课地点":18,#返回建筑Id
-      "最大人数":90,
-      "当前人数":77
+    "id": 1,
+    "名称": "计算机系统基础",
+    "教师": "陈锋",
+    "星期": 0,
+    "节次": 3,
+    "时长": 3,
+    "地点": 18,
+    "teacherId": "2020211840"
   }
   data2={
-      "id":13,
-      "name":"操作系统课程设计",
-      "教师":"吴军",
-      "上课时间":1,
-      "持续时间":2,
-      "最大人数":30,
-      "当前人数":23
+    "id": 2,
+    "名称": "数据结构",
+    "教师": "郜濒",
+    "星期": 1,
+    "节次": 2,
+    "时长": 2,
+    "地点": 18,
+    "teacherId": "2020211848"
   }
   data3={
-      "id":14,
-      "name":"计算机组成",
-      "教师":"陈锋",
-      "上课星期":1,#星期二
-      "上课节次":3,#第八节
-      "持续时间":3,#以节为单位，每节课45min
-      "教学楼":"n3多功能教学楼",
-      "教室":641,
-      "上课地点":18,#返回建筑Id
-      "最大人数":90,
-      "当前人数":77
+    "id": 3,
+    "名称": "离散数学",
+    "教师": "珠峰",
+    "星期": 2,
+    "节次": 3,
+    "时长": 3,
+    "地点": 18,
+    "teacherId": "2020211838"
   }
-  data4={
-      "id":15,
-      "name":"计算机网络课程设计",
-      "教师":"",
-      "上课时间":1,
-      "持续时间":2,
-      "最大人数":30,
-      "当前人数":23
+  {
+    "id": 4,
+    "名称": "习近平新时代中国特色社会主义思想概论",
+    "教师": "郭斌",
+    "星期": 3,
+    "节次": 1,
+    "时长": 2,
+    "地点": 19,
+    "teacherId": "2020211841"
   }
-  update_class(12, "2020211838", data1)
-  update_class(13, "2020211838", data2)
-  update_class(14, "2020211838", data3)
-  update_class(15, "2020211838", data4)
+  update_class(1, "2020211838", data1)
+  update_class(2, "2020211838", data2)
+  update_class(3, "2020211838", data3)
+  update_class(4, "2020211838", data4)
   
-  join_class(12, "2020211839")
-  join_class(13, "2020211839")
-  join_class(15, "2020211839")
+  join_class(1, "2020211839")
+  join_class(2, "2020211839")
+  join_class(4, "2020211839")
   print("all: ",list_class("2020211839"))
   print("操作: ",search_class("2020211839","操作"))
-  quit_class(13, "2020211839")
+  quit_class(2, "2020211839")
   print("操作: ",search_class("2020211839","操作"))
