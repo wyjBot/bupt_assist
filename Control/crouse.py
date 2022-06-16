@@ -20,8 +20,8 @@ def list_class():
     userid=vrfSession(data['session'])
     if not userid:
       return rjs(-1,"登录失效")
-    ret=course.list_class(userid)
-    return rjs(1,ret)
+    data,msg=course.list_class(userid)
+    return rjs(1,data)
 
 
 @api.route('/api/crouse/join',methods=['POST','GET'])

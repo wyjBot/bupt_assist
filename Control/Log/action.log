@@ -721,3 +721,173 @@
 1999-01-01 01:15:52.597860 : Waring:file has been existed,Jump
 1999-01-01 01:42:58.646400 : list_class
 1999-01-01 01:45:17.000400 : list_class
+1999-01-01 01:45:18.989460 : Waring:user has been existed,Jump
+1999-01-01 01:45:19.826100 : Waring:userCourse has been existed,Jump
+1999-01-01 01:45:20.305980 : Waring:course has been existed,Jump
+1999-01-01 01:45:20.785980 : Waring:user has been existed,Jump
+1999-01-01 01:45:23.185980 : Waring:user has been existed,Jump
+1999-01-01 01:45:24.153240 : Waring:userCourse has been existed,Jump
+1999-01-01 01:45:24.646740 : Waring:course has been existed,Jump
+1999-01-01 01:45:25.075980 : Waring:user has been existed,Jump
+1999-01-01 01:45:27.496140 : Waring:user has been existed,Jump
+1999-01-01 01:45:28.336140 : Waring:userCourse has been existed,Jump
+1999-01-01 01:45:28.756200 : Waring:course has been existed,Jump
+1999-01-01 01:45:29.176200 : Waring:user has been existed,Jump
+1999-01-01 01:45:31.447800 : Waring:user has been existed,Jump
+1999-01-01 01:45:32.381400 : Waring:userCourse has been existed,Jump
+1999-01-01 01:45:32.801400 : Waring:course has been existed,Jump
+1999-01-01 01:45:33.255000 : Waring:user has been existed,Jump
+1999-01-01 02:02:02.528040 : list_class
+1999-01-01 02:06:47.864880 : list_class
+1999-01-01 02:07:35.482320 : list_class
+1999-01-01 03:44:50.841000 : list_class
+1999-01-01 04:01:34.388160 : list_class
+1999-01-01 04:01:36.758580 : Waring:user has been existed,Jump
+1999-01-01 04:01:37.718760 : Waring:userCourse has been existed,Jump
+1999-01-01 04:01:38.138760 : Waring:course has been existed,Jump
+1999-01-01 04:01:38.558580 : Waring:user has been existed,Jump
+1999-01-01 04:01:43.339500 : list_class
+1999-01-01 04:08:12.089340 : list_class
+1999-01-01 04:08:14.489340 : Waring:user has been existed,Jump
+1999-01-01 04:08:15.329340 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:15.809220 : Waring:course has been existed,Jump
+1999-01-01 04:08:16.289220 : Waring:user has been existed,Jump
+1999-01-01 04:08:17.789220 : Waring:user has been existed,Jump
+1999-01-01 04:08:18.269100 : Waring:user has been existed,Jump
+1999-01-01 04:08:19.047120 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:19.467000 : Waring:course has been existed,Jump
+1999-01-01 04:08:19.887120 : Waring:user has been existed,Jump
+1999-01-01 04:08:20.270820 : Waring:course has been existed,Jump
+1999-01-01 04:08:21.181020 : updata_class 1
+1999-01-01 04:08:21.755220 : updata_class 2
+1999-01-01 04:08:22.280160 : updata_class 3
+1999-01-01 04:08:22.760100 : updata_class 4
+1999-01-01 04:08:23.245800 : updata_class 5
+1999-01-01 04:08:23.773920 : updata_class 6
+1999-01-01 04:08:24.253800 : updata_class 7
+1999-01-01 04:08:24.780000 : updata_class 8
+1999-01-01 04:08:25.280700 : updata_class 9
+1999-01-01 04:08:25.794660 : updata_class 10
+1999-01-01 04:08:26.214720 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:26.814660 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:27.234840 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:27.654840 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:28.074660 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:28.494720 : Waring:file has been existed,Jump
+1999-01-01 04:08:28.974600 : list_class
+1999-01-01 04:08:30.834600 : Waring:user has been existed,Jump
+1999-01-01 04:08:31.314600 : Waring:user has been existed,Jump
+1999-01-01 04:08:32.454540 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:32.934480 : Waring:course has been existed,Jump
+1999-01-01 04:08:33.414600 : Waring:user has been existed,Jump
+1999-01-01 04:08:33.894660 : Waring:course has been existed,Jump
+1999-01-01 04:08:34.792680 : updata_class 1
+1999-01-01 04:08:35.405400 : updata_class 2
+1999-01-01 04:08:35.945400 : updata_class 3
+1999-01-01 04:08:36.425400 : updata_class 4
+1999-01-01 04:08:36.965400 : updata_class 5
+1999-01-01 04:08:37.505340 : updata_class 6
+1999-01-01 04:08:37.985280 : updata_class 7
+1999-01-01 04:08:38.525280 : updata_class 8
+1999-01-01 04:08:39.005340 : updata_class 9
+1999-01-01 04:08:39.485400 : updata_class 10
+1999-01-01 04:08:39.965460 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:40.576920 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:41.056920 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:41.476920 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:41.963040 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:42.384180 : Waring:file has been existed,Jump
+1999-01-01 04:08:42.804120 : list_class
+1999-01-01 04:08:45.377760 : Waring:user has been existed,Jump
+1999-01-01 04:08:46.262400 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:46.682460 : Waring:course has been existed,Jump
+1999-01-01 04:08:47.162100 : Waring:user has been existed,Jump
+1999-01-01 04:08:48.637380 : Waring:user has been existed,Jump
+1999-01-01 04:08:49.091520 : Waring:user has been existed,Jump
+1999-01-01 04:08:50.110320 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:50.530320 : Waring:course has been existed,Jump
+1999-01-01 04:08:50.950260 : Waring:user has been existed,Jump
+1999-01-01 04:08:51.371460 : Waring:course has been existed,Jump
+1999-01-01 04:08:52.270140 : updata_class 1
+1999-01-01 04:08:52.810140 : updata_class 2
+1999-01-01 04:08:53.334480 : updata_class 3
+1999-01-01 04:08:53.862000 : updata_class 4
+1999-01-01 04:08:54.341940 : updata_class 5
+1999-01-01 04:08:54.822180 : updata_class 6
+1999-01-01 04:08:55.302300 : updata_class 7
+1999-01-01 04:08:55.782360 : updata_class 8
+1999-01-01 04:08:56.202300 : updata_class 9
+1999-01-01 04:08:56.694840 : updata_class 10
+1999-01-01 04:08:57.047580 : Waring:userCourse has been existed,Jump
+1999-01-01 04:08:57.587640 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:58.003740 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:58.423740 : Waring:actvt has been existed,Jump
+1999-01-01 04:08:58.843680 : Waring:userActvt has been existed,Jump
+1999-01-01 04:08:59.325240 : Waring:file has been existed,Jump
+1999-01-01 04:08:59.719440 : list_class
+1999-01-01 04:09:00.679440 : Waring:user has been existed,Jump
+1999-01-01 04:09:02.359440 : Waring:user has been existed,Jump
+1999-01-01 04:09:02.873580 : Waring:course has been existed,Jump
+1999-01-01 04:09:03.353640 : updata_class 1
+1999-01-01 04:09:03.833580 : updata_class 2
+1999-01-01 04:09:04.253580 : updata_class 3
+1999-01-01 04:09:04.733760 : updata_class 4
+1999-01-01 04:09:05.213880 : updata_class 5
+1999-01-01 04:09:05.693820 : updata_class 6
+1999-01-01 04:09:06.173820 : updata_class 7
+1999-01-01 04:09:06.599760 : updata_class 8
+1999-01-01 04:09:07.079700 : updata_class 9
+1999-01-01 04:09:07.559580 : updata_class 10
+1999-01-01 04:09:07.941000 : Waring:userCourse has been existed,Jump
+1999-01-01 04:09:08.420880 : 2020211839 join_class 2
+1999-01-01 04:09:09.219420 : Waring:actvt has been existed,Jump
+1999-01-01 04:09:09.639480 : Waring:userActvt has been existed,Jump
+1999-01-01 04:09:10.119300 : list_class
+1999-01-01 04:09:12.219240 : Waring:user has been existed,Jump
+1999-01-01 04:09:12.639060 : Waring:user has been existed,Jump
+1999-01-01 04:09:13.538700 : Waring:userCourse has been existed,Jump
+1999-01-01 04:09:13.958700 : Waring:course has been existed,Jump
+1999-01-01 04:09:14.378820 : Waring:user has been existed,Jump
+1999-01-01 04:09:14.738640 : Waring:course has been existed,Jump
+1999-01-01 04:09:15.518760 : updata_class 1
+1999-01-01 04:09:16.058940 : updata_class 2
+1999-01-01 04:09:16.538760 : updata_class 3
+1999-01-01 04:09:17.018700 : updata_class 4
+1999-01-01 04:09:17.498820 : updata_class 5
+1999-01-01 04:09:17.978820 : updata_class 6
+1999-01-01 04:09:18.432840 : updata_class 7
+1999-01-01 04:09:18.912780 : updata_class 8
+1999-01-01 04:09:19.452840 : updata_class 9
+1999-01-01 04:09:19.992720 : updata_class 10
+1999-01-01 04:09:20.412840 : Waring:userCourse has been existed,Jump
+1999-01-01 04:09:20.952840 : Waring:actvt has been existed,Jump
+1999-01-01 04:09:21.357720 : Waring:userActvt has been existed,Jump
+1999-01-01 04:09:21.777720 : Waring:actvt has been existed,Jump
+1999-01-01 04:09:22.197840 : Waring:userActvt has been existed,Jump
+1999-01-01 04:09:22.617720 : Waring:file has been existed,Jump
+1999-01-01 04:09:23.037960 : list_class
+1999-01-01 04:09:24.477960 : Waring:user has been existed,Jump
+1999-01-01 04:09:24.897960 : Waring:user has been existed,Jump
+1999-01-01 04:09:25.857900 : Waring:userCourse has been existed,Jump
+1999-01-01 04:09:26.277960 : Waring:course has been existed,Jump
+1999-01-01 04:09:26.697900 : Waring:user has been existed,Jump
+1999-01-01 04:09:27.117960 : Waring:course has been existed,Jump
+1999-01-01 04:09:27.957960 : updata_class 1
+1999-01-01 04:09:28.537140 : updata_class 2
+1999-01-01 04:09:29.077140 : updata_class 3
+1999-01-01 04:09:29.617140 : updata_class 4
+1999-01-01 04:09:30.157080 : updata_class 5
+1999-01-01 04:09:30.637020 : updata_class 6
+1999-01-01 04:09:31.117020 : updata_class 7
+1999-01-01 04:09:31.603200 : updata_class 8
+1999-01-01 04:09:32.095920 : updata_class 9
+1999-01-01 04:09:32.635860 : updata_class 10
+1999-01-01 04:09:33.115800 : Waring:userCourse has been existed,Jump
+1999-01-01 04:09:33.763980 : Waring:actvt has been existed,Jump
+1999-01-01 04:09:34.236240 : Waring:userActvt has been existed,Jump
+1999-01-01 04:09:34.641000 : Waring:actvt has been existed,Jump
+1999-01-01 04:09:35.061060 : Waring:userActvt has been existed,Jump
+1999-01-01 04:09:35.481180 : Waring:file has been existed,Jump
+1999-01-01 04:09:35.901120 : list_class
+1999-01-01 15:42:53.665380 : list_class
+1999-01-01 16:30:07.924380 : list_class

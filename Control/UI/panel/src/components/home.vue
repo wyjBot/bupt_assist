@@ -127,9 +127,13 @@ export default defineComponent({
         session: '',
         tableData: [
           {
-            name: '数据结构',
-            day: '星期一',
-            speaker: '周丽',
+            id: '0',
+            名称: '军事理论',
+            星期: '星期一',
+            节次: '3',
+            时长: '1',
+            教师: '周光',
+            地点: 3,
           },
         ],
         _tableHead:[
@@ -169,7 +173,7 @@ export default defineComponent({
       return this.tableData.filter(
       (data) =>
         !this.search ||
-        data.name.toLowerCase().includes(this.search.toLowerCase())
+        data.名称.toLowerCase().includes(this.search.toLowerCase())
       )
     }
   },
@@ -198,7 +202,21 @@ export default defineComponent({
       .then((res: any)=>{
         if(res.data.code==1)
         {
-           this.$cookies.set("session",res.data.mess)
+          let data=res.data.mess;
+          if(data.length==0) return;
+          let item:any=data[0];
+
+          this._tableHead.length=0;
+          for(var key in item){
+            console.log(key,item[key])
+            this._tableHead.push({label:key,prop:key})
+
+          }
+          for(item in data){
+            console.log(item)
+            this.tableData.push(item)
+          }
+
         }
         else if(res.data.code==-1){
            ElMessage({
@@ -236,7 +254,7 @@ export default defineComponent({
     },
     listmetal(){
       // this._tableHead.length=0;
-      const user:User={
+      const user:any={
         name: '计算机系统基础',
         day: '星期一',
         speaker: '周峰',

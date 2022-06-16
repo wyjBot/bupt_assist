@@ -51,7 +51,7 @@ def newSession(userId):
 
 def vrfSession(serial):
   user=tb.find_one({"session":serial})
-  if user:return user
+  if user:return user['id']
   else:return None
 
 if __name__=='__main__':
