@@ -13,10 +13,12 @@ from datetime import datetime,timedelta
 from flask_cors import *
 from Control.user import user_api
 from Control.crouse import api as crouse_api
+from Control.activity import api as activity_api
 sys.path.append(path.dirname(path.dirname(__file__)))
 
 app = Flask(__name__,template_folder='')
 app.register_blueprint(user_api)
+app.register_blueprint(activity_api)
 app.register_blueprint(crouse_api)
 CORS(app, supports_credentials=True)
 

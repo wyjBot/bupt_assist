@@ -107,7 +107,7 @@ export default defineComponent({
 
           this._tableHead.length=0;
           for(var key in item){
-            console.log(key,item[key])
+            // console.log(key,item[key])
             this._tableHead.push({label:key,prop:key})
 
           }

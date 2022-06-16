@@ -1,5 +1,6 @@
 from datetime import datetime
 from Utils.database import conn
+import json as js
 from Utils.Time import datetime,timedelta
 
 #user初始数据（学号，密码，类型，姓名，电话，地址）
@@ -22,33 +23,23 @@ user.sign_up("2020211848", "12345678", "教师", "郜濒", "17623596418",23)
 from CourseMgmt import course
 coursetb=conn.create("course")
 coursetb.set_ukey("id")
-data1={"id":1,"name":"计算机系统基础","教师":"陈锋","星期":0,"节次":3,"时长":3,"地点":18}
-data2={"id":2,"name":"数据结构","教师":"郜濒","星期":1,"节次":2,"时长":2,"地点":18}
-data3={"id":3,"name":"离散数学","教师":"珠峰","星期":2,"节次":3,"时长":3,"地点":18}
-data4={"id":4,"name":"习近平新时代中国特色社会主义思想概论","教师":"郭斌","星期":3,"节次":1,"时长":2,"地点":19}
-data5={"id":5,"name":"概率论","教师":"吴岗","星期":4,"节次":2,"时长":2,"地点":18}
-data6={"id":6,"name":"电子学","教师":"周智","星期":0,"节次":6,"时长":2,"地点":2}
-data7={"id":7,"name":"高等数学","教师":"陈锋","星期":1,"节次":3,"时长":2,"地点":11}
-data8={"id":8,"name":"英语","教师":"珠峰","星期":2,"节次":7,"时长":2,"地点":11}
-data9={"id":9,"name":"中国近代史","教师":"郭斌","星期":3,"节次":7,"时长":2,"地点":19}
-data10={"id":10,"name":"军事理论","教师":"吴岗","星期":4,"节次":6,"时长":3,"地点":2}
-course.update_class(1, "2020211840", data1)
-course.update_class(2, "2020211848", data2)
-course.update_class(3, "2020211838", data3)
-course.update_class(4, "2020211841", data4)
-course.update_class(5, "2020211842", data5)
-course.update_class(6, "2020211843", data6)
-course.update_class(7, "2020211840", data7)
-course.update_class(8, "2020211838", data8)
-course.update_class(9, "2020211841", data9)
-course.update_class(10, "2020211842", data10)
+fr=open("Control/mateData/class.json","r",encoding='utf-8')
+data=js.loads(fr)
+for item in data:
+  course.update_class(item['id'], item['teacherId'], item)
+# course.update_class(2, "2020211848", data2)
+# course.update_class(3, "2020211838", data3)
+# course.update_class(4, "2020211841", data4)
+# course.update_class(5, "2020211842", data5)
+# course.update_class(6, "2020211843", data6)
+# course.update_class(7, "2020211840", data7)
+# course.update_class(8, "2020211838", data8)
+# course.update_class(9, "2020211841", data9)
+# course.update_class(10, "2020211842", data10)
 
 
-#user加入课程
-userCoursetb=conn.create("userCourse")
-course.join_class(2,"2020211839")
 
-from Activities import activity
+from Activity import activity
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
 data11={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
@@ -94,30 +85,30 @@ activity.actvt_create(data30)
 #exam初始数据
 from CourseMgmt import Exam
 examtb=conn.create("exam")
-data31={"title":"期末考试","开始时间":str(datatime(2022,6,22,10)),"持续时间":120,"地点":2}
-data32={"title":"期末考试","开始时间":str(datatime(2022,6,22,14)),"持续时间":120,"地点":18}
-data33={"title":"期末考试","开始时间":str(datatime(2022,6,23,9)),"持续时间":120,"地点":18}
-data34={"title":"期末考试","开始时间":str(datatime(2022,6,23,13,30)),"持续时间":120,"地点":11}
-data35={"title":"期末考试","开始时间":str(datatime(2022,6,24,8)),"持续时间":120,"地点":2}
+data31={"title":"期末考试","开始时间":str(datetime(2022,6,22,10)),"持续时间":120,"地点":2}
+data32={"title":"期末考试","开始时间":str(datetime(2022,6,22,14)),"持续时间":120,"地点":18}
+data33={"title":"期末考试","开始时间":str(datetime(2022,6,23,9)),"持续时间":120,"地点":18}
+data34={"title":"期末考试","开始时间":str(datetime(2022,6,23,13,30)),"持续时间":120,"地点":11}
+data35={"title":"期末考试","开始时间":str(datetime(2022,6,24,8)),"持续时间":120,"地点":2}
 Exam.create_class_exam(1, data31)
 Exam.create_class_exam(2, data32)
 Exam.create_class_exam(3, data33)
 Exam.create_class_exam(4, data34)
 Exam.create_class_exam(5, data35)
 #task初始数据
-from CourseMgmt import homework
+from CourseMgmt import homework as hmwk
 data36={"name":"第一次作业","des":"完成1,3,4题","attentionId":0,"deadline":str(dataime(2022,6,15,23,59))}
 data37={"name":"第一章","des":"","attentionId":0,"deadline":str(dataime(2022,6,15))}
 data38={"name":"期末作业","des":"请独自完成","attentionId":1,"deadline":str(dataime(2022,6,24))}
 data39={"name":"第二次作业","des":"请完成2,3(1)(2)","attentionId":0,"deadline":str(dataime(2022,6,16))}
 data40={"name":"第二章","des":"完成3,5,7题","attentionId":0,"deadline":str(dataime(2022,6,18))}
 data41={"name":"期末作业","des":"","attentionId":2,"deadline":str(dataime(2022,6,25))}
-create_class_task(1, data36)
-create_class_task(2, data37)
-create_class_task(3, data38)
-create_class_task(4, data39)
-create_class_task(5, data40)
-create_class_task(6, data41)
+hmwk.create_class_task(1, data36)
+hmwk.create_class_task(2, data37)
+hmwk.create_class_task(3, data38)
+hmwk.create_class_task(4, data39)
+hmwk.create_class_task(5, data40)
+hmwk.create_class_task(6, data41)
 
 #material初始数据
 from CourseMgmt import material
@@ -151,5 +142,8 @@ material.update_class_material(updata_number_42, data52)
 #file初始数据
 conn.create("file")
 
+#user课程关联
+userCoursetb=conn.create("userCourse")
+course.join_class(2,"2020211839")
 
 print(course.list_class("2020211839"))

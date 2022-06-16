@@ -18,8 +18,8 @@ tbUserCourse=conn["userCourse"]
 def actvt_list(userId):
   ret=tbUserActvt.find_all({"userId":userId})
   if not ret:
-    log("actvt_list fail",2)
-    return 0,"userId错误"
+    log("actvt_list blank",2)
+    return [],"还没有加入活动"
   log("actvt_list:userId="+userId,0)
   for x in ret:
     x.pop("userId")
