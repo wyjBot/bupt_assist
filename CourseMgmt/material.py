@@ -66,9 +66,7 @@ def create_class_material(classId,data):
   """
   res=tbMaterial.find_all({})
   data["id"]=classId
-  for i in range(len(res)+1):
-    if tbMaterial.find_one({"materialId":i}):continue
-    data["materialId"]=len(res)+1
+  data["materialId"]=(res[len(res)])["materialId"]+1
   data["version"]=0
   tbMaterial.insert(data)
   log("create_class_task:class="+str(classId),0)
