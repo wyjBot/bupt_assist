@@ -100,6 +100,7 @@ export default defineComponent({
           let data=res.data.mess;
           if(data.length==0) return;
           let item:any=data[0];
+          console.log(data)
 
           this._tableHead.length=0;
           for(var key in item){

@@ -3,8 +3,9 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Login from "../components/login.vue"
 import SignUp from "../components/signup.vue"
 import home from "../components/home.vue"
+import activity from "../components/activity.vue"
 import course from "../components/course.vue"
-import test from "../components/ts.vue"
+import ts from "../components/ts.vue"
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -24,7 +25,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'ts',
         name: 'ts',
-        component: test
+        component: ts
+      },
+      {
+        path: '/ts',
+        name: 'ts',
+        component: ts
       },
     ]
   },
