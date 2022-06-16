@@ -14,6 +14,7 @@ from flask_cors import *
 from Control.user import api as user_api
 from Control.exam import api as exam_api
 from Control.hmwk import api as hmwk_api
+from Control.res import api as res_api
 from Control.crouse import api as crouse_api
 from Control.activity import api as activity_api
 sys.path.append(path.dirname(path.dirname(__file__)))
@@ -22,6 +23,7 @@ app = Flask(__name__,template_folder='')
 app.register_blueprint(user_api)
 app.register_blueprint(exam_api)
 app.register_blueprint(hmwk_api)
+app.register_blueprint(res_api)
 app.register_blueprint(activity_api)
 app.register_blueprint(crouse_api)
 CORS(app, supports_credentials=True)

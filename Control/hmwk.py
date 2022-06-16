@@ -9,7 +9,7 @@ from CourseMgmt import homework as hmwk
 
 api = Blueprint('hmwk_api', __name__)
 @api.route('/api/hmwk/list',methods=['POST','GET'])
-def list_class():
+def list_hwmk():
     data = request.get_data()
     try:
         data = js.loads(data)

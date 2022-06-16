@@ -9,7 +9,7 @@ from CourseMgmt import material as res
 
 api = Blueprint('res_api', __name__)
 @api.route('/api/res/list',methods=['POST','GET'])
-def list_class():
+def list_res():
     data = request.get_data()
     try:
         data = js.loads(data)
