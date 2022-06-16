@@ -63,7 +63,7 @@ export default defineComponent({
   mounted(){
       this.session = this.$cookies.get("session")
       if(this.session=="") this.$router.push("/login")
-      console.log(this.session)
+      this.listclass()
   },
   destroyed(){
   },

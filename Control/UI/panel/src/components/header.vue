@@ -1,7 +1,7 @@
 <template>
 <el-row class="row" :gutter="20"  type="flex" justify="space-around" align="middle">
   <el-col  :span="4" :offset="0" >   
-      <el-switch rowitem v-model="isCollapse" />
+      <el-switch rowitem v-model="h_isCollapse" />
   </el-col>
   <el-col :span="10"  :offset="10" >   
   <div class="rowitem timebox">
@@ -30,7 +30,7 @@ import { defineComponent} from 'vue';
 
 let timer:any;
 export default defineComponent({
-  props:['isCollapse'],
+  props:{ 'h_isCollapse':Boolean, },
   data(){
       return {
         session:'',

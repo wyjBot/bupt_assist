@@ -43,9 +43,9 @@ import { Document, Menu as IconMenu, Location,
 <script lang="ts">
 import { defineComponent}from 'vue';
 export default defineComponent({
+  props:{ 'isCollapse':Boolean, },
   data(){
       return {
-        isCollapse :true,
         refreshNum:1,
     }
   },
