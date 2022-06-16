@@ -66,6 +66,10 @@ def list_user_task(userId):
       item["名称"]=item.pop("name")
       item["描述"]=item.pop("des")
       item["截止日期"]=item.pop("deadline")
+      if tbHmwk.find_one({"taskId":item["taskId"],"userId":userId}):
+        item["是否提交"]="已提交"
+      else:
+        item["是否提交"]="未提交"
     ret.extend(temp)
   log("list_user_task:user="+userId,0)
   return ret,"这是这个学生的所有task"
@@ -102,7 +106,7 @@ def view_task(taskId):
   res.pop("taskId")
   res["名称"]=res.pop("name")
   res["描述"]=res.pop("des")
-  res["deadline"]=res.pop("截止日期")
+  res["截止日期"]=res.pop("deadline")
   log("view_task:task="+str(taskId),0)
   ret=list()
   ret.append(res)
