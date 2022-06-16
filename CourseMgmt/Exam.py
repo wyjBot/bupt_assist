@@ -21,6 +21,7 @@ def list_class_exam(classId=-1):
   else:res=tbExam.find_all({"classId":classId})
   for x in res:
     x.pop("classId")
+    x["名称"]=x.pop("title")
   log("list_class_exam:class="+str(classId),0)
   return res,"这是所有的exam"
 
@@ -48,6 +49,9 @@ def list_user_exam(userId):
   ret=list()
   for x in res:
     temp=tbExam.find_all({"classId":x["id"]})
+    for item in temp:
+      item["课程名称"]=x["名称"]
+      item["名称"]=item.pop("title")
     ret.extend(temp)
   log("list_user_exam:user="+userId,0)
   return ret,"这是这个学生所有的考试"
@@ -79,8 +83,7 @@ def create_class_exam(classId,data):
     "title":
     "开始时间"：
     "持续时间":
-    "教学楼":
-    "教室":
+    "地点":
   }
     "classId":
     "examId":
