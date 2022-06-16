@@ -28,8 +28,14 @@ def list_class_task(classId=-1):
   else:res=tbTask.find_all({"classId":classId})
   for x in res:
     x.pop("classId")
+    x["名称"]=x.pop("name")
+    x["描述"]=x.pop("des")
+    x["截止日期"]=x.pop("deadline")
   log("list_class_task:class="+str(classId),0)
   return res,"这是这门课的所有task"
+
+def find_task_attention(taskId):#找到task对应的附件
+  pass
 
 def search_class_task(userId,classId=-1,match="有限状态自动机"):
   """search all class_task when classId=-1"""
@@ -55,6 +61,11 @@ def list_user_task(userId):
   ret=list()
   for x in res:
     temp=tbTask.find_all({"classId":x["id"]})
+    for item in temp:
+      item["课程名称"]=x["名称"]
+      item["名称"]=item.pop("name")
+      item["描述"]=item.pop("des")
+      item["截止日期"]=item.pop("deadline")
     ret.extend(temp)
   log("list_user_task:user="+userId,0)
   return ret,"这是这个学生的所有task"
@@ -89,6 +100,9 @@ def view_task(taskId):
     log("view_task fail",2)
     return -1,"不存在该taskId"
   res.pop("taskId")
+  res["名称"]=res.pop("name")
+  res["描述"]=res.pop("des")
+  res["deadline"]=res.pop("截止日期")
   log("view_task:task="+str(taskId),0)
   ret=list()
   ret.append(res)
@@ -103,6 +117,9 @@ def view_hmwk(hmwkId):
     log("view_hmwk fail",2)
     return -1,"不存在该hmwkId"
   ret.pop("hmwkId")
+  ret.pop("userId")
+  ret["提交时间"]=ret.pop("date")
+  ret["文本"]=ret.pop("text")
   log("view_hmwk:hmwkId="+str(hmwkId),0)
   res=list()
   res.append(ret)
@@ -190,11 +207,11 @@ if __name__ == "__main__":
     "attentionId":3,
     "deadline":str(now())
   }
-  create_class_task(12, data1)
-  create_class_task(12, data2)
-  create_class_task(13, data3)
-  print("12: ",list_class_task(12))
-  print("13: ",list_class_task(13))
+  create_class_task(1, data1)
+  create_class_task(1, data2)
+  create_class_task(2, data3)
+  print("1: ",list_class_task(1))
+  print("2: ",list_class_task(2))
   print("2020211839: ",list_user_task("2020211839"))
   print("task1: ",view_task(1))
   
