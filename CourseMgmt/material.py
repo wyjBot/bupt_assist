@@ -22,16 +22,23 @@ def list_class_material(classId=-1):
   else:res=tbMaterial.find_all({"id":classId})
   for x in res:
     x.pop("id")
+    x.pop("version")
+    x["标题"]=x.pop("title")
+    x["描述"]=x.pop("descript")
   log("list_class_material:class="+str(classId),0)
   return res,"这是所有的task"
 
 def view_material(materialId):
   """return all version """
+  #返回的id是课程的id
   res=tbMaterial.find_one({"materialId":materialId})
   if not res:
     log("view_task fail",2)
     return -1,"不存在该taskId"
   res.pop("materialId")
+  x.pop("version")
+  x["标题"]=x.pop("title")
+  x["描述"]=x.pop("descript")
   ret=list()
   ret.append(res)
   log("view_material:material="+str(materialId),0)
