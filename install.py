@@ -118,6 +118,36 @@ create_class_task(3, data38)
 create_class_task(4, data39)
 create_class_task(5, data40)
 create_class_task(6, data41)
+
+#material初始数据
+from CourseMgmt import material
+data42={"title":"课件1","descript":"the ppt of the first chapter","attachId":2435}
+data43={"title":"课件2","descript":"the ppt of the second chapter","attachId":2436}
+data44={"title":"课件1","descript":"the ppt","attachId":2437}
+data45={"title":"pdf教材","descript":"教材","attachId":2438}
+data46={"title":"第一章","descript":"the ppt of the first chapter","attachId":2439}
+data47={"title":"第二章","descript":"the ppt of the second chapter","attachId":2440}
+data48={"title":"课件3","descript":"answer of chapter one","attachId":2441}
+data49={"title":"第一章第一节","descript":"the ppt of the first chapter one session","attachId":2442}
+data50={"title":"第一章第二节","descript":"the ppt of the first chapter two session","attachId":2443}
+data51={"title":"第二章第二节","descript":"the ppt of the second chapter two session","attachId":2444}
+updata_number_42=material.create_class_material(1, data42)
+material.create_class_material(1, data43)
+material.create_class_material(2, data44)
+material.create_class_material(3, data45)
+updata_number_46=material.create_class_material(4, data46)
+updata_number_47=material.create_class_material(4, data47)
+material.create_class_material(1, data48)
+material.create_class_material(5, data49)
+material.create_class_material(5, data50)
+material.create_class_material(5, data51)
+data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2445}
+data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2446}
+data52={"title":"课件1","descript":"the ppt of the first chapter","attachId":2447}
+material.update_class_material(updata_number_42, data52)
+material.update_class_material(updata_number_42, data52)
+material.update_class_material(updata_number_42, data52)
+
 #file初始数据
 conn.create("file")
 

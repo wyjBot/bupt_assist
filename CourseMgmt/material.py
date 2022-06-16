@@ -44,7 +44,7 @@ def rollback_class_material(materialId,version):
     log("rollback_class_material fail",2)
     return 0,"不存在该版本"
   tbMaterial.update({"materialId":materialId},res)
-  log("rollback_hmwk:hmwkId="+str(hmwkId),0)
+  log("rollback_class_material:materialId="+str(materialId),0)
   return 1,"已返回版本"
 
 def create_class_material(classId,data):
@@ -68,7 +68,7 @@ def create_class_material(classId,data):
   return data["materialId"],"已经创建资料"
 
 def update_class_material(materialId,data):
-  "refer to the descript of update_hmwk"
+  "refer to the descript of update_material"
   res=tbMaterial.find_one({"materialId":materialId})
   if not res:
     log("update_class fail",2)
@@ -116,6 +116,8 @@ if __name__ == "__main__":
     "attachId":2438,
   }
   update_class_material(1, data4)
+  print("12: ",list_class_material(12))
+  rollback_class_material(1, 0)
   print("12: ",list_class_material(12))
   delete_class_material(2)
   print("12: ",list_class_material(12))
