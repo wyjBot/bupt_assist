@@ -61,8 +61,9 @@ def actvt_create(data):
     if tbActvt.find_one({"actvtId":i}):continue
     data["actvtId"]=i
   tbActvt.insert(data)
-  data["userId"]=data["InitiatorId"]
-  tbUserActvt.insert(data)
+  insertdata=data.copy()
+  insertdata["userId"]=insertdata["InitiatorId"]
+  tbUserActvt.insert(insertdata)
   log("actvt_create",0)
   return data["actvtId"],"成功创建活动"
 
@@ -131,12 +132,13 @@ if __name__ == "__main__":
   actvt_create(data1)
   actvt_create(data2)
   print("2020211839: ",actvt_list("2020211839"))
+  print("canjoin:",actvt_canjoin_list("2020211839"))
   actvt_join("2020211839", 0)
   print("2020211839: ",actvt_list("2020211839"))
   data3={
     "type":1,#1 represent personal ,2 means collective
     "name":"run again",
-    "InitiatorId":2020211839,
+    "InitiatorId":"2020211839",
     "time":str(now()),
     "last":str(timedelta(2)),
   }
