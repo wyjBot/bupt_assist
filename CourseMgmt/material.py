@@ -36,9 +36,9 @@ def view_material(materialId):
     log("view_task fail",2)
     return -1,"不存在该taskId"
   res.pop("materialId")
-  x.pop("version")
-  x["标题"]=x.pop("title")
-  x["描述"]=x.pop("descript")
+  res.pop("version")
+  res["标题"]=res.pop("title")
+  res["描述"]=res.pop("descript")
   ret=list()
   ret.append(res)
   log("view_material:material="+str(materialId),0)
@@ -66,7 +66,10 @@ def create_class_material(classId,data):
   """
   res=tbMaterial.find_all({})
   data["id"]=classId
-  data["materialId"]=(res[len(res)])["materialId"]+1
+  if len(res)==0:
+    data["materialId"]=0
+  else:
+    data["materialId"]=(res[len(res)-1])["materialId"]+1
   data["version"]=0
   tbMaterial.insert(data)
   log("create_class_task:class="+str(classId),0)
