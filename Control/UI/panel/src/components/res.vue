@@ -13,8 +13,8 @@
       </template>
       <template #default="scope">
          <el-button size="small"
-          @click="handleEdit(scope.$index, scope.row)"
-          type="info" >{{scope.row.是否提交}}</el-button >
+          @click="handleDelete(scope.$index, scope.row)"
+          type="info" >查看</el-button >
       </template>
     </el-table-column>
   </el-table>
@@ -42,7 +42,7 @@ export default defineComponent({
         isCollapse :true,
         search : '',
         session: '',
-        tableData:[
+        tableData: [
           {
             id: '0',
             名称: '军事理论',
@@ -69,7 +69,7 @@ export default defineComponent({
     },
     filterTableData:function(){
       return this.tableData.filter(
-      (data:any) =>
+      (data) =>
         !this.search ||
         data.名称.toLowerCase().includes(this.search.toLowerCase())
       )
@@ -77,8 +77,7 @@ export default defineComponent({
   },
   methods:{
     handleEdit (index: number, row: any){
-      // console.log(index, row)
-      this.$router.push({name:"hmwk_update",query:{id:row.taskId}})
+      console.log(index, row)
     },
     handleDelete (index: number, row: any){
       console.log(index, row)
@@ -91,7 +90,7 @@ export default defineComponent({
       console.log(key, keyPath)
     },
     listActivity(){
-      axios.post("/api/hmwk/list",
+      axios.post("/api/res/list",
       {
         "session":this.session
       })//传参
@@ -104,9 +103,6 @@ export default defineComponent({
 
           this._tableHead.length=0;
           for(var key in item){
-            if(key=="是否提交") continue;
-            if(key=="classId") continue;
-            if(key=="attentionId") continue;
             this._tableHead.push({label:key,prop:key})
 
           }

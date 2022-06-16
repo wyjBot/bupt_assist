@@ -25,3 +25,21 @@ def list_hwmk():
     data,msg=hmwk.list_user_task(userid)
     return rjs(1,data)
 
+
+@api.route('/api/hmwk/update',methods=['POST','GET'])
+def update_hwmk():
+    data = request.get_data()
+    # file=request.files.get("attach")
+    file=request.files.get("panel.vue")
+    try:
+        data = js.loads(data)
+    except:
+      return rjs(400,"无效请求")
+    if not "session" in data:
+      return rjs(400,"参数缺失")
+    userid=vrfSession(data['session'])
+    if not userid:
+      return rjs(-1,"登录失效")
+    if  "file" in data:
+      print(file)
+      return rjs(1,data["file"])

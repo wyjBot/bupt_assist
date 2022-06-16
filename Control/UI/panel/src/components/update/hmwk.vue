@@ -3,7 +3,7 @@
   <div>{{task.名称}} </div>
   <div>{{task.内容}} </div>
   <el-input
-    v-model="textarea1"
+    v-model="form.text"
     class="txtarea"
     :autosize="{ minRows: 2, maxRows: 4 }"
     type="textarea"
@@ -26,13 +26,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { reactive, onMounted, getCurrentInstance } from "vue";
+import { ref,defineComponent } from 'vue'
 import type { UploadUserFile } from 'element-plus'
 import axios from 'axios';
+import { useRoute, useRouter } from "vue-router";
 import { genFileId } from 'element-plus'
 import type { UploadInstance, UploadProps, UploadFile } from 'element-plus'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import cookies from 'vue-cookies' 
+const  proxy:any  = getCurrentInstance();
+const route = useRoute();
+const router = useRouter();
+
+
+console.log(route.query.id)
+
+// const props = defineProps({
+  // id:String
+// })
+
 const task={
+
   名称:"title",
   内容:"hello kitty"
 }
@@ -43,33 +58,33 @@ const form:any={
   "text":""
 
 }
+let session=cookies.get("session")
 const submit=()=>{
-      axios.post("/api/activity/list",
+      form.file.name="attach"
+      console.log(form.file)
+      axios.post("/api/hmwk/update",
       {
-        "session":this.session
+        "session":session,
+        "file":form.file,
+        "text":form.text
       })//传参
       .then((res: any)=>{
         if(res.data.code==1)
         {
-          let data=res.data.mess;
-          if(data.length==0) return;
-          let item:any=data[0];
-          console.log(data)
-
-          this._tableHead.length=0;
-          for(var key in item){
-            console.log(key,item[key])
-            this._tableHead.push({label:key,prop:key})
-
-          }
-          this.tableData=data
+          let msg=res.data.mess;
+          // console.log(msg)
+          ElMessage({
+            type: 'info',
+            message: msg,
+          })
+          // router.push({name:"hmwk"})
         }
         else if(res.data.code==-1){
            ElMessage({
               type: 'info',
               message: `提示: 登录失效`,
            })
-           this.$router.push({name:'login',params: {id:'10001'}})
+          router.push({name:"login"})
         }
         else{
           console.log(res.data.code)
@@ -102,6 +117,13 @@ const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
 }
 </script>
 
+<script  lang="ts">
+export default defineComponent({
+  methods: {
+    he(){},
+  }
+})
+</script>
 <style>
 .txtarea{
   max-width:60vw;

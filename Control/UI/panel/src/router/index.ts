@@ -4,6 +4,8 @@ import Login from "../components/login.vue"
 import SignUp from "../components/signup.vue"
 import home from "../components/home.vue"
 import hmwk from "../components/hmwk.vue"
+import hmwk_update from "../components/update/hmwk.vue"
+import res from "../components/res.vue"
 import exam from "../components/exam.vue"
 import activity from "../components/activity.vue"
 import course from "../components/course.vue"
@@ -37,7 +39,17 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'hmwk',
         name: 'hmwk',
-        component: hmwk
+        component: hmwk,
+      },
+      {
+        path: 'hmwk/update',
+        name: 'hmwk_update',
+        component: hmwk_update
+      },
+      {
+        path: 'res',
+        name: 'res',
+        component: res
       },
       {
         path: 'ts',

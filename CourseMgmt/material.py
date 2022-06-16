@@ -33,7 +33,7 @@ def list_user_material(userid):
   data,mess=course.list_class(userid)
   ret=list()
   for line in data:
-    ret.append(list_class_material(line['id'])[0])
+    ret.extend(list_class_material(line['id'])[0])
   return ret,"all user res is there"
 
 def view_material(materialId):
