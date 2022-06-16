@@ -84,9 +84,9 @@ class Table:
   def insert(self,dataX):
     keysX=dataX.keys()
     for ukey in self.ukeys:
-      if ukey not in dataX:
-        raise Exception("All ukey should't be empty")
-      if dataX[ukey]==None or dataX[ukey] in self.ukVals[ukey]:
+      if ukey not in dataX or dataX[ukey]==None:
+        raise Exception(f"ukey:{ukey} should't be empty")
+      if dataX[ukey] in self.ukVals[ukey]:
         raise Exception(f"ukey:{ukey} has been existing")
     for ukey in self.ukeys:
       self.ukVals[ukey].append(dataX[ukey])
