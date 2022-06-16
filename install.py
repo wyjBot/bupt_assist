@@ -23,8 +23,8 @@ user.sign_up("2020211848", "12345678", "教师", "郜濒", "17623596418",23)
 from CourseMgmt import course
 coursetb=conn.create("course")
 coursetb.set_ukey("id")
-fr=open("Control/mateData/class.json","r",encoding='utf-8')
-data=js.loads(fr)
+fr=open("Control/metaData/class.json","r",encoding='utf-8')
+data=js.load(fr)
 for item in data:
   course.update_class(item['id'], item['teacherId'], item)
 # course.update_class(2, "2020211848", data2)
@@ -39,7 +39,7 @@ for item in data:
 
 
 
-from Activity import activity
+from Activity import actvt
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
 data11={"type":2,"name":"class meeting","InitiatorId":"2020211839","time":str(datetime(2022,6,5,18)),"last":str(timedelta(hours=1))}
