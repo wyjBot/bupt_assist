@@ -9,8 +9,8 @@ from Utils import database
 from Utils.user import vrfSession
 
 
-user_api = Blueprint('user_api', __name__)
-@user_api.route('/api/signin',methods=['POST','GET'])
+api = Blueprint('user_api', __name__)
+@api.route('/api/signin',methods=['POST','GET'])
 def login():
     data = request.get_data()
     try:
@@ -28,7 +28,7 @@ def login():
       return rjs(1400,"账户名或密码错误")
 
       
-@user_api.route('/api/signup',methods=['POST','GET'])
+@api.route('/api/signup',methods=['POST','GET'])
 def signup():
     data = request.get_data()
     try:

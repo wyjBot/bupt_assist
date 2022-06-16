@@ -44,7 +44,6 @@ export default defineComponent({
     }
   },
   mounted(){
-      console.log("header mounted")
       this.session = this.$cookies.get("session")
       if(this.session=="") this.$router.push("/login")
       timer = setInterval(() => {

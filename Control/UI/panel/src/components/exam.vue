@@ -59,7 +59,7 @@ export default defineComponent({
   mounted(){
       this.session = this.$cookies.get("session")
       if(this.session=="") this.$router.push("/login")
-      this.listActivity()
+      this.listexam()
   },
   destroyed(){
   },
@@ -89,8 +89,8 @@ export default defineComponent({
     handleClose(key: string, keyPath: string[]){
       console.log(key, keyPath)
     },
-    listActivity(){
-      axios.post("/api/activity/list",
+    listexam(){
+      axios.post("/api/exam/list",
       {
         "session":this.session
       })//传参
@@ -100,6 +100,7 @@ export default defineComponent({
           let data=res.data.mess;
           if(data.length==0) return;
           let item:any=data[0];
+          // console.log(data)
 
           this._tableHead.length=0;
           for(var key in item){

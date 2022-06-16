@@ -5,6 +5,7 @@ import Utils
 from Utils.Log import *
 from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
+from CourseMgmt import course
 from Utils.database import conn
 
 """The implementation principle of this module 
@@ -27,6 +28,13 @@ def list_class_material(classId=-1):
     x["描述"]=x.pop("descript")
   log("list_class_material:class="+str(classId),0)
   return res,"这是所有的task"
+
+def list_user_material(userid):
+  data,mess=course.list_class(userid)
+  ret=list()
+  for line in data:
+    ret.append(list_class_material(line['id'])[0])
+  return ret,"all user res is there"
 
 def view_material(materialId):
   """return all version """

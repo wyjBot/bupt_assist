@@ -4,6 +4,7 @@ import Login from "../components/login.vue"
 import SignUp from "../components/signup.vue"
 import home from "../components/home.vue"
 import hmwk from "../components/hmwk.vue"
+import exam from "../components/exam.vue"
 import activity from "../components/activity.vue"
 import course from "../components/course.vue"
 import ts from "../components/ts.vue"
@@ -27,6 +28,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'activity',
         name: 'activity',
         component: activity
+      },
+      {
+        path: 'exam',
+        name: 'exam',
+        component: exam
       },
       {
         path: 'hmwk',

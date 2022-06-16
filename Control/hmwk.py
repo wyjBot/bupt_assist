@@ -4,12 +4,12 @@ import json as js
 from flask import request,redirect,make_response
 from Utils.user import vrfSession
 from Control.webrpc import rjs
-from crouse import homework as hmwk
+from CourseMgmt import homework as hmwk
 
 
-api = Blueprint('task_api', __name__)
-@api.route('/api/task/submit',methods=['POST','GET'])
-def submit():
+api = Blueprint('hmwk_api', __name__)
+@api.route('/api/hmwk/list',methods=['POST','GET'])
+def list_class():
     data = request.get_data()
     try:
         data = js.loads(data)
@@ -20,4 +20,8 @@ def submit():
     userid=vrfSession(data['session'])
     if not userid:
       return rjs(-1,"登录失效")
-    print(data)
+    if  "classid" in data:
+       classid=data['classid']
+    data,msg=hmwk.list_user_task(userid)
+    return rjs(1,data)
+

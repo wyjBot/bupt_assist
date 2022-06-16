@@ -58,7 +58,7 @@ def list_user_exam(userId):
 
 def search_user_exam(userId):
   #ret={}
-  if not tb.find_one({"id":classId,"userId":userId}):return -1,"该学生没有这门课"
+  # if not tb.find_one({"id":classId,"userId":userId}):return -1,"该学生没有这门课"
   res=tb.find_all({"userId":userId})
   ret=list()
   for x in res:
