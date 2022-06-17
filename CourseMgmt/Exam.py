@@ -88,7 +88,7 @@ def create_class_exam(classId,data):
     "classId":
     "examId":
   """
-  return len(res)+1,"已经创建task"
+  return len(res)+1,"已经创建exam"
 
 def view_exam(examId):
   '''return a dict contain key same as "create_task" '''
