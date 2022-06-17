@@ -24,18 +24,28 @@ def notice_list(userId):
     x.pop("userId")
     if x["type"]==1:
       x["闹钟类型"]="活动闹钟"
+      x["活动名称"]=(tbActvt.find_one({"actvtId":x["id"]}))["name"]
+      x.pop("id")
     elif x["type"]==2:
       x["闹钟类型"]="课程闹钟"
+      x["课程名称"]=(tbCourse.find_one({"id":x["id"]}))["名称"]
+      x.pop("id")
     else:
       x["闹钟类型"]="考试闹钟"
+      x["考试名称"]=(tbExam.find_one({"examId":x["id"]}))["title"]
+      x.pop("id")
     if x["frequncy"]==1:
       x["频率"]="只响一次"
+      x.pop("frequncy")
     elif x["frequncy"]==2:
       x["频率"]="每天一次"
+      x.pop("frequncy")
     else:
       x["频率"]="每周一次"
       x["星期"]=x.pop("day")
+      x.pop("frequncy")
     x["闹钟时间"]=x.pop("time")
+    x.pop("type")
   return ret,"这是所有的闹钟"
 
 def notice_available(userId):
@@ -208,3 +218,4 @@ if __name__ == "__main__":
   #notice_add("2020211839", data3)
   resetTo(datetime(2022,6,14,8,44))
   print("notice work:",notice_work(now(), "2020211839"))
+  print(notice_list("2020211839"))
