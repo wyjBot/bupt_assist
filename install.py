@@ -42,6 +42,11 @@ for item in data1:
   print(actvt.actvt_create(item))
 fr.close()
 
+#user课程关联
+userCoursetb=conn.create("userCourse")
+userid="2020211839"
+course.join_class(2,userid)
+course.join_class(3,userid)
 
 #exam初始数据
 examtb=conn.create("exam")
@@ -71,14 +76,24 @@ fr=open("Control/metaData/material.json","r",encoding='utf-8')
 data4=js.load(fr)
 for item in data4:
   print(res.create_class_material(item["id"], item))
-
+#hmwk初始数据
+hmwktb=conn.create("hmwk")
+hmwkRollBacktb=conn.create("hmwkRollBack")
+fr=open("Control/metaData/hmwk.json","r",encoding='utf-8')
+data5=js.load(fr)
+for item in data5:
+  print(hmwk.update_hmwk(item))
+#notice初始数据
+from Schedule import interface as notice
+noticetb=conn.create("notice")
+fr=open("Control/metaData/notice.json","r",encoding='utf-8')
+data6=js.load(fr)
+for item in data6:
+  print(notice.notice_add(item["userId"], item))
 #file初始数据
 conn.create("file")
 
-#user课程关联
-userCoursetb=conn.create("userCourse")
-userid="2020211839"
-course.join_class(2,userid)
+
 print(course.list_class("2020211839"))
 print(Exam.list_user_exam("2020211839"))
 print(res.list_user_material(userid))
