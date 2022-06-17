@@ -6434,3 +6434,23 @@ Jump
 1999-01-26 22:53:59.100000 : Waring:userActvt has been existed,Jump
 1999-01-27 08:08:36.491220 : list_class
 1999-01-27 08:08:38.878380 : list_class_material:class=2
+1999-01-27 08:08:43.668900 : Waring:user has been existed,Jump
+1999-01-27 08:08:45.906540 : Waring:exam has been existed,Jump
+1999-01-27 08:08:48.398760 : Waring:userCourse has been existed,Jump
+1999-01-27 08:08:50.130360 : Waring:course has been existed,Jump
+1999-01-27 08:08:54.604620 : Waring:file has been existed,Jump
+1999-01-27 08:08:58.247280 : Waring:task has been existed,Jump
+1999-01-27 08:09:00.051480 : Waring:userCourse has been existed,Jump
+1999-01-27 08:09:01.654200 : Waring:course has been existed,Jump
+1999-01-27 08:09:03.067500 : Waring:hmwk has been existed,Jump
+1999-01-27 08:09:04.779780 : Waring:hmwkRollBack has been existed,Jump
+1999-01-27 08:09:07.897740 : Waring:userCourse has been existed,Jump
+1999-01-27 08:09:09.082560 : Waring:course has been existed,Jump
+1999-01-27 08:09:10.079940 : Waring:user has been existed,Jump
+1999-01-27 08:09:11.348460 : Waring:material has been existed,Jump
+1999-01-27 08:09:12.734100 : Waring:userCourse has been existed,Jump
+1999-01-27 08:09:14.054040 : Waring:course has been existed,Jump
+1999-01-27 08:09:15.504960 : Waring:materialRollBack has been existed,Jump
+1999-01-27 08:09:19.208100 : Waring:actvt has been existed,Jump
+1999-01-27 08:09:22.491120 : Waring:userActvt has been existed,Jump
+1999-01-27 09:08:44.803080 : actvt_list:userId=2020211839
