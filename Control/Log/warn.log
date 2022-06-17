@@ -135,3 +135,6 @@
 1999-01-26 08:06:00.359340 : Waring: ukey examId has been existed,Jump
 1999-01-26 08:06:08.746500 : Waring: ukey taskId has been existed,Jump
 1999-01-26 08:06:21.893340 : Waring: ukey materialId has been existed,Jump
+1999-01-26 18:54:37.611000 : Waring: ukey id has been existed,Jump
+1999-01-26 18:54:41.219760 : Waring: ukey id has been existed,Jump
+1999-01-26 18:54:59.194980 : Waring: ukey actvtId has been existed,Jump

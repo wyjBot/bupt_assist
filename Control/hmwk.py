@@ -39,6 +39,7 @@ def update_hwmk():
     userid=vrfSession(data['session'])
     if not userid:
       return rjs(-1,"登录失效")
-    if  file:
-      hmwk.update_hwmk(userid,)
-      return rjs(1,"提交成功")
+    del data['session']
+    data['userId']=userid
+    hmwk.submit_hmwk(data)
+    return rjs(1,"提交成功")

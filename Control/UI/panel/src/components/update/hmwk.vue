@@ -1,7 +1,7 @@
 <template>
 
-  <div>{{task.名称}} </div>
-  <div>{{task.内容}} </div>
+  <div>{{taskDt.名称}} </div>
+  <div>{{taskDt.内容}} </div>
   <el-input
     v-model="form.text"
     class="txtarea"
@@ -39,13 +39,15 @@ const route = useRoute();
 const router = useRouter();
 
 
-console.log(route.query.id)
+
+
+const taskId=route.query.id
 
 // const props = defineProps({
   // id:String
 // })
 
-const task={
+const taskDt={
 
   名称:"title",
   内容:"hello kitty"
@@ -95,7 +97,8 @@ const submit=()=>{
       axios.post("/api/hmwk/update",
       {
         "session":session,
-        "fileid":form.fileid,
+        "taskId":taskId,
+        "fileId":form.fileid,
         "text":form.text
       },config)//传参
       .then((res: any)=>{

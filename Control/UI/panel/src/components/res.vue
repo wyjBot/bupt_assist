@@ -35,6 +35,24 @@ import cookies from 'vue-cookies'
 //   console.log("nmsl")
 // }
 
+  function httpPost(URL:string, PARAMS:any) {
+      var temp = document.createElement("form");
+      temp.action = URL;
+      temp.method = "post";
+      temp.style.display = "none";
+
+      for (var x in PARAMS) {
+          var opt = document.createElement("textarea");
+          opt.name = x;
+          opt.value = PARAMS[x];
+          temp.appendChild(opt);
+      }
+      document.body.appendChild(temp);
+      temp.submit();
+
+      return temp;
+  }
+
 import { defineComponent}from 'vue';
 export default defineComponent({
   data(){
@@ -78,17 +96,8 @@ export default defineComponent({
   methods:{
     handleDown (index: number, row: any){
       let fid=row.attachId
-      axios.post("/api/file/down",
-      {
-        "session":this.session,
-        "id":fid,
-      })//传参
-      .then((res: any)=>{
-        console.log( res.data)
-      })
-      .catch(function(err: any){
-           ElMessage({ type: 'info', message: `提示: ${err}`, })
-      });
+      let params={"id":fid,"session":this.session}
+      httpPost("/api/file/down",params);
     },
     handleDelete (index: number, row: any){
       console.log(index, row)

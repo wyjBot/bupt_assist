@@ -142,7 +142,7 @@ def rollback_hmwk(hmwkId,version):
   log("rollback_hmwk:hmwkId="+str(hmwkId),0)
   return 1,"已返回版本"
 
-def submit_hmwk(userId,data):
+def submit_hmwk(data):
   """generate and ret a hmwkId for the taskId of user"""
   """return 0 when creates failed because of insuffcient data or wrong userId/taskId"""
   """
@@ -150,12 +150,13 @@ def submit_hmwk(userId,data):
     "date":datetime.now(),
     "userId":2020211888,
     "taskId":1312,
-    "hmwkId":
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2350,#作业附件文件Id
   }
   #save the data to database and hmwkId ++ and ret now hmwk
   """
+  data['date']=Time.now()
+  userId=data["userId"]
   res=tbTask.find_one({"taskId":data["taskId"]})
   if not res:
     log("submit_hmwk fail",2)

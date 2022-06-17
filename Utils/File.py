@@ -7,6 +7,8 @@ import Cfg;cfg=Cfg.cfg
 from Log import log
 from database import conn
 
+filedir=path.dirname(__file__)+"/../Upload/tmp/"
+
 tb=conn.create("file")
 
 def saveFile(opath:str)->int:
@@ -21,7 +23,11 @@ def saveFile(opath:str)->int:
 
 def getFile(fileId:int):
   line=tb.find_one({"id":fileId})
-  fpath=line['path'].split('#')[0]
+  try:
+    fpath=line['path'].split('#')[0]
+  except:
+    fpath=path.dirname(__file__)+"/../Upload/tmp/test.txt"
+
   return fpath
 
 # print(getFile(5))
