@@ -6,6 +6,7 @@ from Utils.Log import *
 from Utils.Time import *
 from Utils.DataFrame import *
 from Utils.database import conn
+from Navigate.interface import builds
 
 """The implementation principle of this module 
     is highly similar to CourseMgmt
@@ -29,7 +30,7 @@ def actvt_list(userId):
     else:
       x["类型"]="公开活动"
     x.pop("type")
-    x["地点"]=x.pop("buildId")
+    x["地点"]=builds[x["buildId"]]["名称"]
     x["名称"]=x.pop("name")
     x["创建者"]=x.pop("InitiatorId")
     x["开始时间"]=x.pop("time")
@@ -163,7 +164,8 @@ def find_user_location(timein,userId):#通过时间找用户位置
       lasttime=lasttotimedelta(x["last"])
       time1=time1+lasttime
       if time1.__le__(time):continue
-      return x["buildId"],"这是用户所在位置"
+      a=[{"buildId":x["buildId"],"地点":builds[x["buildId"]]["名称"]}]
+      return a,"这是用户所在位置"
   day=time.weekday()#计算星期几
   rex=tbUserCourse.find_all({"userId":userId,"星期":day})
   temptime=str(time.date())+" 08:00:00"
@@ -173,9 +175,11 @@ def find_user_location(timein,userId):#通过时间找用户位置
     if time1.__le__(time):
       time1=time1+timedelta(minutes=(45*x["时长"]))
       if time1.__le__(time):continue
-      return x["地点"],"这是用户所在位置"
+      a=[{"buildId":x["buildId"],"地点":builds[x["buildId"]]["名称"]}]
+      return a,"这是用户所在位置"
   nofind=tbUser.find_one({"id":userId})
-  return nofind["addr"],"这是用户注册地址"
+  a=[{"buildId":nofind["addr"],"地点":builds[nofind["addr"]]["名称"]}]
+  return a,"这是用户注册地址"
 
 
 def lasttotimedelta(str):
@@ -220,3 +224,4 @@ if __name__ == "__main__":
   print(find_user_location(now(), "2020211839"))
   resetTo(datetime(2022,6,5,20,15))
   print(find_user_location(now(), "2020211839"))
+  print(actvt_list("2020211839"))
