@@ -27,7 +27,7 @@
     </el-menu-item>
     <el-menu-item index="4">
       <el-icon><setting /></el-icon>
-      <template #title>个人设置</template>
+      <template #title @click="goNav">个人设置</template>
     </el-menu-item>
   </el-menu>
 
@@ -54,10 +54,10 @@ export default defineComponent({
   },
   methods:{
     handleOpen  (key: string, keyPath: string[]){
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     },
     handleClose(key: string, keyPath: string[]){
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
     },
     gocourse(){
       this.$router.push({name:"course"})
@@ -74,6 +74,9 @@ export default defineComponent({
     },
     goactvt(){
       this.$router.push("/activity")
+    },
+    goNav(){
+      this.$router.push("/nav")
     },
   }
 })

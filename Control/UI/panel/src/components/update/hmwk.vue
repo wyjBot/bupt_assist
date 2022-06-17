@@ -26,8 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, onMounted, getCurrentInstance } from "vue";
-import { ref,defineComponent } from 'vue'
+import { ref,reactive, onMounted, getCurrentInstance } from "vue";
 import type { UploadUserFile } from 'element-plus'
 import axios from 'axios';
 import { useRoute, useRouter } from "vue-router";
@@ -55,47 +54,65 @@ const textarea1 = ref('')
 
 const form:any={
   "file":"",
-  "text":""
+  "text":"",
+  "fileid":0,
 
 }
 let session=cookies.get("session")
-const submit=()=>{
-      form.file.name="attach"
-      console.log(form.file)
-      axios.post("/api/hmwk/update",
-      {
-        "session":session,
-        "file":form.file,
-        "text":form.text
-      })//传参
-      .then((res: any)=>{
-        if(res.data.code==1)
-        {
-          let msg=res.data.mess;
-          // console.log(msg)
-          ElMessage({
-            type: 'info',
-            message: msg,
-          })
-          // router.push({name:"hmwk"})
-        }
-        else if(res.data.code==-1){
+const gologin=()=>{
            ElMessage({
               type: 'info',
               message: `提示: 登录失效`,
            })
           router.push({name:"login"})
+}
+const submit=()=>{
+      form.file.name="attach"
+      console.log(form.file)
+      let config = {
+        headers: {'Content-Type': 'multipart/form-data'}
+      }
+      axios.post("/api/file/upload",
+      {
+        "session":session,
+        "file":form.file,
+        "text":form.text
+      },config)//传参
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+          form.fileid=res.data.mess;
         }
+        else if(res.data.code==-1){ gologin(); }
         else{
           console.log(res.data.code)
           throw res.data.mess
         }
       })
       .catch(function(err: any){
-           ElMessage({
-              type: 'info',
-              message: `提示: ${err}`,
-           })
+           ElMessage({ type: 'info', message: `提示: ${err}`,})
+      });
+      axios.post("/api/hmwk/update",
+      {
+        "session":session,
+        "fileid":form.fileid,
+        "text":form.text
+      },config)//传参
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+          let msg=res.data.mess;
+          ElMessage({ type: 'info', message: msg, })
+          router.push({name:"hmwk"})
+        }
+        else if(res.data.code==-1){ gologin(); }
+        else{
+          console.log(res.data.code)
+          throw res.data.mess
+        }
+      })
+      .catch(function(err: any){
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
       });
 
 }
@@ -118,6 +135,7 @@ const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
 </script>
 
 <script  lang="ts">
+import { ref,defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     he(){},

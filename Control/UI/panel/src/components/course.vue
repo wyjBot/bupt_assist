@@ -114,10 +114,7 @@ export default defineComponent({
           this.tableData=data
         }
         else if(res.data.code==-1){
-           ElMessage({
-              type: 'info',
-              message: `提示: 登录失效`,
-           })
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
            this.$router.push({name:'login',params: {id:'10001'}})
         }
         else{
@@ -126,10 +123,7 @@ export default defineComponent({
         }
       })
       .catch(function(err: any){
-           ElMessage({
-              type: 'info',
-              message: `提示: ${err}`,
-           })
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
       });
     },
   }
