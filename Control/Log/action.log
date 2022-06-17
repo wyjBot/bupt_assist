@@ -5239,3 +5239,79 @@ Jump
 1999-01-24 10:00:34.371300 : Waring:userActvt has been existed,Jump
 1999-01-24 22:25:42.986700 : list_class
 1999-01-25 02:29:37.584120 : list_class
+1999-01-25 02:29:40.509480 : Waring:user has been existed,Jump
+1999-01-25 02:29:41.464260 : Waring:exam has been existed,Jump
+1999-01-25 02:29:42.004320 : Waring:userCourse has been existed,Jump
+1999-01-25 02:29:42.544440 : Waring:course has been existed,Jump
+1999-01-25 02:29:44.865300 : Waring:file has been existed,Jump
+1999-01-25 02:29:45.525300 : Waring:task has been existed,Jump
+1999-01-25 02:29:46.005300 : Waring:userCourse has been existed,Jump
+1999-01-25 02:29:46.485180 : Waring:course has been existed,Jump
+1999-01-25 02:29:46.965180 : Waring:hmwk has been existed,Jump
+1999-01-25 02:29:47.445120 : Waring:hmwkRollBack has been existed,Jump
+1999-01-25 02:29:48.430440 : Waring:userCourse has been existed,Jump
+1999-01-25 02:29:48.910440 : Waring:course has been existed,Jump
+1999-01-25 02:29:49.399860 : Waring:user has been existed,Jump
+1999-01-25 02:29:49.939800 : Waring:material has been existed,Jump
+1999-01-25 02:29:50.454780 : Waring:userCourse has been existed,Jump
+1999-01-25 02:29:50.906760 : Waring:course has been existed,Jump
+1999-01-25 02:29:51.386700 : Waring:materialRollBack has been existed,Jump
+1999-01-25 02:29:52.295880 : Waring:actvt has been existed,Jump
+1999-01-25 02:29:52.775940 : Waring:userActvt has been existed,Jump
+1999-01-25 02:29:56.464500 : Waring:user has been existed,Jump
+1999-01-25 02:29:57.304440 : Waring:exam has been existed,Jump
+1999-01-25 02:29:57.819960 : Waring:userCourse has been existed,Jump
+1999-01-25 02:29:58.270020 : Waring:course has been existed,Jump
+1999-01-25 02:30:00.451140 : Waring:file has been existed,Jump
+1999-01-25 02:30:01.111140 : Waring:task has been existed,Jump
+1999-01-25 02:30:01.660260 : Waring:userCourse has been existed,Jump
+1999-01-25 02:30:02.174040 : Waring:course has been existed,Jump
+1999-01-25 02:30:02.690460 : Waring:hmwk has been existed,Jump
+1999-01-25 02:30:03.279060 : Waring:hmwkRollBack has been existed,Jump
+1999-01-25 02:30:04.522080 : Waring:userCourse has been existed,Jump
+1999-01-25 02:30:05.122020 : Waring:course has been existed,Jump
+1999-01-25 02:30:05.662140 : Waring:user has been existed,Jump
+1999-01-25 02:30:06.262140 : Waring:material has been existed,Jump
+1999-01-25 02:30:06.798960 : Waring:userCourse has been existed,Jump
+1999-01-25 02:30:07.400820 : Waring:course has been existed,Jump
+1999-01-25 02:30:08.240820 : Waring:materialRollBack has been existed,Jump
+1999-01-25 02:30:09.759600 : Waring:actvt has been existed,Jump
+1999-01-25 02:30:10.476000 : Waring:userActvt has been existed,Jump
+1999-01-25 02:35:03.043620 : list_class
+1999-01-25 02:40:55.916280 : list_class
+1999-01-25 03:54:54.583860 : list_class
+1999-01-25 04:00:29.157900 : actvt_list:userId=2020211839
+1999-01-25 04:17:48.598560 : actvt_list:userId=2020211839
+1999-01-25 06:08:45.149100 : list_class
+1999-01-25 06:44:41.934420 : list_class
+1999-01-25 08:01:44.325060 : list_class
+1999-01-25 08:07:54.411600 : list_class
+1999-01-25 08:25:32.030280 : list_class
+1999-01-25 08:43:11.446920 : list_class
+1999-01-25 08:59:43.452660 : list_class
+1999-01-25 09:04:55.430820 : list_class
+1999-01-25 11:11:00.178740 : list_class
+1999-01-25 11:46:02.829000 : list_class
+1999-01-25 11:58:17.048340 : actvt_list:userId=2020211839
+1999-01-25 11:59:05.658480 : list_class
+1999-01-25 11:59:55.248000 : actvt_list:userId=2020211839
+1999-01-25 12:03:22.484100 : list_class
+1999-01-25 12:05:11.047020 : list_class
+1999-01-25 12:30:03.609840 : list_class
+1999-01-25 12:49:39.304560 : list_class
+1999-01-25 12:56:31.144620 : list_class
+1999-01-25 13:02:20.173260 : list_class
+1999-01-25 13:24:39.718260 : list_class
+1999-01-25 14:05:48.890880 : list_class
+1999-01-25 14:12:44.020260 : list_class
+1999-01-25 15:14:03.580140 : list_class
+1999-01-25 15:20:47.208060 : list_class
+1999-01-25 15:26:42.432600 : list_class
+1999-01-25 17:22:58.503840 : list_class
+1999-01-25 17:41:21.743220 : list_class
+1999-01-25 17:47:20.606460 : list_class
+1999-01-25 20:14:07.966620 : list_class
+1999-01-25 22:46:41.107740 : list_class
+1999-01-25 23:08:57.064440 : list_class
+1999-01-25 23:39:20.266680 : list_class
+1999-01-26 01:21:35.057700 : list_class

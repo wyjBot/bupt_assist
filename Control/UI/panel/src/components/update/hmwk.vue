@@ -29,11 +29,11 @@
 import { ref,reactive, onMounted, getCurrentInstance } from "vue";
 import type { UploadUserFile } from 'element-plus'
 import axios from 'axios';
-import { useRoute, useRouter } from "vue-router";
 import { genFileId } from 'element-plus'
 import type { UploadInstance, UploadProps, UploadFile } from 'element-plus'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import cookies from 'vue-cookies' 
+import { useRoute, useRouter } from "vue-router";
 const  proxy:any  = getCurrentInstance();
 const route = useRoute();
 const router = useRouter();

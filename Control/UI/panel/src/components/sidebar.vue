@@ -21,13 +21,13 @@
       <el-icon><icon-menu /></el-icon>
       <template #title >活动管理</template>
     </el-menu-item>
-    <el-menu-item index="3">
+    <el-menu-item index="3" @click="goreminder">
       <el-icon><document /></el-icon>
       <template #title>日程提醒</template>
     </el-menu-item>
-    <el-menu-item index="4">
+    <el-menu-item index="4" @click="goNav">
       <el-icon><setting /></el-icon>
-      <template #title @click="goNav">个人设置</template>
+      <template #title >校园导航</template>
     </el-menu-item>
   </el-menu>
 
@@ -76,7 +76,10 @@ export default defineComponent({
       this.$router.push("/activity")
     },
     goNav(){
-      this.$router.push("/nav")
+      this.$router.push({name:"nav"})
+    },
+    goreminder(){
+      this.$router.push({name:"remind"})
     },
   }
 })

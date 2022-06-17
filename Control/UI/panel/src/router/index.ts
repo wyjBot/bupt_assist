@@ -6,6 +6,7 @@ import home from "../components/home.vue"
 import hmwk from "../components/hmwk.vue"
 import hmwk_update from "../components/update/hmwk.vue"
 import res from "../components/res.vue"
+import nav from "../components/nav.vue"
 import exam from "../components/exam.vue"
 import activity from "../components/activity.vue"
 import course from "../components/course.vue"
@@ -52,9 +53,9 @@ const routes: Array<RouteRecordRaw> = [
         component: res
       },
       {
-        path: 'ts',
-        name: 'ts',
-        component: ts
+        path: 'nav',
+        name: 'nav',
+        component: nav
       },
       {
         path: '/ts',
