@@ -71,7 +71,9 @@ def actvt_create(data):
   tbUserActvt.insert(insertdata)
   log("actvt_create",0)
   if flag==0:return data["actvtId"],"成功创建活动,无冲突活动或课程"
-  return data["actvtId"],"成功创建活动,有冲突活动或课程"
+  tbActvt.remove(data)
+  tbUserActvt.remove(insertdata)
+  return data["actvtId"],"创建活动失败,有冲突活动或课程"
 
 def actvt_join(userId,actvtId):
   '''join a actvt created by others'''
@@ -91,7 +93,8 @@ def actvt_join(userId,actvtId):
 
   log("actvt_join:actvtId="+str(actvtId),0)
   if flag==0:return 1,"已加入集体活动,无冲突活动或课程"
-  return 1,"已加入集体活动,有冲突活动或课程"
+  tbUserActvt.remove(res)
+  return 1,"加入集体活动失败,有冲突活动或课程"
 
 def actvt_del(actvtId,userId=-1):
   '''delete a actvt,pay attention to check user's Permission'''
