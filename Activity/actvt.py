@@ -159,22 +159,22 @@ def find_user_location(timein,userId):#通过时间找用户位置
   time=datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S")
   for x in res:#活动检测
     time1=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
-    if time1.__le__(time2):
+    if time1.__le__(time):
       lasttime=lasttotimedelta(x["last"])
       time1=time1+lasttime
-      if time1.__le__(time2):continue
+      if time1.__le__(time):continue
       return x["buildId"],"这是用户所在位置"
   day=time.weekday()#计算星期几
   rex=tbUserCourse.find_all({"userId":userId,"星期":day})
-  temptime=str(timeact.date())+" 08:00:00"
+  temptime=str(time.date())+" 08:00:00"
   for x in rex:#课程检测
     time1=datetime.strptime(temptime, "%Y-%m-%d %H:%M:%S")
     time1=time1+timedelta(minutes=(45*(x["节次"]-1)))
-    if time1.__le__(time2):
+    if time1.__le__(time):
       time1=time1+timedelta(minutes=(45*x["时长"]))
-      if time1.__le__(time2):continue
+      if time1.__le__(time):continue
       return x["地点"],"这是用户所在位置"
-  nofind=tbUser.find_one({"userId":userId})
+  nofind=tbUser.find_one({"id":userId})
   return nofind["addr"],"这是用户注册地址"
 
 
@@ -183,6 +183,7 @@ def lasttotimedelta(str):
   return timedelta(hours=int(strtime[0]),minutes=int(strtime[1]),seconds=int(strtime[2]))
 
 if __name__ == "__main__":
+  """
   data1={
     "type":2,#1 represent personal ,2 means collective
     "name":"class meeting",
@@ -214,3 +215,8 @@ if __name__ == "__main__":
   print("2020211839: ",actvt_list("2020211839"))
   actvt_del(0,"2020211838")
   print("2020211839: ",actvt_list("2020211839"))
+  """
+  resetTo(datetime(2022,6,5,21))
+  print(find_user_location(now(), "2020211839"))
+  resetTo(datetime(2022,6,5,20,15))
+  print(find_user_location(now(), "2020211839"))
