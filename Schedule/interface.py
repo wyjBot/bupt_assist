@@ -30,7 +30,7 @@ def notice_list(userId):
       x["闹钟类型"]="考试闹钟"
     if x["frequncy"]==1:
       x["频率"]="只响一次"
-    elif x["type"]==2:
+    elif x["frequncy"]==2:
       x["频率"]="每天一次"
     else:
       x["频率"]="每周一次"
