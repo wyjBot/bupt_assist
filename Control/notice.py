@@ -81,10 +81,10 @@ def n_del():
       return rjs(400,"无效请求")
     if not "session" in data:
       return rjs(400,"参数缺失")
-    userid=vrfSession(data['session'])
+    userId=vrfSession(data['session'])
     del data['session']
-    if not userid:
+    if not userId:
       return rjs(-1,"登录失效")
-    code,msg=notice.notice_del(userid,data)
+    code,msg=notice.notice_del(userId,data['noticeId'])
     return rjs(code,msg)
 

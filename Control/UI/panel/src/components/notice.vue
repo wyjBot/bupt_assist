@@ -29,11 +29,6 @@ import {reactive, ref, toRefs } from 'vue';
 import {onMounted,onBeforeUpdate,onUpdated,onBeforeMount,onBeforeUnmount,onUnmounted,computed,watch } from "vue";
 
 import {defineExpose ,getCurrentInstance} from 'vue';
-import cookies from 'vue-cookies'
-
-// const addTodo = (user: User): void => {
-//   console.log("nmsl")
-// }
 
 import { defineComponent}from 'vue';
 export default defineComponent({
@@ -80,15 +75,21 @@ export default defineComponent({
       console.log(index, row)
     },
     handleDelete (index: number, row: any){
-      axios.post("/api/notice/list",
+      axios.post("/api/notice/del",
       {
         "session":this.session,
-        "noticeid":row.noticeid
-      })//传参
-        else if(res.data.code==-1){
+        "noticeId":row.noticeId,
+      }).then((res:any)=>{
+        var msg=res.data.mess;
+        if(res.data.code==-1){
            ElMessage({ type: 'info', message: `提示: 登录失效`, })
            this.$router.push({name:'login',params: {id:'10001'}})
         }
+        this.listActivity();
+        throw msg
+    }).catch((err:any)=>{
+          ElMessage({ type: 'info', message: err, })
+    })
     },
 
     handleOpen (key: string, keyPath: string[]){

@@ -1,3 +1,4 @@
+import clean
 from datetime import datetime
 from Utils.database import conn
 import json as js
@@ -94,8 +95,10 @@ for item in data6:
 conn.create("file")
 
 
+userId="2020211839"
 print(course.list_class("2020211839"))
 print("all notice: ",notice.notice_available("2020211839"))
-print("all notice: ",notice.notice_list("2020211839"))
 print(Exam.list_user_exam("2020211839"))
-print(res.list_user_material(userid))
+print(res.list_user_material(userId))
+print("all notice: ",notice.notice_list("2020211839"))
+print(notice.notice_del(userId,1))

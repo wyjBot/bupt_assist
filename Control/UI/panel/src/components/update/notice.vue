@@ -82,7 +82,9 @@ const submit=()=>{
     .then((res: any)=>{
         if(res.data.code==1)
         {
-          var data=res.data.mess;
+          var msg=res.data.mess;
+          router.push("/notice")
+          ElMessage({ type: 'info', message: "添加成功", })
         }
         else throw res.data.mess
       })
