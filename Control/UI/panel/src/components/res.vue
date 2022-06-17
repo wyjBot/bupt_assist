@@ -13,8 +13,8 @@
       </template>
       <template #default="scope">
          <el-button size="small"
-          @click="handleDelete(scope.$index, scope.row)"
-          type="info" >查看</el-button >
+          @click="handleDown(scope.$index, scope.row)"
+          type="info" >下载</el-button >
       </template>
     </el-table-column>
   </el-table>
@@ -76,8 +76,19 @@ export default defineComponent({
     }
   },
   methods:{
-    handleEdit (index: number, row: any){
-      console.log(index, row)
+    handleDown (index: number, row: any){
+      let fid=row.attachId
+      axios.post("/api/file/down",
+      {
+        "session":this.session,
+        "id":fid,
+      })//传参
+      .then((res: any)=>{
+        console.log( res.data)
+      })
+      .catch(function(err: any){
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
+      });
     },
     handleDelete (index: number, row: any){
       console.log(index, row)

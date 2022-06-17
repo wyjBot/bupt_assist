@@ -6,7 +6,7 @@ from Utils.Log import *
 from Utils.Time import *
 from Utils.DataFrame import *
 from Utils.database import conn
-from Navigate.interface import builds
+from Navigate.build import buildings
 
 """The implementation principle of this module 
     is highly similar to CourseMgmt
