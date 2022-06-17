@@ -1,6 +1,7 @@
 import sys,os.path as path
 sys.path.append(path.dirname(path.dirname(__file__)))
 import Utils
+from Navigate.build import buildings
 from Utils.Time import datetime,timedelta
 from Utils.DataFrame import *
 from Utils.database import conn
@@ -49,6 +50,8 @@ def search_class(userId,str="操作系统"):
     temp=x.copy()
     temp.pop("userId")
     temp.pop("teacherId")
+    temp["buildId"]=temp["地点"]
+    temp["地点"]=buildings[temp["buildId"]]["名称"]
     res.append(temp)
     log("search_class--"+str,0)
   return res,"已返回查到的课程"
@@ -58,6 +61,8 @@ def list_class(userId):
   for x in ret:
     x.pop("userId")
     x.pop("teacherId")
+    x["buildId"]=x["地点"]
+    x["地点"]=buildings[x["buildId"]]["名称"]
   log("list_class",0)
   return ret,"已返回所有课程"
 
@@ -106,6 +111,10 @@ def kmp(keyword,name):#返回值0代表没有，1代表有
             return 1
         if len(name)==0:
             return 0
+        if len(keyword)==1:
+          for i in range(len(keyword)):
+            if name[i]==keyword:return 1
+          return 0
         nextplace=[-1 for i in range(len(keyword))]#初始化next数组
         nextplace[1]=0
         i=1
