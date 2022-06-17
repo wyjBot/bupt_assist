@@ -5,6 +5,7 @@ import SignUp from "../components/signup.vue"
 import home from "../components/home.vue"
 import hmwk from "../components/hmwk.vue"
 import hmwk_update from "../components/update/hmwk.vue"
+import notice_update from "../components/update/notice.vue"
 import res from "../components/res.vue"
 import nav from "../components/nav.vue"
 import notice from "../components/notice.vue"
@@ -52,6 +53,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'hmwk/update',
         name: 'hmwk_update',
         component: hmwk_update
+      },
+      {
+        path: 'notice/update',
+        name: 'notice_update',
+        component: notice_update
       },
       {
         path: 'res',

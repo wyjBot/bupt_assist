@@ -6,10 +6,10 @@
     @open="handleOpen"
     @close="handleClose"
   >
-    <el-sub-menu index="1">
-      <template #title>
+    <el-sub-menu index="1" >
+      <template #title >
         <el-icon><location /></el-icon>
-        <span>学业</span>
+        <span >学业</span>
       </template>
         <el-menu-item index="1-1" @click="gocourse">课程表</el-menu-item>
         <el-menu-item index="1-2" @click="gores">资料</el-menu-item>
@@ -21,10 +21,13 @@
       <el-icon><icon-menu /></el-icon>
       <template #title >活动管理</template>
     </el-menu-item>
-    <el-menu-item index="3" @click="gonoticeer">
+    <!-- <el-menu-item index="3" @click="gonoticeer"> -->
+    <el-sub-menu index="3" >
+      <template #title>
       <el-icon><document /></el-icon>
-      <template #title>日程提醒</template>
-    </el-menu-item>
+        日程提醒</template>
+        <el-menu-item index="3-1" @click="addnotice">添加闹钟</el-menu-item>
+    </el-sub-menu>
     <el-menu-item index="4" @click="goNav">
       <el-icon><setting /></el-icon>
       <template #title >校园导航</template>
@@ -54,7 +57,9 @@ export default defineComponent({
   },
   methods:{
     handleOpen  (key: string, keyPath: string[]){
-      // console.log(key, keyPath)
+      console.log(key, keyPath)
+      if(key=='1') this.gocourse();
+      if(key=='3') this.gonoticeer();
     },
     handleClose(key: string, keyPath: string[]){
       // console.log(key, keyPath)
@@ -81,6 +86,9 @@ export default defineComponent({
     gonoticeer(){
       this.$router.push({name:"notice"})
     },
+    addnotice(){
+      this.$router.push({name:"notice_update"})
+    }
   }
 })
 

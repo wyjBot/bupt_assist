@@ -14,7 +14,7 @@
       <template #default="scope">
          <el-button size="small"
           @click="handleDelete(scope.$index, scope.row)"
-          type="info" >查看</el-button >
+          type="info" >删除</el-button >
       </template>
     </el-table-column>
   </el-table>
@@ -80,10 +80,18 @@ export default defineComponent({
       console.log(index, row)
     },
     handleDelete (index: number, row: any){
-      console.log(index, row)
+      axios.post("/api/notice/list",
+      {
+        "session":this.session,
+        "noticeid":row.noticeid
+      })//传参
+        else if(res.data.code==-1){
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
+           this.$router.push({name:'login',params: {id:'10001'}})
+        }
     },
 
-    handleOpen  (key: string, keyPath: string[]){
+    handleOpen (key: string, keyPath: string[]){
       console.log(key, keyPath)
     },
     handleClose(key: string, keyPath: string[]){
@@ -109,10 +117,7 @@ export default defineComponent({
           this.tableData=data
         }
         else if(res.data.code==-1){
-           ElMessage({
-              type: 'info',
-              message: `提示: 登录失效`,
-           })
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
            this.$router.push({name:'login',params: {id:'10001'}})
         }
         else{

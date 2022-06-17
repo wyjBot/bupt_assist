@@ -142,7 +142,7 @@ const buildOptions=computed(()=>{
 
 const b2c=()=>{
   b2cDt.value.pr=pr.value;
-  b2tDt.value.session=session
+  b2cDt.value.session=session
   axios.post("/api/nav/explore",b2cDt.value)//传参
     .then((res: any)=>{
         if(res.data.code==1)
@@ -169,7 +169,7 @@ const b2c=()=>{
 
 const b2b=()=>{
   b2bDt.value.pr=pr.value;
-  b2tDt.value.session=session
+  b2bDt.value.session=session
   axios.post("/api/nav/explore",b2bDt.value)//传参
     .then((res: any)=>{
         if(res.data.code==1)
@@ -190,7 +190,7 @@ const b2b=()=>{
           })
       .catch(function(err: any){
            ElMessage({ type: 'info', message: `提示: ${err}`, })
-           router.push("/login")
+          //  router.push("/login")
       });
 
 }
@@ -240,7 +240,7 @@ const initOptions=()=>{
            router.push({name:'login',params: {id:'10001'}})
         }
         else{
-          console.log(res.data.code)
+          // console.log(res.data.code)
           throw res.data.mess
         }
       })

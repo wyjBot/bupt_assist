@@ -46,8 +46,8 @@ def find_route():
       t=data['b2']
     if data["mode"]=="b2t":
       s=data['b']
+      # print(s,data['t'],pr)
       t,mess=find_user_location(data['t'],userid)
       t=t[0]['buildId']
-      # print(t)
     data=astar.plan(s,t,pr)
     return rjs(1,data)

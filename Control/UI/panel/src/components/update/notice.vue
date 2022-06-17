@@ -1,111 +1,116 @@
 <template>
-
-  <div>{{taskDt.名称}} </div>
-  <div>{{taskDt.内容}} </div>
-  <el-input
-    v-model="form.text"
-    class="txtarea"
-    :autosize="{ minRows: 2, maxRows: 4 }"
-    type="textarea"
-    placeholder="Please input"
-  />
-  <el-upload
-    class="upload-demo"
-    :on-change="handleChange"
-    :file-list="fileList"
-    :auto-upload="false"
-  >
-    <el-button type="primary" plain> upload</el-button>
-    <template #tip>
-      <div class="el-upload__tip">
-        多文件或文件夹请用压缩包上传
-      </div>
-    </template>
-  </el-upload>
-  <el-button type="success" @click="submit" >    OK   </el-button>
+   <div> 选择频率 </div>
+   <el-select v-model="frequncy" class="m-2" placeholder="Select">
+    <el-option
+      v-for="item in fqData"
+      :key="item.id"
+      :label="item.name"
+      :value="item.id"
+    />
+    </el-select>
+   <div> 选择活动 </div><br>
+   <el-select v-model="form.id" class="m-2" placeholder="Select">
+    <el-option
+      v-for="item in classOptions"
+      :key="item.actvtId"
+      :label="item.名称"
+      :value="item.actvtId"
+    />
+  </el-select> 
+  <el-button @click="submit">确定</el-button>
 </template>
 
-<script setup lang="ts">
-import { ref,reactive, onMounted, getCurrentInstance } from "vue";
-import type { UploadUserFile } from 'element-plus'
-import axios from 'axios';
-import { genFileId } from 'element-plus'
-import type { UploadInstance, UploadProps, UploadFile } from 'element-plus'
+<script lang="ts" setup>
+import { ref,reactive, onMounted, getCurrentInstance, computed } from "vue";
+import axios from "axios"
 import { ElMessage, ElMessageBox } from 'element-plus'
 import cookies from 'vue-cookies' 
 import { useRoute, useRouter } from "vue-router";
+let session=cookies.get("session")
 const  proxy:any  = getCurrentInstance();
 const route = useRoute();
 const router = useRouter();
+const pr=ref(1);
+const fqData=[
+  {name:"仅一次",id:1},
+  {name:"每天",id:2},
+  {name:"每周",id:3},
+]
 
-const taskId=route.query.id
 
-// const props = defineProps({
-  // id:String
-// })
 
-const taskDt={
 
-  名称:"title",
-  内容:"hello kitty"
-}
-const textarea1 = ref('')
+const b2cDt=ref({
+    b1:"6",
+    b2:"2",
+    pr:1,
+    mode:"b2b",
+    session:"",
+  })
+const b2tDt=ref( {
+    session:"",
+    b:"",
+    t:"",
+    pr:2,
+    mode:"b2t"
+  })
 
-const form=ref({
-  "text":"",
-  "fileid":0,
+const classOptionData = [
+  {
+    名称: 'c1',
+    actvtId: 'Option1',
+  },
+]
+
+const classOptions=computed(()=>{
+  return classOptionData
 })
 
-var fileTosend:any;
 
-let session=cookies.get("session")
-const gologin=()=>{
-           ElMessage({
-              type: 'info',
-              message: `提示: 登录失效`,
-           })
-          router.push({name:"login"})
-}
+
+const frequncy=ref(1);
+const form=ref({
+    type:1,
+    session:"",
+    id:0,
+    frequncy:0,
+})
 const submit=()=>{
-      console.log(fileTosend)
-      let config = {
-        headers: {'Content-Type': 'multipart/form-data'}
-      }
-      axios.post("/api/file/upload",
-      {
-        "session":session,
-        "file":fileTosend,
-        "text":form.value.text
-      },config)//传参
+ form.value.session=session
+ form.value.frequncy=frequncy.value
+  axios.post("/api/notice/update",form.value)//传参
+    .then((res: any)=>{
+        if(res.data.code==1)
+        {
+          var data=res.data.mess;
+        }
+        else throw res.data.mess
+      })
+      .catch(function(err: any){
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
+          //  router.push("/login")
+      });
+}
+const initOptions=()=>{
+ form.value.session=session
+ form.value.frequncy=frequncy.value
+ axios.post("/api/activity/list",form.value)//传参
       .then((res: any)=>{
         if(res.data.code==1)
         {
-          form.value.fileid=res.data.mess;
+          let data:any=res.data.mess;
+          if(data.length==0) throw "无actvt数据";
+          classOptionData.length=0
+          for (var item in data)
+            classOptionData.push(data[item])
         }
-        else if(res.data.code==-1){ gologin(); }
+        else if(res.data.code==-1){
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
+           router.push({name:'login',params: {id:'10001'}})
+        }
         else{
           console.log(res.data.code)
           throw res.data.mess
-        }
-      })
-      .catch(function(err: any){
-           ElMessage({ type: 'info', message: `提示: ${err}`,})
-      });
-      axios.post("/api/hmwk/update",
-      {
-        "session":session,
-        "taskId":taskId,
-        "fileId":form.value.fileid,
-        "text":form.value.text
-      },config)//传参
-      .then((res: any)=>{
-        var msg= res.data.mess;
-        if(res.data.code==0) throw msg;
-        else if(res.data.code==400){ throw msg}
-        else if(res.data.code==-1){ gologin(); }
-        else{
-          router.push({name:"hmwk"})
-          throw msg;
         }
       })
       .catch(function(err: any){
@@ -114,34 +119,10 @@ const submit=()=>{
 
 }
 
-const fileList = ref<UploadUserFile[]>([
-  {
-    name: 'food.jpeg',
-    url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
-  },
-  {
-    name: 'food2.jpeg',
-    url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
-  },
-])
+onMounted(()=>{
+  initOptions();
 
-const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
-  fileList.value = fileList.value.slice(-1)
-  fileTosend=uploadFile
-}
-</script>
-
-<script  lang="ts">
-import { ref,defineComponent } from 'vue'
-export default defineComponent({
-  methods: {
-    he(){},
-  }
 })
-</script>
-<style>
-.txtarea{
-  max-width:60vw;
-}
 
-</style>
+
+</script>
