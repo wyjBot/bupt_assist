@@ -3,6 +3,7 @@
 import sys,os.path as path
 sys.path.append(path.dirname(path.dirname(__file__)))
 import Utils
+from Utils.File import *
 from Utils.Log import *
 from Utils.Time import *
 from Utils.DataFrame import *
@@ -149,6 +150,7 @@ def submit_hmwk(userId,data):
     "date":datetime.now(),
     "userId":2020211888,
     "taskId":1312,
+    "hmwkId":
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2350,#作业附件文件Id
   }
@@ -164,9 +166,13 @@ def submit_hmwk(userId,data):
   hmwkId=len(tbHmwk.find_all({}))+1
   data["hmwkId"]=hmwkId
   data["version"]=0
+  rex=tbHmwk.find_one({"text":data["text"]})
   tbHmwk.insert(data)
   log("submit_hmwk:userId"+userId,0)
-  return hmwkId,"已经提交作业"
+  if not rex:
+    return hmwkId,"已经提交作业"
+  else:
+    return hmwkId,"有重复文本"
 
 def update_hmwk(data):
   '''return now versionId'''
@@ -174,23 +180,54 @@ def update_hmwk(data):
   """"
   data={#example
     "date":datetime.now(),
-    "hmwkId":1312,
+    "hmwkId":1312,if hmwkId=-1,submit hmwk
+    "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
+    "fileId":2350,#作业附件文件Id
+  }
+  data={#example  
+    "date":datetime.now(),
+    "userId":2020211888,
+    "taskId":1312,
+    "hmwkId":-1
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2350,#作业附件文件Id
   }
   #save the data to database and hmwkId ++ and ret now hmwk
   """
-  res=tbHmwk.find_one({"hmwkId":data["hmwkId"]})
-  if not res:
-    log("update_hmwk fail",2)
-    return 0,"hmwkId错误"
-  data["userId"]=res["userId"]
-  data["taskId"]=res["taskId"]
-  data["version"]=res["version"]+1
-  tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
-  tbHmwk.update({"hmwkId":data["hmwkId"]},data)
-  log("update_hmwk",0)
-  return data["version"],"已经更新作业"
+  if data["hmwkId"]!=-1:
+    res=tbHmwk.find_one({"hmwkId":data["hmwkId"]})
+    if not res:
+      log("update_hmwk fail",2)
+      return 0,"hmwkId错误"
+    data["userId"]=res["userId"]##依据hmwkId矫正
+    data["taskId"]=res["taskId"]
+    data["version"]=res["version"]+1
+    tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
+    rex=tbHmwk.find_one({"text":data["text"]})
+    tbHmwk.update({"hmwkId":data["hmwkId"]},data)
+    log("update_hmwk",0)
+    if not rex:
+      return data["version"],"已经更新作业"
+    else:
+      return data["version"],"存在重复文本"
+  else:
+    res=tbTask.find_one({"taskId":data["taskId"]})
+    if not res:
+      log("submit_hmwk fail",2)
+      return -1,"taskId错误"
+    if not tb.find_one({"id":res["classId"],"userId":data["userId"]}):
+      log("submit_hmwk fail",2)
+      return -1,"userId错误"
+    hmwkId=len(tbHmwk.find_all({}))+1
+    data["hmwkId"]=hmwkId
+    data["version"]=0
+    rex=tbHmwk.find_one({"text":data["text"]})
+    tbHmwk.insert(data)
+    log("submit_hmwk:userId"+data["userId"],0)
+    if not rex:
+      return hmwkId,"已经提交作业"
+    else:
+      return hmwkId,"有重复文本"
 
 if __name__ == "__main__":
   
@@ -212,30 +249,33 @@ if __name__ == "__main__":
     "attentionId":3,
     "deadline":str(now())
   }
-  create_class_task(1, data1)
-  create_class_task(1, data2)
-  create_class_task(2, data3)
-  print("1: ",list_class_task(1))
-  print("2: ",list_class_task(2))
-  print("2020211839: ",list_user_task("2020211839"))
-  print("task1: ",view_task(1))
+  #create_class_task(1, data1)
+  #create_class_task(1, data2)
+  #create_class_task(2, data3)
+  #print("1: ",list_class_task(1))
+  #print("2: ",list_class_task(2))
+  #print("2020211839: ",list_user_task("2020211839"))
+  #print("task1: ",view_task(1))
   
   data4={#example
     "date":str(now()),
-    "userId":2020211839,
+    "userId":"2020211839",
     "taskId":1,
+    "hmwkId":-1,
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2350,#作业附件文件Id
   }
   data5={#example
     "date":str(now()),
-    "userId":2020211839,
+    "userId":"2020211839",
     "taskId":2,
+    "hmwkId":-1,
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2351,#作业附件文件Id
   }
-  submit_hmwk("2020211839",data4)
-  submit_hmwk("2020211839",data5)
+  print(update_hmwk(data4))
+  print(update_hmwk(data5))
+  print(update_hmwk(data5))
   print("hmwk1: ",view_hmwk(1))
   print("hmwk2: ",view_hmwk(2))
   data6={#example
