@@ -2,11 +2,14 @@ from datetime import datetime
 from Utils.database import conn
 import json as js
 from Utils.Time import datetime,timedelta
+import os.path as path
+import os,sys,shutil
+shutil.rmtree("DataBase")
 
 #user初始数据（学号，密码，类型，姓名，电话，地址）
-from Utils import user
 usertb=conn.create("user")
 usertb.set_ukey("id")
+from Utils import user
 user.sign_up("2020211838", "12345678", "教师", "珠峰", "17623596408",23)
 user.sign_up("2020211839", "12345678", "学生", "彭木", "17623596409",16)
 user.sign_up("2020211840", "12345678", "教师", "陈锋", "17623596410",23)
@@ -20,9 +23,9 @@ user.sign_up("2020211847", "12345678", "学生", "肖晟轩", "17623596417",15)
 user.sign_up("2020211848", "12345678", "教师", "郜濒", "17623596418",23)
 
 #class初始数据（id，name，教师，上课星期，上课节次，持续时间，建筑id）
-from CourseMgmt import course
 coursetb=conn.create("course")
 coursetb.set_ukey("id")
+from CourseMgmt import course
 fr=open("Control/metaData/class.json","r",encoding='utf-8')
 data=js.load(fr)
 for item in data:
@@ -30,10 +33,10 @@ for item in data:
 
 
 
-from Activity import actvt
 tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
 tbActvt.set_ukey("actvtId")
+from Activity import actvt
 fr=open("Control/metaData/actvt.json","r",encoding='utf-8')
 # print(fr.read());exit(0)
 data1=js.load(fr)
@@ -43,9 +46,9 @@ fr.close()
 
 
 #exam初始数据
-from CourseMgmt import Exam
 examtb=conn.create("exam")
 examtb.set_ukey("examId")
+from CourseMgmt import Exam
 fr=open("Control/metaData/exam.json","r",encoding='utf-8')
 data2=js.load(fr)
 for item in data2:
@@ -53,9 +56,9 @@ for item in data2:
 
 #task初始数据
 print("create task")
-from CourseMgmt import homework as hmwk
 tasktb=conn.create("task")
 tasktb.set_ukey("taskId")
+from CourseMgmt import homework as hmwk
 fr=open("Control/metaData/task.json","r",encoding='utf-8')
 data3=js.load(fr)
 for item in data3:
@@ -63,9 +66,9 @@ for item in data3:
 
 
 #material初始数据
-from CourseMgmt import material as res
 materialtb=conn.create("material")
 materialtb.set_ukey("materialId")
+from CourseMgmt import material as res
 fr=open("Control/metaData/material.json","r",encoding='utf-8')
 data4=js.load(fr)
 for item in data4:

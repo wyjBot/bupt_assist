@@ -30,7 +30,6 @@ def list_hwmk():
 @api.route('/api/hmwk/update',methods=['POST','GET'])
 def update_hwmk():
     data = request.form
-    file=request.files.get("file.raw")
     try:
         data =dict(data)
     except:
