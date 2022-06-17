@@ -26,6 +26,7 @@ import axios from "axios"
 import { ElMessage, ElMessageBox } from 'element-plus'
 import cookies from 'vue-cookies' 
 import { useRoute, useRouter } from "vue-router";
+let session=cookies.get("session")
 const  proxy:any  = getCurrentInstance();
 const route = useRoute();
 const router = useRouter();
@@ -37,9 +38,6 @@ const b2b_b2 = ref('')
 const b2t_b = ref('')
 const b2t_t = ref('')
 
-const classOptions=computed(()=>{
-  return optionData
-})
 
 const b2bform=[
   {
@@ -61,15 +59,27 @@ const b2tform=[
   }
 ]
 
-
-const ClassOptionData = [
+const classOptionData = [
   {
-    名称: 'Option1',
+    名称: 'c1',
     id: 'Option1',
   },
-  ]
+]
 
-let session=cookies.get("session")
+const buildOptionData = [
+  {
+    名称: 'b1',
+    id: 'Option1',
+  },
+]
+const classOptions=computed(()=>{
+  return classOptionData
+})
+
+const buildOptions=computed(()=>{
+  return classOptionData
+})
+
 
 const initOptions=()=>{
  axios.post("/api/crouse/list",
@@ -81,9 +91,34 @@ const initOptions=()=>{
         {
           let data:any=res.data.mess;
           if(data.length==0) throw "无课程数据";
-          optionData.length=0
+          classOptionData.length=0
           for (var item in data)
-            optionData.push(data[item])
+            classOptionData.push(data[item])
+        }
+        else if(res.data.code==-1){
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
+           router.push({name:'login',params: {id:'10001'}})
+        }
+        else{
+          console.log(res.data.code)
+          throw res.data.mess
+        }
+      })
+      .catch(function(err: any){
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
+      });
+ axios.post("/api/nav/build",
+      {
+        "session":session
+      })//传参
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+          let data:any=res.data.mess;
+          if(data.length==0) throw "无数据";
+          classOptionData.length=0
+          for (var item in data)
+            classOptionData.push(data[item])
         }
         else if(res.data.code==-1){
            ElMessage({ type: 'info', message: `提示: 登录失效`, })
