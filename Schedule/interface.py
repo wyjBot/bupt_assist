@@ -171,6 +171,7 @@ def notice_work(timein,userId):
   ret=list()
   timestr=str(timein)[0:19]
   time=datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S")
+  strin=""
   for x in res:
     if x["frequncy"]==1:
       timenotice=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
@@ -185,9 +186,15 @@ def notice_work(timein,userId):
     timelat=timenotice+timedelta(seconds=cfg['rate']*1)
     if timepre.__le__(time) and timelat.__ge__(time):
       ret.append(x["noticeId"])
-    
+      if x["type"]==1:
+        strin=strin+(tbActvt.find_one({"actvtId":x["id"]}))["name"]+" "
+      elif x["type"]==2:
+        strin=strin+(tbCourse.find_one({"id":x["id"]}))["名称"]+" "
+      else:
+        strin=strin+(tbExam.find_one({"examId":x["id"]}))["title"]+" "
   log("notice_work",0)
-  return ret,"这是要响的闹钟"
+  if not ret:return
+  return ret,"现在是系统时间："+timestr+" 您需要参加:"+strin
 
 
 if __name__ == "__main__":
