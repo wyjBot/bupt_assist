@@ -3,7 +3,7 @@ sys.path.append(path.dirname(__file__))
 sys.path.append(path.dirname(path.dirname(__file__)))
 import Utils
 from Utils.Log import *
-from Utils.Time import datetime,timedelta
+from Utils.Time import *
 from Utils.DataFrame import *
 from Utils.database import conn
 
@@ -46,19 +46,30 @@ def notice_available(userId):
     time1=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
     time2=now()
     if time2.__le__(time1):#时间在现在的时间之后可以设置闹钟
-      ret.append(x)
-  retcourse=tbUserCourse.find_all({"userId"})
+      if not tbNotice.find_one({"type":1,"id":x["actvtId"]}):#已经设好的就不能设了
+        x["类型"]="个人活动" if x.pop("type")==1 else "集体活动"
+        x["名称"]=x.pop("name")
+        x["创建者"]=x.pop("InitiatorId")
+        x["开始时间"]=x.pop("time")
+        x["持续时间"]=x.pop("last")
+        x.pop("userId")
+        ret.append(x)
+  retcourse=tbUserCourse.find_all({"userId":userId})
   retclass=list()
   for x in retcourse:#都可以设置闹钟
-    ret.append(x)
-    retcourse.append(x["classId"])
-  for x in range(len(retclass)-1):
+    if not tbNotice.find_one({"type":2,"id":x["id"]}):
+      x.pop("userId")
+      ret.append(x)
+    retclass.append(x["id"])
+  for x in range(len(retclass)):
     retexam=tbExam.find_all({"classId":retclass[x]})
     for item in retexam:#时间在现在的时间之后可以设置闹钟
       time1=datetime.strptime(item["开始时间"], "%Y-%m-%d %H:%M:%S")
       time2=now()
       if time2.__le__(time1):
-        ret.append(item)
+        if not tbNotice.find_one({"type":3,"id":item["examId"]}):
+          item["考试名称"]=item.pop("title")
+          ret.append(item)
   log("notice_available:userId="+str(userId),0)
   return ret,"这是可以设置闹钟的活动/课程/考试"
 
@@ -89,8 +100,8 @@ def notice_add(userId,data):
       data["time"]=str(temptime.time())
     else:
       return -1,"data频率错误"
-  elif date["type"]==2:
-    ret=tbActvt.find_one({"id":data["id"]})
+  elif data["type"]==2:
+    ret=tbCourse.find_one({"id":data["id"]})
     if not ret:return -1,"不存在这个活动"
     if data["frequncy"]==1:
       tempnow=str(now())[0:19]
@@ -108,9 +119,9 @@ def notice_add(userId,data):
       date["time"]=str(temptime)
     elif data["frequncy"]==3:
       data["day"]=ret["星期"]
-      temptime=time(8,0)
+      temptime=datetime(2000,1,1,8,0)
       temptime=temptime+timedelta(minutes=(45*(ret["节次"]-1)))
-      data["time"]=str(temptime)
+      data["time"]=str(temptime)[12:19]
     else:
       return -1,"data频率错误"
   elif date["type"]==3:
@@ -129,6 +140,7 @@ def notice_add(userId,data):
       return -1,"data频率错误"
   else:
     return -1,"data错误"
+  res=tbNotice.find_all({})
   if len(res)==0:
     data["noticeId"]=0
   else:
@@ -150,10 +162,49 @@ def notice_work(timein,userId):
   timestr=str(timein)[0:19]
   time=datetime.strptime(timestr, "%Y-%m-%d %H:%M:%S")
   for x in res:
-    timenotice=datetime.strptime(ret["开始时间"], "%Y-%m-%d %H:%M:%S")
+    if x["frequncy"]==1:
+      timenotice=datetime.strptime(x["time"], "%Y-%m-%d %H:%M:%S")
+    elif x["frequncy"]==2:
+      timenoticetemp=timestr[0:11]+x["time"]
+      timenotice=datetime.strptime(timenoticetemp, "%Y-%m-%d %H:%M:%S")
+    else:
+      if time.weekday()!=x["day"]:continue
+      timenoticetemp=timestr[0:11]+x["time"]
+      timenotice=datetime.strptime(timenoticetemp, "%Y-%m-%d %H:%M:%S")
     timepre=timenotice+timedelta(seconds=cfg['rate']*-1)
     timelat=timenotice+timedelta(seconds=cfg['rate']*1)
     if timepre.__le__(time) and timelat.__ge__(time):
       ret.append(x["noticeId"])
+    
   log("notice_work",0)
   return ret,"这是要响的闹钟"
+
+
+if __name__ == "__main__":
+  print("all notice: ",notice_available("2020211839"))
+  data1={
+    "type":1,
+    "id":0,
+    "frequncy":1
+  }
+  #notice_add("2020211839", data1)
+  resetTo(datetime(2022,6,5,19,59))
+  rate(60)
+  print(now())
+  print("notice work:",notice_work(now(), "2020211839"))
+  data2={
+    "type":1,
+    "id":2,
+    "frequncy":2
+  }
+  #notice_add("2020211839", data2)
+  resetTo(datetime(2022,6,9,11,59))
+  print("notice work:",notice_work(now(), "2020211839"))
+  data3={
+    "type":2,
+    "id":2,
+    "frequncy":3
+  }
+  #notice_add("2020211839", data3)
+  resetTo(datetime(2022,6,14,8,44))
+  print("notice work:",notice_work(now(), "2020211839"))
