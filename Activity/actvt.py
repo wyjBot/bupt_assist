@@ -17,7 +17,7 @@ tbUserActvt=conn.create("userActvt")
 tbUserCourse=conn["userCourse"]
 tbUser=conn["user"]
 ##########活动管理与查看，加入#############
-def actvt_list(userId):
+def actvt_list(userId,sort):
   ret=tbUserActvt.find_all({"userId":userId})
   if not ret:
     log("actvt_list blank",2)
@@ -35,7 +35,90 @@ def actvt_list(userId):
     x["创建者"]=x.pop("InitiatorId")
     x["开始时间"]=x.pop("time")
     x["持续时间"]=x.pop("last")
-  return ret,"这是所有的活动"
+  if sort==0:
+    return ret,"这是所有的活动"
+  if sort==1:#按时间排序
+    mergeSorttime(ret,0,len(ret)-1)
+    return ret,"这是按时间排序的所有的活动"
+  if sort==2:#按名称排序
+    mergeSortname(ret, 0, len(ret)-1)
+    return ret,"这是按空间排序的所有的活动"
+
+def mergeSorttime(ret,l,r):
+  if l<r:
+    m=int((l+(r-1))/2)
+    mergeSorttime(ret, l, m)
+    mergeSorttime(ret, m+1, r)
+    mergetime(ret,l,m,r)
+  
+def mergetime(ret,l,m,r):
+  n1=m-l+1
+  n2=r-m
+  L=list()
+  R=list()
+  for i in range(0,n1):
+    L.append(ret[l+i])
+  
+  for j in range(0,n2):
+    R.append(ret[m+1+j])
+  
+  i=0
+  j=0
+  k=l
+  while i<n1 and j<n2:
+    if L[i]["开始时间"]<=R[j]["开始时间"]:
+      ret[k]=L[i]
+      i+=1
+    else:
+      ret[k]=R[j]
+      j+=1
+    k+=1
+  while i<n1:
+    ret[k]=L[i]
+    i+=1
+    k+=1
+  while j<n2:
+    ret[k]=R[j]
+    j+=1
+    k+=1
+
+def mergeSortname(ret,l,r):
+  if l<r:
+    m=int((l+(r-1))/2)
+    mergeSortname(ret, l, m)
+    mergeSortname(ret, m+1, r)
+    mergetname(ret,l,m,r)
+  
+def mergetname(ret,l,m,r):
+  n1=m-l+1
+  n2=r-m
+  L=list()
+  R=list()
+  for i in range(0,n1):
+    L.append(ret[l+i])
+  
+  for j in range(0,n2):
+    R.append(ret[m+1+j])
+  
+  i=0
+  j=0
+  k=l
+  while i<n1 and j<n2:
+    if L[i]["名称"]<=R[j]["名称"]:
+      ret[k]=L[i]
+      i+=1
+    else:
+      ret[k]=R[j]
+      j+=1
+    k+=1
+  while i<n1:
+    ret[k]=L[i]
+    i+=1
+    k+=1
+  while j<n2:
+    ret[k]=R[j]
+    j+=1
+    k+=1
 
 def actvt_canjoin_list(userId):
   ret=tbActvt.find_all({})
@@ -227,4 +310,8 @@ if __name__ == "__main__":
   print(find_user_location(now(), "2020211839"))
   resetTo(datetime(2022,6,5,20,15))
   print(find_user_location(now(), "2020211839"))
-  print(actvt_list("2020211839"))
+  print(actvt_list("2020211839", 0))
+  print(actvt_list("2020211839", 1))
+  print(actvt_list("2020211839", 2))
+
+
