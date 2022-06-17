@@ -1,0 +1,27 @@
+[
+  {
+    "type": 1,
+    "id": 0,
+    "frequncy": 1,
+    "userId": "2020211839",
+    "time": "2022-06-05 20:00:00",
+    "noticeId": 0
+  },
+  {
+    "type": 1,
+    "id": 2,
+    "frequncy": 2,
+    "userId": "2020211839",
+    "time": "12:00:00",
+    "noticeId": 1
+  },
+  {
+    "type": 2,
+    "id": 2,
+    "frequncy": 3,
+    "userId": "2020211839",
+    "day": 1,
+    "time": "8:45:00",
+    "noticeId": 2
+  }
+]

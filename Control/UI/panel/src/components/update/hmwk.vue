@@ -38,9 +38,6 @@ const  proxy:any  = getCurrentInstance();
 const route = useRoute();
 const router = useRouter();
 
-
-
-
 const taskId=route.query.id
 
 // const props = defineProps({

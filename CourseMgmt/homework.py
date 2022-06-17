@@ -162,10 +162,10 @@ def submit_hmwk(data):
   res=tbTask.find_one({"taskId":data["taskId"]})
   if not res:
     log("submit_hmwk fail",2)
-    return -1,"taskId错误"
+    return 0,"taskId错误"
   if not tb.find_one({"id":res["classId"],"userId":userId}):
     log("submit_hmwk fail",2)
-    return -1,"userId错误"
+    return 0,"userId错误"
   hmwkId=len(tbHmwk.find_all({}))+1
   data["hmwkId"]=hmwkId
   data["version"]=0
@@ -173,9 +173,9 @@ def submit_hmwk(data):
   tbHmwk.insert(data)
   log("submit_hmwk:userId"+userId,0)
   if not rex:
-    return hmwkId,"已经提交作业"
+    return hmwkId,"提交成功"
   else:
-    return hmwkId,"有重复文本"
+    return hmwkId,"疑似抄袭"
 
 def update_hmwk(data):
   '''return now versionId'''

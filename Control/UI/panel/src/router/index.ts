@@ -7,6 +7,7 @@ import hmwk from "../components/hmwk.vue"
 import hmwk_update from "../components/update/hmwk.vue"
 import res from "../components/res.vue"
 import nav from "../components/nav.vue"
+import remind from "../components/remind.vue"
 import exam from "../components/exam.vue"
 import activity from "../components/activity.vue"
 import course from "../components/course.vue"
@@ -41,6 +42,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'hmwk',
         name: 'hmwk',
         component: hmwk,
+      },
+      {
+        path: 'remind',
+        name: 'remind',
+        component: remind,
       },
       {
         path: 'hmwk/update',

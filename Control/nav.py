@@ -1,16 +1,15 @@
 from flask import Blueprint
 import os,sys,os.path as path
 import json as js
-from flask import request,redirect,make_response
+from flask import request,redirect
 from Utils.user import vrfSession
-from Utils import File 
 from Control.webrpc import rjs
-from CourseMgmt import homework as hmwk
+from Navigate import build
 
 
-api = Blueprint('hmwk_api', __name__)
-@api.route('/api/hmwk/list',methods=['POST','GET'])
-def list_hwmk():
+api = Blueprint('nav_api', __name__)
+@api.route('/api/nav/build',methods=['POST','GET'])
+def list_res():
     data = request.get_data()
     try:
         data = js.loads(data)
@@ -23,15 +22,18 @@ def list_hwmk():
       return rjs(-1,"登录失效")
     if  "classid" in data:
        classid=data['classid']
-    data,msg=hmwk.list_user_task(userid)
-    return rjs(1,data)
+    return rjs(1,build.buildings)
 
 
-@api.route('/api/hmwk/update',methods=['POST','GET'])
-def update_hwmk():
-    data = request.form
+
+from Navigate import astar
+from Activity.actvt import find_user_location
+@api.route('/api/nav/explore',methods=['POST','GET'])
+def find_route():
+    data = request.get_data()
     try:
-        data =dict(data)
+        data = js.loads(data)
+        pr=data['pr']
     except:
       return rjs(400,"无效请求")
     if not "session" in data:
@@ -39,7 +41,13 @@ def update_hwmk():
     userid=vrfSession(data['session'])
     if not userid:
       return rjs(-1,"登录失效")
-    del data['session']
-    data['userId']=userid
-    id,msg=hmwk.submit_hmwk(data)
-    return rjs(id,msg)
+    if data["mode"]=="b2b":
+      s=data['b1']
+      t=data['b2']
+    if data["mode"]=="b2t":
+      s=data['b']
+      t,mess=find_user_location(data['t'],userid)
+      t=t[0]['buildId']
+      # print(t)
+    data=astar.plan(s,t,pr)
+    return rjs(1,data)
