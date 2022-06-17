@@ -3,6 +3,7 @@ import os,sys
 import os.path as path
 from datetime import datetime
 import shutil
+timelist=['now','rate_time_b']
 
 pwd=path.dirname(path.dirname(__file__))+"/"
 cfgPwd=pwd
@@ -15,11 +16,11 @@ class Cfg(dict):
   def saveCfg(self):
     global pwd,cfgFile
     #enstr time
-    self.update({'timelist':list()})
-    timelist=self['timelist']
+    # self.update({'timelist':list()})
+    # timelist=self['timelist']
     for key in self:
       if type(self[key])==datetime:
-        timelist.append(key)
+        # timelist.append(key)
         self.update({key:str(self[key])})
     #write to file
     try:
@@ -28,7 +29,8 @@ class Cfg(dict):
       fw.close()
     except: print("save cfg failed")
     #revert timetype
-    for key in self['timelist']:
+    for key in timelist:
+      if key in self:
         self.update({key:datetime.fromisoformat(self[key])})
 
   def __setitem__(self,key,value):
@@ -42,7 +44,7 @@ class Cfg(dict):
       try:
         with open(cfgFile,"r+") as fr: _cfg=js.load(fr)
         self.update(_cfg)
-        for key in self['timelist']:
+        for key in timelist:
             self.update({key:datetime.fromisoformat(self[key])})
       except:
         print("配置文件损坏,已重置为默认值")

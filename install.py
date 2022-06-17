@@ -29,7 +29,7 @@ from CourseMgmt import course
 fr=open("Control/metaData/class.json","r",encoding='utf-8')
 data=js.load(fr)
 for item in data:
-  print(course.update_class(item['id'], item['teacherId'], item))
+  course.update_class(item['id'], item['teacherId'], item)
 
 
 
@@ -98,13 +98,14 @@ conn.create("file")
 
 import Utils.Time as Time
 userId="2020211839"
-Time.resetTo(datetime(2022,6,14,8,44))
 print(course.list_class("2020211839"))
 print("all notice: ",notice.notice_available("2020211839"))
 print(Exam.list_user_exam("2020211839"))
 print(res.list_user_material(userId))
 print("all notice: ",notice.notice_list("2020211839"))
 print(notice.notice_del(userId,1))
+Time.resetTo(datetime(2022,6,14,8,44))
+Time.rate(600)
 for i in range(1000):
   sleep(1)
   print(Time.now(),"notice work:",notice.notice_work(Time.now(), "2020211839"))

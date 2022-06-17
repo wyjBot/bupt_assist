@@ -37,4 +37,4 @@ CORS(app, supports_credentials=True)
 
 if __name__ == '__main__':
     # print(conn)
-    app.run(debug=True,port=1024,host="0.0.0.0")
+    app.run(debug=True,port=1024,host="0.0.0.0",threaded=True)

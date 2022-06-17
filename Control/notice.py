@@ -46,6 +46,7 @@ def n_wk():
     data = request.get_data()
     try:
         data = js.loads(data)
+        print(data)
     except:
       return rjs(400,"无效请求")
     if not "session" in data:

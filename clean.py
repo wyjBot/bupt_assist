@@ -1,6 +1,9 @@
 import shutil,os
-shutil.rmtree("DataBase")
-shutil.rmtree("Upload")
+try:
+  shutil.rmtree("DataBase")
+  os.remove("cfg.json")
+  shutil.rmtree("Upload")
+except:pass
 
 try:
   os.makedirs("Upload/tmp")

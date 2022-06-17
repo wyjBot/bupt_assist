@@ -81,20 +81,25 @@ export default defineComponent({
   },
   methods:{
     getNoiceWk(){
-      axios.post("/api/notice/wk",)//传参
+      axios.post("/api/notice/wk",{
+        session: this.session
+
+      })//传参
         .then((res: any)=>{
+            console.log(res.data.code)
             if(res.data.code==1)
             {
               var data=res.data.mess;
-              for(var key in data){
-                ElMessage({ type: 'info', message: "添加成功", })
+              for(var x in data){
+                ElMessage({ type: 'info', message: x, })
               }
             }
+            else if(res.data.code==-1)
+              this.$router.push("/login")
             else throw res.data.mess
           })
           .catch(function(err: any){
               ElMessage({ type: 'info', message: `提示: ${err}`, })
-              //  router.push("/login")
           });
 
 
