@@ -8,6 +8,7 @@ realnow=datetime.now
 fromstr=datetime.fromisoformat
 
 def now():
+  cfg['rate']=int(cfg['rate'])
   cfg['now']+=(realnow()-cfg['rate_time_b'])*cfg['rate']
   cfg['rate_time_b']=realnow()
   return cfg['now']
@@ -31,6 +32,7 @@ def start():
   cfg['stop']=False
 
 if __name__=="__main__":
+  print(now())
   rate(60)
   resetTo(datetime(2000,1,1))
   print(now())

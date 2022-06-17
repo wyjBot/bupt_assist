@@ -144,7 +144,7 @@ def rollback_hmwk(hmwkId,version):
   log("rollback_hmwk:hmwkId="+str(hmwkId),0)
   return 1,"已返回版本"
 
-def submit_hmwk(data):
+def submit_hmwk(data):#abandon
   """generate and ret a hmwkId for the taskId of user"""
   """return 0 when creates failed because of insuffcient data or wrong userId/taskId"""
   """
@@ -157,7 +157,6 @@ def submit_hmwk(data):
   }
   #save the data to database and hmwkId ++ and ret now hmwk
   """
-  data['date']=Time.now()
   userId=data["userId"]
   res=tbTask.find_one({"taskId":data["taskId"]})
   if not res:
@@ -184,14 +183,6 @@ def update_hmwk(data):
   data={#example
     "date":datetime.now(),
     "hmwkId":1312,if hmwkId=-1,submit hmwk
-    "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
-    "fileId":2350,#作业附件文件Id
-  }
-  data={#example  
-    "date":datetime.now(),
-    "userId":2020211888,
-    "taskId":1312,
-    "hmwkId":-1
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2350,#作业附件文件Id
   }
@@ -228,9 +219,9 @@ def update_hmwk(data):
     tbHmwk.insert(data)
     log("submit_hmwk:userId"+data["userId"],0)
     if not rex:
-      return hmwkId,"已经提交作业"
+      return hmwkId,"提交成功"
     else:
-      return hmwkId,"有重复文本"
+      return hmwkId,"与他人重复，疑似抄袭"
 
 if __name__ == "__main__":
   

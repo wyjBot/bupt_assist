@@ -116,7 +116,7 @@ def notice_add(userId,data):
     elif data["frequncy"]==2:
       temptime=time(8,0)
       temptime=temptime+timedelta(minutes=(45*(ret["节次"]-1)))
-      date["time"]=str(temptime)
+      data["time"]=str(temptime)
     elif data["frequncy"]==3:
       data["day"]=ret["星期"]
       temptime=datetime(2000,1,1,8,0)
@@ -124,7 +124,7 @@ def notice_add(userId,data):
       data["time"]=str(temptime)[12:19]
     else:
       return -1,"data频率错误"
-  elif date["type"]==3:
+  elif data["type"]==3:
     ret=tbExam.find_one({"examId":id})
     if not ret:return -1,"不存在这个活动"
     if data["frequncy"]==1:

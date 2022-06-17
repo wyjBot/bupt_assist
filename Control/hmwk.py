@@ -32,6 +32,40 @@ def update_hwmk():
     data = request.form
     try:
         data =dict(data)
+        print(data)
+    except:
+      return rjs(400,"无效请求")
+    if not "session" in data:
+      return rjs(400,"参数缺失")
+    userid=vrfSession(data['session'])
+    if not userid:
+      return rjs(-1,"登录失效")
+    del data['session']
+    data['userId']=userid
+    id,msg=hmwk.update_hmwk(data)
+    return rjs(id,msg)
+
+@api.route('/api/hmwk/view',methods=['POST','GET'])
+def view_hwmk():
+    data = request.form
+    try:
+        data =dict(data)
+    except:
+      return rjs(400,"无效请求")
+    if not "session" in data:
+      return rjs(400,"参数缺失")
+    userid=vrfSession(data['session'])
+    if not userid:
+      return rjs(-1,"登录失效")
+    del data['session']
+    data['userId']=userid
+    id,msg=hmwk.view_hmwk(data)
+    return rjs(id,msg)
+
+def update_hwmk():
+    data = request.form
+    try:
+        data =dict(data)
     except:
       return rjs(400,"无效请求")
     if not "session" in data:

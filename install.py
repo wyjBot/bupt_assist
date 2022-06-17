@@ -95,5 +95,7 @@ conn.create("file")
 
 
 print(course.list_class("2020211839"))
+print("all notice: ",notice.notice_available("2020211839"))
+print("all notice: ",notice.notice_list("2020211839"))
 print(Exam.list_user_exam("2020211839"))
 print(res.list_user_material(userid))

@@ -90,7 +90,7 @@ export default defineComponent({
       console.log(key, keyPath)
     },
     listActivity(){
-      axios.post("/api/activity/list",
+      axios.post("/api/notice/list",
       {
         "session":this.session
       })//传参

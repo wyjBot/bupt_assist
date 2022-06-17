@@ -24,7 +24,7 @@
       v-for="item in classOptions"
       :key="item.id"
       :label="item.名称"
-      :value="item.id"
+      :value="item.buildId"
     />
   </el-select> 
   <el-button @click="b2c">确定</el-button>
@@ -122,7 +122,7 @@ const b2tDt=ref( {
 const classOptionData = [
   {
     名称: 'c1',
-    id: 'Option1',
+    buildId: 'Option1',
   },
 ]
 
@@ -217,7 +217,7 @@ const b2t=()=>{
       })
       .catch(function(err: any){
            ElMessage({ type: 'info', message: `提示: ${err}`, })
-          //  router.push("/login")
+           router.push("/login")
       });
 
 }

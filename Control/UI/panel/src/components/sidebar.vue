@@ -21,7 +21,7 @@
       <el-icon><icon-menu /></el-icon>
       <template #title >活动管理</template>
     </el-menu-item>
-    <el-menu-item index="3" @click="goreminder">
+    <el-menu-item index="3" @click="gonoticeer">
       <el-icon><document /></el-icon>
       <template #title>日程提醒</template>
     </el-menu-item>
@@ -78,8 +78,8 @@ export default defineComponent({
     goNav(){
       this.$router.push({name:"nav"})
     },
-    goreminder(){
-      this.$router.push({name:"remind"})
+    gonoticeer(){
+      this.$router.push({name:"notice"})
     },
   }
 })
