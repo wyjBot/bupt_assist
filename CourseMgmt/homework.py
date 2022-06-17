@@ -117,9 +117,9 @@ def view_task(taskId):
 
 ######hmwk_mgmt############
 
-def view_hmwk(hmwkId):
+def view_hmwk(userId,taskId):
   '''ret a dict contain all hmwk version '''
-  ret=tbHmwk.find_one({"hmwkId":hmwkId})
+  ret=tbHmwk.find_one({"userId":userId,"taskId":taskId})
   if not ret:
     log("view_hmwk fail",2)
     return -1,"不存在该hmwkId"
@@ -188,7 +188,7 @@ def update_hmwk(data):
   }
   #save the data to database and hmwkId ++ and ret now hmwk
   """
-  if data["hmwkId"]!=-1:
+  if tbHmwk.find_one({"userId":data["userId"],"taskId":data["taskId"]}):
     res=tbHmwk.find_one({"hmwkId":data["hmwkId"]})
     if not res:
       log("update_hmwk fail",2)
