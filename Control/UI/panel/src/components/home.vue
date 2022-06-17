@@ -76,8 +76,30 @@ export default defineComponent({
       if(this.session=="") this.$router.push("/login")
       else console.log("head mounted",this.session)
       timer = setInterval(() => {
-        // console.log("开始---");
+        this.getNoiceWk();
       }, 1000);
+  },
+  methods:{
+    getNoiceWk(){
+      axios.post("/api/notice/wk",)//传参
+        .then((res: any)=>{
+            if(res.data.code==1)
+            {
+              var data=res.data.mess;
+              for(var key in data){
+                ElMessage({ type: 'info', message: "添加成功", })
+              }
+            }
+            else throw res.data.mess
+          })
+          .catch(function(err: any){
+              ElMessage({ type: 'info', message: `提示: ${err}`, })
+              //  router.push("/login")
+          });
+
+
+      },
+
   },
   destroyed(){
       clearInterval(timer)
@@ -85,10 +107,7 @@ export default defineComponent({
   computed:{
     
   },
-  methods:{
 
-  }
-   
 })
 </script>
 
