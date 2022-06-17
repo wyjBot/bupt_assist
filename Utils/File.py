@@ -15,7 +15,7 @@ def saveFile(path:str):
   name=path.basename(path)
   os.rename(path,path+"#123")
   time=Time.now()
-  tb.insert({"id":fileId,"naem":name,"path":path,"time":time})
+  tb.insert({"id":fileId,"name":name,"path":path,"time":time})
   return fileId
 
 def getFile(fileId:int):
