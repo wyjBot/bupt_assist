@@ -67,8 +67,10 @@ def list_user_task(userId):
       item["名称"]=item.pop("name")
       item["描述"]=item.pop("des")
       item["截止日期"]=item.pop("deadline")
-      if tbHmwk.find_one({"taskId":item["taskId"],"userId":userId}):
+      needhmwk=tbHmwk.find_one({"taskId":item["taskId"],"userId":userId})
+      if needhmwk:
         item["是否提交"]="已提交"
+        item["查重"]="抄袭" if len(tbHmwk.find_all({"text":needhmwk["text"]}))>1 else "无"
       else:
         item["是否提交"]="未提交"
     ret.extend(temp)
@@ -274,6 +276,7 @@ if __name__ == "__main__":
     "text":"解:1.A 2.B 3.正确 4.总线结构",#文本作业
     "fileId":2351,#作业附件文件Id
   }
+  print(list_user_task("2020211839"))
   print(update_hmwk(data4))
   print(update_hmwk(data5))
   print(update_hmwk(data5))
