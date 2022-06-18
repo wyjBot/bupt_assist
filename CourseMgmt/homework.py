@@ -136,7 +136,7 @@ def view_hmwk(userId,taskId):
 
 
 
-def submit_hmwk(data):
+def submit_hmwk(data):#abandon
   """generate and ret a hmwkId for the taskId of user"""
   """return 0 when creates failed because of insuffcient data or wrong userId/taskId"""
   """
@@ -178,7 +178,8 @@ def rollback_hmwk(hmwkId,version):
   tbHmwk.update({"hmwkId":hmwkId},res)
   log("rollback_hmwk:hmwkId="+str(hmwkId),0)
   return 1,"已返回版本"
-def update_hmwk(data):#abandon
+
+def update_hmwk(data):
   '''return now versionId'''
   """return 0 when update failed because of blank data or wrong taskId"""
   """"
