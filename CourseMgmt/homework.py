@@ -192,12 +192,8 @@ def update_hmwk(data):
   #save the data to database and hmwkId ++ and ret now hmwk
   """
   if tbHmwk.find_one({"userId":data["userId"],"taskId":data["taskId"]}):
-    res=tbHmwk.find_one({"hmwkId":data["hmwkId"]})
-    if not res:
-      log("update_hmwk fail",2)
-      return 0,"hmwkId错误"
-    data["userId"]=res["userId"]##依据hmwkId矫正
-    data["taskId"]=res["taskId"]
+    res=tbHmwk.find_one({"userId":data["userId"],"taskId":data["taskId"]})
+    data["hmwkId"]=res["hmwkId"]
     data["version"]=res["version"]+1
     tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
     rex=tbHmwk.find_one({"text":data["text"]})
