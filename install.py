@@ -113,6 +113,14 @@ userId="2020211839"
 # print(res.list_user_material(userId))
 # print("all notice: ",notice.notice_list("2020211839"))
 # print(notice.notice_del(userId,1))
+#提交和更新hmwk的示例
+#data={
+#  "date":
+#  "userId":
+#  "taskId":
+#  "text":
+#}
+
 Time.resetTo(datetime(2022,6,14,8,44))
 Time.rate(600)
 for i in range(1000):
