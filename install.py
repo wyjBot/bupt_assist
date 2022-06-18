@@ -104,7 +104,7 @@ fr=open("Control/metaData/hmwk.json","r",encoding='utf-8')
 data5=js.load(fr)
 for item in data5:
   print(item)
-  print(hmwk.submit_hmwk(item))
+  print(hmwk.update_hmwk(item))
 #test
 import Utils.Time as Time
 userId="2020211839"
