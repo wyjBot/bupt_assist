@@ -73,6 +73,7 @@ const form=ref({
     type:1,
     session:"",
     id:0,
+    sort:0,
     frequncy:0,
 })
 const submit=()=>{
@@ -95,6 +96,7 @@ const submit=()=>{
 }
 const initOptions=()=>{
  form.value.session=session
+ form.value.sort=0
  form.value.frequncy=frequncy.value
  axios.post("/api/activity/list",form.value)//传参
       .then((res: any)=>{

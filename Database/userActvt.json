@@ -198,5 +198,15 @@
     "actvtId": 19,
     "userId": "2020211847",
     "buildId": 9
+  },
+  {
+    "type": 2,
+    "name": "早操",
+    "InitiatorId": "2020211838",
+    "time": "2022-06-06 08:00:00",
+    "last": "0:40:00",
+    "actvtId": 7,
+    "userId": "2020211839",
+    "buildId": 10
   }
 ]

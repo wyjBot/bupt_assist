@@ -17,7 +17,7 @@ tbUserActvt=conn.create("userActvt")
 tbUserCourse=conn["userCourse"]
 tbUser=conn["user"]
 ##########活动管理与查看，加入#############
-def actvt_list(userId,sort):
+def actvt_list(userId,sort=0):
   ret=tbUserActvt.find_all({"userId":userId})
   if not ret:
     log("actvt_list blank",2)

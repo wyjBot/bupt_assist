@@ -54,11 +54,41 @@ const textarea1 = ref('')
 const form=ref({
   "text":"",
   "fileid":0,
+  "lastTime":"未提交",
 })
 
 var fileTosend:any;
 
 let session=cookies.get("session")
+
+onMounted(()=>{
+ axios.post("/api/hmwk/view",{
+   taskId:taskId,
+   session:session,
+ })//传参
+      .then((res: any)=>{
+        if(res.data.code==1)
+        {
+          let data:any=res.data.mess;
+          if(data.length==0) return;
+          form.value.text=data['文本']
+          form.value.lastTime=data['提交时间']
+        }
+        else if(res.data.code==-1){
+           ElMessage({ type: 'info', message: `提示: 登录失效`, })
+           router.push({name:'login',params: {id:'10001'}})
+        }
+        else{
+          console.log(res.data.code)
+          throw res.data.mess
+        }
+      })
+      .catch(function(err: any){
+           ElMessage({ type: 'info', message: `提示: ${err}`, })
+      });
+
+
+})
 const gologin=()=>{
            ElMessage({
               type: 'info',

@@ -123,6 +123,7 @@ def view_hmwk(userId,taskId):
   if not ret:
     log("view_hmwk fail",2)
     return -1,"不存在该hmwkId"
+  hmwkId=ret['hmwkId']
   ret.pop("hmwkId")
   ret.pop("userId")
   ret.pop("version")
@@ -133,18 +134,9 @@ def view_hmwk(userId,taskId):
   res.append(ret)
   return res,"已经返回该作业"
 
-def rollback_hmwk(hmwkId,version):
-  """reset hmwk version to old ret 1 when suc
-  return 0 when creates failed because of noexist id"""
-  res=tbHmwkRollBack.find_one({"hmwkId":hmwkId,"version":version})
-  if not res:
-    log("rollback_hmwk fail",2)
-    return 0,"不存在该版本"
-  tbHmwk.update({"hmwkId":hmwkId},res)
-  log("rollback_hmwk:hmwkId="+str(hmwkId),0)
-  return 1,"已返回版本"
 
-def submit_hmwk(data):#abandon
+
+def submit_hmwk(data):
   """generate and ret a hmwkId for the taskId of user"""
   """return 0 when creates failed because of insuffcient data or wrong userId/taskId"""
   """
@@ -164,7 +156,7 @@ def submit_hmwk(data):#abandon
     return 0,"taskId错误"
   if not tb.find_one({"id":res["classId"],"userId":userId}):
     log("submit_hmwk fail",2)
-    return 0,"userId错误"
+    return 0,"越权访问"
   hmwkId=len(tbHmwk.find_all({}))+1
   data["hmwkId"]=hmwkId
   data["version"]=0
@@ -176,7 +168,17 @@ def submit_hmwk(data):#abandon
   else:
     return hmwkId,"疑似抄袭"
 
-def update_hmwk(data):
+def rollback_hmwk(hmwkId,version):
+  """reset hmwk version to old ret 1 when suc
+  return 0 when creates failed because of noexist id"""
+  res=tbHmwkRollBack.find_one({"hmwkId":hmwkId,"version":version})
+  if not res:
+    log("rollback_hmwk fail",2)
+    return 0,"不存在该版本"
+  tbHmwk.update({"hmwkId":hmwkId},res)
+  log("rollback_hmwk:hmwkId="+str(hmwkId),0)
+  return 1,"已返回版本"
+def update_hmwk(data):#abandon
   '''return now versionId'''
   """return 0 when update failed because of blank data or wrong taskId"""
   """"

@@ -76,12 +76,12 @@ export default defineComponent({
         resetDt:"",
         notimeInput:true,
         timeswcDt:'开启中',
-        timeSpeedValue:1,
+        timeSpeedValue:60,
         timeSpeedOptions:[
           {label:"1x:1秒->1秒",value:1},
           {label:"60x:1秒->1分",value:60},
+          {label:"3600x:1秒->5分",value:300},
           {label:"3600x:1秒->1时",value:3600},
-          {label:"86400x:1秒->1天",value:86400},
         ],
     }
   },

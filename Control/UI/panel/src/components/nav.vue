@@ -14,15 +14,15 @@
    <el-select v-model="b2cDt.b1" class="m-2" placeholder="Select">
     <el-option
       v-for="item in buildOptions"
-      :key="item.Id"
+      :key="String(item.Id)"
       :label="item.名称"
-      :value="item.Id"
+      :value="String(item.Id)"
     />
   </el-select> 
    <el-select v-model="b2cDt.b2" class="m-2" placeholder="Select">
     <el-option
       v-for="item in classOptions"
-      :key="item.id"
+      :key="item.buildId"
       :label="item.名称"
       :value="item.buildId"
     />
@@ -102,8 +102,8 @@ const b2bDt=ref({
 })
 
 const b2cDt=ref({
-    b1:"6",
-    b2:"2",
+    b1:'6',
+    b2:'2',
     pr:1,
     mode:"b2b",
     session:"",

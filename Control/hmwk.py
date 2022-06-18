@@ -59,8 +59,8 @@ def view_hwmk():
       return rjs(-1,"登录失效")
     del data['session']
     data['userId']=userid
-    id,msg=hmwk.view_hmwk(data)
-    return rjs(id,msg)
+    data,msg=hmwk.view_hmwk(data)
+    return rjs(1,data)
 
 def update_hwmk():
     data = request.form

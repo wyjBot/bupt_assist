@@ -7,6 +7,14 @@
       :value="item.value"
     />
   </el-select>
+ <el-select v-model="typeOptionValue" class="m-2" placeholder="Select">
+    <el-option
+      v-for="item in typeOptions"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+    />
+  </el-select>
   <el-table :data="filterTableData"  style="width: 100%">
       <el-table-column
         v-for="(items,indexs) in tableHead"
@@ -19,11 +27,11 @@
       <template #header>
         <el-input v-model="search" size="small" placeholder="Type to search" />
       </template>
-      <template #default="scope">
-         <el-button size="small"
+      <!-- <template #default="scope"> -->
+         <!-- <el-button size="small"
           @click="handleDelete(scope.$index, scope.row)"
-          type="info" >查看</el-button >
-      </template>
+          type="info" >查看</el-button > -->
+      <!-- </template> -->
     </el-table-column>
   </el-table>
 
@@ -51,16 +59,28 @@ export default defineComponent({
         search : '',
         session: '',
         sortOptionValue:1,
-        timeSpeedOptions:[
-          {label:"1x:1秒->1秒",value:1},
-          {label:"60x:1秒->1分",value:60},
-          {label:"3600x:1秒->1时",value:3600},
-          {label:"86400x:1秒->1天",value:86400},
+        sortOptions:[
+          {label:"按时间排序",value:1},
+          {label:"按名称排序",value:2},
+        ],
+        typeOptionValue:0,
+        typeOptions:[
+          {label:"个人活动",value:0},
+          {label:"集体活动",value:1},
         ],
         tableData: [
           {
             id: '0',
             名称: '军事理论',
+            类型:'',
+
+          },
+        ],
+        tableDataO: [
+          {
+            id: '0',
+            名称: '军事理论',
+            类型:'',
 
           },
         ],
@@ -107,7 +127,8 @@ export default defineComponent({
     listActivity(){
       axios.post("/api/activity/list",
       {
-        "session":this.session
+        "session":this.session,
+        "sort":this.sortOptionValue
       })//传参
       .then((res: any)=>{
         if(res.data.code==1)
@@ -142,8 +163,26 @@ export default defineComponent({
            })
       });
     },
-  }
+
+  },
    
+  watch:{
+    sortOptionValue:function(){
+      this.listActivity();
+    },
+    typeOptionValue:function(){
+      var str=''
+      if(this.tableDataO.length<this.tableData.length)
+        this.tableDataO=this.tableData;
+      if(this.typeOptionValue==0) str="私人"
+      if(this.typeOptionValue==1) str="公开"
+      this.tableData=this.tableDataO.filter(
+        (data) =>
+          !str||data.类型.includes(str)
+        ) 
+
+    }
+  }
 })
 </script>
 

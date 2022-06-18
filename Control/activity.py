@@ -20,5 +20,5 @@ def listactvt():
     userid=vrfSession(data['session'])
     if not userid:
       return rjs(-1,"登录失效")
-    data,msg=actvt.actvt_list(userid)
+    data,msg=actvt.actvt_list(userid,data['sort'])
     return rjs(1,data)

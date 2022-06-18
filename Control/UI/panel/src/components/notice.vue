@@ -101,7 +101,8 @@ export default defineComponent({
     listActivity(){
       axios.post("/api/notice/list",
       {
-        "session":this.session
+        "session":this.session,
+        "sort":0
       })//传参
       .then((res: any)=>{
         if(res.data.code==1)
