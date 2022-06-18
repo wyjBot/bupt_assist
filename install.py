@@ -106,13 +106,8 @@ for item in data5:
   print(item)
   print(hmwk.update_hmwk(item))
 #test
-import Utils.Time as Time
-userId="2020211839"
-# print(course.list_class("2020211839"))
-# print(Exam.list_user_exam("2020211839"))
-# print(res.list_user_material(userId))
-# print("all notice: ",notice.notice_list("2020211839"))
-# print(notice.notice_del(userId,1))
+print(hmwk.view_hmwk("2020211839",2))
+print(hmwk.view_hmwk("2020211839",3))
 #提交和更新hmwk的示例
 #data={
 #  "date":
@@ -120,6 +115,21 @@ userId="2020211839"
 #  "taskId":
 #  "text":
 #}
+#下面是对上面两个提交的hmwk的更新
+fr=open("Control/metaData/hmwkupdate.json","r",encoding='utf-8')
+data6=js.load(fr)
+for item in data6:
+  print(item)
+  print(hmwk.update_hmwk(item))
+print(hmwk.view_hmwk("2020211839",2))
+print(hmwk.view_hmwk("2020211839",3))
+import Utils.Time as Time
+userId="2020211839"
+# print(course.list_class("2020211839"))
+# print(Exam.list_user_exam("2020211839"))
+# print(res.list_user_material(userId))
+# print("all notice: ",notice.notice_list("2020211839"))
+# print(notice.notice_del(userId,1))
 
 Time.resetTo(datetime(2022,6,14,8,44))
 Time.rate(600)
