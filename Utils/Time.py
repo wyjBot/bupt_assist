@@ -6,6 +6,7 @@ sys.path.append(path.dirname(__file__))
 import Cfg;cfg=Cfg.cfg
 realnow=datetime.now 
 fromstr=datetime.fromisoformat
+strptime=datetime.strptime
 
 def now():
   cfg['rate']=int(cfg['rate'])

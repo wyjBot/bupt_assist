@@ -8,6 +8,14 @@
     "noticeId": 0
   },
   {
+    "type": 1,
+    "id": 2,
+    "frequncy": 2,
+    "userId": "2020211839",
+    "time": "12:00:00",
+    "noticeId": 1
+  },
+  {
     "type": 2,
     "id": 2,
     "frequncy": 3,

@@ -103,7 +103,7 @@ print("all notice: ",notice.notice_available("2020211839"))
 print(Exam.list_user_exam("2020211839"))
 print(res.list_user_material(userId))
 print("all notice: ",notice.notice_list("2020211839"))
-print(notice.notice_del(userId,1))
+# print(notice.notice_del(userId,1))
 Time.resetTo(datetime(2022,6,14,8,44))
 Time.rate(600)
 for i in range(1000):

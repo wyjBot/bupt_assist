@@ -193,8 +193,8 @@ def notice_work(timein,userId):
       else:
         strin=strin+(tbExam.find_one({"examId":x["id"]}))["title"]+" "
   log("notice_work",0)
-  if not ret:return
-  return ret,"现在是系统时间："+timestr+" 您需要参加:"+strin
+  if not ret:return [],[]
+  return ret,["现在是系统时间："+timestr+" 您需要参加:"+strin]
 
 
 if __name__ == "__main__":

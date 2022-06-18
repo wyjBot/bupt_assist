@@ -61,8 +61,6 @@
     />
   </el-select></el-col> 
      <el-col span="5">
-  <div class="demo-datetime-picker"></div>
-  <div class="block">
       <el-date-picker
         v-model="b2tDt.t"
         type="datetime"
@@ -70,7 +68,6 @@
         format="YYYY/MM/DD hh:mm:ss"
         value-format="YYYY-MM-DD hh:mm:ss "
       />
-    </div>
      </el-col>
      <el-col span="5">
   <el-button @click="b2t">确定</el-button>
@@ -282,26 +279,3 @@ onMounted(()=>{
 
 
 </script>
-<style scoped>
-.demo-datetime-picker {
-  display: flex;
-  width: 100%;
-  padding: 0;
-  flex-wrap: wrap;
-}
-.demo-datetime-picker .block {
-  padding: 30px 0;
-  text-align: center;
-  border-right: solid 1px var(--el-border-color);
-  flex: 1;
-}
-.demo-datetime-picker .block:last-child {
-  border-right: none;
-}
-.demo-datetime-picker .demonstration {
-  display: block;
-  color: var(--el-text-color-secondary);
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-</style>

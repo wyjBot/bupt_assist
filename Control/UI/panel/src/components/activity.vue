@@ -1,4 +1,12 @@
 <template>
+ <el-select v-model="sortOptionValue" class="m-2" placeholder="Select">
+    <el-option
+      v-for="item in sortOptions"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+    />
+  </el-select>
   <el-table :data="filterTableData"  style="width: 100%">
       <el-table-column
         v-for="(items,indexs) in tableHead"
@@ -42,6 +50,13 @@ export default defineComponent({
         isCollapse :true,
         search : '',
         session: '',
+        sortOptionValue:1,
+        timeSpeedOptions:[
+          {label:"1x:1秒->1秒",value:1},
+          {label:"60x:1秒->1分",value:60},
+          {label:"3600x:1秒->1时",value:3600},
+          {label:"86400x:1秒->1天",value:86400},
+        ],
         tableData: [
           {
             id: '0',
