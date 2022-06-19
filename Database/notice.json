@@ -23,5 +23,14 @@
     "day": 1,
     "time": "8:45:00",
     "noticeId": 2
+  },
+  {
+    "type": 1,
+    "id": 11,
+    "sort": 0,
+    "frequncy": 1,
+    "userId": "2020211839",
+    "time": "2022-06-08 18:00:00",
+    "noticeId": 3
   }
 ]

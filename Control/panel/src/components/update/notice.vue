@@ -79,7 +79,7 @@ const form=ref({
 const submit=()=>{
  form.value.session=session
  form.value.frequncy=frequncy.value
-  axios.post("/api/notice/wk",form.value)//传参
+  axios.post("/api/notice/update",form.value)//传参
     .then((res: any)=>{
         if(res.data.code==1)
         {

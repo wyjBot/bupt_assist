@@ -6,7 +6,7 @@ from Utils.user import vrfSession
 from Control.rpc.webrpc import rjs
 from Utils import File as File
 
-filedir=path.dirname(__file__)+"/../Upload/tmp/"
+filedir=path.join(path.dirname(__file__),"../../Upload/tmp/")
 
 api = Blueprint('file_api', __name__)
 @api.route('/api/file/down',methods=['POST','GET'])
