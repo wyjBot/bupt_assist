@@ -25,13 +25,12 @@ def saveFile(opath:str,copy=False)->int:
   return fileId
 
 def getFile(fileId:int):
+  fileId=int(fileId)
   line=tb.find_one({"id":fileId})
   try:
     fpath=line['path'].split('#')[0]
   except Exception as e:
-    print(e)
     fpath=path.dirname(__file__)+"/../Upload/tmp/test.txt"
-
   return fpath
 
 # print(getFile(5))

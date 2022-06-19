@@ -11,21 +11,13 @@ filedir=path.join(path.dirname(__file__),"../../Upload/tmp/")
 api = Blueprint('file_api', __name__)
 @api.route('/api/file/down',methods=['POST','GET'])
 def down_file():
-    data = request.get_data()
     try:
-      # data = js.loads(data)
-      # fileid=data['id']
-      # filepath=File.getFile(fileid)
-      filepath=File.getFile(3)
-      return send_file(filepath,as_attachment=True)
-    except:
-      pass
-      # return rjs(400,"无效请求")
-    # if not "session" in data:
-    #   return rjs(400,"参数缺失")
-    # userid=vrfSession(data['session'])
-    # if not userid:
-    #   return rjs(-1,"登录失效")
+      data =dict(request.form)
+      fileid=data['id']
+    except Exception as e:
+      fileid=0
+    filepath=File.getFile(fileid)
+    return send_file(filepath,as_attachment=True)
 
 @api.route('/api/file/upload',methods=['POST','GET'])
 def update_file():
