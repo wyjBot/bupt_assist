@@ -15,7 +15,7 @@
     "name": "彭木",
     "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
     "addr": 16,
-    "session": "352a3a1dbc5eaa46a9c03ff6a0130328"
+    "session": null
   },
   {
     "role": "教师",
@@ -57,7 +57,7 @@
     "role": "教师",
     "id": "2020211843",
     "phone": "17623596413",
-    "name": "周智",
+    "name": "周智源",
     "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
     "addr": 23,
     "session": null

@@ -1,0 +1,25 @@
+.header {
+    background-color:rgb(43,48,56);
+    border-radius: 0px;
+    padding: 0px;
+    height: 8vh;
+    margin: 0px;
+}
+
+.timebox{
+    // padding: 0px;
+    // margin: 0px;
+    // height: 100%;
+}
+
+.row{
+    // background-color:rgb(4,123,56);
+    height: 100%;
+}
+
+.rowitem{
+  height: 100%;
+  display:flex;
+  justify-content:center;/*主轴上居中*/
+  align-items:center;/*侧轴上居中*/
+}

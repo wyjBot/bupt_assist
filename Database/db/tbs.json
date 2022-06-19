@@ -1,1 +1,1 @@
-["user", "course", "userCourse", "actvt", "userActvt", "exam", "task", "hmwk", "hmwkRollBack", "material", "materialRollBack", "notice", "file"]
+["user", "userCourse", "course", "exam", "actvt", "userActvt", "task", "hmwk", "hmwkRollBack", "material", "materialRollBack", "notice", "file"]
