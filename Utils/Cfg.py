@@ -19,7 +19,7 @@ class Cfg(dict):
     try:
       fr=open(pwd+"Control/cfg.lock","r")
       ltime=js.load(fr)['time']
-      if datetime.timestamp(datetime.now())-ltime<60: return
+      if datetime.timestamp(datetime.now())-ltime<12: return
       else:fr.close()
     except:pass
     with open(pwd+"Control/cfg.lock","w+") as fw:

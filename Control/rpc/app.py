@@ -21,8 +21,12 @@ from Control.rpc.file import api as file_api
 from Control.rpc.crouse import api as crouse_api
 from Control.rpc.activity import api as activity_api
 sys.path.append(path.dirname(path.dirname(__file__)))
+pwd=path.dirname(__file__)+"/"
 
-app = Flask(__name__,template_folder='')
+app = Flask(__name__,template_folder=pwd+"/dist",
+            static_folder=pwd+'/dist',
+            static_url_path=""
+            )
 app.register_blueprint(user_api)
 app.register_blueprint(exam_api)
 app.register_blueprint(hmwk_api)
@@ -34,6 +38,9 @@ app.register_blueprint(activity_api)
 app.register_blueprint(crouse_api)
 CORS(app, supports_credentials=True)
 
+@app.route('/')
+def index():
+    return render_template('index.html',name='index')
 
 if __name__ == '__main__':
     # print(conn)
