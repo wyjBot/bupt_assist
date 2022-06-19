@@ -3,6 +3,7 @@
 import sys,os.path as path
 sys.path.append(path.dirname(path.dirname(__file__)))
 import Utils
+from Utils.Similarity import *
 from Utils.File import *
 from Utils.Log import *
 from Utils.Time import *
@@ -200,10 +201,13 @@ def update_hmwk(data):
     data["hmwkId"]=res["hmwkId"]
     data["version"]=res["version"]+1
     tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
-    rex=tbHmwk.find_one({"text":data["text"]})
+    rex=tbHmwk.find_all({})
+    if data["text"]:
+      for item in rex:
+        similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.update({"hmwkId":data["hmwkId"]},data)
     log("update_hmwk",0)
-    if not rex:
+    if similarity>0.8:
       return data["version"],"已经更新作业"
     else:
       return data["version"],"已提交"
@@ -218,10 +222,12 @@ def update_hmwk(data):
     hmwkId=len(tbHmwk.find_all({}))+1
     data["hmwkId"]=hmwkId
     data["version"]=0
-    rex=tbHmwk.find_one({"text":data["text"]})
+    if data["text"]:
+      for item in rex:
+        similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.insert(data)
     log("submit_hmwk:userId"+data["userId"],0)
-    if not rex:
+    if similarity>0.8:
       return hmwkId,"提交成功"
     else:
       return hmwkId,"与他人重复，疑似抄袭"
