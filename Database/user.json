@@ -15,7 +15,7 @@
     "name": "彭木",
     "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
     "addr": 16,
-    "session": "b69bcec61a8182c9e8e53ee0af41c1d8"
+    "session": "03ce84815959ccfc137259bd1a72d5d7"
   },
   {
     "role": "教师",
@@ -69,33 +69,6 @@
     "name": "肖晟轩",
     "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
     "addr": 15,
-    "session": null
-  },
-  {
-    "role": "学生",
-    "id": "2020211844",
-    "phone": "17623596414",
-    "name": "张韬",
-    "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
-    "addr": 15,
-    "session": null
-  },
-  {
-    "role": "教师",
-    "id": "2020211843",
-    "phone": "17623596413",
-    "name": "周智源",
-    "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
-    "addr": 23,
-    "session": null
-  },
-  {
-    "role": "学生",
-    "id": "2020211845",
-    "phone": "17623596415",
-    "name": "焦俊毅",
-    "passwd": "48e33291530ed84981c0c0dfb99cc3c6",
-    "addr": 14,
     "session": null
   }
 ]

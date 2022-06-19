@@ -2,25 +2,25 @@
   {
     "id": 1,
     "name": "1.jpg",
-    "path": "A:\\WS\\bupt_assist\\Upload/11.jpg",
-    "time": "2022-06-19 15:47:21.641785"
+    "path": "/root/bupt_assist/Upload/11.jpg",
+    "time": "2022-06-19 16:30:09.034674"
   },
   {
     "id": 2,
     "name": "2.jpg",
-    "path": "A:\\WS\\bupt_assist\\Upload/22.jpg",
-    "time": "2022-06-19 15:47:21.705767"
+    "path": "/root/bupt_assist/Upload/22.jpg",
+    "time": "2022-06-19 16:30:09.071625"
   },
   {
     "id": 3,
     "name": "3.jpg",
-    "path": "A:\\WS\\bupt_assist\\Upload/33.jpg",
-    "time": "2022-06-19 15:47:22.034169"
+    "path": "/root/bupt_assist/Upload/33.jpg",
+    "time": "2022-06-19 16:30:09.226502"
   },
   {
     "id": 4,
     "name": "4.jpg",
-    "path": "A:\\WS\\bupt_assist\\Upload/44.jpg",
-    "time": "2022-06-19 15:47:22.127039"
+    "path": "/root/bupt_assist/Upload/44.jpg",
+    "time": "2022-06-19 16:30:09.276185"
   }
 ]
