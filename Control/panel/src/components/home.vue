@@ -87,7 +87,7 @@ export default defineComponent({
   },
   mounted(){
       this.session = this.$cookies.get("session")
-      if(this.session=="") this.$router.push("/login")
+      if(this.session==null) this.$router.push("/login")
       else console.log("head mounted",this.session)
       timer = setInterval(() => {
         this.getNoiceWk();

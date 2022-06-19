@@ -82,7 +82,7 @@ class Cfg(dict):
         shutil.rmtree(pwd+"tmp")
       except: pass
       try:
-        os.makedirs(pwd+"tmp")
+        # os.makedirs(pwd+"tmp")
         os.makedirs(cfgPwd)
       except:pass
 

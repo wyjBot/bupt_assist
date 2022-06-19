@@ -74,7 +74,8 @@ const routes: Array<RouteRecordRaw> = [
         name: 'ts',
         component: ts
       },
-    ]
+    ],
+    redirect:'/activity'
   },
   {
     path: '/login',
