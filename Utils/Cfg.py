@@ -3,6 +3,7 @@ import os,sys
 import os.path as path
 from datetime import datetime
 import shutil
+import Utils.corn
 timelist=['now','rate_time_b']
 
 pwd=path.dirname(path.dirname(__file__))+"/"
@@ -10,6 +11,7 @@ cfgPwd=pwd
 cfgFile=cfgPwd+"cfg.json"
 
 class Cfg(dict):
+  count=0
   def __init__(self):
     self.loadCfg()
 
@@ -21,6 +23,10 @@ class Cfg(dict):
       ltime=js.load(fr)['time']
       if datetime.timestamp(datetime.now())-ltime<12: return
       else:fr.close()
+      self.count+=1
+      if self.count>10:
+        Utils.corn.cleanFile()
+        self.count=0
     except:pass
     with open(pwd+"Control/cfg.lock","w+") as fw:
       js.dump({"time":datetime.timestamp(datetime.now())},fw)

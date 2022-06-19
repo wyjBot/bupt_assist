@@ -76,10 +76,11 @@ def file_encode(input_file):
 
     # print(bytes_dict)
     #开始压缩文件
-    print('开始压缩文件...\n')
+    print('开始压缩文件...\n',input_file)
     path_list=input_file.split('.')
     name=input_file.split('/')[-1]
-    with open(path_list[0]+'.cc','wb') as object:
+    outpath=path_list[0]+'.cc'
+    with open(outpath,'wb') as object:
         #首先将文件的原名写入
         object.write((name+'\n').encode(encoding='UTF-8'))
         #写入结点数量，占位2个字节
@@ -130,7 +131,8 @@ def file_encode(input_file):
             if code[i] == 49:
                 out = out | 1
         object.write(int.to_bytes(out,1,byteorder='big'))
-        print('压缩完成！')
+        print('压缩完成！',outpath)
+        return outpath
 
 
 
