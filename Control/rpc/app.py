@@ -11,15 +11,15 @@ from Utils.database import conn
 from Utils.Cfg import cfg
 from datetime import datetime,timedelta
 from flask_cors import *
-from Control.user import api as user_api
-from Control.exam import api as exam_api
-from Control.hmwk import api as hmwk_api
-from Control.res import api as res_api
-from Control.nav import api as nav_api
-from Control.notice import api as notice_api
-from Control.file import api as file_api
-from Control.crouse import api as crouse_api
-from Control.activity import api as activity_api
+from Control.rpc.user import api as user_api
+from Control.rpc.exam import api as exam_api
+from Control.rpc.hmwk import api as hmwk_api
+from Control.rpc.res import api as res_api
+from Control.rpc.nav import api as nav_api
+from Control.rpc.notice import api as notice_api
+from Control.rpc.file import api as file_api
+from Control.rpc.crouse import api as crouse_api
+from Control.rpc.activity import api as activity_api
 sys.path.append(path.dirname(path.dirname(__file__)))
 
 app = Flask(__name__,template_folder='')

@@ -4,7 +4,7 @@ import json as js
 from flask import request,redirect,make_response
 from Utils.user import vrfSession
 from Utils import File 
-from Control.webrpc import rjs
+from Control.rpc.webrpc import rjs
 from CourseMgmt import homework as hmwk
 
 
