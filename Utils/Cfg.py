@@ -16,11 +16,20 @@ class Cfg(dict):
   def saveCfg(self):
     global pwd,cfgFile
     #enstr time
-    # self.update({'timelist':list()})
-    # timelist=self['timelist']
+    try:
+      fr=open(pwd+"Control/cfg.lock","r")
+      ltime=js.load(fr)['time']
+      if datetime.timestamp(datetime.now())-ltime<60: return
+      else:fr.close()
+    except:pass
+    with open(pwd+"Control/cfg.lock","w+") as fw:
+      js.dump({"time":datetime.timestamp(datetime.now())},fw)
+
+    self.update({'timelist':list()})
+    timelist=self['timelist']
     for key in self:
       if type(self[key])==datetime:
-        # timelist.append(key)
+        timelist.append(key)
         self.update({key:str(self[key])})
     #write to file
     try:

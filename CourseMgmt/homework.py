@@ -121,15 +121,18 @@ def view_hmwk(userId,taskId):
   '''ret a dict contain all hmwk version '''
   ret=tbHmwk.find_one({"userId":userId,"taskId":taskId})
   if not ret:
-    log("view_hmwk fail",2)
-    return -1,"不存在该hmwkId"
-  hmwkId=ret['hmwkId']
-  ret.pop("hmwkId")
-  ret.pop("userId")
-  ret.pop("version")
-  ret["提交时间"]=ret.pop("date")
-  ret["文本"]=ret.pop("text")
-  log("view_hmwk:hmwkId="+str(hmwkId),0)
+    log("find_old_hmwk fail",2)
+    ret=dict()
+  else:
+    hmwkId=ret['hmwkId']
+    log("view_hmwk:hmwkId="+str(hmwkId),0)
+    ret.pop("hmwkId")
+    ret.pop("userId")
+    ret.pop("version")
+    ret["提交时间"]=ret.pop("date")
+    ret["文本"]=ret.pop("text")
+  res=tbTask.find_one({"taskId":taskId})
+  ret['task']=res
   res=list()
   res.append(ret)
   return res,"已经返回该作业"
@@ -191,6 +194,7 @@ def update_hmwk(data):
   }
   #save the data to database and hmwkId ++ and ret now hmwk
   """
+  data['date']=str(Time.now())
   if tbHmwk.find_one({"userId":data["userId"],"taskId":data["taskId"]}):
     res=tbHmwk.find_one({"userId":data["userId"],"taskId":data["taskId"]})
     data["hmwkId"]=res["hmwkId"]
@@ -202,7 +206,7 @@ def update_hmwk(data):
     if not rex:
       return data["version"],"已经更新作业"
     else:
-      return data["version"],"存在重复文本"
+      return data["version"],"已提交"
   else:
     res=tbTask.find_one({"taskId":data["taskId"]})
     if not res:

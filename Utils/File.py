@@ -17,8 +17,8 @@ def saveFile(opath:str)->int:
   name=path.basename(opath)
   filepath=opath+"#"+str(cfg["file_sum"])
   os.rename(opath,filepath)
-  time=Time.now()
-  tb.insert({"id":fileId,"name":name,"path":path,"time":time})
+  time=str(Time.now())
+  tb.insert({"id":fileId,"name":name,"path":filepath,"time":time})
   return fileId
 
 def getFile(fileId:int):

@@ -91,7 +91,7 @@ export default defineComponent({
       else console.log("head mounted",this.session)
       timer = setInterval(() => {
         this.getNoiceWk();
-      }, 2400);
+      }, 1600);
   },
   methods:{
     dpickerFocusd(){

@@ -106,8 +106,9 @@ for item in data5:
   print(item)
   print(hmwk.update_hmwk(item))
 #test
-print(hmwk.view_hmwk("2020211839",2))
+# print(hmwk.list_user_task("2020211839"))
 print(hmwk.view_hmwk("2020211839",3))
+print(hmwk.view_hmwk("2020211839",4))
 #提交和更新hmwk的示例
 #data={
 #  "date":
@@ -121,8 +122,7 @@ data6=js.load(fr)
 for item in data6:
   print(item)
   print(hmwk.update_hmwk(item))
-print(hmwk.view_hmwk("2020211839",2))
-print(hmwk.view_hmwk("2020211839",3))
+
 import Utils.Time as Time
 userId="2020211839"
 # print(course.list_class("2020211839"))

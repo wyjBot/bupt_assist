@@ -28,7 +28,7 @@ def down_file():
     #   return rjs(-1,"登录失效")
 
 @api.route('/api/file/upload',methods=['POST','GET'])
-def update_hwmk():
+def update_file():
     data = request.form
     file=request.files.get("file.raw")
     try:
@@ -45,3 +45,4 @@ def update_hwmk():
       file.save(filepwd)
       fileid=File.saveFile(filepwd)
       return rjs(1,fileid)
+    else:return rjs(2,"未上传作业文件")

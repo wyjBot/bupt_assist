@@ -1,7 +1,9 @@
 <template>
 
+  <div>{{taskDt.课程名称}} </div>
   <div>{{taskDt.名称}} </div>
-  <div>{{taskDt.内容}} </div>
+  <div>{{taskDt.描述}} </div>
+  <div>上次提交：{{form.lastTime}}</div>
   <el-input
     v-model="form.text"
     class="txtarea"
@@ -44,12 +46,12 @@ const taskId=route.query.id
   // id:String
 // })
 
-const taskDt={
+const taskDt=ref({
 
-  名称:"title",
-  内容:"hello kitty"
-}
-const textarea1 = ref('')
+  课程名称:"Loading...",
+  名称:"越权访问或未找到该作业",
+  描述:"Loading..."
+})
 
 const form=ref({
   "text":"",
@@ -65,14 +67,16 @@ onMounted(()=>{
  axios.post("/api/hmwk/view",{
    taskId:taskId,
    session:session,
- })//传参
-      .then((res: any)=>{
+ }) .then((res: any)=>{
+        let data:any=res.data.mess;
         if(res.data.code==1)
         {
           let data:any=res.data.mess;
           if(data.length==0) return;
+          data=data[0]
           form.value.text=data['文本']
           form.value.lastTime=data['提交时间']
+          taskDt.value=data['task']
         }
         else if(res.data.code==-1){
            ElMessage({ type: 'info', message: `提示: 登录失效`, })
@@ -121,6 +125,8 @@ const submit=()=>{
       .catch(function(err: any){
            ElMessage({ type: 'info', message: `提示: ${err}`,})
       });
+      if (form.value.text=="") form.value.text="无"
+
       axios.post("/api/hmwk/update",
       {
         "session":session,
@@ -132,7 +138,7 @@ const submit=()=>{
         var msg= res.data.mess;
         if(res.data.code==0) throw msg;
         else if(res.data.code==400){ throw msg}
-        else if(res.data.code==-1){ gologin(); }
+        // else if(res.data.code==-1){ gologin(); }
         else{
           router.push({name:"hmwk"})
           throw msg;
@@ -147,10 +153,6 @@ const submit=()=>{
 const fileList = ref<UploadUserFile[]>([
   {
     name: 'food.jpeg',
-    url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
-  },
-  {
-    name: 'food2.jpeg',
     url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
   },
 ])

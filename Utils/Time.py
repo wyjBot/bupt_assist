@@ -8,13 +8,18 @@ realnow=datetime.now
 fromstr=datetime.fromisoformat
 strptime=datetime.strptime
 
+
+
 def now():
   cfg['rate']=int(cfg['rate'])
-  cfg['now']+=(realnow()-cfg['rate_time_b'])*cfg['rate']
-  cfg['rate_time_b']=realnow()
-  return cfg['now']
+  nowtm=cfg['now']
+  nowtm+=(realnow()-cfg['rate_time_b'])*cfg['rate']
+  return nowtm
+def strnow():
+  return str(now())
 
 def resetTo(tgt_tim:datetime):
+  _now()
   cfg['now']=tgt_tim
 
 
@@ -23,9 +28,16 @@ def rate(num:int):
   if num<1: 
     return "错误,最小为一"
   cfg['rate']=num
+  _now()
+
+def _now():
+  rate=int(cfg['rate'])
+  cfg['now']+=(realnow()-cfg['rate_time_b'])*cfg['rate']
+  cfg['rate_time_b']=realnow()
+  return cfg['now']
 
 def stop():
-  now()
+  _now()
   cfg['stop']=True
 
 def start():
@@ -33,7 +45,7 @@ def start():
   cfg['stop']=False
 
 if __name__=="__main__":
-  print(now())
+  print(_now())
   rate(60)
   resetTo(datetime(2000,1,1))
   print(now())
