@@ -31465,3 +31465,2195 @@ has been existed,Jump
 2022-06-19 10:58:18.109825 : submit_hmwk:userId2020211839
 2022-06-19 10:58:18.118823 : update_hmwk
 2022-06-19 10:58:18.126825 : update_hmwk
+2022-07-08 10:11:07.957651 : notice_work
+2022-07-08 10:11:27.221539 : notice_work
+2022-07-08 10:11:28.189958 : notice_work
+2022-07-08 10:11:29.104041 : list_class
+2022-07-08 10:11:29.789459 : notice_work
+2022-07-08 10:11:30.283125 : list_class
+2022-07-08 10:11:30.289137 : list_class_material:class=1
+2022-07-08 10:11:30.296127 : list_class_material:class=2
+2022-07-08 10:11:30.301129 : list_class_material:class=3
+2022-07-08 10:11:30.308127 : list_class_material:class=4
+2022-07-08 10:11:30.313128 : list_class_material:class=5
+2022-07-08 10:11:30.319126 : list_class_material:class=6
+2022-07-08 10:11:30.325128 : list_class_material:class=7
+2022-07-08 10:11:30.331126 : list_class_material:class=8
+2022-07-08 10:11:30.336128 : list_class_material:class=9
+2022-07-08 10:11:31.075889 : actvt_list:userId=2020211839
+2022-07-08 10:11:31.392079 : notice_work
+2022-07-08 10:11:32.221816 : actvt_list:userId=2020211839
+2022-07-08 10:11:32.989946 : notice_work
+2022-07-08 10:11:33.245448 : actvt_list:userId=2020211839
+2022-07-08 10:11:34.586743 : notice_work
+2022-07-08 10:11:36.202370 : notice_work
+2022-07-08 10:11:37.065026 : notice_add:noticeId=4
+2022-07-08 10:11:37.186042 : actvt_list:userId=2020211839
+2022-07-08 10:11:37.789687 : notice_work
+2022-07-08 10:11:39.390710 : notice_work
+2022-07-08 10:11:39.970886 : list_user_exam:user=2020211839
+2022-07-08 10:11:40.377788 : list_user_task:user=2020211839
+2022-07-08 10:11:40.986496 : notice_work
+2022-07-08 10:11:41.780497 : list_class
+2022-07-08 10:11:41.785498 : list_class_material:class=1
+2022-07-08 10:11:41.791497 : list_class_material:class=2
+2022-07-08 10:11:41.797500 : list_class_material:class=3
+2022-07-08 10:11:41.803500 : list_class_material:class=4
+2022-07-08 10:11:41.809158 : list_class_material:class=5
+2022-07-08 10:11:41.815171 : list_class_material:class=6
+2022-07-08 10:11:41.820170 : list_class_material:class=7
+2022-07-08 10:11:41.826173 : list_class_material:class=8
+2022-07-08 10:11:41.832171 : list_class_material:class=9
+2022-07-08 10:11:42.589182 : notice_work
+2022-07-08 10:11:44.191572 : notice_work
+2022-07-08 10:11:45.934287 : notice_work
+2022-07-08 10:11:47.934804 : notice_work
+2022-07-08 10:11:49.937324 : notice_work
+2022-07-08 10:11:50.737262 : notice_work
+2022-07-08 10:11:52.195554 : notice_work
+2022-07-08 10:11:53.932939 : notice_work
+2022-07-08 10:11:55.941451 : notice_work
+2022-07-08 10:11:57.938358 : notice_work
+2022-07-08 10:11:58.941275 : notice_work
+2022-07-08 10:12:00.932796 : notice_work
+2022-07-08 10:12:01.953936 : notice_work
+2022-07-08 10:12:03.943339 : notice_work
+2022-07-08 10:12:05.939202 : notice_work
+2022-07-08 10:12:06.935529 : notice_work
+2022-07-08 10:12:08.941256 : notice_work
+2022-07-08 10:12:09.947962 : notice_work
+2022-07-08 10:12:11.935030 : notice_work
+2022-07-08 10:12:13.936375 : notice_work
+2022-07-08 10:12:14.933646 : notice_work
+2022-07-08 10:12:16.940108 : notice_work
+2022-07-08 10:12:17.932716 : notice_work
+2022-07-08 10:12:19.940684 : notice_work
+2022-07-08 10:12:21.945374 : notice_work
+2022-07-08 10:12:22.942514 : notice_work
+2022-07-08 10:12:24.947283 : notice_work
+2022-07-08 10:12:25.944650 : notice_work
+2022-07-08 10:12:27.936415 : notice_work
+2022-07-08 10:12:29.943397 : notice_work
+2022-07-08 10:12:30.938729 : notice_work
+2022-07-08 10:12:32.937784 : notice_work
+2022-07-08 10:12:33.933938 : notice_work
+2022-07-08 10:12:35.945158 : notice_work
+2022-07-08 10:12:37.934248 : notice_work
+2022-07-08 10:12:38.936831 : notice_work
+2022-07-08 10:12:40.935732 : notice_work
+2022-07-08 10:12:41.929391 : notice_work
+2022-07-08 10:12:43.929566 : notice_work
+2022-07-08 10:12:45.928758 : notice_work
+2022-07-08 10:12:46.935560 : notice_work
+2022-07-08 10:12:48.932461 : notice_work
+2022-07-08 10:12:49.931759 : notice_work
+2022-07-08 10:12:51.940434 : notice_work
+2022-07-08 10:12:53.929939 : notice_work
+2022-07-08 10:12:54.969629 : notice_work
+2022-07-08 10:12:56.932259 : notice_work
+2022-07-08 10:12:57.935922 : notice_work
+2022-07-08 10:12:59.967651 : notice_work
+2022-07-08 10:13:01.948039 : notice_work
+2022-07-08 10:13:02.930828 : notice_work
+2022-07-08 10:13:04.939905 : notice_work
+2022-07-08 10:13:05.936961 : notice_work
+2022-07-08 10:13:07.947198 : notice_work
+2022-07-08 10:13:09.940735 : notice_work
+2022-07-08 10:13:10.962769 : notice_work
+2022-07-08 10:13:12.933659 : notice_work
+2022-07-08 10:13:13.942715 : notice_work
+2022-07-08 10:13:15.940478 : notice_work
+2022-07-08 10:13:17.946117 : notice_work
+2022-07-08 10:13:18.943042 : notice_work
+2022-07-08 10:13:20.929969 : notice_work
+2022-07-08 10:13:21.940640 : notice_work
+2022-07-08 10:13:23.940495 : notice_work
+2022-07-08 10:13:25.946680 : notice_work
+2022-07-08 10:13:26.942302 : notice_work
+2022-07-08 10:13:28.941367 : notice_work
+2022-07-08 10:13:29.942498 : notice_work
+2022-07-08 10:13:31.945625 : notice_work
+2022-07-08 10:13:33.941505 : notice_work
+2022-07-08 10:13:34.936851 : notice_work
+2022-07-08 10:13:36.942080 : notice_work
+2022-07-08 10:13:37.931266 : notice_work
+2022-07-08 10:13:39.935209 : notice_work
+2022-07-08 10:13:41.944364 : notice_work
+2022-07-08 10:13:42.934009 : notice_work
+2022-07-08 10:13:44.942674 : notice_work
+2022-07-08 10:13:45.943368 : notice_work
+2022-07-08 10:13:47.943878 : notice_work
+2022-07-08 10:13:49.936341 : notice_work
+2022-07-08 10:13:50.937624 : notice_work
+2022-07-08 10:13:52.941920 : notice_work
+2022-07-08 10:13:53.939719 : notice_work
+2022-07-08 10:13:55.933427 : notice_work
+2022-07-08 10:13:57.940678 : notice_work
+2022-07-08 10:13:58.941257 : notice_work
+2022-07-08 10:14:00.937088 : notice_work
+2022-07-08 10:14:01.950847 : notice_work
+2022-07-08 10:14:03.941295 : notice_work
+2022-07-08 10:14:05.943059 : notice_work
+2022-07-08 10:14:06.936865 : notice_work
+2022-07-08 10:14:08.937760 : notice_work
+2022-07-08 10:14:09.945959 : notice_work
+2022-07-08 10:14:11.934699 : notice_work
+2022-07-08 10:14:13.937708 : notice_work
+2022-07-08 10:14:14.939475 : notice_work
+2022-07-08 10:14:16.939226 : notice_work
+2022-07-08 10:14:17.936469 : notice_work
+2022-07-08 10:14:19.943806 : notice_work
+2022-07-08 10:14:21.942023 : notice_work
+2022-07-08 10:14:22.938242 : notice_work
+2022-07-08 10:14:24.942707 : notice_work
+2022-07-08 10:14:25.942432 : notice_work
+2022-07-08 10:14:27.943901 : notice_work
+2022-07-08 10:14:29.937107 : notice_work
+2022-07-08 10:14:30.942378 : notice_work
+2022-07-08 10:14:32.935282 : notice_work
+2022-07-08 10:14:33.941325 : notice_work
+2022-07-08 10:14:35.932897 : notice_work
+2022-07-08 10:14:37.950857 : notice_work
+2022-07-08 10:14:38.943104 : notice_work
+2022-07-08 10:14:40.931906 : notice_work
+2022-07-08 10:14:41.943652 : notice_work
+2022-07-08 10:14:43.946222 : notice_work
+2022-07-08 10:14:45.936896 : notice_work
+2022-07-08 10:14:46.941959 : notice_work
+2022-07-08 10:14:48.946421 : notice_work
+2022-07-08 10:14:49.930936 : notice_work
+2022-07-08 10:14:51.933588 : notice_work
+2022-07-08 10:14:53.945582 : notice_work
+2022-07-08 10:14:54.936433 : notice_work
+2022-07-08 10:14:56.947016 : notice_work
+2022-07-08 10:14:57.937256 : notice_work
+2022-07-08 10:14:59.945115 : notice_work
+2022-07-08 10:15:01.938883 : notice_work
+2022-07-08 10:15:02.936846 : notice_work
+2022-07-08 10:15:04.938409 : notice_work
+2022-07-08 10:15:05.944054 : notice_work
+2022-07-08 10:15:07.942573 : notice_work
+2022-07-08 10:15:09.951679 : notice_work
+2022-07-08 10:15:10.934064 : notice_work
+2022-07-08 10:15:12.935317 : notice_work
+2022-07-08 10:15:13.940300 : notice_work
+2022-07-08 10:15:15.932580 : notice_work
+2022-07-08 10:15:17.935154 : notice_work
+2022-07-08 10:15:18.956318 : notice_work
+2022-07-08 10:15:20.939944 : notice_work
+2022-07-08 10:15:21.944093 : notice_work
+2022-07-08 10:15:23.939764 : notice_work
+2022-07-08 10:15:25.942922 : notice_work
+2022-07-08 10:15:26.943753 : notice_work
+2022-07-08 10:15:28.944316 : notice_work
+2022-07-08 10:15:29.943210 : notice_work
+2022-07-08 10:15:31.940283 : notice_work
+2022-07-08 10:15:33.967046 : notice_work
+2022-07-08 10:15:34.945007 : notice_work
+2022-07-08 10:15:36.942683 : notice_work
+2022-07-08 10:15:37.950925 : notice_work
+2022-07-08 10:15:39.973806 : notice_work
+2022-07-08 10:15:41.944536 : notice_work
+2022-07-08 10:15:42.942970 : notice_work
+2022-07-08 10:15:44.967398 : notice_work
+2022-07-08 10:15:45.959093 : notice_work
+2022-07-08 10:15:47.943493 : notice_work
+2022-07-08 10:15:49.964477 : notice_work
+2022-07-08 10:15:50.963651 : notice_work
+2022-07-08 10:15:52.976528 : notice_work
+2022-07-08 10:15:53.941052 : notice_work
+2022-07-08 10:15:55.939766 : notice_work
+2022-07-08 10:15:57.964199 : notice_work
+2022-07-08 10:15:58.941596 : notice_work
+2022-07-08 10:16:00.933286 : notice_work
+2022-07-08 10:16:01.941204 : notice_work
+2022-07-08 10:16:03.945220 : notice_work
+2022-07-08 10:16:05.942134 : notice_work
+2022-07-08 10:16:06.945390 : notice_work
+2022-07-08 10:16:08.937486 : notice_work
+2022-07-08 10:16:09.941104 : notice_work
+2022-07-08 10:16:11.391586 : notice_work
+2022-07-08 10:16:13.974913 : notice_work
+2022-07-08 10:16:14.936889 : notice_work
+2022-07-08 10:16:16.941016 : notice_work
+2022-07-08 10:16:17.936036 : notice_work
+2022-07-08 10:16:19.938961 : notice_work
+2022-07-08 10:16:21.945009 : notice_work
+2022-07-08 10:16:22.947134 : notice_work
+2022-07-08 10:16:24.945388 : notice_work
+2022-07-08 10:16:25.941122 : notice_work
+2022-07-08 10:16:27.939369 : notice_work
+2022-07-08 10:16:29.948637 : notice_work
+2022-07-08 10:16:30.935025 : notice_work
+2022-07-08 10:16:32.945336 : notice_work
+2022-07-08 10:16:33.945509 : notice_work
+2022-07-08 10:16:35.936060 : notice_work
+2022-07-08 10:16:37.945580 : notice_work
+2022-07-08 10:16:38.941386 : notice_work
+2022-07-08 10:10:21.047001 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.058999 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.064999 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.071002 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.104998 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.112999 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.119000 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.124997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.132000 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.137997 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.154998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.161000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.166998 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.173001 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.179000 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.184998 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.189998 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.203997 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.210000 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.223997 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.043998 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.055999 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.061004 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.066999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.097001 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.105008 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.110000 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.116001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.121010 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.127009 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.143002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.148001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.154003 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.159001 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.165001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.170001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.175001 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.188999 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.194002 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.207000 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.045994 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.057844 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.063855 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.068863 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.100856 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.108856 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.114854 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.119855 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.125855 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.131854 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.147639 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.153640 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.158640 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.164639 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.169639 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.175641 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.180639 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.194639 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.199640 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.213794 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.048988 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.065989 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.071988 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.077987 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.130998 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.147989 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.153988 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.159989 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.164990 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.170988 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.188988 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.194991 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.200988 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.206990 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.212989 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.217988 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.223988 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.237988 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.243986 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.256987 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.047738 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.059739 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.065739 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.070737 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.109739 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.117739 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.123738 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.129740 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.135738 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.140736 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.158738 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.164739 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.169738 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.175742 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.181739 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.187738 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.192736 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.206738 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.212739 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.228736 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.044998 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.057998 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.062996 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.069999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.103997 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.111997 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.117997 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.122996 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.127998 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.133997 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.153997 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.158997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.164999 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.170998 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.176996 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.181997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.187995 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.201998 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.208999 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.222998 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.080001 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.098000 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.107541 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.116693 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.169626 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.177627 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.183628 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.189634 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.196632 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.204633 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.231626 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.237625 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.243628 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.249634 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.255625 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.261627 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.268629 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.287632 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.297628 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.320627 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.047001 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.059001 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.065003 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.071001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.104199 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.112199 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.117202 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.123203 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.129202 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.134200 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.151200 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.156199 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.162202 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.168199 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.173200 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.179202 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.184199 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.198201 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.204200 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.217200 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.047012 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.060005 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.065008 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.071011 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.106006 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.114005 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.120001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.125004 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.131002 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.136002 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.166010 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.175007 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.184006 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.192008 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.201005 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.210004 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.219012 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.243010 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.253006 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.279008 : Waring:notice has been existed,Jump
+2022-06-19 11:07:56.168998 : Waring:user has been existed,Jump
+2022-06-19 11:07:56.176994 : Waring:user has been existed,Jump
+2022-06-19 11:07:56.216390 : Waring:course has been existed,Jump
+2022-06-19 11:07:56.233391 : updata_class 1
+2022-06-19 11:07:56.245386 : updata_class 2
+2022-06-19 11:07:56.259394 : updata_class 3
+2022-06-19 11:07:56.274389 : updata_class 4
+2022-06-19 11:07:56.289386 : updata_class 5
+2022-06-19 11:07:56.303385 : updata_class 6
+2022-06-19 11:07:56.315388 : updata_class 7
+2022-06-19 11:07:56.329390 : updata_class 8
+2022-06-19 11:07:56.342385 : updata_class 9
+2022-06-19 11:07:56.355384 : updata_class 10
+2022-06-19 11:07:56.378385 : Waring:exam has been existed,Jump
+2022-06-19 11:07:56.389390 : Waring:userCourse has been existed,Jump
+2022-06-19 11:07:56.400387 : Waring:course has been existed,Jump
+2022-06-19 11:07:56.420382 : create_class_exam:class=1
+2022-06-19 11:07:56.434384 : create_class_exam:class=2
+2022-06-19 11:07:56.442381 : create_class_exam:class=3
+2022-06-19 11:07:56.449381 : create_class_exam:class=4
+2022-06-19 11:07:56.456380 : create_class_exam:class=5
+2022-06-19 11:07:56.469380 : Waring:actvt has been existed,Jump
+2022-06-19 11:07:56.474380 : Waring:userActvt has been existed,Jump
+2022-06-19 11:07:56.490384 : actvt_create
+2022-06-19 11:07:56.499381 : actvt_create
+2022-06-19 11:07:56.507379 : actvt_create
+2022-06-19 11:07:56.516384 : actvt_create
+2022-06-19 11:07:56.524384 : actvt_create
+2022-06-19 11:07:56.533381 : actvt_create
+2022-06-19 11:07:56.542383 : actvt_create
+2022-06-19 11:07:56.551381 : actvt_create
+2022-06-19 11:07:56.560379 : actvt_create
+2022-06-19 11:07:56.569384 : actvt_create
+2022-06-19 11:07:56.578384 : actvt_create
+2022-06-19 11:07:56.588381 : actvt_create
+2022-06-19 11:07:56.598380 : actvt_create
+2022-06-19 11:07:56.607380 : actvt_create
+2022-06-19 11:07:56.617381 : actvt_create
+2022-06-19 11:07:56.626381 : actvt_create
+2022-06-19 11:07:56.638380 : actvt_create
+2022-06-19 11:07:56.649384 : actvt_create
+2022-06-19 11:07:56.659380 : actvt_create
+2022-06-19 11:07:56.669380 : actvt_create
+2022-06-19 11:07:56.720379 : Waring:task has been existed,Jump
+2022-06-19 11:07:56.727383 : Waring:userCourse has been existed,Jump
+2022-06-19 11:07:56.732384 : Waring:course has been existed,Jump
+2022-06-19 11:07:56.744911 : create_class_task:class=1
+2022-06-19 11:07:56.751908 : create_class_task:class=2
+2022-06-19 11:07:56.758908 : create_class_task:class=3
+2022-06-19 11:07:56.765911 : create_class_task:class=4
+2022-06-19 11:07:56.773913 : create_class_task:class=5
+2022-06-19 11:07:56.780909 : create_class_task:class=6
+2022-06-19 11:07:56.790908 : Waring:material has been existed,Jump
+2022-06-19 11:07:56.796913 : Waring:userCourse has been existed,Jump
+2022-06-19 11:07:56.802909 : Waring:course has been existed,Jump
+2022-06-19 11:08:35.699941 : Waring:user has been existed,Jump
+2022-06-19 11:08:35.706941 : Waring:user has been existed,Jump
+2022-06-19 11:08:35.727937 : Waring:course has been existed,Jump
+2022-06-19 11:08:35.734941 : updata_class 1
+2022-06-19 11:08:35.741942 : updata_class 2
+2022-06-19 11:08:35.748939 : updata_class 3
+2022-06-19 11:08:35.755939 : updata_class 4
+2022-06-19 11:08:35.762939 : updata_class 5
+2022-06-19 11:08:35.770940 : updata_class 6
+2022-06-19 11:08:35.777941 : updata_class 7
+2022-06-19 11:08:35.784940 : updata_class 8
+2022-06-19 11:08:35.791941 : updata_class 9
+2022-06-19 11:08:35.799940 : updata_class 10
+2022-06-19 11:08:35.816938 : Waring:exam has been existed,Jump
+2022-06-19 11:08:35.822942 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:35.828939 : Waring:course has been existed,Jump
+2022-06-19 11:08:35.835937 : create_class_exam:class=1
+2022-06-19 11:08:35.842943 : create_class_exam:class=2
+2022-06-19 11:08:35.849940 : create_class_exam:class=3
+2022-06-19 11:08:35.856939 : create_class_exam:class=4
+2022-06-19 11:08:35.863937 : create_class_exam:class=5
+2022-06-19 11:08:35.876940 : Waring:actvt has been existed,Jump
+2022-06-19 11:08:35.881939 : Waring:userActvt has been existed,Jump
+2022-06-19 11:08:35.897939 : actvt_create
+2022-06-19 11:08:35.905936 : actvt_create
+2022-06-19 11:08:35.913940 : actvt_create
+2022-06-19 11:08:35.922940 : actvt_create
+2022-06-19 11:08:35.930940 : actvt_create
+2022-06-19 11:08:35.939942 : actvt_create
+2022-06-19 11:08:35.948940 : actvt_create
+2022-06-19 11:08:35.957938 : actvt_create
+2022-06-19 11:08:35.966937 : actvt_create
+2022-06-19 11:08:35.975938 : actvt_create
+2022-06-19 11:08:35.984940 : actvt_create
+2022-06-19 11:08:35.993943 : actvt_create
+2022-06-19 11:08:36.002940 : actvt_create
+2022-06-19 11:08:36.012939 : actvt_create
+2022-06-19 11:08:36.021943 : actvt_create
+2022-06-19 11:08:36.030939 : actvt_create
+2022-06-19 11:08:36.040940 : actvt_create
+2022-06-19 11:08:36.049941 : actvt_create
+2022-06-19 11:08:36.060940 : actvt_create
+2022-06-19 11:08:36.069937 : actvt_create
+2022-06-19 11:08:36.105938 : Waring:task has been existed,Jump
+2022-06-19 11:08:36.111940 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:36.117938 : Waring:course has been existed,Jump
+2022-06-19 11:08:36.128939 : create_class_task:class=1
+2022-06-19 11:08:36.135941 : create_class_task:class=2
+2022-06-19 11:08:36.142939 : create_class_task:class=3
+2022-06-19 11:08:36.149941 : create_class_task:class=4
+2022-06-19 11:08:36.156939 : create_class_task:class=5
+2022-06-19 11:08:36.164937 : create_class_task:class=6
+2022-06-19 11:08:36.174941 : Waring:material has been existed,Jump
+2022-06-19 11:08:36.180940 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:36.186941 : Waring:course has been existed,Jump
+2022-06-19 11:08:36.194941 : create_class_task:class=1
+2022-06-19 11:08:36.203941 : create_class_task:class=1
+2022-06-19 11:08:36.210940 : create_class_task:class=2
+2022-06-19 11:08:36.217939 : create_class_task:class=3
+2022-06-19 11:08:36.224941 : create_class_task:class=4
+2022-06-19 11:08:36.231940 : create_class_task:class=4
+2022-06-19 11:08:36.239939 : create_class_task:class=1
+2022-06-19 11:08:36.246937 : create_class_task:class=5
+2022-06-19 11:08:36.254939 : create_class_task:class=5
+2022-06-19 11:08:36.261939 : create_class_task:class=5
+2022-06-19 11:08:36.284940 : Waring:notice has been existed,Jump
+2022-06-19 11:08:36.292938 : notice_add:noticeId=0
+2022-06-19 11:08:36.300940 : notice_add:noticeId=1
+2022-06-19 11:08:36.308938 : notice_add:noticeId=2
+2022-06-19 11:08:36.321939 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:36.328939 : 2020211839 join_class 1
+2022-06-19 11:08:36.336939 : 2020211839 join_class 2
+2022-06-19 11:08:36.343939 : 2020211839 join_class 3
+2022-06-19 11:08:36.351943 : 2020211839 join_class 4
+2022-06-19 11:08:36.359940 : 2020211839 join_class 5
+2022-06-19 11:08:36.366940 : 2020211839 join_class 6
+2022-06-19 11:08:36.375941 : 2020211839 join_class 7
+2022-06-19 11:08:36.383942 : 2020211839 join_class 8
+2022-06-19 11:08:36.391942 : 2020211839 join_class 9
+2022-06-19 11:08:36.431939 : actvt_join:actvtId=5
+2022-06-19 11:08:36.443947 : actvt_join:actvtId=7
+2022-06-19 11:08:36.455942 : actvt_join:actvtId=8
+2022-06-19 11:08:36.468944 : actvt_join:actvtId=9
+2022-06-19 11:08:36.476946 : Waring:hmwk has been existed,Jump
+2022-06-19 11:08:36.484943 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:08:36.494941 : submit_hmwk:userId2020211839
+2022-06-19 11:08:36.503941 : submit_hmwk:userId2020211839
+2022-06-19 11:08:36.514939 : update_hmwk
+2022-06-19 11:08:36.528940 : update_hmwk
+2022-06-19 11:08:40.883422 : Waring:user has been existed,Jump
+2022-06-19 11:08:40.896424 : Waring:exam has been existed,Jump
+2022-06-19 11:08:40.902423 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:40.908424 : Waring:course has been existed,Jump
+2022-06-19 11:08:40.956422 : Waring:file has been existed,Jump
+2022-06-19 11:08:40.964423 : Waring:task has been existed,Jump
+2022-06-19 11:08:40.970426 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:40.977422 : Waring:course has been existed,Jump
+2022-06-19 11:08:40.983424 : Waring:hmwk has been existed,Jump
+2022-06-19 11:08:40.989423 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:08:41.006424 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:41.012423 : Waring:course has been existed,Jump
+2022-06-19 11:08:41.017424 : Waring:user has been existed,Jump
+2022-06-19 11:08:41.023422 : Waring:material has been existed,Jump
+2022-06-19 11:08:41.029422 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:41.035422 : Waring:course has been existed,Jump
+2022-06-19 11:08:41.041423 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:08:41.054428 : Waring:actvt has been existed,Jump
+2022-06-19 11:08:41.060423 : Waring:userActvt has been existed,Jump
+2022-06-19 11:08:41.074424 : Waring:notice has been existed,Jump
+2022-06-19 11:08:42.015250 : Waring:user has been existed,Jump
+2022-06-19 11:08:42.027250 : Waring:exam has been existed,Jump
+2022-06-19 11:08:42.033250 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:42.039251 : Waring:course has been existed,Jump
+2022-06-19 11:08:42.085251 : Waring:file has been existed,Jump
+2022-06-19 11:08:42.094250 : Waring:task has been existed,Jump
+2022-06-19 11:08:42.099248 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:42.105250 : Waring:course has been existed,Jump
+2022-06-19 11:08:42.111255 : Waring:hmwk has been existed,Jump
+2022-06-19 11:08:42.116249 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:08:42.133250 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:42.139251 : Waring:course has been existed,Jump
+2022-06-19 11:08:42.145248 : Waring:user has been existed,Jump
+2022-06-19 11:08:42.151250 : Waring:material has been existed,Jump
+2022-06-19 11:08:42.156249 : Waring:userCourse has been existed,Jump
+2022-06-19 11:08:42.162250 : Waring:course has been existed,Jump
+2022-06-19 11:08:42.168251 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:08:42.181250 : Waring:actvt has been existed,Jump
+2022-06-19 11:08:42.187248 : Waring:userActvt has been existed,Jump
+2022-06-19 11:08:42.201252 : Waring:notice has been existed,Jump
+2022-07-08 10:11:15.714734 : notice_work
+2022-07-08 10:11:15.833764 : notice_work
+2022-07-08 10:11:17.079918 : list_class
+2022-07-08 10:11:17.201877 : notice_work
+2022-07-08 10:11:17.313880 : notice_work
+2022-07-08 10:11:17.420455 : notice_work
+2022-07-08 10:11:18.716856 : list_user_task:user=2020211839
+2022-07-08 10:11:18.792862 : notice_work
+2022-07-08 10:11:18.898853 : notice_work
+2022-07-08 10:11:19.025476 : notice_work
+2022-07-08 10:11:19.172477 : list_class
+2022-07-08 10:11:19.179478 : list_class_material:class=1
+2022-07-08 10:11:19.185476 : list_class_material:class=2
+2022-07-08 10:11:19.192477 : list_class_material:class=3
+2022-07-08 10:11:19.198479 : list_class_material:class=4
+2022-07-08 10:11:19.204477 : list_class_material:class=5
+2022-07-08 10:11:19.209478 : list_class_material:class=6
+2022-07-08 10:11:19.215480 : list_class_material:class=7
+2022-07-08 10:11:19.222477 : list_class_material:class=8
+2022-07-08 10:11:19.227479 : list_class_material:class=9
+2022-07-08 10:11:20.384612 : notice_work
+2022-07-08 10:11:20.495607 : notice_work
+2022-07-08 10:11:20.635244 : notice_work
+2022-07-08 10:11:21.993290 : notice_work
+2022-07-08 10:11:22.169289 : notice_work
+2022-07-08 10:11:22.224292 : notice_work
+2022-07-08 10:11:23.588252 : notice_work
+2022-07-08 10:11:23.697330 : notice_work
+2022-07-08 10:11:23.833455 : notice_work
+2022-07-08 10:11:25.196774 : notice_work
+2022-07-08 10:11:25.304081 : notice_work
+2022-07-08 10:11:25.429080 : notice_work
+2022-07-08 10:11:26.797968 : notice_work
+2022-07-08 10:11:26.899097 : notice_work
+2022-07-08 10:11:27.028360 : notice_work
+2022-07-08 10:11:28.381547 : notice_work
+2022-07-08 10:11:28.507847 : notice_work
+2022-07-08 10:11:28.630244 : notice_work
+2022-07-08 10:11:30.003144 : notice_work
+2022-07-08 10:11:30.109004 : notice_work
+2022-07-08 10:11:30.230885 : notice_work
+2022-07-08 10:11:31.584188 : notice_work
+2022-07-08 10:11:31.700414 : notice_work
+2022-07-08 10:11:31.835416 : notice_work
+2022-07-08 10:11:33.187184 : notice_work
+2022-07-08 10:11:33.303372 : notice_work
+2022-07-08 10:11:33.436322 : notice_work
+2022-07-08 10:11:34.813383 : notice_work
+2022-07-08 10:11:34.954384 : notice_work
+2022-07-08 10:11:35.459942 : notice_work
+2022-07-08 10:11:36.525989 : notice_work
+2022-07-08 10:11:37.453414 : notice_work
+2022-07-08 10:11:38.454253 : notice_work
+2022-07-08 10:11:38.454253 : notice_work
+2022-07-08 10:11:40.478686 : notice_work
+2022-07-08 10:11:40.479686 : notice_work
+2022-07-08 10:11:41.460634 : notice_work
+2022-07-08 10:11:41.460634 : notice_work
+2022-07-08 10:11:43.454574 : notice_work
+2022-07-08 10:11:43.454574 : notice_work
+2022-07-08 10:11:43.454574 : notice_work
+2022-07-08 10:11:44.448377 : notice_work
+2022-07-08 10:11:45.454438 : notice_work
+2022-07-08 10:11:46.448304 : notice_work
+2022-07-08 10:11:46.448304 : notice_work
+2022-07-08 10:11:46.448304 : notice_work
+2022-07-08 10:11:48.454094 : notice_work
+2022-07-08 10:11:48.454094 : notice_work
+2022-07-08 10:11:48.454094 : notice_work
+2022-07-08 10:11:49.447087 : notice_work
+2022-07-08 10:11:49.447087 : notice_work
+2022-07-08 10:11:49.447087 : notice_work
+2022-07-08 10:11:51.447463 : notice_work
+2022-07-08 10:11:51.447463 : notice_work
+2022-07-08 10:11:51.447463 : notice_work
+2022-07-08 10:11:52.441629 : notice_work
+2022-07-08 10:11:53.450579 : notice_work
+2022-07-08 10:11:54.446523 : notice_work
+2022-07-08 10:11:54.446523 : notice_work
+2022-07-08 10:11:56.473222 : notice_work
+2022-07-08 10:11:56.474220 : notice_work
+2022-07-08 10:11:56.474220 : notice_work
+2022-07-08 10:11:57.467327 : notice_work
+2022-07-08 10:11:57.468332 : notice_work
+2022-07-08 10:11:57.468332 : notice_work
+2022-07-08 10:11:59.457606 : notice_work
+2022-07-08 10:11:59.457606 : notice_work
+2022-07-08 10:11:59.457606 : notice_work
+2022-07-08 10:12:00.454604 : notice_work
+2022-07-08 10:12:00.601599 : notice_work
+2022-07-08 10:12:00.648613 : notice_work
+2022-07-08 10:12:01.989850 : notice_work
+2022-07-08 10:12:02.133473 : notice_work
+2022-07-08 10:12:02.499801 : notice_work
+2022-07-08 10:12:04.448397 : notice_work
+2022-07-08 10:12:04.448397 : notice_work
+2022-07-08 10:12:04.448397 : notice_work
+2022-07-08 10:12:05.466685 : notice_work
+2022-07-08 10:12:07.484067 : notice_work
+2022-07-08 10:12:07.484067 : notice_work
+2022-07-08 10:12:08.444517 : notice_work
+2022-07-08 10:12:09.507461 : notice_work
+2022-07-08 10:12:09.507461 : notice_work
+2022-07-08 10:12:10.458881 : notice_work
+2022-07-08 10:12:10.459884 : notice_work
+2022-07-08 10:12:10.459884 : notice_work
+2022-07-08 10:12:12.456979 : notice_work
+2022-07-08 10:12:12.456979 : notice_work
+2022-07-08 10:12:12.456979 : notice_work
+2022-07-08 10:12:13.451987 : notice_work
+2022-07-08 10:12:13.451987 : notice_work
+2022-07-08 10:12:15.445633 : notice_work
+2022-07-08 10:12:15.445633 : notice_work
+2022-07-08 10:12:15.445633 : notice_work
+2022-07-08 10:12:16.446006 : notice_work
+2022-07-08 10:12:17.452113 : notice_work
+2022-07-08 10:12:17.452113 : notice_work
+2022-07-08 10:12:18.485577 : notice_work
+2022-07-08 10:12:18.485577 : notice_work
+2022-07-08 10:12:20.454134 : notice_work
+2022-07-08 10:12:20.454134 : notice_work
+2022-07-08 10:12:21.457285 : notice_work
+2022-07-08 10:12:21.457285 : notice_work
+2022-07-08 10:12:21.458283 : notice_work
+2022-07-08 10:12:23.452267 : notice_work
+2022-07-08 10:12:23.452267 : notice_work
+2022-07-08 10:12:24.445444 : notice_work
+2022-07-08 10:12:25.449881 : notice_work
+2022-07-08 10:12:26.456215 : notice_work
+2022-07-08 10:12:26.457216 : notice_work
+2022-07-08 10:12:26.457216 : notice_work
+2022-07-08 10:12:28.454864 : notice_work
+2022-07-08 10:12:28.454864 : notice_work
+2022-07-08 10:12:29.448915 : notice_work
+2022-07-08 10:12:29.448915 : notice_work
+2022-07-08 10:12:29.448915 : notice_work
+2022-07-08 10:12:31.444700 : notice_work
+2022-07-08 10:12:31.444700 : notice_work
+2022-07-08 10:12:31.444700 : notice_work
+2022-07-08 10:12:32.445576 : notice_work
+2022-07-08 10:12:33.459481 : notice_work
+2022-07-08 10:12:33.459481 : notice_work
+2022-07-08 10:12:34.453810 : notice_work
+2022-07-08 10:12:34.454811 : notice_work
+2022-07-08 10:12:36.454877 : notice_work
+2022-07-08 10:12:36.455880 : notice_work
+2022-07-08 10:12:36.456881 : notice_work
+2022-07-08 10:12:37.452321 : notice_work
+2022-07-08 10:12:37.452321 : notice_work
+2022-07-08 10:12:37.452321 : notice_work
+2022-07-08 10:12:39.446848 : notice_work
+2022-07-08 10:12:39.446848 : notice_work
+2022-07-08 10:12:39.446848 : notice_work
+2022-07-08 10:12:40.486458 : notice_work
+2022-07-08 10:12:41.454472 : notice_work
+2022-07-08 10:12:41.454472 : notice_work
+2022-07-08 10:12:42.462277 : notice_work
+2022-07-08 10:12:42.462277 : notice_work
+2022-07-08 10:12:42.462277 : notice_work
+2022-07-08 10:12:44.449719 : notice_work
+2022-07-08 10:12:44.449719 : notice_work
+2022-07-08 10:12:44.449719 : notice_work
+2022-07-08 10:12:45.494371 : notice_work
+2022-07-08 10:12:45.494371 : notice_work
+2022-07-08 10:12:45.494371 : notice_work
+2022-07-08 10:10:21.064002 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.077002 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.083001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.083001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.089003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.150003 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.150003 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.158002 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.158002 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.164002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.169002 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.169002 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.175002 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.175002 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.181003 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.199002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.199002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.204999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.211001 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.217003 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.222002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.228003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.233002 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.233002 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.248002 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.248002 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.253002 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.253002 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.269004 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.269004 : Waring:notice has been existed,Jump
+2022-07-08 10:10:22.183797 : notice_work
+2022-07-08 10:10:22.926238 : notice_work
+2022-07-08 10:10:23.038235 : notice_work
+2022-07-08 10:10:23.153237 : notice_work
+2022-07-08 10:10:24.513979 : notice_work
+2022-07-08 10:10:24.640259 : notice_work
+2022-07-08 10:10:24.759863 : notice_work
+2022-07-08 10:10:26.113045 : notice_work
+2022-07-08 10:10:26.227226 : notice_work
+2022-07-08 10:10:26.352861 : notice_work
+2022-07-08 10:10:27.711647 : notice_work
+2022-07-08 10:10:27.836932 : notice_work
+2022-07-08 10:10:28.057372 : notice_work
+2022-07-08 10:10:29.382156 : notice_work
+2022-07-08 10:10:29.987869 : notice_work
+2022-07-08 10:10:29.987869 : notice_work
+2022-07-08 10:10:30.972289 : notice_work
+2022-07-08 10:10:31.982813 : notice_work
+2022-07-08 10:10:32.975328 : notice_work
+2022-07-08 10:10:32.976327 : notice_work
+2022-07-08 10:10:21.059004 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.071998 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.078999 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.083996 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.129997 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.137998 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.143998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.150000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.154999 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.161125 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.178125 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.184125 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.190124 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.196125 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.201122 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.207128 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.213125 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.228128 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.234128 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.248125 : Waring:notice has been existed,Jump
+2022-07-08 10:10:34.135453 : notice_work
+2022-07-08 10:10:34.239455 : notice_work
+2022-07-08 10:10:34.363453 : notice_work
+2022-07-08 10:10:21.058002 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.070002 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.075005 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.081002 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.127005 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.135003 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.141003 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.146004 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.152002 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.158005 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.174001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.180000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.186003 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.191003 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.197002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.202002 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.208001 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.222006 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.227002 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.242006 : Waring:notice has been existed,Jump
+2022-07-08 10:10:35.713366 : notice_work
+2022-07-08 10:10:35.839365 : notice_work
+2022-07-08 10:10:35.965146 : notice_work
+2022-07-08 10:10:37.022361 : list_user_task:user=2020211839
+2022-07-08 10:10:37.316189 : notice_work
+2022-07-08 10:10:37.424192 : notice_work
+2022-07-08 10:10:37.613866 : list_class
+
+2022-07-08 10:10:37.620871 : list_class_material:class=1
+2022-07-08 10:10:37.626866 : list_class_material:class=2
+2022-07-08 10:10:37.632867 : list_class_material:class=3
+2022-07-08 10:10:37.637867 : list_class_material:class=4
+2022-07-08 10:10:37.643873 : list_class_material:class=5
+2022-07-08 10:10:37.651870 : list_class_material:class=6
+2022-07-08 10:10:37.657867 : list_class_material:class=7
+2022-07-08 10:10:37.663868 : list_class_material:class=8
+2022-07-08 10:10:37.669869 : list_class_material:class=9
+2022-07-08 10:10:38.973880 : notice_work
+2022-07-08 10:10:39.982147 : notice_work
+2022-07-08 10:10:40.620801 : notice_work
+2022-07-08 10:10:40.651802 : notice_work
+2022-07-08 10:10:40.753799 : notice_work
+2022-07-08 10:10:41.883567 : list_class
+2022-07-08 10:10:42.120625 : notice_work
+2022-07-08 10:10:42.228291 : notice_work
+2022-07-08 10:10:42.354593 : notice_work
+2022-07-08 10:10:42.609594 : list_class
+2022-07-08 10:10:42.615597 : list_class_material:class=1
+2022-07-08 10:10:42.622606 : list_class_material:class=2
+2022-07-08 10:10:42.628595 : list_class_material:class=3
+2022-07-08 10:10:42.633595 : list_class_material:class=4
+2022-07-08 10:10:42.639593 : list_class_material:class=5
+2022-07-08 10:10:42.646595 : list_class_material:class=6
+2022-07-08 10:10:42.651595 : list_class_material:class=7
+2022-07-08 10:10:42.657595 : list_class_material:class=8
+2022-07-08 10:10:42.663597 : list_class_material:class=9
+2022-07-08 10:10:43.992279 : notice_work
+2022-07-08 10:10:43.992279 : notice_work
+2022-07-08 10:10:43.992279 : notice_work
+2022-07-08 10:10:45.998193 : notice_work
+2022-07-08 10:10:45.998193 : notice_work
+2022-07-08 10:10:46.974410 : notice_work
+2022-07-08 10:10:47.989814 : notice_work
+2022-07-08 10:10:47.990818 : notice_work
+2022-07-08 10:10:48.994010 : notice_work
+2022-07-08 10:10:48.994010 : notice_work
+2022-07-08 10:10:51.013169 : notice_work
+2022-07-08 10:10:51.013169 : notice_work
+2022-07-08 10:10:51.013169 : notice_work
+2022-07-08 10:10:51.976990 : notice_work
+2022-07-08 10:10:51.976990 : notice_work
+2022-07-08 10:10:51.977989 : notice_work
+2022-07-08 10:10:53.976699 : notice_work
+2022-07-08 10:10:53.976699 : notice_work
+2022-07-08 10:10:53.976699 : notice_work
+2022-07-08 10:10:54.975765 : notice_work
+2022-07-08 10:10:55.980037 : notice_work
+2022-07-08 10:10:56.983567 : notice_work
+2022-07-08 10:10:56.990572 : notice_work
+2022-07-08 10:10:56.991566 : notice_work
+2022-07-08 10:10:58.972425 : notice_work
+2022-07-08 10:10:58.972425 : notice_work
+2022-07-08 10:10:58.972425 : notice_work
+2022-07-08 10:10:59.974430 : notice_work
+2022-07-08 10:10:59.974430 : notice_work
+2022-07-08 10:11:02.000492 : notice_work
+2022-07-08 10:11:02.000492 : notice_work
+2022-07-08 10:11:02.000492 : notice_work
+2022-07-08 10:11:02.985842 : notice_work
+2022-07-08 10:10:21.049005 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.062002 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.068001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.074003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.125000 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.133999 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.139997 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.145997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.055995 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.151997 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.156997 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.067998 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.073995 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.174998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.180999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.186997 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.193003 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.199004 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.205003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.212998 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.227999 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.131997 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.138016 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.234018 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.143996 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.148999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.154997 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.160995 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.179000 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.184999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.190999 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.195999 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.201999 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.207999 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.213995 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.228996 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.234998 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.248999 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.406999 : notice_work
+2022-07-08 10:10:21.406999 : notice_work
+2022-07-08 10:10:21.531998 : notice_work
+2022-07-08 10:10:21.531998 : notice_work
+2022-07-08 10:10:21.531998 : notice_work
+2022-07-08 10:10:23.575378 : notice_work
+2022-07-08 10:10:23.575378 : notice_work
+2022-07-08 10:10:23.575378 : notice_work
+2022-07-08 10:10:24.579931 : notice_work
+2022-07-08 10:10:24.579931 : notice_work
+2022-07-08 10:10:24.579931 : notice_work
+2022-07-08 10:10:26.522762 : notice_work
+2022-07-08 10:10:26.523762 : notice_work
+2022-07-08 10:10:26.523762 : notice_work
+2022-07-08 10:10:21.070997 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.091007 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.105999 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.118001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.191994 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.204995 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.214001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.220997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.229004 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.239011 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.262001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.271007 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.278998 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.287005 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.296001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.304997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.312996 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.329806 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.334806 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.348808 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.055999 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.067999 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.073999 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.080000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.124000 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.131999 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.137998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.142997 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.148999 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.153998 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.170998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.176000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.181999 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.187999 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.192998 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.198998 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.204998 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.217998 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.226000 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.239999 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.407000 : notice_work
+2022-07-08 10:10:21.407000 : notice_work
+2022-07-08 10:10:21.407998 : notice_work
+2022-07-08 10:10:21.407998 : notice_work
+2022-07-08 10:10:21.407998 : notice_work
+2022-07-08 10:10:22.213783 : notice_work
+2022-07-08 10:10:22.213783 : notice_work
+2022-07-08 10:10:22.213783 : notice_work
+2022-07-08 10:10:23.216918 : notice_work
+2022-07-08 10:10:23.216918 : notice_work
+2022-07-08 10:10:23.217918 : notice_work
+2022-07-08 10:10:25.222085 : notice_work
+2022-07-08 10:10:25.222085 : notice_work
+2022-07-08 10:10:26.215801 : notice_work
+2022-07-08 10:10:27.216535 : notice_work
+2022-07-08 10:10:27.216535 : notice_work
+2022-07-08 10:10:21.048008 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.060001 : Waring:exam has been existed,Jump
+2022-07-08 10:10:21.065003 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.071001 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.118002 : Waring:file has been existed,Jump
+2022-07-08 10:10:21.126003 : Waring:task has been existed,Jump
+2022-07-08 10:10:21.132000 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.137003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.143003 : Waring:hmwk has been existed,Jump
+2022-07-08 10:10:21.149000 : Waring:hmwkRollBack has been existed,Jump
+2022-07-08 10:10:21.165001 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.171000 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.177002 : Waring:user has been existed,Jump
+2022-07-08 10:10:21.182004 : Waring:material has been existed,Jump
+2022-07-08 10:10:21.188002 : Waring:userCourse has been existed,Jump
+2022-07-08 10:10:21.193003 : Waring:course has been existed,Jump
+2022-07-08 10:10:21.199002 : Waring:materialRollBack has been existed,Jump
+2022-07-08 10:10:21.213004 : Waring:actvt has been existed,Jump
+2022-07-08 10:10:21.218001 : Waring:userActvt has been existed,Jump
+2022-07-08 10:10:21.232002 : Waring:notice has been existed,Jump
+2022-07-08 10:10:21.394165 : notice_work
+2022-07-08 10:10:21.394165 : notice_work
+2022-07-08 10:10:21.394165 : notice_work
+2022-07-08 10:10:21.797213 : notice_work
+2022-07-08 10:10:21.830209 : notice_work
+2022-07-08 10:10:21.950208 : notice_work
+2022-07-08 10:10:23.269486 : notice_work
+2022-07-08 10:10:23.384804 : notice_work
+2022-07-08 10:10:23.509593 : notice_work
+2022-07-08 10:10:24.877667 : notice_work
+2022-07-08 10:10:24.985662 : notice_work
+2022-07-08 10:10:25.142665 : notice_work
+2022-07-08 10:10:26.488502 : notice_work
+2022-07-08 10:10:26.580679 : notice_work
+2022-07-08 10:10:26.715271 : notice_work
+2022-07-08 10:10:28.539207 : notice_work
+2022-07-08 10:10:29.676079 : notice_work
+2022-07-08 10:10:29.788080 : notice_work
+2022-07-08 10:10:29.910061 : notice_work
+2022-07-08 10:10:31.273602 : notice_work
+2022-07-08 10:10:31.381815 : notice_work
+2022-07-08 10:10:31.516461 : notice_work
+2022-07-08 10:10:32.877995 : notice_work
+2022-07-08 10:10:32.986426 : notice_work
+2022-07-08 10:10:33.109907 : notice_work
+2022-07-08 10:10:34.472907 : notice_work
+2022-07-08 10:10:34.582027 : notice_work
+2022-07-08 10:10:34.706027 : notice_work
+2022-07-08 10:10:36.075258 : notice_work
+2022-07-08 10:10:36.191148 : notice_work
+2022-07-08 10:10:36.332060 : notice_work
+2022-07-08 10:10:37.668587 : notice_work
+2022-07-08 10:10:37.781586 : notice_work
+2022-07-08 10:10:37.909836 : notice_work
+2022-07-08 10:10:39.273038 : notice_work
+2022-07-08 10:10:39.390599 : notice_work
+2022-07-08 10:10:39.509267 : notice_work
+2022-07-08 10:10:40.869138 : notice_work
+2022-07-08 10:10:40.990616 : notice_work
+2022-07-08 10:10:41.112544 : notice_work
+2022-07-08 10:10:42.498396 : notice_work
+2022-07-08 10:10:42.704412 : notice_work
+2022-07-08 10:10:42.768395 : notice_work
+2022-07-08 10:10:44.079321 : notice_work
+2022-07-08 10:10:44.186612 : notice_work
+2022-07-08 10:10:44.308412 : notice_work
+2022-07-08 10:10:45.674422 : notice_work
+2022-07-08 10:10:45.782224 : notice_work
+2022-07-08 10:10:45.911229 : notice_work
+2022-07-08 10:10:47.267368 : notice_work
+2022-07-08 10:10:47.389364 : notice_work
+2022-07-08 10:10:47.509661 : notice_work
+2022-07-08 10:10:49.537877 : notice_work
+2022-07-08 10:10:49.537877 : notice_work
+2022-07-08 10:10:49.537877 : notice_work
+2022-07-08 10:10:50.540028 : notice_work
+2022-07-08 10:10:51.562550 : notice_work
+2022-07-08 10:10:51.562550 : notice_work
+2022-07-08 10:10:52.546241 : notice_work
+2022-07-08 10:10:52.546241 : notice_work
+2022-07-08 10:10:54.598607 : notice_work
+2022-07-08 10:10:55.563107 : notice_work
+2022-07-08 10:10:55.563107 : notice_work
+2022-07-08 10:10:57.552876 : notice_work
+2022-07-08 10:10:58.531488 : notice_work
+2022-07-08 10:10:59.542453 : notice_work
+2022-07-08 10:11:00.541966 : notice_work
+2022-07-08 10:11:00.541966 : notice_work
+2022-07-08 10:11:01.802357 : notice_work
+2022-07-08 10:11:01.907377 : notice_work
+2022-07-08 10:11:03.539563 : notice_work
+2022-07-08 10:11:03.539563 : notice_work
+2022-07-08 10:11:03.539563 : notice_work
+2022-07-08 10:11:05.554610 : notice_work
+2022-07-08 10:11:05.554610 : notice_work
+2022-07-08 10:11:06.561839 : notice_work
+2022-07-08 10:11:07.630190 : notice_work
+2022-07-08 10:11:08.605378 : notice_work
+2022-07-08 10:11:08.605378 : notice_work
+2022-07-08 10:11:10.533837 : notice_work
+2022-07-08 10:11:10.533837 : notice_work
+2022-07-08 10:11:11.540031 : notice_work
+2022-07-08 10:11:11.540031 : notice_work
+2022-07-08 10:11:13.549119 : notice_work
+2022-07-08 10:11:14.656881 : notice_work
+2022-07-08 10:11:16.027178 : notice_work
+2022-07-08 10:11:16.864166 : notice_work
+2022-07-08 10:11:18.534224 : notice_work
+2022-07-08 10:11:18.534224 : notice_work
+2022-07-08 10:11:18.534224 : notice_work
+2022-07-08 10:11:19.542746 : notice_work
+2022-07-08 10:11:19.542746 : notice_work
+2022-07-08 10:11:19.542746 : notice_work
+2022-07-08 10:11:21.548506 : notice_work
+2022-07-08 10:11:21.548506 : notice_work
+2022-07-08 10:11:21.548506 : notice_work
+2022-07-08 10:11:22.537327 : notice_work
+2022-07-08 10:11:23.540451 : notice_work
+2022-07-08 10:11:24.526611 : notice_work
+2022-07-08 10:11:24.526611 : notice_work
+2022-07-08 10:11:26.573942 : notice_work
+2022-07-08 10:11:26.573942 : notice_work
+2022-07-08 10:11:27.541209 : notice_work
+2022-07-08 10:11:27.541209 : notice_work
+2022-07-08 10:11:27.541209 : notice_work
+2022-07-08 10:11:29.538325 : notice_work
+2022-07-08 10:11:29.539325 : notice_work
+2022-07-08 10:11:29.539325 : notice_work
+2022-07-08 10:11:30.554976 : notice_work
+2022-07-08 10:11:31.552080 : notice_work
+2022-07-08 10:11:32.555011 : notice_work
+2022-07-08 10:11:32.555011 : notice_work
+2022-07-08 10:11:32.555011 : notice_work
+2022-07-08 10:11:34.547773 : notice_work
+2022-07-08 10:11:35.537033 : notice_work
+2022-07-08 10:11:35.537033 : notice_work
+2022-07-08 10:11:35.537033 : notice_work
+2022-07-08 10:11:36.872489 : notice_work
+2022-07-08 10:11:36.995489 : notice_work
+2022-07-08 10:11:37.141498 : notice_work
+2022-07-08 10:11:38.255778 : list_user_task:user=2020211839
+2022-07-08 10:11:38.484773 : notice_work
+2022-07-08 10:11:38.583773 : notice_work
+2022-07-08 10:11:38.708776 : notice_work
+2022-07-08 10:11:40.024354 : list_user_exam:user=2020211839
+2022-07-08 10:11:40.090352 : notice_work
+2022-07-08 10:11:40.254353 : notice_work
+2022-07-08 10:11:40.306351 : notice_work
+2022-07-08 10:11:41.680551 : notice_work
+2022-07-08 10:11:41.783481 : notice_work
+2022-07-08 10:11:41.912493 : notice_work
+2022-07-08 10:11:43.282058 : notice_work
+2022-07-08 10:11:43.383056 : notice_work
+2022-07-08 10:11:43.519056 : notice_work
+2022-07-08 10:11:44.935219 : list_class
+
+2022-07-08 10:11:44.942222 : list_class_material:class=1
+2022-07-08 10:11:44.949222 : list_class_material:class=2
+2022-07-08 10:11:44.956225 : list_class_material:class=3
+2022-07-08 10:11:44.963226 : list_class_material:class=4
+2022-07-08 10:11:44.971228 : list_class_material:class=5
+2022-07-08 10:11:44.980223 : list_class_material:class=6
+2022-07-08 10:11:44.988226 : notice_work
+2022-07-08 10:11:44.988226 : list_class_material:class=7
+2022-07-08 10:11:44.998221 : list_class_material:class=8
+2022-07-08 10:11:45.005221 : list_class_material:class=9
+2022-07-08 10:11:45.114224 : notice_work
+2022-07-08 10:11:46.473682 : notice_work
+2022-07-08 10:11:46.586316 : notice_work
+2022-07-08 10:11:46.707855 : notice_work
+2022-07-08 10:11:48.073449 : notice_work
+2022-07-08 10:11:48.193448 : notice_work
+2022-07-08 10:11:48.309444 : notice_work
+2022-07-08 10:11:49.673723 : notice_work
+2022-07-08 10:11:49.786676 : notice_work
+2022-07-08 10:11:49.913676 : notice_work
+2022-07-08 10:11:51.276284 : notice_work
+2022-07-08 10:11:51.382283 : notice_work
+2022-07-08 10:11:51.519284 : notice_work
+2022-07-08 10:11:52.879174 : notice_work
+2022-07-08 10:11:52.981168 : notice_work
+2022-07-08 10:11:53.120172 : notice_work
+2022-07-08 10:11:54.486733 : notice_work
+2022-07-08 10:11:54.581734 : notice_work
+2022-07-08 10:11:54.707385 : notice_work
+2022-07-08 10:11:56.093061 : notice_work
+2022-07-08 10:11:56.211072 : notice_work
+2022-07-08 10:11:56.318053 : notice_work
+2022-07-08 10:11:57.679593 : notice_work
+2022-07-08 10:11:57.783694 : notice_work
+2022-07-08 10:11:57.908696 : notice_work
+2022-07-08 10:11:59.272442 : notice_work
+2022-07-08 10:11:59.385970 : notice_work
+2022-07-08 10:11:59.531738 : notice_work
+2022-07-08 10:12:00.868975 : notice_work
+2022-07-08 10:12:01.260984 : notice_work
+k:user=2020211839
+2022-07-08 10:12:02.488531 : notice_work
+2022-07-08 10:12:02.581605 : notice_work
+2022-07-08 10:12:02.707660 : notice_work
+2022-07-08 10:12:04.072747 : notice_work
+2022-07-08 10:12:04.194514 : notice_work
+2022-07-08 10:12:04.319809 : notice_work
+2022-07-08 10:12:05.676753 : notice_work
+2022-07-08 10:12:05.787667 : notice_work
+2022-07-08 10:12:05.909753 : notice_work
+2022-07-08 10:12:07.013157 : list_user_exam:user=2020211839
+2022-07-08 10:12:07.269660 : notice_work
+2022-07-08 10:12:07.382654 : notice_work
+2022-07-08 10:12:07.507942 : notice_work
+2022-07-08 10:12:08.870594 : notice_work
+2022-07-08 10:12:09.033596 : notice_work
+2022-07-08 10:12:09.105596 : notice_work
+2022-07-08 10:12:10.470719 : notice_work
+2022-07-08 10:12:10.590915 : notice_work
+2022-07-08 10:12:10.714946 : notice_work
+2022-07-08 10:12:12.078864 : notice_work
+2022-07-08 10:12:12.183306 : notice_work
+2022-07-08 10:12:12.320508 : notice_work
+2022-07-08 10:12:13.670669 : notice_work
+2022-07-08 10:12:13.783231 : notice_work
+2022-07-08 10:12:13.914775 : notice_work
+2022-07-08 10:12:15.268486 : notice_work
+2022-07-08 10:12:15.383951 : notice_work
+2022-07-08 10:12:15.507836 : notice_work
+2022-07-08 10:12:16.084415 : list_user_task:user=2020211839
+2022-07-08 10:12:16.869831 : notice_work
+2022-07-08 10:12:16.991437 : notice_work
+2022-07-08 10:12:17.112432 : notice_work
+2022-07-08 10:12:18.477959 : notice_work
+2022-07-08 10:12:18.585961 : notice_work
+2022-07-08 10:12:18.707968 : notice_work
+2022-07-08 10:12:20.069717 : notice_work
+2022-07-08 10:12:20.190024 : notice_work
+2022-07-08 10:12:20.313425 : notice_work
+2022-07-08 10:12:21.704100 : notice_work
+2022-07-08 10:12:21.811097 : notice_work
+2022-07-08 10:12:22.008758 : notice_work
+2022-07-08 10:12:23.539550 : notice_work
+2022-07-08 10:12:23.540551 : notice_work
+2022-07-08 10:12:25.543530 : notice_work
+2022-07-08 10:12:25.556526 : notice_work
+2022-07-08 10:12:25.556526 : notice_work
+2022-07-08 10:12:26.527468 : notice_work
+2022-07-08 10:12:27.533292 : notice_work
+2022-07-08 10:12:27.533292 : notice_work
+2022-07-08 10:12:28.542902 : notice_work
+2022-07-08 10:12:28.543900 : notice_work
+2022-07-08 10:12:30.554934 : notice_work
+2022-07-08 10:12:30.555936 : notice_work
+2022-07-08 10:12:30.555936 : notice_work
+2022-07-08 10:12:31.545717 : notice_work
+2022-07-08 10:12:31.545717 : notice_work
+2022-07-08 10:12:31.545717 : notice_work
+2022-07-08 10:12:33.542930 : notice_work
+2022-07-08 10:12:33.542930 : notice_work
+2022-07-08 10:12:34.540038 : notice_work
+2022-07-08 10:12:35.531073 : notice_work
+2022-07-08 10:12:36.571148 : notice_work
+2022-07-08 10:12:38.531907 : notice_work
+2022-07-08 10:12:38.531907 : notice_work
+2022-07-08 10:12:38.531907 : notice_work
+2022-07-08 10:12:39.533198 : notice_work
+2022-07-08 10:12:39.534185 : notice_work
+2022-07-08 10:12:39.534185 : notice_work
+2022-07-08 10:12:41.547792 : notice_work
+2022-07-08 10:12:41.547792 : notice_work
+2022-07-08 10:12:41.547792 : notice_work
+2022-07-08 10:12:42.537675 : notice_work
+2022-07-08 10:12:43.542511 : notice_work
+2022-07-08 10:12:43.542511 : notice_work
+2022-07-08 10:12:44.540105 : notice_work
+2022-07-08 10:12:44.540105 : notice_work
+2022-07-08 10:12:46.535574 : notice_work
+2022-07-08 10:12:46.537578 : notice_work
+2022-07-08 10:12:46.537578 : notice_work
+2022-07-08 10:12:47.537006 : notice_work
+2022-07-08 10:12:47.537006 : notice_work
+2022-07-08 10:12:47.537006 : notice_work
+2022-07-08 10:12:49.541776 : notice_work
+2022-07-08 10:12:49.541776 : notice_work
+2022-07-08 10:12:49.541776 : notice_work
+2022-07-08 10:12:50.571054 : notice_work
+2022-07-08 10:12:51.542410 : notice_work
+2022-07-08 10:12:52.541205 : notice_work
+2022-07-08 10:12:54.541171 : notice_work
+2022-07-08 10:12:54.541171 : notice_work
+2022-07-08 10:12:55.538333 : notice_work
+2022-07-08 10:12:55.538333 : notice_work
+2022-07-08 10:12:57.549125 : notice_work
+2022-07-08 10:12:57.550128 : notice_work
+2022-07-08 10:12:58.531281 : notice_work
+2022-07-08 10:12:59.551022 : notice_work
+2022-07-08 10:13:00.598789 : notice_work
+2022-07-08 10:13:00.598789 : notice_work
+2022-07-08 10:13:02.533117 : notice_work
+2022-07-08 10:13:02.533117 : notice_work
+2022-07-08 10:13:02.533117 : notice_work
+2022-07-08 10:13:03.546472 : notice_work
+2022-07-08 10:13:03.546472 : notice_work
+2022-07-08 10:13:04.867474 : notice_work
+2022-07-08 10:13:04.991622 : notice_work
+2022-07-08 10:13:05.115679 : notice_work
+2022-07-08 10:13:06.629974 : notice_work
+2022-07-08 10:13:07.585218 : notice_work
+2022-07-08 10:13:08.528742 : notice_work
+2022-07-08 10:13:08.528742 : notice_work
+2022-07-08 10:13:10.543831 : notice_work
+2022-07-08 10:13:10.544828 : notice_work
+2022-07-08 10:13:10.544828 : notice_work
+2022-07-08 10:13:11.543309 : notice_work
+2022-07-08 10:13:11.544307 : notice_work
+2022-07-08 10:13:11.545316 : notice_work
+2022-07-08 10:13:13.577443 : notice_work
+2022-07-08 10:13:13.578443 : notice_work
+2022-07-08 10:13:14.548969 : notice_work
+2022-07-08 10:13:15.357390 : notice_work
+2022-07-08 10:13:16.086281 : notice_work
+2022-07-08 10:13:16.187687 : notice_work
+2022-07-08 10:13:16.306947 : notice_work
+2022-07-08 10:13:17.678862 : notice_work
+2022-07-08 10:13:17.803860 : notice_work
+2022-07-08 10:13:17.912409 : notice_work
+2022-07-08 10:13:19.269246 : notice_work
+2022-07-08 10:13:19.384751 : notice_work
+2022-07-08 10:13:19.507727 : notice_work
+2022-07-08 10:13:20.099949 : list_user_exam:user=2020211839
+2022-07-08 10:13:20.869786 : notice_work
+2022-07-08 10:13:20.982885 : notice_work
+2022-07-08 10:13:21.120212 : notice_work
+2022-07-08 10:13:22.095829 : list_user_task:user=2020211839
+2022-07-08 10:13:22.468563 : notice_work
+2022-07-08 10:13:22.581889 : notice_work
+2022-07-08 10:13:22.706439 : notice_work
+2022-07-08 10:13:24.077731 : notice_work
+2022-07-08 10:13:24.182919 : notice_work
+2022-07-08 10:13:24.321703 : notice_work
+2022-07-08 10:13:24.819927 : list_class
+2022-07-08 10:13:24.826925 : list_class_material:class=1
+2022-07-08 10:13:24.833922 : list_class_material:class=2
+2022-07-08 10:13:24.838922 : list_class_material:class=3
+2022-07-08 10:13:24.844925 : list_class_material:class=4
+2022-07-08 10:13:24.850924 : list_class_material:class=5
+2022-07-08 10:13:24.856922 : list_class_material:class=6
+2022-07-08 10:13:24.862927 : list_class_material:class=7
+2022-07-08 10:13:24.869923 : list_class_material:class=8
+2022-07-08 10:13:24.875923 : list_class_material:class=9
+2022-07-08 10:13:25.678306 : notice_work
+2022-07-08 10:13:25.783928 : notice_work
+2022-07-08 10:13:25.908411 : notice_work
+2022-07-08 10:13:27.534552 : notice_work
+2022-07-08 10:13:27.534552 : notice_work
+2022-07-08 10:13:27.534552 : notice_work
+2022-07-08 10:13:28.927827 : notice_work
+2022-07-08 10:13:29.540175 : notice_work
+2022-07-08 10:13:29.540175 : notice_work
+2022-07-08 10:13:30.528406 : notice_work
+2022-07-08 10:13:31.542920 : notice_work
+2022-07-08 10:13:32.575914 : notice_work
+2022-07-08 10:13:34.565816 : notice_work
+2022-07-08 10:13:35.534496 : notice_work
+2022-07-08 10:13:35.534496 : notice_work
+2022-07-08 10:13:37.548804 : notice_work
+2022-07-08 10:13:37.549804 : notice_work
+2022-07-08 10:13:37.549804 : notice_work
+2022-07-08 10:13:38.534233 : notice_work
+2022-07-08 10:13:39.808678 : notice_work
+2022-07-08 10:13:40.761210 : notice_work
+2022-07-08 10:13:40.761210 : notice_work
+2022-07-08 10:13:42.549259 : notice_work
+2022-07-08 10:13:42.549259 : notice_work
+2022-07-08 10:13:43.536506 : notice_work
+2022-07-08 10:13:43.536506 : notice_work
+2022-07-08 10:13:43.536506 : notice_work
+2022-07-08 10:13:45.569988 : notice_work
+2022-07-08 10:13:45.569988 : notice_work
+2022-07-08 10:13:46.634624 : notice_work
+2022-07-08 10:13:47.533290 : notice_work
+2022-07-08 10:13:47.533290 : notice_work
+2022-07-08 10:13:48.369507 : notice_work
+2022-07-08 10:13:48.404509 : notice_work
+2022-07-08 10:13:48.450515 : notice_work
+2022-07-08 10:13:49.829376 : list_class
+2022-07-08 10:13:49.868392 : notice_work
+2022-07-08 10:13:49.984408 : notice_work
+2022-07-08 10:13:51.312098 : notice_work
+2022-07-08 10:13:51.409088 : notice_work
+2022-07-08 10:13:51.531083 : notice_work
+2022-07-08 10:13:53.528948 : notice_work
+2022-07-08 10:13:53.528948 : notice_work
+2022-07-08 10:13:54.554564 : notice_work
+2022-07-08 10:13:55.537906 : notice_work
+2022-07-08 10:13:56.545325 : notice_work
+2022-07-08 10:13:56.545325 : notice_work
+2022-07-08 10:13:56.545325 : notice_work
+2022-07-08 10:13:58.537497 : notice_work
+2022-07-08 10:13:58.538497 : notice_work
+2022-07-08 10:13:59.550769 : notice_work
+2022-07-08 10:13:59.550769 : notice_work
+2022-07-08 10:14:01.553203 : notice_work
+2022-07-08 10:14:01.553203 : notice_work
+2022-07-08 10:14:02.537238 : notice_work
+2022-07-08 10:14:03.543363 : notice_work
+2022-07-08 10:14:04.533729 : notice_work
+2022-07-08 10:14:04.533729 : notice_work
+2022-07-08 10:14:04.533729 : notice_work
+2022-07-08 10:14:06.541944 : notice_work
+2022-07-08 10:14:06.541944 : notice_work
+2022-07-08 10:14:07.532059 : notice_work
+2022-07-08 10:14:07.532059 : notice_work
+2022-07-08 10:14:09.539099 : notice_work
+2022-07-08 10:14:09.539099 : notice_work
+2022-07-08 10:14:09.539099 : notice_work
+2022-07-08 10:14:10.535409 : notice_work
+2022-07-08 10:14:11.532598 : notice_work
+2022-07-08 10:14:12.529855 : notice_work
+2022-07-08 10:14:12.529855 : notice_work
+2022-07-08 10:14:14.549095 : notice_work
+2022-07-08 10:14:14.549095 : notice_work
+2022-07-08 10:14:15.542536 : notice_work
+2022-07-08 10:14:15.542536 : notice_work
+2022-07-08 10:14:15.543542 : notice_work
+2022-07-08 10:14:17.538425 : notice_work
+2022-07-08 10:14:17.538425 : notice_work
+2022-07-08 10:14:18.532426 : notice_work
+2022-07-08 10:14:19.528632 : notice_work
+2022-07-08 10:14:20.544236 : notice_work
+2022-07-08 10:14:20.544236 : notice_work
+2022-07-08 10:14:22.576379 : notice_work
+2022-07-08 10:14:22.576379 : notice_work
+2022-07-08 10:14:23.588547 : notice_work
+2022-07-08 10:14:25.540697 : notice_work
+2022-07-08 10:14:25.540697 : notice_work
+2022-07-08 10:14:25.540697 : notice_work
+2022-07-08 10:14:26.533505 : notice_work
+2022-07-08 10:14:27.546149 : notice_work
+2022-07-08 10:14:28.726958 : notice_work
+2022-07-08 10:14:28.726958 : notice_work
+2022-07-08 10:14:29.762445 : notice_work
+2022-07-08 10:14:29.796444 : notice_work
+2022-07-08 10:14:29.965445 : notice_work
+2022-07-08 10:14:31.283626 : notice_work
+2022-07-08 10:14:31.386652 : notice_work
+2022-07-08 10:14:31.509652 : notice_work
+2022-07-08 10:14:32.872089 : notice_work
+2022-07-08 10:14:32.996103 : notice_work
+2022-07-08 10:14:33.119462 : notice_work
+2022-07-08 10:14:34.470391 : notice_work
+2022-07-08 10:14:34.597161 : notice_work
+2022-07-08 10:14:34.723098 : notice_work
+2022-07-08 10:14:36.069849 : notice_work
+2022-07-08 10:14:36.183137 : notice_work
+2022-07-08 10:14:36.310319 : notice_work
+2022-07-08 10:14:37.219792 : list_class
+2022-07-08 10:14:37.226794 : list_class_material:class=1
+2022-07-08 10:14:37.232796 : list_class_material:class=2
+2022-07-08 10:14:37.238792 : list_class_material:class=3
+2022-07-08 10:14:37.245788 : list_class_material:class=4
+2022-07-08 10:14:37.251785 : list_class_material:class=5
+2022-07-08 10:14:37.257784 : list_class_material:class=6
+2022-07-08 10:14:37.264785 : list_class_material:class=7
+2022-07-08 10:14:37.270781 : list_class_material:class=8
+2022-07-08 10:14:37.276780 : list_class_material:class=9
+2022-07-08 10:14:37.678519 : notice_work
+2022-07-08 10:14:37.784775 : notice_work
+2022-07-08 10:14:37.911840 : notice_work
+2022-07-08 10:14:39.267845 : notice_work
+2022-07-08 10:14:39.390022 : notice_work
+2022-07-08 10:14:39.512155 : notice_work
+2022-07-08 10:14:40.887569 : notice_work
+2022-07-08 10:14:40.992838 : notice_work
+2022-07-08 10:14:41.107889 : notice_work
+2022-07-08 10:14:42.471253 : notice_work
+2022-07-08 10:14:42.580248 : notice_work
+2022-07-08 10:14:42.708248 : notice_work
+2022-07-08 10:14:43.114043 : list_user_task:user=2020211839
+2022-07-08 10:14:43.572314 : list_class
+2022-07-08 10:14:43.580315 : list_class_material:class=1
+2022-07-08 10:14:43.588311 : list_class_material:class=2
+2022-07-08 10:14:43.595312 : list_class_material:class=3
+2022-07-08 10:14:43.601312 : list_class_material:class=4
+2022-07-08 10:14:43.607316 : list_class_material:class=5
+2022-07-08 10:14:43.613314 : list_class_material:class=6
+2022-07-08 10:14:43.619315 : list_class_material:class=7
+2022-07-08 10:14:43.625311 : list_class_material:class=8
+2022-07-08 10:14:43.631313 : list_class_material:class=9
+2022-07-08 10:14:44.075288 : notice_work
+2022-07-08 10:14:44.188327 : notice_work
+2022-07-08 10:14:44.308646 : notice_work
+2022-07-08 10:14:45.667901 : notice_work
+2022-07-08 10:14:45.788402 : notice_work
+2022-07-08 10:14:45.908397 : notice_work
+2022-07-08 10:14:47.267866 : notice_work
+2022-07-08 10:14:47.382644 : notice_work
+2022-07-08 10:14:47.507642 : notice_work
+2022-07-08 10:14:48.883763 : list_user_exam:user=2020211839
+2022-07-08 10:14:48.983762 : notice_work
+2022-07-08 10:14:49.119881 : notice_work
+2022-07-08 10:14:50.470701 : notice_work
+2022-07-08 10:14:50.583414 : notice_work
+2022-07-08 10:14:50.720975 : notice_work
+2022-07-08 10:14:52.075283 : notice_work
+2022-07-08 10:14:52.189542 : notice_work
+2022-07-08 10:14:52.308793 : notice_work
+2022-07-08 10:14:52.745992 : list_user_task:user=2020211839
+2022-07-08 10:14:53.680173 : notice_work
+2022-07-08 10:14:53.788993 : notice_work
+2022-07-08 10:14:53.911490 : notice_work
+2022-07-08 10:14:55.266725 : notice_work
+2022-07-08 10:14:55.392594 : notice_work
+2022-07-08 10:14:55.505597 : notice_work
+2022-07-08 10:14:56.867360 : notice_work
+2022-07-08 10:14:56.981771 : notice_work
+2022-07-08 10:14:57.121793 : notice_work
+2022-07-08 10:14:58.468176 : notice_work
+2022-07-08 10:14:58.582259 : notice_work
+2022-07-08 10:14:58.717008 : notice_work
+2022-07-08 10:15:00.068155 : notice_work
+2022-07-08 10:15:00.183156 : notice_work
+2022-07-08 10:15:00.307317 : notice_work
+2022-07-08 10:15:01.670768 : notice_work
+2022-07-08 10:15:01.786369 : notice_work
+2022-07-08 10:15:01.910427 : notice_work
+2022-07-08 10:15:03.322075 : notice_work
+2022-07-08 10:15:03.433082 : notice_work
+2022-07-08 10:15:03.612306 : notice_work
+2022-07-08 10:15:04.870589 : notice_work
+2022-07-08 10:15:04.992969 : notice_work
+2022-07-08 10:15:05.118321 : notice_work
+2022-07-08 10:15:06.485675 : notice_work
+2022-07-08 10:15:06.594005 : notice_work
+2022-07-08 10:15:06.706008 : notice_work
+2022-07-08 10:15:08.168267 : list_class
+
+2022-07-08 10:15:08.184272 : list_class_material:class=1
+2022-07-08 10:15:08.203267 : list_class_material:class=2
+2022-07-08 10:15:08.218264 : list_class_material:class=3
+2022-07-08 10:15:08.233270 : list_class_material:class=4
+2022-07-08 10:15:08.253268 : list_class_material:class=5
+2022-07-08 10:15:08.267269 : list_class_material:class=6
+2022-07-08 10:15:08.267269 : notice_work
+2022-07-08 10:15:08.279271 : list_class_material:class=7
+2022-07-08 10:15:08.288264 : list_class_material:class=8
+2022-07-08 10:15:08.299265 : list_class_material:class=9
+2022-07-08 10:15:08.406266 : notice_work
+2022-07-08 10:15:09.668399 : notice_work
+2022-07-08 10:15:09.792697 : notice_work
+2022-07-08 10:15:09.907212 : notice_work
+2022-07-08 10:15:11.270332 : notice_work
+2022-07-08 10:15:11.386331 : notice_work
+2022-07-08 10:15:11.509331 : notice_work
+2022-07-08 10:15:12.872990 : notice_work
+2022-07-08 10:15:12.989988 : notice_work
+2022-07-08 10:15:13.120988 : notice_work
+2022-07-08 10:15:14.482057 : notice_work
+2022-07-08 10:15:14.596718 : notice_work
+2022-07-08 10:15:14.707667 : notice_work
+2022-07-08 10:15:16.076728 : notice_work
+2022-07-08 10:15:16.196729 : notice_work
+2022-07-08 10:15:16.319799 : notice_work
+2022-07-08 10:15:18.545648 : notice_work
+2022-07-08 10:15:18.545648 : notice_work
+2022-07-08 10:15:18.545648 : notice_work
+2022-07-08 10:15:19.532293 : notice_work
+2022-07-08 10:15:19.533297 : notice_work
+2022-07-08 10:15:21.534544 : notice_work
+2022-07-08 10:15:21.534544 : notice_work
+2022-07-08 10:15:22.559562 : notice_work
+2022-07-08 10:15:23.539398 : notice_work
+2022-07-08 10:15:23.539398 : notice_work
+2022-07-08 10:15:24.534107 : notice_work
+2022-07-08 10:15:24.535107 : notice_work
+2022-07-08 10:15:26.544097 : notice_work
+2022-07-08 10:15:26.544097 : notice_work
+2022-07-08 10:15:26.544097 : notice_work
+2022-07-08 10:15:27.533038 : notice_work
+2022-07-08 10:15:27.534041 : notice_work
+2022-07-08 10:15:27.534041 : notice_work
+2022-07-08 10:15:29.536790 : notice_work
+2022-07-08 10:15:29.536790 : notice_work
+2022-07-08 10:15:29.536790 : notice_work
+2022-07-08 10:15:30.536496 : notice_work
+2022-07-08 10:15:31.530035 : notice_work
+2022-07-08 10:15:32.542313 : notice_work
+2022-07-08 10:15:32.543318 : notice_work
+2022-07-08 10:15:32.543318 : notice_work
+2022-07-08 10:15:34.539589 : notice_work
+2022-07-08 10:15:34.539589 : notice_work
+2022-07-08 10:15:35.539631 : notice_work
+2022-07-08 10:15:35.539631 : notice_work
+2022-07-08 10:15:35.539631 : notice_work
+2022-07-08 10:15:37.535413 : notice_work
+2022-07-08 10:15:37.535413 : notice_work
+2022-07-08 10:15:38.532480 : notice_work
+2022-07-08 10:15:39.530640 : notice_work
+2022-07-08 10:15:39.530640 : notice_work
+2022-07-08 10:15:40.545125 : notice_work
+2022-07-08 10:15:40.545125 : notice_work
+2022-07-08 10:15:40.546125 : notice_work
+2022-07-08 10:15:42.646973 : notice_work
+2022-07-08 10:15:43.544769 : notice_work
+2022-07-08 10:15:43.544769 : notice_work
+2022-07-08 10:15:43.544769 : notice_work
+2022-07-08 10:15:53.780438 : notice_work
+2022-07-08 10:15:53.780438 : notice_work
+2022-07-08 10:15:53.780438 : notice_work
+2022-07-08 10:15:53.780438 : list_user_task:user=2020211839
+2022-07-08 10:15:53.780438 : list_class
+2022-07-08 10:15:53.781441 : notice_work
+2022-07-08 10:15:53.803440 : list_class_material:class=1
+2022-07-08 10:15:53.814444 : list_class_material:class=2
+2022-07-08 10:15:53.821442 : list_class_material:class=3
+2022-07-08 10:15:53.828439 : list_class_material:class=4
+2022-07-08 10:15:53.836444 : list_class_material:class=5
+2022-07-08 10:15:53.843438 : list_class_material:class=6
+2022-07-08 10:15:53.849438 : list_class_material:class=7
+2022-07-08 10:15:53.856438 : notice_work
+2022-07-08 10:15:53.857439 : list_class_material:class=8
+2022-07-08 10:15:53.857439 : notice_work
+2022-07-08 10:15:53.864439 : list_class_material:class=9
+2022-07-08 10:15:54.361439 : list_class
+2022-07-08 10:15:55.265173 : notice_work
+2022-07-08 10:15:55.265173 : notice_work
+2022-07-08 10:15:55.265173 : list_class
+2022-07-08 10:15:55.273172 : list_class_material:class=1
+2022-07-08 10:15:55.279174 : list_class_material:class=2
+2022-07-08 10:15:55.286171 : list_class_material:class=3
+2022-07-08 10:15:55.293170 : list_class_material:class=4
+2022-07-08 10:15:55.308177 : list_class_material:class=5
+2022-07-08 10:15:55.319170 : list_class_material:class=6
+2022-07-08 10:15:55.329180 : list_class_material:class=7
+2022-07-08 10:15:55.336171 : list_class_material:class=8
+2022-07-08 10:15:55.343175 : list_class_material:class=9
+2022-07-08 10:15:56.209190 : notice_work
+2022-07-08 10:15:56.451191 : notice_work
+2022-07-08 10:15:56.534188 : notice_work
+2022-07-08 10:15:57.699424 : notice_work
+2022-07-08 10:15:58.038045 : notice_work
+2022-07-08 10:15:58.158044 : notice_work
+2022-07-08 10:15:59.452799 : notice_work
+2022-07-08 10:15:59.532796 : notice_work
+2022-07-08 10:15:59.741798 : notice_work
+2022-07-08 10:16:01.261316 : notice_work
+2022-07-08 10:16:02.749281 : notice_work
+2022-07-08 10:16:03.783080 : notice_work
+2022-07-08 10:16:03.783080 : notice_work
+2022-07-08 10:16:04.345057 : notice_work
+2022-07-08 10:16:04.652076 : notice_work
+2022-07-08 10:16:04.723076 : notice_work
+2022-07-08 10:16:05.813376 : notice_work
+2022-07-08 10:16:05.896373 : notice_work
+2022-07-08 10:16:06.031575 : notice_work
+2022-07-08 10:16:07.462250 : notice_work
+2022-07-08 10:16:07.531367 : notice_work
+2022-07-08 10:16:07.707514 : notice_work
+2022-07-08 10:16:09.213543 : notice_work
+2022-07-08 10:16:09.398540 : notice_work
+2022-07-08 10:16:10.851840 : notice_work
+2022-07-08 10:16:11.665338 : notice_work
+2022-07-08 10:16:13.376118 : notice_work
+2022-07-08 10:16:14.729132 : notice_work
+2022-07-08 10:16:14.730132 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.130520 : notice_work
+2022-07-08 10:16:19.209673 : notice_work
+2022-07-08 10:16:21.205562 : notice_work
+2022-07-08 10:16:21.205562 : notice_work
+2022-07-08 10:16:22.551458 : notice_work
+2022-07-08 10:16:22.552458 : notice_work
+2022-07-08 10:16:23.553082 : notice_work
+2022-07-08 10:16:23.553082 : notice_work
+2022-07-08 10:16:25.554598 : notice_work
+2022-07-08 10:16:25.554598 : notice_work
+2022-07-08 10:16:25.554598 : notice_work
+2022-07-08 10:16:26.536635 : notice_work
+2022-07-08 10:16:27.573260 : notice_work
+2022-07-08 10:16:27.573260 : notice_work
+2022-07-08 10:16:28.552714 : notice_work
+2022-07-08 10:16:28.552714 : notice_work
+2022-07-08 10:16:28.552714 : notice_work
+2022-07-08 10:16:30.561813 : notice_work
+2022-07-08 10:16:30.561813 : notice_work
+2022-07-08 10:16:31.564054 : notice_work
+2022-07-08 10:16:33.563764 : notice_work
+2022-07-08 10:16:33.563764 : notice_work
+2022-07-08 10:16:33.563764 : notice_work
+2022-07-08 10:16:34.550709 : notice_work
+2022-07-08 10:16:35.566469 : notice_work
+2022-07-08 10:16:35.566469 : notice_work
+2022-07-08 10:16:36.831489 : notice_work
+2022-07-08 10:16:36.844499 : notice_work
+2022-07-08 10:16:36.844499 : notice_work
+2022-07-08 10:16:38.812069 : notice_work
+2022-07-08 10:16:38.812069 : notice_work
+2022-07-08 10:16:38.812069 : notice_work
+2022-07-08 10:16:39.546859 : notice_work
+2022-07-08 10:16:39.546859 : notice_work
+2022-07-08 10:16:39.546859 : notice_work
+2022-07-08 10:16:41.564210 : notice_work
+2022-07-08 10:16:41.565211 : notice_work
+2022-07-08 10:16:42.563909 : notice_work
+2022-07-08 10:16:43.542952 : notice_work
+2022-07-08 10:16:43.542952 : notice_work
+2022-07-08 10:16:44.338949 : notice_work
+2022-07-08 10:16:45.723092 : notice_work
+2022-07-08 10:16:45.822631 : notice_work
+2022-07-08 10:16:45.920630 : notice_work
+2022-07-08 10:16:47.285403 : notice_work
+2022-07-08 10:16:47.415971 : notice_work
+2022-07-08 10:16:47.513967 : notice_work
+2022-07-08 10:16:48.884771 : notice_work
+2022-07-08 10:16:49.073778 : notice_work
+2022-07-08 10:16:49.239206 : notice_work
+2022-07-08 10:16:50.470009 : notice_work
+2022-07-08 10:16:50.582009 : notice_work
+2022-07-08 10:16:50.714014 : notice_work
+2022-07-08 10:16:52.086362 : notice_work
+2022-07-08 10:16:52.186086 : notice_work
+2022-07-08 10:16:52.309842 : notice_work
+2022-07-08 10:16:53.672738 : notice_work
+2022-07-08 10:16:53.791139 : notice_work
+2022-07-08 10:16:53.914912 : notice_work
+2022-07-08 10:16:55.546373 : notice_work
+2022-07-08 10:16:55.546373 : notice_work
+2022-07-08 10:16:57.545816 : notice_work
+2022-07-08 10:16:57.546817 : notice_work
+2022-07-08 10:16:58.565688 : notice_work
+2022-07-08 10:16:59.537484 : notice_work
+2022-07-08 10:16:59.537484 : notice_work
+2022-07-08 10:17:00.541129 : notice_work
+2022-07-08 10:17:00.541129 : notice_work
+2022-07-08 10:17:00.541129 : notice_work
+2022-07-08 10:17:02.577315 : notice_work
+2022-07-08 10:17:02.577315 : notice_work
+2022-07-08 10:17:02.577315 : notice_work
+2022-07-08 10:17:03.553556 : notice_work
+2022-07-08 10:17:03.553556 : notice_work
+2022-07-08 10:17:05.574747 : notice_work
+2022-07-08 10:17:05.575741 : notice_work
+2022-07-08 10:17:05.575741 : notice_work
+2022-07-08 10:17:06.535595 : notice_work
+2022-07-08 10:17:07.540379 : notice_work
+2022-07-08 10:17:08.548875 : notice_work
+2022-07-08 10:17:08.548875 : notice_work
+2022-07-08 10:17:08.548875 : notice_work
+2022-07-08 10:17:10.555895 : notice_work
+2022-07-08 10:17:10.556894 : notice_work
+2022-07-08 10:17:10.556894 : notice_work
+2022-07-08 10:17:11.554892 : notice_work
+2022-07-08 10:17:11.554892 : notice_work
+2022-07-08 10:17:11.554892 : notice_work
+2022-07-08 10:17:13.540186 : notice_work
+2022-07-08 10:17:13.540186 : notice_work
+2022-07-08 10:17:13.540186 : notice_work
+2022-07-08 10:17:14.547036 : notice_work
+2022-07-08 10:17:15.535810 : notice_work
+2022-07-08 10:17:15.535810 : notice_work
+2022-07-08 10:17:16.568422 : notice_work
+2022-07-08 10:17:16.569427 : notice_work
+2022-07-08 10:17:18.556077 : notice_work
+2022-07-08 10:17:18.556077 : notice_work
+2022-07-08 10:17:19.554079 : notice_work
+2022-07-08 10:17:19.554079 : notice_work
+2022-07-08 10:17:19.555069 : notice_work
+2022-07-08 10:17:21.582392 : notice_work
+2022-07-08 10:17:22.549682 : notice_work
+2022-07-08 10:17:24.051151 : notice_work
+2022-07-08 10:17:24.167151 : notice_work
+2022-07-08 10:17:24.261151 : notice_work
+2022-07-08 10:17:24.376234 : notice_work
+2022-07-08 10:17:25.688753 : notice_work
+2022-07-08 10:17:25.805777 : notice_work
+2022-07-08 10:17:26.184176 : list_user_task:user=2020211839
+2022-07-08 10:17:26.450176 : list_class
+2022-07-08 10:17:26.459177 : list_class_material:class=1
+2022-07-08 10:17:26.466177 : list_class_material:class=2
+2022-07-08 10:17:26.472179 : list_class_material:class=3
+2022-07-08 10:17:26.478177 : list_class_material:class=4
+2022-07-08 10:17:26.484177 : list_class_material:class=5
+2022-07-08 10:17:26.490178 : list_class_material:class=6
+2022-07-08 10:17:26.496177 : list_class_material:class=7
+2022-07-08 10:17:26.501175 : list_class_material:class=8
+2022-07-08 10:17:26.507175 : list_class_material:class=9
+2022-07-08 10:17:27.280862 : notice_work
+2022-07-08 10:17:27.389122 : notice_work
+2022-07-08 10:17:27.514532 : notice_work
+2022-07-08 10:17:28.373749 : list_user_task:user=2020211839
+2022-07-08 10:17:28.870619 : notice_work
+2022-07-08 10:17:28.985618 : notice_work
+2022-07-08 10:17:29.110772 : notice_work
+2022-07-08 10:17:29.228773 : list_class
+2022-07-08 10:17:29.236779 : list_class_material:class=1
+2022-07-08 10:17:29.243775 : list_class_material:class=2
+2022-07-08 10:17:29.250772 : list_class_material:class=3
+2022-07-08 10:17:29.256773 : list_class_material:class=4
+2022-07-08 10:17:29.262773 : list_class_material:class=5
+2022-07-08 10:17:29.268776 : list_class_material:class=6
+2022-07-08 10:17:29.273772 : list_class_material:class=7
+2022-07-08 10:17:29.279776 : list_class_material:class=8
+2022-07-08 10:17:29.285772 : list_class_material:class=9
+2022-07-08 10:17:30.623968 : notice_work
+2022-07-08 10:17:31.552290 : notice_work
+2022-07-08 10:17:31.552290 : notice_work
+2022-07-08 10:17:32.547456 : notice_work
+2022-07-08 10:17:32.548458 : notice_work
+2022-07-08 10:17:32.548458 : notice_work
+2022-07-08 10:17:34.546704 : notice_work
+2022-07-08 10:17:34.547705 : notice_work
+2022-07-08 10:17:34.547705 : notice_work
+2022-07-08 10:17:35.574957 : notice_work
+2022-07-08 10:17:35.574957 : notice_work
+2022-07-08 10:17:37.539242 : notice_work
+2022-07-08 10:17:37.539242 : notice_work
+2022-07-08 10:17:37.539242 : notice_work
+2022-07-08 10:17:38.544326 : notice_work
+2022-07-08 10:17:38.811324 : notice_work
+2022-07-08 10:17:38.811324 : notice_work
+2022-07-08 10:17:40.299313 : notice_work
+2022-07-08 10:17:40.299313 : notice_work
+2022-07-08 10:17:40.299313 : list_user_task:user=2020211839
+2022-07-08 10:17:40.313314 : notice_work
+2022-07-08 10:17:40.669793 : list_class
+2022-07-08 10:17:40.676795 : list_class_material:class=1
+2022-07-08 10:17:40.683800 : list_class_material:class=2
+2022-07-08 10:17:40.690797 : list_class_material:class=3
+2022-07-08 10:17:40.697317 : list_class_material:class=4
+2022-07-08 10:17:40.705317 : list_class_material:class=5
+2022-07-08 10:17:40.715323 : list_class_material:class=6
+2022-07-08 10:17:40.725323 : list_class_material:class=7
+2022-07-08 10:17:40.736325 : list_class_material:class=8
+2022-07-08 10:17:40.746323 : list_class_material:class=9
+2022-07-08 10:17:41.686893 : notice_work
+2022-07-08 10:17:41.794176 : notice_work
+2022-07-08 10:17:43.440409 : list_class
+2022-07-08 10:17:43.447411 : list_class_material:class=1
+2022-07-08 10:17:43.454411 : list_class_material:class=2
+2022-07-08 10:17:43.461407 : list_class_material:class=3
+2022-07-08 10:17:43.469408 : list_class_material:class=4
+2022-07-08 10:17:43.476409 : list_class_material:class=5
+2022-07-08 10:17:43.483411 : list_class_material:class=6
+2022-07-08 10:17:43.491408 : list_class_material:class=7
+2022-07-08 10:17:43.498407 : list_class_material:class=8
+2022-07-08 10:17:43.506411 : list_class_material:class=9
+2022-07-08 10:17:45.051350 : notice_work
+2022-07-08 10:17:45.314666 : list_class
+2022-07-08 10:17:46.218363 : list_class
+2022-07-08 10:17:46.224362 : list_class_material:class=1
+2022-07-08 10:17:46.230366 : list_class_material:class=2
+2022-07-08 10:17:46.238364 : list_class_material:class=3
+2022-07-08 10:17:46.245366 : list_class_material:class=4
+2022-07-08 10:17:46.251363 : list_class_material:class=5
+2022-07-08 10:17:46.257365 : list_class_material:class=6
+2022-07-08 10:17:46.264364 : list_class_material:class=7
+2022-07-08 10:17:46.270365 : list_class_material:class=8
+2022-07-08 10:17:46.276366 : list_class_material:class=9
+2022-07-08 10:17:46.646364 : notice_work
+2022-07-08 10:17:48.248565 : notice_work
+2022-07-08 10:17:50.541094 : notice_work
+2022-07-08 10:17:51.536541 : notice_work
+2022-07-08 10:17:53.082600 : notice_work
+2022-07-08 10:17:54.649941 : notice_work
+2022-06-19 11:20:00.871021 : Waring:user has been existed,Jump
+2022-06-19 11:20:00.888021 : Waring:user has been existed,Jump
+2022-06-19 11:20:00.907019 : Waring:course has been existed,Jump
+2022-06-19 11:20:00.918027 : updata_class 1
+2022-06-19 11:20:00.929018 : updata_class 2
+2022-06-19 11:20:00.940017 : updata_class 3
+2022-06-19 11:20:00.950020 : updata_class 4
+2022-06-19 11:20:00.961016 : updata_class 5
+2022-06-19 11:20:00.972017 : updata_class 6
+2022-06-19 11:20:00.980016 : updata_class 7
+2022-06-19 11:20:00.987024 : updata_class 8
+2022-06-19 11:20:00.994016 : updata_class 9
+2022-06-19 11:20:01.001016 : updata_class 10
+2022-06-19 11:20:01.017021 : Waring:exam has been existed,Jump
+2022-06-19 11:20:01.023017 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:01.028454 : Waring:course has been existed,Jump
+2022-06-19 11:20:01.035463 : create_class_exam:class=1
+2022-06-19 11:20:01.042465 : create_class_exam:class=2
+2022-06-19 11:20:01.049471 : create_class_exam:class=3
+2022-06-19 11:20:01.057467 : create_class_exam:class=4
+2022-06-19 11:20:01.065477 : create_class_exam:class=5
+2022-06-19 11:20:01.082476 : Waring:actvt has been existed,Jump
+2022-06-19 11:20:01.089475 : Waring:userActvt has been existed,Jump
+2022-06-19 11:20:01.109474 : actvt_create
+2022-06-19 11:20:01.121473 : actvt_create
+2022-06-19 11:20:01.133469 : actvt_create
+2022-06-19 11:20:01.145475 : actvt_create
+2022-06-19 11:20:01.156468 : actvt_create
+2022-06-19 11:20:01.167470 : actvt_create
+2022-06-19 11:20:01.179477 : actvt_create
+2022-06-19 11:20:01.192469 : actvt_create
+2022-06-19 11:20:01.206465 : actvt_create
+2022-06-19 11:20:01.218467 : actvt_create
+2022-06-19 11:20:01.228463 : actvt_create
+2022-06-19 11:20:01.242465 : actvt_create
+2022-06-19 11:20:01.255466 : actvt_create
+2022-06-19 11:20:01.268476 : actvt_create
+2022-06-19 11:20:01.282466 : actvt_create
+2022-06-19 11:20:01.293464 : actvt_create
+2022-06-19 11:20:01.306472 : actvt_create
+2022-06-19 11:20:01.320467 : actvt_create
+2022-06-19 11:20:01.336466 : actvt_create
+2022-06-19 11:20:01.352469 : actvt_create
+2022-06-19 11:20:01.484490 : Waring:task has been existed,Jump
+2022-06-19 11:20:01.505483 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:01.518476 : Waring:course has been existed,Jump
+2022-06-19 11:20:01.536470 : create_class_task:class=1
+2022-06-19 11:20:01.547467 : create_class_task:class=2
+2022-06-19 11:20:01.556477 : create_class_task:class=3
+2022-06-19 11:20:01.567470 : create_class_task:class=4
+2022-06-19 11:20:01.579465 : create_class_task:class=5
+2022-06-19 11:20:01.590487 : create_class_task:class=6
+2022-06-19 11:20:01.605479 : Waring:material has been existed,Jump
+2022-06-19 11:20:01.614475 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:01.622467 : Waring:course has been existed,Jump
+2022-06-19 11:20:01.630463 : create_class_task:class=1
+2022-06-19 11:20:01.637464 : create_class_task:class=1
+2022-06-19 11:20:01.644464 : create_class_task:class=2
+2022-06-19 11:20:01.650464 : create_class_task:class=3
+2022-06-19 11:20:01.657463 : create_class_task:class=4
+2022-06-19 11:20:01.664464 : create_class_task:class=4
+2022-06-19 11:20:01.671463 : create_class_task:class=1
+2022-06-19 11:20:01.678464 : create_class_task:class=5
+2022-06-19 11:20:01.685468 : create_class_task:class=5
+2022-06-19 11:20:01.694470 : create_class_task:class=5
+2022-06-19 11:20:01.730467 : Waring:notice has been existed,Jump
+2022-06-19 11:20:01.744474 : notice_add:noticeId=0
+2022-06-19 11:20:01.752462 : notice_add:noticeId=1
+2022-06-19 11:20:01.759462 : notice_add:noticeId=2
+2022-06-19 11:20:01.772462 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:01.779464 : 2020211839 join_class 1
+2022-06-19 11:20:01.785468 : 2020211839 join_class 2
+2022-06-19 11:20:01.793107 : 2020211839 join_class 3
+2022-06-19 11:20:01.800124 : 2020211839 join_class 4
+2022-06-19 11:20:01.808128 : 2020211839 join_class 5
+2022-06-19 11:20:01.819129 : 2020211839 join_class 6
+2022-06-19 11:20:01.829124 : 2020211839 join_class 7
+2022-06-19 11:20:01.840125 : 2020211839 join_class 8
+2022-06-19 11:20:01.850125 : 2020211839 join_class 9
+2022-06-19 11:20:01.901135 : actvt_join:actvtId=5
+2022-06-19 11:20:01.918139 : actvt_join:actvtId=7
+2022-06-19 11:20:01.931128 : actvt_join:actvtId=8
+2022-06-19 11:20:01.942129 : actvt_join:actvtId=9
+2022-06-19 11:20:01.952128 : Waring:hmwk has been existed,Jump
+2022-06-19 11:20:01.959126 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:20:01.971140 : submit_hmwk:userId2020211839
+2022-06-19 11:20:01.981128 : submit_hmwk:userId2020211839
+2022-06-19 11:20:01.994138 : update_hmwk
+2022-06-19 11:20:02.006124 : update_hmwk
+2022-06-19 11:20:11.000819 : Waring:user has been existed,Jump
+2022-06-19 11:20:11.013816 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:11.019816 : Waring:course has been existed,Jump
+2022-06-19 11:20:11.025815 : Waring:user has been existed,Jump
+2022-06-19 11:20:12.082091 : Waring:user has been existed,Jump
+2022-06-19 11:20:16.984437 : Waring:user has been existed,Jump
+2022-06-19 11:20:16.995437 : Waring:exam has been existed,Jump
+2022-06-19 11:20:17.001441 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.006438 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.047439 : Waring:file has been existed,Jump
+2022-06-19 11:20:17.055437 : Waring:task has been existed,Jump
+2022-06-19 11:20:17.060437 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.066437 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.071437 : Waring:hmwk has been existed,Jump
+2022-06-19 11:20:17.077438 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:20:17.093437 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.099437 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.104437 : Waring:user has been existed,Jump
+2022-06-19 11:20:17.110439 : Waring:material has been existed,Jump
+2022-06-19 11:20:17.115437 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.121437 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.126566 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:20:17.139576 : Waring:actvt has been existed,Jump
+2022-06-19 11:20:17.145575 : Waring:userActvt has been existed,Jump
+2022-06-19 11:20:17.158575 : Waring:notice has been existed,Jump
+2022-06-19 11:20:17.823642 : Waring:user has been existed,Jump
+2022-06-19 11:20:17.835640 : Waring:exam has been existed,Jump
+2022-06-19 11:20:17.841640 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.847640 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.889989 : Waring:file has been existed,Jump
+2022-06-19 11:20:17.897991 : Waring:task has been existed,Jump
+2022-06-19 11:20:17.903990 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.908989 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.913991 : Waring:hmwk has been existed,Jump
+2022-06-19 11:20:17.919989 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:20:17.936760 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.941759 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.947759 : Waring:user has been existed,Jump
+2022-06-19 11:20:17.953760 : Waring:material has been existed,Jump
+2022-06-19 11:20:17.959764 : Waring:userCourse has been existed,Jump
+2022-06-19 11:20:17.964760 : Waring:course has been existed,Jump
+2022-06-19 11:20:17.970760 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:20:17.984761 : Waring:actvt has been existed,Jump
+2022-06-19 11:20:17.989761 : Waring:userActvt has been existed,Jump
+2022-06-19 11:20:18.003761 : Waring:notice has been existed,Jump
+2022-06-19 11:21:47.743008 : Waring:user has been existed,Jump
+2022-06-19 11:21:47.762006 : Waring:exam has been existed,Jump
+2022-06-19 11:21:47.769010 : Waring:userCourse has been existed,Jump
+2022-06-19 11:21:47.775013 : Waring:course has been existed,Jump
+2022-06-19 11:21:47.809006 : Waring:file has been existed,Jump
+2022-06-19 11:21:47.817012 : Waring:task has been existed,Jump
+2022-06-19 11:21:47.822006 : Waring:userCourse has been existed,Jump
+2022-06-19 11:21:47.828006 : Waring:course has been existed,Jump
+2022-06-19 11:21:47.834006 : Waring:hmwk has been existed,Jump
+2022-06-19 11:21:47.841010 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:21:47.859007 : Waring:userCourse has been existed,Jump
+2022-06-19 11:21:47.865006 : Waring:course has been existed,Jump
+2022-06-19 11:21:47.870006 : Waring:user has been existed,Jump
+2022-06-19 11:21:47.876006 : Waring:material has been existed,Jump
+2022-06-19 11:21:47.881009 : Waring:userCourse has been existed,Jump
+2022-06-19 11:21:47.887011 : Waring:course has been existed,Jump
+2022-06-19 11:21:47.892007 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:21:47.906010 : Waring:actvt has been existed,Jump
+2022-06-19 11:21:47.911007 : Waring:userActvt has been existed,Jump
+2022-06-19 11:21:47.925007 : Waring:notice has been existed,Jump
+2022-06-19 11:22:00.377649 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.389650 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.394648 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.400648 : Waring:user has been existed,Jump
+2022-06-19 11:22:03.362295 : Waring:exam has been existed,Jump
+2022-06-19 11:22:03.380299 : Waring:exam has been existed,Jump
+2022-06-19 11:22:03.387296 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:03.393299 : Waring:course has been existed,Jump
+2022-06-19 11:22:03.400298 : create_class_exam:class=6
+2022-06-19 11:22:03.408298 : create_class_exam:class=7
+2022-06-19 11:22:00.540653 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.551651 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.557768 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.563650 : Waring:user has been existed,Jump
+2022-06-19 11:22:03.744187 : Waring:exam has been existed,Jump
+2022-06-19 11:22:03.756188 : Waring:exam has been existed,Jump
+2022-06-19 11:22:03.762188 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:03.769191 : Waring:course has been existed,Jump
+2022-06-19 11:22:03.776188 : create_class_exam:class=6
+2022-06-19 11:22:03.785188 : create_class_exam:class=7
+2022-06-19 11:22:00.381649 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.393648 : Waring:exam has been existed,Jump
+2022-06-19 11:22:00.399648 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.404647 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.436649 : Waring:file has been existed,Jump
+2022-06-19 11:22:00.444647 : Waring:task has been existed,Jump
+2022-06-19 11:22:00.450650 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.455647 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.461651 : Waring:hmwk has been existed,Jump
+2022-06-19 11:22:00.467652 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:22:00.484649 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.489649 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.495506 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.501506 : Waring:material has been existed,Jump
+2022-06-19 11:22:00.507509 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.512505 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.518509 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:22:00.532509 : Waring:actvt has been existed,Jump
+2022-06-19 11:22:00.537507 : Waring:userActvt has been existed,Jump
+2022-06-19 11:22:00.551506 : Waring:notice has been existed,Jump
+2022-06-19 11:22:00.380652 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.391650 : Waring:exam has been existed,Jump
+2022-06-19 11:22:00.397650 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.403650 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.433650 : Waring:file has been existed,Jump
+2022-06-19 11:22:00.441650 : Waring:task has been existed,Jump
+2022-06-19 11:22:00.446650 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.452649 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.457650 : Waring:hmwk has been existed,Jump
+2022-06-19 11:22:00.462651 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:22:00.479649 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.485649 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.490650 : Waring:user has been existed,Jump
+2022-06-19 11:22:00.496651 : Waring:material has been existed,Jump
+2022-06-19 11:22:00.502650 : Waring:userCourse has been existed,Jump
+2022-06-19 11:22:00.507653 : Waring:course has been existed,Jump
+2022-06-19 11:22:00.513650 : Waring:materialRollBack has been existed,Jump
+2022-06-19 11:22:00.526650 : Waring:actvt has been existed,Jump
+2022-06-19 11:22:00.532650 : Waring:userActvt has been existed,Jump
+2022-06-19 11:22:00.546649 : Waring:notice has been existed,Jump
+2022-06-19 11:23:14.321218 : Waring:user has been existed,Jump
+2022-06-19 11:23:14.327216 : Waring:user has been existed,Jump
+2022-06-19 11:23:14.343215 : Waring:course has been existed,Jump
+2022-06-19 11:23:14.349215 : updata_class 1
+2022-06-19 11:23:14.356215 : updata_class 2
+2022-06-19 11:23:14.363216 : updata_class 3
+2022-06-19 11:23:14.369219 : updata_class 4
+2022-06-19 11:23:14.376215 : updata_class 5
+2022-06-19 11:23:14.383215 : updata_class 6
+2022-06-19 11:23:14.390215 : updata_class 7
+2022-06-19 11:23:14.396215 : updata_class 8
+2022-06-19 11:23:14.403215 : updata_class 9
+2022-06-19 11:23:14.410215 : updata_class 10
+2022-06-19 11:23:14.426215 : Waring:exam has been existed,Jump
+2022-06-19 11:23:14.432218 : Waring:userCourse has been existed,Jump
+2022-06-19 11:23:14.437215 : Waring:course has been existed,Jump
+2022-06-19 11:23:14.444215 : create_class_exam:class=1
+2022-06-19 11:23:14.450215 : create_class_exam:class=2
+2022-06-19 11:23:14.457218 : create_class_exam:class=3
+2022-06-19 11:23:14.463216 : create_class_exam:class=4
+2022-06-19 11:23:14.470215 : create_class_exam:class=5
+2022-06-19 11:23:14.481215 : Waring:actvt has been existed,Jump
+2022-06-19 11:23:14.487216 : Waring:userActvt has been existed,Jump
+2022-06-19 11:23:14.501215 : actvt_create
+2022-06-19 11:23:14.509215 : actvt_create
+2022-06-19 11:23:14.517215 : actvt_create
+2022-06-19 11:23:14.524215 : actvt_create
+2022-06-19 11:23:14.532215 : actvt_create
+2022-06-19 11:23:14.540215 : actvt_create
+2022-06-19 11:23:14.548215 : actvt_create
+2022-06-19 11:23:14.557034 : actvt_create
+2022-06-19 11:23:14.565044 : actvt_create
+2022-06-19 11:23:14.573044 : actvt_create
+2022-06-19 11:23:14.581044 : actvt_create
+2022-06-19 11:23:14.590044 : actvt_create
+2022-06-19 11:23:14.599044 : actvt_create
+2022-06-19 11:23:14.607044 : actvt_create
+2022-06-19 11:23:14.616044 : actvt_create
+2022-06-19 11:23:14.626044 : actvt_create
+2022-06-19 11:23:14.635044 : actvt_create
+2022-06-19 11:23:14.644046 : actvt_create
+2022-06-19 11:23:14.653044 : actvt_create
+2022-06-19 11:23:14.662044 : actvt_create
+2022-06-19 11:23:14.695047 : Waring:task has been existed,Jump
+2022-06-19 11:23:14.701047 : Waring:userCourse has been existed,Jump
+2022-06-19 11:23:14.707044 : Waring:course has been existed,Jump
+2022-06-19 11:23:14.727044 : create_class_task:class=1
+2022-06-19 11:23:14.736044 : create_class_task:class=2
+2022-06-19 11:23:14.744044 : create_class_task:class=3
+2022-06-19 11:23:14.751044 : create_class_task:class=4
+2022-06-19 11:23:14.759050 : create_class_task:class=5
+2022-06-19 11:23:14.767045 : create_class_task:class=6
+2022-06-19 11:23:14.780044 : Waring:material has been existed,Jump
+2022-06-19 11:23:14.787048 : Waring:userCourse has been existed,Jump
+2022-06-19 11:23:14.794048 : Waring:course has been existed,Jump
+2022-06-19 11:23:14.805048 : create_class_task:class=1
+2022-06-19 11:23:14.814046 : create_class_task:class=1
+2022-06-19 11:23:14.821044 : create_class_task:class=2
+2022-06-19 11:23:14.830044 : create_class_task:class=3
+2022-06-19 11:23:14.837044 : create_class_task:class=4
+2022-06-19 11:23:14.846045 : create_class_task:class=4
+2022-06-19 11:23:14.855049 : create_class_task:class=1
+2022-06-19 11:23:14.864044 : create_class_task:class=5
+2022-06-19 11:23:14.872046 : create_class_task:class=5
+2022-06-19 11:23:14.880046 : create_class_task:class=5
+2022-06-19 11:23:14.901044 : Waring:notice has been existed,Jump
+2022-06-19 11:23:14.908044 : notice_add:noticeId=0
+2022-06-19 11:23:14.914045 : notice_add:noticeId=1
+2022-06-19 11:23:14.921044 : notice_add:noticeId=2
+2022-06-19 11:23:14.933044 : Waring:userCourse has been existed,Jump
+2022-06-19 11:23:14.940044 : 2020211839 join_class 1
+2022-06-19 11:23:14.946044 : 2020211839 join_class 2
+2022-06-19 11:23:14.953044 : 2020211839 join_class 3
+2022-06-19 11:23:14.959044 : 2020211839 join_class 4
+2022-06-19 11:23:14.966044 : 2020211839 join_class 5
+2022-06-19 11:23:14.972044 : 2020211839 join_class 6
+2022-06-19 11:23:14.979045 : 2020211839 join_class 7
+2022-06-19 11:23:14.985044 : 2020211839 join_class 8
+2022-06-19 11:23:14.993046 : 2020211839 join_class 9
+2022-06-19 11:23:15.026044 : actvt_join:actvtId=5
+2022-06-19 11:23:15.036044 : actvt_join:actvtId=7
+2022-06-19 11:23:15.043044 : actvt_join:actvtId=8
+2022-06-19 11:23:15.052044 : actvt_join:actvtId=9
+2022-06-19 11:23:15.059044 : Waring:hmwk has been existed,Jump
+2022-06-19 11:23:15.064044 : Waring:hmwkRollBack has been existed,Jump
+2022-06-19 11:23:15.071044 : submit_hmwk:userId2020211839
+2022-06-19 11:23:15.078044 : submit_hmwk:userId2020211839
+2022-06-19 11:23:15.086045 : update_hmwk
+2022-06-19 11:23:15.094044 : update_hmwk

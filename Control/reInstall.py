@@ -78,6 +78,12 @@ data4=js.load(fr)
 for item in data4:
   print(res.create_class_material(item["id"], item))
 
+#file
+from Utils import File as F
+F.saveFile(pwd("Control/metaData/file/1.jpg"),True)
+F.saveFile(pwd("Control/metaData/file/2.jpg"),True)
+F.saveFile(pwd("Control/metaData/file/3.jpg"),True)
+F.saveFile(pwd("Control/metaData/file/4.jpg"),True)
 
 
 #notice初始数据

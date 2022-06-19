@@ -1,61 +1,61 @@
 [{
     "title": "课件1",
     "descript": "the ppt of the first chapter",
-    "attachId": 2435,
+    "attachId": 1,
     "id": 1
 },
 {
     "title": "课件2",
     "descript": "the ppt of the second chapter",
-    "attachId": 2436,
+    "attachId": 2,
     "id": 1
 },
 {
     "title": "课件1",
     "descript": "the ppt",
-    "attachId": 2437,
+    "attachId": 3,
     "id": 2
 },
 {
     "title": "pdf教材",
     "descript": "教材",
-    "attachId": 2438,
+    "attachId":4,
     "id": 3
 },
 {
     "title": "第一章",
     "descript": "the ppt of the first chapter",
-    "attachId": 2439,
+    "attachId":5,
     "id": 4
 },
 {
     "title": "第二章",
     "descript": "the ppt of the second chapter",
-    "attachId": 2440,
+    "attachId":6,
     "id": 4
 },
 {
     "title": "课件3",
     "descript": "answer of chapter one",
-    "attachId": 2441,
+    "attachId":7,
     "id": 1
 },
 {
     "title": "第一章第一节",
     "descript": "the ppt of the first chapter one session",
-    "attachId": 2442,
+    "attachId":8,
     "id": 5
 },
 {
     "title": "第一章第二节",
     "descript": "the ppt of the first chapter two session",
-    "attachId": 2443,
+    "attachId":9,
     "id": 5
 },
 {
     "title": "第二章第二节",
     "descript": "the ppt of the second chapter two session",
-    "attachId": 2444,
+    "attachId":10,
     "id": 5
 }
 ]

@@ -8,9 +8,9 @@
         :label="items.label"
       ></el-table-column>
     <el-table-column align="right">
-      <template #header>
+      <!-- <template #header>
         <el-input v-model="search" size="small" placeholder="Type to search" />
-      </template>
+      </template> -->
       <template #default="scope">
          <el-button size="small"
           @click="handleDown(scope.$index, scope.row)"
@@ -63,7 +63,7 @@ export default defineComponent({
         tableData: [
           {
             id: '0',
-            名称: '军事理论',
+            标题: '军事理论',
 
           },
         ],
@@ -89,7 +89,7 @@ export default defineComponent({
       return this.tableData.filter(
       (data) =>
         !this.search ||
-        data.名称.toLowerCase().includes(this.search.toLowerCase())
+        data.标题.toLowerCase().includes(this.search.toLowerCase())
       )
     }
   },

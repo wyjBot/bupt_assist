@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkpanel"]=self["webpackChunkpanel"]||[]).push([[443],{4335:function(n,a,e){e.r(a),e.d(a,{default:function(){return f}});var u=e(3396);const t={class:"about"},r=(0,u._)("h1",null,"This is an about page",-1),s=[r];function c(n,a){return(0,u.wg)(),(0,u.iD)("div",t,s)}var i=e(89);const l={},o=(0,i.Z)(l,[["render",c]]);var f=o}}]);
+//# sourceMappingURL=about.61d4dc4d.js.map

@@ -2,18 +2,22 @@ from time import sleep
 import os,sys,time,os.path as path
 sys.path.append(path.dirname(path.dirname(__file__)))
 from datetime import datetime
-from Utils.database import conn
 import json as js
-from Utils.Time import datetime,timedelta
 import os.path as path
 import os,sys,shutil
-#user初始数据（学号，密码，类型，姓名，电话，地址）
-from Utils import user
+
 
 def jpwd(subfile):
   pwd=path.dirname(path.dirname(__file__))
   return os.path.join(pwd,subfile)
 
+os.remove(jpwd("Control/cfg.lock"))
+from Utils.Time import datetime,timedelta
+from Utils.database import conn
+from Utils import user
+
+
+#user初始数据（学号，密码，类型，姓名，电话，地址）
 def _user():
   usertb=conn.create("user")
   usertb.set_ukey("id")

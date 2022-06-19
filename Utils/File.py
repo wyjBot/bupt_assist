@@ -11,12 +11,15 @@ filedir=path.dirname(__file__)+"/../Upload/tmp/"
 
 tb=conn.create("file")
 
-def saveFile(opath:str)->int:
+def saveFile(opath:str,copy=False)->int:
   cfg["file_sum"]+=1
   fileId=cfg["file_sum"]
   name=path.basename(opath)
   filepath=opath+"#"+str(cfg["file_sum"])
-  os.rename(opath,filepath)
+  if copy:
+    st.copyfile(opath,filepath)
+  else:
+    os.rename(opath,filepath)
   time=str(Time.now())
   tb.insert({"id":fileId,"name":name,"path":filepath,"time":time})
   return fileId
@@ -25,7 +28,8 @@ def getFile(fileId:int):
   line=tb.find_one({"id":fileId})
   try:
     fpath=line['path'].split('#')[0]
-  except:
+  except Exception as e:
+    print(e)
     fpath=path.dirname(__file__)+"/../Upload/tmp/test.txt"
 
   return fpath
