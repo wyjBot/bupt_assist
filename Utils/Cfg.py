@@ -25,8 +25,8 @@ class Cfg(dict):
     with open(pwd+"Control/cfg.lock","w+") as fw:
       js.dump({"time":datetime.timestamp(datetime.now())},fw)
 
-    self.update({'timelist':list()})
-    timelist=self['timelist']
+    # self.update({'timelist':list()})
+    # timelist=self['timelist']
     for key in self:
       if type(self[key])==datetime:
         timelist.append(key)
@@ -39,8 +39,9 @@ class Cfg(dict):
     except: print("save cfg failed")
     #revert timetype
     for key in timelist:
-      if key in self:
-        self.update({key:datetime.fromisoformat(self[key])})
+      if key not in self: continue
+      if type(self[key])!=str: continue
+      self.update({key:datetime.fromisoformat(self[key])})
 
   def __setitem__(self,key,value):
       dict.__setitem__(self,key,value)
@@ -54,9 +55,12 @@ class Cfg(dict):
         with open(cfgFile,"r+") as fr: _cfg=js.load(fr)
         self.update(_cfg)
         for key in timelist:
-            self.update({key:datetime.fromisoformat(self[key])})
-      except:
-        print("配置文件损坏,已重置为默认值")
+          if key not in self: continue
+          self.update({key:datetime.fromisoformat(self[key])})
+      except Exception as e:
+        # print(e)
+        # print("配置文件损坏,已重置为默认值")
+        print("reload")
         init=dict()
         init['file_sum']=0
         init['user_sum']=0

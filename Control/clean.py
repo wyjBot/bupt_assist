@@ -4,9 +4,11 @@ pwd=path.dirname(path.dirname(__file__))
 pjoin=path.join
 try:
   shutil.rmtree(pjoin(pwd,"Database"))
-  os.remove(pjoin(pwd,"cfg.json"))
   shutil.rmtree(pjoin(pwd,"Upload"))
-except Exception as e: print(e)
+  os.remove(pjoin(pwd,"cfg.json"))
+  os.remove(pjoin(pwd,"Control/cfg.lock"))
+except Exception as e:
+  print(e,"In Clean")
 
 try:
   os.makedirs(pjoin(pwd,"Upload/tmp"))
