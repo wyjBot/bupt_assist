@@ -1,7 +1,6 @@
 from time import sleep
 import os,sys,time,os.path as path
 sys.path.append(path.dirname(path.dirname(__file__)))
-pwd=path.dirname(path.dirname(__file__))+"/"
 import clean
 from datetime import datetime
 from Utils.database import conn
@@ -12,10 +11,14 @@ import os,sys,shutil
 #user初始数据（学号，密码，类型，姓名，电话，地址）
 from Utils import user
 
+def pwd(subfile):
+  _pwd=path.dirname(path.dirname(__file__))
+  return os.path.join(_pwd,subfile)
+
 def _user():
   usertb=conn.create("user")
   usertb.set_ukey("id")
-  fr=open(pwd+"Control/metaData/user.json","r",encoding='utf-8')
+  fr=open(pwd("Control/metaData/user.json"),"r",encoding='utf-8')
   data=js.load(fr)
   for key in data:
     print(user.sign_up(*data[key]))
@@ -25,7 +28,7 @@ def _crouse():
   #class初始数据（id，name，教师，上课星期，上课节次，持续时间，建筑id）
   coursetb=conn.create("course")
   coursetb.set_ukey("id")
-  fr=open(pwd+"Control/metaData/class.json","r",encoding='utf-8')
+  fr=open(pwd("Control/metaData/class.json"),"r",encoding='utf-8')
   data=js.load(fr)
   for item in data:
     course.update_class(item['id'], item['teacherId'], item)
@@ -35,7 +38,7 @@ def _exam():
   examtb=conn.create("exam")
   examtb.set_ukey("examId")
   from CourseMgmt import Exam
-  fr=open(pwd+"Control/metaData/exam.json","r",encoding='utf-8')
+  fr=open(pwd("Control/metaData/exam.json"),"r",encoding='utf-8')
   data2=js.load(fr)
   for item in data2:
     print(Exam.create_class_exam(item["classId"], item))
@@ -46,7 +49,7 @@ tbActvt=conn.create("actvt")
 tbUserActvt=conn.create("userActvt")
 tbActvt.set_ukey("actvtId")
 from Activity import actvt
-fr=open(pwd+"Control/metaData/actvt.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/actvt.json"),"r",encoding='utf-8')
 # print(fr.read());exit(0)
 data1=js.load(fr)
 for item in data1:
@@ -60,7 +63,7 @@ print("create task")
 tasktb=conn.create("task")
 tasktb.set_ukey("taskId")
 from CourseMgmt import homework as hmwk
-fr=open(pwd+"Control/metaData/task.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/task.json"),"r",encoding='utf-8')
 data3=js.load(fr)
 for item in data3:
   print(hmwk.create_class_task(item["classId"], item))
@@ -70,7 +73,7 @@ for item in data3:
 materialtb=conn.create("material")
 materialtb.set_ukey("materialId")
 from CourseMgmt import material as res
-fr=open(pwd+"Control/metaData/material.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/material.json"),"r",encoding='utf-8')
 data4=js.load(fr)
 for item in data4:
   print(res.create_class_material(item["id"], item))
@@ -80,7 +83,7 @@ for item in data4:
 #notice初始数据
 from Schedule import interface as notice
 noticetb=conn.create("notice")
-fr=open(pwd+"Control/metaData/notice.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/notice.json"),"r",encoding='utf-8')
 data6=js.load(fr)
 for item in data6:
   print(notice.notice_add(item["userId"], item))
@@ -108,14 +111,14 @@ for i in range(10):
 #}
 hmwktb=conn.create("hmwk")
 hmwkRollBacktb=conn.create("hmwkRollBack")
-fr=open(pwd+"Control/metaData/hmwk.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/hmwk.json"),"r",encoding='utf-8')
 data5=js.load(fr)
 for item in data5:
   print(item)
   print(hmwk.update_hmwk(item))
 
 #下面是对上面两个提交的hmwk的更新
-fr=open(pwd+"Control/metaData/hmwkupdate.json","r",encoding='utf-8')
+fr=open(pwd("Control/metaData/hmwkupdate.json"),"r",encoding='utf-8')
 data6=js.load(fr)
 for item in data6:
   print(item)
