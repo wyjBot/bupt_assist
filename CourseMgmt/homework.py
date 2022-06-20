@@ -140,7 +140,7 @@ def view_hmwk(userId,taskId):
 
 
 
-def submit_hmwk(data):#abandon
+def _submit_hmwk(data):#abandon
   """generate and ret a hmwkId for the taskId of user"""
   """return 0 when creates failed because of insuffcient data or wrong userId/taskId"""
   """
@@ -216,6 +216,7 @@ def update_hmwk(data):
     else:
       data["查重"]="抄袭*"
       tbHmwk.update({"hmwkId":data["hmwkId"]},data)
+      print(data)
       return data["version"],"与他人重复，疑似抄袭"
   else:
     res=tbTask.find_one({"taskId":data["taskId"]})
@@ -238,6 +239,7 @@ def update_hmwk(data):
     log("submit_hmwk:userId"+data["userId"],0)
     if similaritymax<0.75:
       data["查重"]="无"
+      print(data)
       tbHmwk.update({"hmwkId":data["hmwkId"]},data)
       return hmwkId,"提交成功"
     else:
