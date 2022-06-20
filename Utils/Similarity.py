@@ -1,6 +1,5 @@
-import jieba
+import jieba,re
 import gensim
-import re
 #获取指定路径的文件内容
 def get_file_contents(path):
     str = ''
@@ -30,12 +29,9 @@ def calc_similarity(text1,text2):
     test_corpus_1 = dictionary.doc2bow(text1)
     cosine_sim = similarity[test_corpus_1][1]
     return cosine_sim
+
 if __name__ == '__main__':
-    #path1 = "E:\pythonProject1\test\orig_0.8_dis_10.txt"  #论文原文的文件的绝对路径（作业要求）
-    #path2 = "E:\pythonProject1\test\orig_0.8_dis_15.txt"  #抄袭版论文的文件的绝对路径
-    #save_path = "E:\pythonProject1\save.txt"   #输出结果绝对路径
-    #str1 = get_file_contents(path1)
-    #str2 = get_file_contents(path2)
+
     str1="""
 通过写存储器操作将手工汇编的程序写入存储器。 
 通过读寄存器，检查写入寄存器的数据是否正确。
