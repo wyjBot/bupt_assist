@@ -207,10 +207,7 @@ def update_hmwk(data):
         similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.update({"hmwkId":data["hmwkId"]},data)
     log("update_hmwk",0)
-    if similarity>0.8:
-      return data["version"],"已经更新作业"
-    else:
-      return data["version"],"已提交"
+    return data["version"],"已更新提交"
   else:
     res=tbTask.find_one({"taskId":data["taskId"]})
     if not res:
@@ -227,7 +224,7 @@ def update_hmwk(data):
         similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.insert(data)
     log("submit_hmwk:userId"+data["userId"],0)
-    if similarity>0.8:
+    if similarity<0.75:
       return hmwkId,"提交成功"
     else:
       return hmwkId,"与他人重复，疑似抄袭"
