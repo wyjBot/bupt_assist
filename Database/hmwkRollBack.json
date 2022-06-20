@@ -1,18 +1,158 @@
 [
   {
-    "date": "2022-06-20 21:35:39.012688",
+    "date": "2022-06-20 21:53:36.953528",
     "userId": "2020211839",
     "taskId": 2,
     "hmwkId": 1,
     "text": "第一章作业的解 1.解得  2.得证  4.A",
-    "version": 0
+    "version": 0,
+    "查重": "无"
   },
   {
-    "date": "2022-06-20 21:35:39.019687",
+    "date": "2022-06-20 21:53:36.961521",
     "userId": "2020211839",
     "taskId": 3,
     "hmwkId": 2,
     "text": "逢考必过",
-    "version": 0
+    "version": 0,
+    "查重": "无"
+  },
+  {
+    "date": "2022-06-20 21:53:38.364298",
+    "userId": "2020211839",
+    "taskId": 2,
+    "hmwkId": 1,
+    "text": "第一章作业的解 1.sinx/x  2.TCP协议  4.A*算法",
+    "version": 1,
+    "查重": "无"
+  },
+  {
+    "date": "2022-06-20 21:53:49.012730",
+    "userId": "2020211839",
+    "taskId": 2,
+    "hmwkId": 1,
+    "text": "第一章作业的解 1.sinx/x  2.TCP协议  4.A*算法",
+    "version": 2,
+    "查重": "无",
+    "fileId": "0"
+  },
+  {
+    "date": "2022-06-20 21:53:54.328706",
+    "userId": "2020211839",
+    "taskId": 2,
+    "hmwkId": 1,
+    "text": "第一章作业的解 1.sinx/x  2.TCP协议  4.A*算法",
+    "version": 3,
+    "查重": "无",
+    "fileId": "0"
+  },
+  {
+    "date": "2022-06-20 21:54:29.938572",
+    "userId": "2020211839",
+    "taskId": 2,
+    "hmwkId": 1,
+    "text": "第一章作业的解 1.sinx/x  2.TCP协议  4.A*算法1",
+    "version": 4,
+    "查重": "无",
+    "fileId": "0"
+  },
+  {
+    "taskId": 1,
+    "fileId": "0",
+    "text": "第一章作业的解 1.sinx/x  2.TCP协议  4.A*算法",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:54:39.993549",
+    "hmwkId": 3,
+    "version": 0,
+    "查重": "抄袭"
+  },
+  {
+    "taskId": 1,
+    "fileId": "0",
+    "text": "dfsgdfgsfdsf",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:54:48.884320",
+    "hmwkId": 3,
+    "version": 1,
+    "查重": "无"
+  },
+  {
+    "taskId": 5,
+    "fileId": "0",
+    "text": "my hmoework333",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:56:18.303453",
+    "hmwkId": 6,
+    "version": 0,
+    "查重": "无"
+  },
+  {
+    "taskId": 5,
+    "fileId": "0",
+    "text": "my hmoework my",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:56:29.469489",
+    "hmwkId": 6,
+    "version": 1,
+    "查重": "抄袭"
+  },
+  {
+    "date": "2022-06-20 21:53:38.388295",
+    "userId": "2020211839",
+    "taskId": 3,
+    "hmwkId": 2,
+    "text": "期末加油",
+    "version": 1,
+    "查重": "无"
+  },
+  {
+    "taskId": 5,
+    "fileId": "0",
+    "text": "my hmoework my",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:56:33.140580",
+    "hmwkId": 6,
+    "version": 2,
+    "查重": "抄袭"
+  },
+  {
+    "taskId": 6,
+    "fileId": "0",
+    "text": "my hmoework",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:56:14.104088",
+    "hmwkId": 5,
+    "version": 0,
+    "查重": "抄袭"
+  },
+  {
+    "taskId": 6,
+    "fileId": "0",
+    "text": "my hmoework",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:57:38.168617",
+    "hmwkId": 5,
+    "version": 1,
+    "查重": "抄袭*"
+  },
+  {
+    "taskId": 6,
+    "fileId": "0",
+    "text": "my hmoework123",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:57:43.508589",
+    "hmwkId": 5,
+    "version": 2,
+    "查重": "抄袭*"
+  },
+  {
+    "taskId": 6,
+    "fileId": "0",
+    "text": "my hmoework1234特十分士大夫",
+    "userId": "2020211839",
+    "date": "2022-06-20 21:57:48.361917",
+    "hmwkId": 5,
+    "version": 3,
+    "查重": "无"
   }
 ]

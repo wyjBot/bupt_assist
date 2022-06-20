@@ -206,13 +206,17 @@ def update_hmwk(data):
     if "text" in data:
       for item in rex:
         similarity=calc_similarity(data["text"], item["text"])
+        if data["hmwkId"]==item['hmwkId']:continue
         similaritymax=similarity if similarity>similaritymax else similaritymax
-    tbHmwk.update({"hmwkId":data["hmwkId"]},data)
     log("update_hmwk",0)
     if similaritymax<0.75:
+      data["查重"]="无"
+      tbHmwk.update({"hmwkId":data["hmwkId"]},data)
       return data["version"],"已更新提交"
     else:
-      return hmwkId,"与他人重复，疑似抄袭"
+      data["查重"]="抄袭*"
+      tbHmwk.update({"hmwkId":data["hmwkId"]},data)
+      return data["version"],"与他人重复，疑似抄袭"
   else:
     res=tbTask.find_one({"taskId":data["taskId"]})
     if not res:
@@ -228,13 +232,17 @@ def update_hmwk(data):
     similaritymax=0
     if "text" in data:
       for item in rex:
+        if data["hmwkId"]==item['hmwkId']:continue
         similarity=calc_similarity(data["text"], item["text"])
         similaritymax=similarity if similarity>similaritymax else similaritymax
-    tbHmwk.insert(data)
     log("submit_hmwk:userId"+data["userId"],0)
     if similaritymax<0.75:
+      data["查重"]="无"
+      tbHmwk.update({"hmwkId":data["hmwkId"]},data)
       return hmwkId,"提交成功"
     else:
+      data["查重"]="抄袭-"
+      tbHmwk.update({"hmwkId":data["hmwkId"]},data)
       return hmwkId,"与他人重复，疑似抄袭"
 
 if __name__ == "__main__":

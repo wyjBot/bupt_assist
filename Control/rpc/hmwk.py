@@ -42,7 +42,6 @@ def update_hwmk():
     del data['session']
     data['userId']=userid
     data['taskId']=int(data['taskId'])
-    print(data)
     id,msg=hmwk.update_hmwk(data)
     print(rjs(id,msg))
     return rjs(id,msg)
