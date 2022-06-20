@@ -202,7 +202,7 @@ def update_hmwk(data):
     data["version"]=res["version"]+1
     tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
     rex=tbHmwk.find_all({})
-    if data["text"]:
+    if "text" in data:
       for item in rex:
         similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.update({"hmwkId":data["hmwkId"]},data)
@@ -219,7 +219,8 @@ def update_hmwk(data):
     hmwkId=len(tbHmwk.find_all({}))+1
     data["hmwkId"]=hmwkId
     data["version"]=0
-    if data["text"]:
+    rex=tbHmwk.find_all({})
+    if "text" in data:
       for item in rex:
         similarity=calc_similarity(data["text"], item["text"])
     tbHmwk.insert(data)
