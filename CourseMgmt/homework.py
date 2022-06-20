@@ -202,13 +202,14 @@ def update_hmwk(data):
     data["version"]=res["version"]+1
     tbHmwkRollBack.update({"hmwkId":data["hmwkId"],"version":res["version"]},res)
     rex=tbHmwk.find_all({})
-    similarity=0
+    similaritymax=0
     if "text" in data:
       for item in rex:
         similarity=calc_similarity(data["text"], item["text"])
+        similaritymax=similarity if similarity>similaritymax else similaritymax
     tbHmwk.update({"hmwkId":data["hmwkId"]},data)
     log("update_hmwk",0)
-    if similarity<0.75:
+    if similaritymax<0.75:
       return data["version"],"已更新提交"
     else:
       return hmwkId,"与他人重复，疑似抄袭"
@@ -224,13 +225,14 @@ def update_hmwk(data):
     data["hmwkId"]=hmwkId
     data["version"]=0
     rex=tbHmwk.find_all({})
-    similarity=0
+    similaritymax=0
     if "text" in data:
       for item in rex:
         similarity=calc_similarity(data["text"], item["text"])
+        similaritymax=similarity if similarity>similaritymax else similaritymax
     tbHmwk.insert(data)
     log("submit_hmwk:userId"+data["userId"],0)
-    if similarity<0.75:
+    if similaritymax<0.75:
       return hmwkId,"提交成功"
     else:
       return hmwkId,"与他人重复，疑似抄袭"
