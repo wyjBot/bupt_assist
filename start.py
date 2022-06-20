@@ -5,4 +5,4 @@ import os,Utils.corn
 
 Utils.corn.cleanFile()
 os.remove("Control/cfg.lock")
-app.run(debug=False,port=1024,host="0.0.0.0",processes=50,threaded=False)
+app.run(debug=False,port=1024,host="0.0.0.0",threaded=True)

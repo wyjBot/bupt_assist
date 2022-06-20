@@ -9,7 +9,6 @@ fromstr=datetime.fromisoformat
 strptime=datetime.strptime
 
 
-
 def now():
   cfg['rate']=int(cfg['rate'])
   nowtm=cfg['now']
