@@ -10,7 +10,7 @@ def get_file_contents(path):
         line = f.readline()
     f.close()
     return str
-#将读取到的文件内容先进行jieba分词，然后再把标点符号、转义符号等特殊符号过滤掉
+#将读取到的作业文本内容先进行jieba分词，然后再把标点符号、转义符号等特殊符号过滤掉
 def filter(str):
     str = jieba.lcut(str)
     result = []
@@ -22,6 +22,8 @@ def filter(str):
     return result
 #传入过滤之后的数据，通过调用gensim.similarities.Similarity计算余弦相似度
 def calc_similarity(text1,text2):
+    text1=filter(text1)
+    text2=filter(text2)
     texts=[text1,text2]
     dictionary = gensim.corpora.Dictionary(texts)
     corpus = [dictionary.doc2bow(text) for text in texts]
@@ -43,12 +45,12 @@ if __name__ == '__main__':
     text1 = filter(str1)
     text2 = filter(str2)
     print(text1,text2)
-    similarity = calc_similarity(text1, text2)
+    similarity = calc_similarity(str1,str2)
     print("Test1:文章相似度： %.4f"%similarity)
     str1="中国面积最大的省级行政区是新疆"
     str2="新疆乃中国面积最大的省级行政区"
     text1 = filter(str1)
     text2 = filter(str2)
     print(text1,text2)
-    similarity = calc_similarity(text1, text2)
+    similarity = calc_similarity(str1,str2)
     print("Test2:文章相似度： %.4f"%similarity)
